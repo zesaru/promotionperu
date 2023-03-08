@@ -22,13 +22,13 @@ export default function Carrusel() {
             className="h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right"
             style={{
               backgroundImage:
-                'url("https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/270082398_1954206854758284_6419631902345125998_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=730e14&_nc_ohc=U94L1KsBbREAX8niLNU&_nc_ht=scontent-nrt1-1.xx&oh=00_AfBPhmM_P1b1XBxBKH9W3CrtFUWiCpoYjC8M4pPKh3-tcg&oe=640AE89A")',
+                'url("https://peru.info/archivos/categoria/banner-gastronomia%20(1).jpg")',
             }}
           >
             <div className="container mx-auto">
               <div className="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
                 <p className="text-2xl my-4 text-white">
-                  Tiradito de lenguado, kinmedai
+                  Slide
                 </p>
                 <a
                   className="text-xl text-white inline-block no-underline border-b border-white leading-relaxed hover:text-white hover:border-black"
