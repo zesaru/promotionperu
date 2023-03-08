@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Header() {
   return (
     <nav id="header" className="w-full z-30 top-0 py-1">
@@ -22,12 +24,12 @@ export default function Header() {
           <nav>
             <ul className="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
               <li>
-                <a
+                <Link
                   className="inline-block no-underline hover:text-black hover:underline py-2 px-4"
-                  href="./restaurants.html"
+                  href="./restaurants"
                 >
                   Restaurants
-                </a>
+                </Link>
               </li>
               <li>
                 <a
@@ -40,7 +42,7 @@ export default function Header() {
               <li>
                 <a
                   className="inline-block no-underline hover:text-black hover:underline py-2 px-4"
-                  href="#"
+                  href="/pisco"
                 >
                   Pisco
                 </a>
@@ -49,16 +51,16 @@ export default function Header() {
           </nav>
         </div>
         <div className="order-1 md:order-2">
-          <a
+          <Link
             className="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl "
-            href="#"
+            href="/"
           >
             <img
               src="http://embperujapan.org/gastronomia/eatperu/logo.svg"
               className="w-12 px-2"
             />
             PERU EATS IN JAPAN
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

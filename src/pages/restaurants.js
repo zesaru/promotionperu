@@ -1,15 +1,13 @@
-import { Inter } from 'next/font/google'
-import { Layout } from '@/components/Layout'
-import Restaurants from '@/components/Restautants'
+import { Inter } from "next/font/google";
+import { Layout } from "@/components/Layout";
+import Restaurants from "@/components/Restautants";
 
+const inter = Inter({ subsets: ["latin"] });
 
-
-const inter = Inter({ subsets: ['latin'] })
-
-export default function Home() {
+export default function restaurants() {
   return (
     <Layout>
-        <Restaurants/>
+      <Restaurants />
     </Layout>
-  )
+  );
 }
