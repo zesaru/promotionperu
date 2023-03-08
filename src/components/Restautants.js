@@ -120,7 +120,5 @@ export default function Restaurants() {
     </div>
   </section>
 </div>
-
     )    
-
 }
