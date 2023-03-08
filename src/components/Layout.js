@@ -1,12 +1,12 @@
-import { Header } from "./header"
-import { Footer } from "./Footer"
+import  Header  from "./Header";
+import  Footer  from "./Footer";
 
-export const Layout = ({children}) => {
+export const Layout = ({ children }) => {
   return (
-    <body class="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
-        <Header/>
-        {children}
-        <Footer/>
-    </body>
-  )
-}
+    <div className="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
+      <Header />
+      {children}
+      <Footer />
+    </div>
+  );
+};
