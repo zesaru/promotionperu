@@ -26,26 +26,34 @@ export default function Header() {
               <li>
                 <Link
                   className="inline-block no-underline hover:text-black hover:underline py-2 px-4"
-                  href="./restaurants"
+                  href="/restaurants"
                 >
                   Restaurants
                 </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="inline-block no-underline hover:text-black hover:underline py-2 px-4"
-                  href="#"
+                  href="/food-stores"
                 >
                   Food Stores
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="inline-block no-underline hover:text-black hover:underline py-2 px-4"
                   href="/pisco"
                 >
                   Pisco
-                </a>
+                </Link>
+                <li>
+                <Link
+                  className="inline-block no-underline hover:text-black hover:underline py-2 px-4"
+                  href="/cacao"
+                >
+                  Cacao
+                </Link>
+              </li>
               </li>
             </ul>
           </nav>
