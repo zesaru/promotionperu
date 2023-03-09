@@ -34,19 +34,12 @@ export default function Header() {
               <li>
                 <Link
                   className="inline-block no-underline hover:text-black hover:underline py-2 px-4"
-                  href="/food-stores"
-                >
-                  Food Stores
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="inline-block no-underline hover:text-black hover:underline py-2 px-4"
                   href="/pisco"
                 >
                   Pisco
                 </Link>
-                <li>
+              </li>
+              <li>
                 <Link
                   className="inline-block no-underline hover:text-black hover:underline py-2 px-4"
                   href="/cacao"
@@ -54,6 +47,13 @@ export default function Header() {
                   Cacao
                 </Link>
               </li>
+              <li>
+                <Link
+                  className="inline-block no-underline hover:text-black hover:underline py-2 px-4"
+                  href="/coffee"
+                >
+                  Coffee
+                </Link>
               </li>
             </ul>
           </nav>

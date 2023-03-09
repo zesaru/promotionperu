@@ -1,5 +1,5 @@
 import { Inter } from 'next/font/google'
-import { Layout } from '@/components/Layout'
+import  Layout  from '@/components/Layout'
 import Carrusel from '@/components/Carrusel'
 import Wellcome from '@/components/Wellcome'
 
