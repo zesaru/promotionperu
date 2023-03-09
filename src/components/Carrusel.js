@@ -15,7 +15,7 @@ export default function Carrusel() {
           defaultChecked="checked"
         />
         <div
-          className="carousel-item absolute opacity-0"
+          className="carousel-item absolute opacity-0"	
           style={{ height: "50vh" }}
         >
           <div
