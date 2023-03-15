@@ -1,5 +1,42 @@
 import Card from "./Card";
 
+const cities = [
+  {
+    "name": "Tokyo",
+    "image": "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=836&q=80"
+  },
+  {
+    "name": "Kanagawa",
+    "image": "https://images.unsplash.com/photo-1529921879218-f99546d03a9d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=836&q=80"
+  },
+  {
+    "name": "Gunma",
+    "image": "https://images.unsplash.com/photo-1583599589740-f0a60591d8d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=836&q=80"
+  },
+  {
+    "name": "Tochigi",
+    "image": "https://images.unsplash.com/photo-1651417426620-318be8167e0b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=836&q=80"
+  },
+  {
+    "name": "Shizuoka",
+    "image": "https://plus.unsplash.com/premium_photo-1673698463068-78886b3a7081?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=836&q=80"
+  },
+  {
+    "name": "Aichi",
+    "image": "https://images.unsplash.com/photo-1596628889205-f92ba59fd2ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=836&q=80"
+  },
+  {
+    "name": "Osaka",
+    "image": "https://images.unsplash.com/photo-1589451765662-547fb5445bb8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=836&q=80a"
+  },
+  {
+    "name": "Hiroshima",
+    "image": "https://images.unsplash.com/photo-1559998551-19a349e9677b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=836&q=80"
+  }
+]
+
+
+
 export default function Restaurants() {
   return (
     <div>
@@ -22,7 +59,12 @@ export default function Restaurants() {
       </section>
       <section className="bg-white py-8">
         <div className="container mx-auto flex items-center flex-wrap pt-4 pb-12">
-          <Card name="Tokyo" />
+          {
+            cities.map((city) => (
+              <Card name={city.name} key={city.name} image={city.image} city={city.name.toLowerCase()}/>
+            ))
+          }
+          
         </div>
       </section>
       <section className="bg-white py-8">
