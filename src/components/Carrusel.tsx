@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function Carrusel() {
   return (
     <div
@@ -12,10 +14,10 @@ export default function Carrusel() {
           name="carousel"
           aria-hidden="true"
           hidden
-          defaultChecked="checked"
+          defaultChecked
         />
         <div
-          className="carousel-item absolute opacity-0"	
+          className="carousel-item absolute opacity-0"
           style={{ height: "50vh" }}
         >
           <div
@@ -27,9 +29,7 @@ export default function Carrusel() {
           >
             <div className="container mx-auto">
               <div className="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
-                <p className="text-2xl my-4 text-white">
-                  Slide
-                </p>
+                <p className="text-2xl my-4 text-white">Slide</p>
                 <a
                   className="text-xl text-white inline-block no-underline border-b border-white leading-relaxed hover:text-white hover:border-black"
                   href="#"

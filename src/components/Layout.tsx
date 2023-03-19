@@ -1,7 +1,12 @@
-import  Header  from "./Header";
-import  Footer  from "./Footer";
+import React, { ReactNode } from "react";
+import Header from "./Header";
+import Footer from "./Footer";
 
-export default function Layout ({ children }) {
+type LayoutProps = {
+  children: ReactNode;
+};
+
+export default function Layout({ children }: LayoutProps) {
   return (
     <div className="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
       <Header />
@@ -9,4 +14,4 @@ export default function Layout ({ children }) {
       <Footer />
     </div>
   );
-};
+}
