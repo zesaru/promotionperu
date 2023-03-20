@@ -1,8 +1,7 @@
 import { apiVersion, dataset, projectId } from 'lib/sanity.api'
 import { deskTool } from 'sanity/desk';
 import cityType from 'schemas/city'
-
-
+import restaurantType from 'schemas/restaurant'
 
 export const config = {
     projectId,
@@ -12,6 +11,6 @@ export const config = {
     basePath: '/admin',
     plugins: [deskTool()],
     schema: {
-        types: [cityType]
+        types: [cityType, restaurantType]
     }
 };

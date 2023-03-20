@@ -1,10 +1,33 @@
 import React from "react";
 import { useRouter } from "next/router";
+import RestaurantCard from "../../components/RestautantCard";
+import useSWR from 'swr'
+import { dataset, projectId } from 'lib/sanity.api'
+import { createClient, groq } from 'next-sanity'
+
+const clientConfig = {
+  projectId,
+  dataset,
+  useCdn: false,
+};
+
+function getRestaurants() {
+  return createClient(clientConfig).fetch(groq`
+    *[_type == "restaurant"] {
+      _id,
+      name,
+      "image": image.asset->url,
+    }
+  `);
+}
 
 const Slug = () => {
   const router = useRouter();
   const { slug } = router.query;
-  console.log(slug)
+
+  const { data, error } = useSWR('restaurant', getRestaurants);
+  if (error) return <div>Error loading cities.</div>;
+  if (!data) return <div>Loading...</div>;
 
   return (
     <div>
@@ -27,7 +50,9 @@ const Slug = () => {
       </section>
       <section className="bg-white py-8">
         <div className="container mx-auto flex items-center flex-wrap pt-4 pb-12">
-        {slug}    
+        {data.map((restaurant:any) => (
+            <RestaurantCard name={restaurant.name} imageSrc={restaurant.image} key={restaurant._id}/>
+        ))}
         </div>
       </section>
     </div>
