@@ -1,9 +1,20 @@
 import React from "react";
-import { useRouter } from "next/router";
 import RestaurantCard from "../../components/RestautantCard";
-import useSWR from 'swr'
+import useSWR from "swr";
 import { dataset, projectId } from 'lib/sanity.api'
 import { createClient, groq } from 'next-sanity'
+
+export async function getServerSideProps({ params }) {
+  const { slug } = params;
+  // Aquí puedes hacer lo que necesites con el slug antes de que se renderice el componente
+
+  return {
+    props: {
+      slug
+    }
+  }
+}
+
 
 const clientConfig = {
   projectId,
@@ -17,14 +28,12 @@ function getRestaurants() {
       _id,
       name,
       "image": image.asset->url,
-    }
+    } | order(name)
   `);
 }
 
-const Slug = () => {
-  const router = useRouter();
-  const { slug } = router.query;
-
+const Slug = ({slug}) => {
+  
   const { data, error } = useSWR('restaurant', getRestaurants);
   if (error) return <div>Error loading cities.</div>;
   if (!data) return <div>Loading...</div>;
@@ -43,7 +52,7 @@ const Slug = () => {
         <div className="container mx-auto">
           <div className="flex flex-col w-full lg:w-1/2 justify-center items-start px-6 tracking-wide">
             <h1 className="text-white text-4xl lg:text-5xl my-4">
-              RESTAURANTS
+              RESTAURANTS IN {slug.toUpperCase()}
             </h1>
           </div>
         </div>
@@ -51,7 +60,7 @@ const Slug = () => {
       <section className="bg-white py-8">
         <div className="container mx-auto flex items-center flex-wrap pt-4 pb-12">
         {data.map((restaurant:any) => (
-            <RestaurantCard name={restaurant.name} imageSrc={restaurant.image} key={restaurant._id}/>
+            <RestaurantCard name={restaurant.name} imageSrc={restaurant.image} key={restaurant._id} imageAlt={restaurant.name} city={""}/>
         ))}
         </div>
       </section>
