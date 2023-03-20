@@ -5,7 +5,11 @@ import { config } from "../../../sanity.config";
 export default function StudioPage() {
   return (
     <NextStudio
-      config={{ ...config, dataset: config.dataset || "default_dataset" }}
-    />
+    config={{
+      ...config,
+      dataset: config.dataset || "default_dataset",
+      projectId: config.projectId || "",
+    }}
+  />
   );
 }

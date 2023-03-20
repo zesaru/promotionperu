@@ -6,6 +6,7 @@ module.exports = {
       "images.unsplash.com",
       "via.placeholder.com",
       "plus.unsplash.com",
+      "cdn.sanity.io",
     ],
   },
   webpack: (config) => {

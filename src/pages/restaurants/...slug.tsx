@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 const Slug = () => {
   const router = useRouter();
   const { slug } = router.query;
+  console.log(slug)
 
   return (
     <div>
@@ -26,7 +27,7 @@ const Slug = () => {
       </section>
       <section className="bg-white py-8">
         <div className="container mx-auto flex items-center flex-wrap pt-4 pb-12">
-                      
+        {slug}    
         </div>
       </section>
     </div>

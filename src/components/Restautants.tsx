@@ -1,50 +1,31 @@
 import React from "react";
 import Card from "./Card";
+import useSWR from 'swr'
+import { dataset, projectId } from 'lib/sanity.api'
+import { createClient, groq } from 'next-sanity'
 
-const cities = [
-  {
-    name: "Tokyo",
-    image:
-      "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=836&q=80",
-  },
-  {
-    name: "Kanagawa",
-    image:
-      "https://images.unsplash.com/photo-1529921879218-f99546d03a9d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=836&q=80",
-  },
-  {
-    name: "Gunma",
-    image:
-      "https://images.unsplash.com/photo-1583599589740-f0a60591d8d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=836&q=80",
-  },
-  {
-    name: "Tochigi",
-    image:
-      "https://images.unsplash.com/photo-1651417426620-318be8167e0b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=836&q=80",
-  },
-  {
-    name: "Shizuoka",
-    image:
-      "https://plus.unsplash.com/premium_photo-1673698463068-78886b3a7081?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=836&q=80",
-  },
-  {
-    name: "Aichi",
-    image:
-      "https://images.unsplash.com/photo-1596628889205-f92ba59fd2ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=836&q=80",
-  },
-  {
-    name: "Osaka",
-    image:
-      "https://images.unsplash.com/photo-1589451765662-547fb5445bb8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=836&q=80a",
-  },
-  {
-    name: "Hiroshima",
-    image:
-      "https://images.unsplash.com/photo-1559998551-19a349e9677b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=836&q=80",
-  },
-];
+const clientConfig = {
+  projectId,
+  dataset,
+  useCdn: false,
+};
+
+function getCities() {
+  return createClient(clientConfig).fetch(groq`
+    *[_type == "cities"] | order(city asc) {
+      _id,
+      city,
+      "image": image.asset->url,
+    }
+  `);
+}
 
 export default function Restaurants() {
+
+  const { data, error } = useSWR('cities', getCities);
+  if (error) return <div>Error loading cities.</div>;
+  if (!data) return <div>Loading...</div>;
+  
   return (
     <div>
       <section
@@ -66,13 +47,13 @@ export default function Restaurants() {
       </section>
       <section className="bg-white py-8">
         <div className="container mx-auto flex items-center flex-wrap pt-4 pb-12">
-          {cities.map((city) => (
+          {data.map((city:any) => (
             <Card
-              name={city.name}
-              key={city.name}
+              name={city.city}
+              key={city._id}
               imageSrc={city.image}
-              imageAlt={city.name}
-              city={city.name.toLowerCase()}
+              imageAlt={city.city}
+              city={city.city.toLowerCase()}
             />
           ))}
         </div>
