@@ -1,8 +1,9 @@
-import React from "react";
-import Card from "./Card";
-import useSWR from 'swr'
 import { dataset, projectId } from 'lib/sanity.api'
 import { createClient, groq } from 'next-sanity'
+import React from "react";
+import useSWR from 'swr'
+
+import Card from "./Card";
 
 const clientConfig = {
   projectId,
