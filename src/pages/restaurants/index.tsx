@@ -1,10 +1,11 @@
-import React from "react";
-import { createClient, groq } from "next-sanity";
-import { Inter } from "next/font/google";
-import Layout from "../../components/Layout";
 import { dataset, projectId } from "lib/sanity.api";
 import { GetStaticProps } from "next";
+import { Inter } from "next/font/google";
+import { createClient, groq } from "next-sanity";
+import React from "react";
 import Card from "src/components/Card";
+
+import Layout from "../../components/Layout";
 
 const inter = Inter({ subsets: ["latin"] });
 

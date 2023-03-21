@@ -1,8 +1,9 @@
-import React from "react";
-import RestaurantCard from "../../components/RestautantCard";
-import useSWR from "swr";
 import { dataset, projectId } from "lib/sanity.api";
 import { createClient, groq } from "next-sanity";
+import React from "react";
+import useSWR from "swr";
+
+import RestaurantCard from "../../components/RestautantCard";
 
 // export async function getServerSideProps({ params }) {
 //   const { slug } = params;
