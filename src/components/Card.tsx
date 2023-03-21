@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
+import { urlForImage } from "../../lib/sanity.image";
 
 type CardProps = {
   name: string;
@@ -17,7 +18,7 @@ export default function Card({ name, imageSrc, imageAlt, city }: CardProps) {
           <Image
             className="hover:grow hover:shadow-lg"
             alt={imageAlt}
-            src={imageSrc}
+            src={urlForImage(imageSrc).url()}
             width={836}
             height={556}
           />

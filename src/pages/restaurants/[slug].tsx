@@ -1,20 +1,19 @@
 import React from "react";
 import RestaurantCard from "../../components/RestautantCard";
 import useSWR from "swr";
-import { dataset, projectId } from 'lib/sanity.api'
-import { createClient, groq } from 'next-sanity'
+import { dataset, projectId } from "lib/sanity.api";
+import { createClient, groq } from "next-sanity";
 
-export async function getServerSideProps({ params }) {
-  const { slug } = params;
-  // Aquí puedes hacer lo que necesites con el slug antes de que se renderice el componente
+// export async function getServerSideProps({ params }) {
+//   const { slug } = params;
+//   // Aquí puedes hacer lo que necesites con el slug antes de que se renderice el componente
 
-  return {
-    props: {
-      slug
-    }
-  }
-}
-
+//   return {
+//     props: {
+//       slug
+//     }
+//   }
+// }
 
 const clientConfig = {
   projectId,
@@ -32,11 +31,10 @@ function getRestaurants() {
   `);
 }
 
-const Slug = ({slug}) => {
-  
-  const { data, error } = useSWR('restaurant', getRestaurants);
-  if (error) return <div>Error loading cities.</div>;
-  if (!data) return <div>Loading...</div>;
+const Slug = () => {
+  // const { data, error } = useSWR("restaurant", getRestaurants);
+  // if (error) return <div>Error loading cities.</div>;
+  // if (!data) return <div>Loading...</div>;
 
   return (
     <div>
@@ -52,16 +50,22 @@ const Slug = ({slug}) => {
         <div className="container mx-auto">
           <div className="flex flex-col w-full lg:w-1/2 justify-center items-start px-6 tracking-wide">
             <h1 className="text-white text-4xl lg:text-5xl my-4">
-              RESTAURANTS IN {slug.toUpperCase()}
+              RESTAURANTS
             </h1>
           </div>
         </div>
       </section>
       <section className="bg-white py-8">
         <div className="container mx-auto flex items-center flex-wrap pt-4 pb-12">
-        {data.map((restaurant:any) => (
-            <RestaurantCard name={restaurant.name} imageSrc={restaurant.image} key={restaurant._id} imageAlt={restaurant.name} city={""}/>
-        ))}
+          {/* {data.map((restaurant: any) => (
+            <RestaurantCard
+              name={restaurant.name}
+              imageSrc={restaurant.image}
+              key={restaurant._id}
+              imageAlt={restaurant.name}
+              city={""}
+            />
+          ))} */}
         </div>
       </section>
     </div>
