@@ -1,4 +1,5 @@
 import { defineType } from "sanity";
+
 import  CityType  from './city';
 
 export default defineType({
@@ -26,6 +27,26 @@ export default defineType({
       type: "boolean",
       initialValue: true,
     },
+    {
+      name: "address",
+      title: "Address",
+      type: "string",
+    },   
+    {
+      name: "phone",
+      title: "Phone",
+      type: "string",
+    },
+    {
+      name: "facebook",
+      title: "Facebook",
+      type: "string",
+    },
+    {
+      name: "homepage",
+      title: "Homepage",
+      type: "string",
+    },      
     {
       name: 'city',
       title: 'City',

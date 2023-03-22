@@ -1,41 +1,53 @@
-import { dataset, projectId } from "lib/sanity.api";
+import { apiVersion,dataset, projectId } from "lib/sanity.api";
+import { GetStaticPaths, GetStaticProps } from "next";
 import { createClient, groq } from "next-sanity";
 import React from "react";
-import useSWR from "swr";
 
 import RestaurantCard from "../../components/RestautantCard";
-
-// export async function getServerSideProps({ params }) {
-//   const { slug } = params;
-//   // Aquí puedes hacer lo que necesites con el slug antes de que se renderice el componente
-
-//   return {
-//     props: {
-//       slug
-//     }
-//   }
-// }
 
 const clientConfig = {
   projectId,
   dataset,
+  apiVersion,
   useCdn: false,
 };
 
-function getRestaurants() {
+
+type CardProps = {
+  restaurants: Array<any>;
+  slug: string;
+
+};
+
+
+function getRestaurants(slug: string) {
   return createClient(clientConfig).fetch(groq`
-    *[_type == "restaurant"] {
+    *[_type == "restaurant" && city->city == $slug] {
       _id,
       name,
       "image": image.asset->url,
-    } | order(name)
+      "city": city->city,
+      facebook,
+      homepage,
+      phone,
+      address,
+    } 
+`, { slug });
+}
+
+function getCities() {
+  return createClient(clientConfig).fetch(groq`
+    *[_type == "cities"]{
+      _id,
+      city,
+      "image": image.asset->url,
+    }
   `);
 }
 
-const Slug = () => {
-  // const { data, error } = useSWR("restaurant", getRestaurants);
-  // if (error) return <div>Error loading cities.</div>;
-  // if (!data) return <div>Loading...</div>;
+
+
+const Slug = ({restaurants, slug}:CardProps) => {
 
   return (
     <div>
@@ -51,22 +63,26 @@ const Slug = () => {
         <div className="container mx-auto">
           <div className="flex flex-col w-full lg:w-1/2 justify-center items-start px-6 tracking-wide">
             <h1 className="text-white text-4xl lg:text-5xl my-4">
-              RESTAURANTS
+              RESTAURANTS IN {slug.toUpperCase()}
             </h1>
           </div>
         </div>
       </section>
       <section className="bg-white py-8">
         <div className="container mx-auto flex items-center flex-wrap pt-4 pb-12">
-          {/* {data.map((restaurant: any) => (
+          {restaurants.map((restaurant: any) => (
             <RestaurantCard
               name={restaurant.name}
               imageSrc={restaurant.image}
               key={restaurant._id}
               imageAlt={restaurant.name}
-              city={""}
+              facebook={restaurant.facebook}
+              homepage={restaurant.homepage}
+              phone={restaurant.phone}
+              address={restaurant.address}
+              city={restaurant.city}
             />
-          ))} */}
+          ))}
         </div>
       </section>
     </div>
@@ -74,3 +90,30 @@ const Slug = () => {
 };
 
 export default Slug;
+
+export const getStaticPaths: GetStaticPaths = async (ctx) => {
+
+  const cities = await getCities();
+  
+  return {
+    paths: cities.map( (city: { city: string; }) => ({
+      params: { slug: city.city.toLowerCase() }
+    })),
+    fallback: false
+  }
+}
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  function capitalizeFirstLetter(str: string) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+  const { slug } = params as { slug: string };
+  const  data  = await getRestaurants(capitalizeFirstLetter(slug));
+
+ return {
+    props: {
+      restaurants: data,
+      slug: capitalizeFirstLetter(slug)
+    }
+  }
+}
