@@ -34,12 +34,12 @@ export default function CardR({ name, imageSrc, city, facebook, homepage, phone,
         </div>
         <div className="flex gap-4">
           { facebook &&
-          <Link href={facebook}>
+          <Link href={facebook} target="_blank">
           <FaFacebook className="text-blue-700 hover:text-blue-500 w-8 h-8"/>
           </Link>             
           }
           { homepage &&
-          <Link href={homepage}>
+          <Link href={homepage} target="_blank">
           <TbWorldWww className="text-orange-700 hover:text-orange-500 w-8 h-8"/>
           </Link>             
           }

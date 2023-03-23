@@ -2,6 +2,7 @@ import { apiVersion,dataset, projectId } from "lib/sanity.api";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { createClient, groq } from "next-sanity";
 import React from "react";
+import Layout from "src/components/Layout";
 
 import RestaurantCard from "../../components/RestautantCard";
 
@@ -50,7 +51,7 @@ function getCities() {
 const Slug = ({restaurants, slug}:CardProps) => {
 
   return (
-    <div>
+    <Layout>
       <section
         className="w-full mx-auto bg-nordic-gray-light flex pt-12 md:pt-0 md:items-center bg-cover bg-right"
         style={{
@@ -85,7 +86,7 @@ const Slug = ({restaurants, slug}:CardProps) => {
           ))}
         </div>
       </section>
-    </div>
+    </Layout>
   );
 };
 
