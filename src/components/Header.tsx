@@ -22,37 +22,37 @@ export default function Header() {
           id="menu"
         >
           <nav>
-            <ul className="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
-              <li>
+            <ul className="md:flex items-center justify-between gap-2 text-base text-gray-700 pt-4 md:pt-0">
+              <li className="md:border-b-4  md:border-red-700">
                 <Link
-                  className="inline-block no-underline hover:text-black hover:underline py-2 px-4"
+                  className="inline-block no-underline  py-2 px-4 "
                   href="/restaurants"
                 >
-                  Restaurants
+                  La gastronomía
                 </Link>
               </li>
-              <li>
+              <li className="border-b-4 border-red-700">
                 <Link
-                  className="inline-block no-underline hover:text-black hover:underline py-2 px-4"
+                  className="inline-block no-underline  py-2 px-4 "
                   href="/pisco"
                 >
-                  Pisco
+                  Productos
                 </Link>
               </li>
-              <li>
+              <li className="border-b-4 border-red-700">
                 <Link
-                  className="inline-block no-underline hover:text-black hover:underline py-2 px-4"
+                  className="inline-block no-underline py-2 px-4"
                   href="/cacao"
                 >
-                  Cacao
+                  Invertir en el Perú
                 </Link>
               </li>
-              <li>
+              <li className="border-b-4  border-red-700">
                 <Link
-                  className="inline-block no-underline hover:text-black hover:underline py-2 px-4"
+                  className="inline-block no-underline py-2 px-4"
                   href="/coffee"
                 >
-                  Coffee
+                  150 años
                 </Link>
               </li>
             </ul>
@@ -63,7 +63,7 @@ export default function Header() {
               className="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl "
               href="/"
             >
-              PERU IN JAPAN
+              PERUINJAPAN
             </Link>
           </div>
       </div>
