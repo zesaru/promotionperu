@@ -1,5 +1,5 @@
-import Layout from "../components/Layout";
 import Coffee from "../components/Coffee";	
+import Layout from "../components/Layout";
 
 export default function coffeePage () {
   return (
