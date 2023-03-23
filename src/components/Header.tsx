@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 
+const menus = ["La gastronomía", "Productos", "Invertir en el Perú", "150 años"]
 export default function Header() {
   return (
     <nav id="header" className="w-full z-30 top-0 py-1">
@@ -22,39 +24,19 @@ export default function Header() {
           id="menu"
         >
           <nav>
-            <ul className="md:flex items-center justify-between gap-2 text-base text-gray-700 pt-4 md:pt-0">
-              <li className="md:border-b-4  md:border-red-700">
-                <Link
-                  className="inline-block no-underline  py-2 px-4 "
-                  href="/restaurants"
-                >
-                  La gastronomía
-                </Link>
-              </li>
-              <li className="border-b-4 border-red-700">
-                <Link
-                  className="inline-block no-underline  py-2 px-4 "
-                  href="/pisco"
-                >
-                  Productos
-                </Link>
-              </li>
-              <li className="border-b-4 border-red-700">
-                <Link
-                  className="inline-block no-underline py-2 px-4"
-                  href="/cacao"
-                >
-                  Invertir en el Perú
-                </Link>
-              </li>
-              <li className="border-b-4  border-red-700">
-                <Link
-                  className="inline-block no-underline py-2 px-4"
-                  href="/coffee"
-                >
-                  150 años
-                </Link>
-              </li>
+            <ul className="md:flex items-center align-middle justify-between gap-3 text-base text-gray-600 pt-4 md:pt-0">
+              {
+                menus.map((item) => (
+                  <li className="md:border-b-4  md:border-red-700" key={item}>
+                  <Link
+                    className="inline-block no-underline  py-2 px-4 "
+                    href="/restaurants"
+                  >
+                    {item}
+                  </Link>
+                </li>
+                ))
+              }
             </ul>
           </nav>
         </div>
@@ -63,7 +45,8 @@ export default function Header() {
               className="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl "
               href="/"
             >
-              PERUINJAPAN
+              <Image src="/apple-touch-icon.png" height='35' width='35' alt="escudo del peru" />
+              <span>PERUINJAPAN</span>
             </Link>
           </div>
       </div>
