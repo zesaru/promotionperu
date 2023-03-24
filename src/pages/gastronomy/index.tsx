@@ -45,9 +45,11 @@ const gastronomyPage = () => {
                 />
               </Link>
               </div> 
+              <Link href="/restaurants" className="">
               <div className="flex justify-start">
-                <p className="py-4 text-xl ">Restaurants</p> 
+                <p className="py-4 text-xl hover:grow">Restaurants</p> 
               </div>
+              </Link>
             </div>
           </div>
         </div>
