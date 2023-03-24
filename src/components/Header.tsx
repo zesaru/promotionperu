@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const menus = ["La gastronomía", "Productos", "Invertir en el Perú", "150 años"]
+const menus = ["Gastronomy", "Products", "Investing in Peru", "150 años"]
 export default function Header() {
   return (
     <nav id="header" className="w-full z-30 top-0 py-1">
@@ -27,10 +27,10 @@ export default function Header() {
             <ul className="md:flex items-center align-middle justify-between gap-3 text-base text-gray-600 pt-4 md:pt-0">
               {
                 menus.map((item) => (
-                  <li className="md:border-b-4  md:border-red-700" key={item}>
+                  <li className="md:border-b-4  md:border-red-600" key={item}>
                   <Link
                     className="inline-block no-underline  py-2 px-4 "
-                    href="/restaurants"
+                    href="/gastronomy"
                   >
                     {item}
                   </Link>
@@ -42,11 +42,12 @@ export default function Header() {
         </div>
           <div className="order-1 md:order-2 mx-auto md:mr-0">
             <Link
-              className="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl "
+              className="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl md:gap-1"
               href="/"
             >
               <Image src="/apple-touch-icon.png" height='35' width='35' alt="escudo del peru" />
-              <span>PERUINJAPAN</span>
+              <span className="w-1 h-8 bg-red-500 border border-red-600"></span>
+              <span className="px-1">PERUINJAPAN</span>
             </Link>
           </div>
       </div>

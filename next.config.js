@@ -7,6 +7,7 @@ module.exports = {
       "via.placeholder.com",
       "plus.unsplash.com",
       "cdn.sanity.io",
+      "embperujapan.org",
     ],
   },
   webpack: (config) => {
