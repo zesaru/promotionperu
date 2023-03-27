@@ -1,17 +1,14 @@
-import React from 'react'
+import React from "react";
 
-import Carrusel from '../components/Carrusel'
-import  Layout  from '../components/Layout'
-import Wellcome from '../components/Wellcome'
-
-
-
+import Carrusel from "../components/Carrusel";
+import Layout from "../components/Layout";
+import Wellcome from "../components/Wellcome";
 
 export default function Home() {
   return (
-    <Layout >
+    <Layout>
       <Carrusel />
-      <Wellcome/>     
+      <Wellcome />
     </Layout>
-  )
+  );
 }

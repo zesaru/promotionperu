@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .work-sans {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'bree','Work Sans', sans-serif;
   }
         
   #menu-toggle:checked + #menu {

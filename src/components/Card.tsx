@@ -13,11 +13,11 @@ type CardProps = {
 
 export default function Card({ name, imageSrc, imageAlt, city }: CardProps) {
   return (
-    <div className="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+    <div className="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col ">
       <div className="relative">
         <Link href={`/restaurants/${city}`}>
           <Image
-            className="hover:grow hover:shadow-lg"
+            className="hover:grow hover:shadow-lg rounded-xl"
             alt={imageAlt}
             src={urlForImage(imageSrc).url()}
             width={836}
