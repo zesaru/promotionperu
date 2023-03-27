@@ -24,7 +24,7 @@ export default function Card({ name, imageSrc, imageAlt, city }: CardProps) {
             height={556}
           />
         </Link>
-        <div className="text-5xl text-white bg-gray-900 bg-opacity-50 p-4 w-full text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 py-2 px-4 font-bold">
+        <div className="text-4xl text-white bg-gray-900 bg-opacity-50 p-4 w-full text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 py-2 px-4 font-bold">
           {name}
         </div>
       </div>

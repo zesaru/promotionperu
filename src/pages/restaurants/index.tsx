@@ -34,7 +34,8 @@ export default function restaurants({ cities: cities }: { cities: any }) {
           maxWidth: 1600,
           height: "32rem",
           backgroundImage:
-            'url("https://peru.info/img/20.restaurantes-del-mundo/logo-banner.jpg")',
+            // 'url("https://peru.info/img/20.restaurantes-del-mundo/logo-banner.jpg")',
+            'url("http://embperujapan.org/gastronomia/restaurantsv2.jpg")',
         }}
       >
         <div className="container mx-auto">
