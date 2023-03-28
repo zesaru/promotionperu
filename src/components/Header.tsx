@@ -50,7 +50,7 @@ export default function Header() {
               alt="escudo del peru"
             />
             <span className="w-1 h-8 bg-red-500 border border-red-600"></span>
-            <span className="px-1">PERUINJAPAN</span>
+            <span className="px-1 md:hidden lg:flex">PERUINJAPAN</span>
           </Link>
         </div>
       </div>

@@ -25,7 +25,7 @@ const gastronomyPage = () => {
             src="http://embperujapan.org/gastronomia/gastronomy500v2.jpg"
             width={400}
             height={380}
-            className="max-w-screen-sm rounded-3xl shadow-2xl"
+            className="max-w-screen-xs rounded-3xl shadow-2xl"
           />
         </div>
       </section>
@@ -70,7 +70,7 @@ const gastronomyPage = () => {
           <div className="w-full md:w-1/3 xl:w-1/4 p-3 md:p-4 lg:p-6 flex flex-col">
             <div>
               <div className="flex justify-center">
-                <Link href="/restaurants" className="">
+                <Link href="/recipes" className="">
                   <Image
                     className="hover:grow hover:shadow-lg w-auto rounded-xl"
                     src="http://embperujapan.org/gastronomia/lomosaltado640x480.jpg"
@@ -80,7 +80,7 @@ const gastronomyPage = () => {
                   />
                 </Link>
               </div>
-              <Link href="/restaurants" className="">
+              <Link href="/recipes" className="">
                 <div className="flex justify-start">
                   <p className="py-4 text-xl hover:grow">Recipes</p>
                 </div>
@@ -103,7 +103,7 @@ const gastronomyPage = () => {
               </div>
               <Link href="/restaurants" className="">
                 <div className="flex justify-start">
-                  <p className="py-4 text-xl hover:grow">Productos</p>
+                  <p className="py-4 text-xl hover:grow">Products</p>
                 </div>
               </Link>
             </div>
