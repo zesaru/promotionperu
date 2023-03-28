@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const menus = ["Gastronomy", "Products", "Investing in Peru", "150 años"];
+const menus = ["Gastronomy", "Products", "Investing in Peru", "150 years of diplomatic relations "];
 export default function Header() {
   return (
     <nav id="header" className="w-full z-30 top-0 py-1">
