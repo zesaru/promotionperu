@@ -22,9 +22,6 @@ const navBar = {
     },
   ],
 };
-const menuEn = [  { title: 'Gastronomy', slug: 'gastronomy' },  { title: 'Products', slug: 'products' },  { title: 'Investing in Peru', slug: 'investing-in-peru' },  { title: '150 years of diplomatic relations', slug: '150-years-of-diplomatic-relations' }];
-const menuJp = [  { title: 'ガストロノミー', slug: 'gastronomy' },  { title: 'ペルー食品', slug: 'products' },  { title: 'ペルーへの投資', slug: 'investing-in-peru' },  { title: '外交関係樹立150周年', slug: '150-years-of-diplomatic-relations' }];
-
 
 export default function Header() {
   const { locale, locales, asPath } = useRouter();
@@ -51,8 +48,9 @@ export default function Header() {
         >
           <nav>
             <ul className="md:flex items-center align-middle justify-between gap-3 text-base text-gray-600 pt-4 md:pt-0">
-              { locale === 'en' ? 
-              menuEn.map((item) => (
+              {navBar.menus
+                .filter((item) => item.locale === locale)
+                .map((item, i) => (
                   <li className="md:border-b-4  md:border-red-600" key={item.title}>
                   <Link
                     className="inline-block no-underline py-2 px-4 "
@@ -61,18 +59,8 @@ export default function Header() {
                     {item.title}
                   </Link>
                 </li>
-              ))
-              : 
-              menuJp.map((item) => (
-                <li className="md:border-b-4  md:border-red-600" key={item.title}>
-                <Link
-                  className="inline-block no-underline py-2 px-4 "
-                  href={`/${item.slug}`}
-                >
-                  {item.title}
-                </Link>
-              </li>
-              ))}
+                ))               
+              }
             </ul>
             
           </nav>
