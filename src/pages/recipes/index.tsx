@@ -1,12 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 
 import Layout from "../../components/Layout";
 
-const gastronomyPage = () => {
+const RecipesPage = () => {
+  const { locale } = useRouter();
   return (
-    <Layout title={""}>
+    <Layout language={locale}>
       <section className="flex justify-center align-middle ">
         <div className="">
           <Image
@@ -29,6 +31,7 @@ const gastronomyPage = () => {
           />
         </div>
       </section>
+      
       <div className="container p-6  mx-auto">
         <a
           className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8"
@@ -131,4 +134,4 @@ const gastronomyPage = () => {
   );
 };
 
-export default gastronomyPage;
+export default RecipesPage;

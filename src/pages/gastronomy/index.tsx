@@ -1,12 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 
 import Layout from "../../components/Layout";
 
-const gastronomyPage = () => {
+
+const GastronomyPage = () => {
+
+  const { locale } = useRouter();
+
   return (
-    <Layout title={""}>
+    <Layout language={locale} >
       <section className="flex justify-center align-middle ">
         <div className="">
           <Image
@@ -135,4 +140,4 @@ const gastronomyPage = () => {
   );
 };
 
-export default gastronomyPage;
+export default GastronomyPage;

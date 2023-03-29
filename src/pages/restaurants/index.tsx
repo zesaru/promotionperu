@@ -1,6 +1,7 @@
 import { dataset, projectId } from "lib/sanity.api";
 import { GetStaticProps } from "next";
 import { Inter } from "next/font/google";
+import {useRouter} from "next/router";
 import { createClient, groq } from "next-sanity";
 import React from "react";
 import Card from "src/components/Card";
@@ -25,9 +26,10 @@ function getCities() {
   `);
 }
 
-export default function restaurants({ cities: cities }: { cities: any }) {
+export default function Restaurants({ cities: cities }: { cities: any }) {
+  const { locale } = useRouter();
   return (
-    <Layout title={""}>
+    <Layout language={locale}>
 
       <section
         className="w-full mx-auto bg-nordic-gray-light flex pt-12 md:pt-0 md:items-center bg-cover bg-right"

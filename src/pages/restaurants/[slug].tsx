@@ -1,5 +1,6 @@
 import { apiVersion,dataset, projectId } from "lib/sanity.api";
 import { GetStaticPaths, GetStaticProps } from "next";
+import { useRouter } from "next/router";
 import { createClient, groq } from "next-sanity";
 import React from "react";
 import Layout from "src/components/Layout";
@@ -49,9 +50,9 @@ function getCities() {
 
 
 const Slug = ({restaurants, slug}:CardProps) => {
-
+  const { locale } = useRouter();
   return (
-    <Layout title={""}>
+    <Layout language={locale}>
       <section
         className="w-full mx-auto bg-nordic-gray-light flex pt-12 md:pt-0 md:items-center bg-cover bg-right"
         style={{

@@ -1,14 +1,34 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
+const navBar = {
+  menus: [
+    { locale: "en", title: "Gastronomy", slug: "gastronomy" },
+    { locale: "en", title: "Products", slug: "products" },
+    { locale: "en", title: "Investing in Peru", slug: "investing-in-peru" },
+    {
+      locale: "en",
+      title: "150 years of diplomatic relations",
+      slug: "150-years-of-diplomatic-relations",
+    },
+    { locale: "jp", title: "ガストロノミー", slug: "gastronomy" },
+    { locale: "jp", title: "ペルー食品", slug: "products" },
+    { locale: "jp", title: "ペルーへの投資", slug: "investing-in-peru" },
+    {
+      locale: "jp",
+      title: "外交関係樹立150周年",
+      slug: "150-years-of-diplomatic-relations",
+    },
+  ],
+};
 const menuEn = [  { title: 'Gastronomy', slug: 'gastronomy' },  { title: 'Products', slug: 'products' },  { title: 'Investing in Peru', slug: 'investing-in-peru' },  { title: '150 years of diplomatic relations', slug: '150-years-of-diplomatic-relations' }];
 const menuJp = [  { title: 'ガストロノミー', slug: 'gastronomy' },  { title: 'ペルー食品', slug: 'products' },  { title: 'ペルーへの投資', slug: 'investing-in-peru' },  { title: '外交関係樹立150周年', slug: '150-years-of-diplomatic-relations' }];
 
-interface HeaderProps {
-  language: string;
-}
-export default function Header({ language }: HeaderProps) {
-  let menu = {};
+
+export default function Header() {
+  const { locale, locales, asPath } = useRouter();
+
   return (
     <nav id="header" className="w-full z-30 top-0 py-1">
       <div className="w-full container mx-auto flex flex-wrap items-center md:justify-between  mt-0 px-6 py-3">
@@ -31,7 +51,7 @@ export default function Header({ language }: HeaderProps) {
         >
           <nav>
             <ul className="md:flex items-center align-middle justify-between gap-3 text-base text-gray-600 pt-4 md:pt-0">
-              { language === 'peruinjapan' ? 
+              { locale === 'en' ? 
               menuEn.map((item) => (
                   <li className="md:border-b-4  md:border-red-600" key={item.title}>
                   <Link
@@ -54,10 +74,22 @@ export default function Header({ language }: HeaderProps) {
               </li>
               ))}
             </ul>
+            
           </nav>
+          <div className="pl-10">
+          {locales?.map((l, i) => {
+            return (
+              <span key={i} className={l === locale ? "bg-red-500 text-white rounded-md" : ""}>
+                <Link href={asPath} locale={l} className="px-1">
+                  {l}
+                </Link>
+              </span>
+            );
+          })}
+        </div>
         </div>
         <div className="order-1 md:order-2 mx-auto md:mr-0">
-          <Link
+                  <Link
             className="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl md:gap-1"
             href="/"
           >
@@ -67,8 +99,9 @@ export default function Header({ language }: HeaderProps) {
               width="35"
               alt="escudo del peru"
             />
+            
             <span className="w-1 h-8 bg-red-500 border border-red-600"></span>
-            <span className="px-1 md:hidden lg:flex">PERUINJAPAN</span>
+            <span className="px-1 md:hidden lg:flex">PERUINJAPAN </span>
           </Link>
         </div>
       </div>

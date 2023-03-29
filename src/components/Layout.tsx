@@ -1,22 +1,25 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 import React, { ReactNode } from "react";
 
 import Header from "./Header";
 
 type LayoutProps = {
   children: ReactNode;
-  title: string;
+  language: string | undefined;
 };
 
 const Footer = React.lazy(() => import('./Footer'));
 
 
-export default function Layout({ children, title }: LayoutProps) {
+export default function Layout({ children, language }: LayoutProps) {
+  const { locale } = useRouter();
+
 
   return (
     <div className="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
       <Head>
-        <title>PeruinJapan </title>
+        <title>PeruinJapan {language}</title>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -39,7 +42,7 @@ export default function Layout({ children, title }: LayoutProps) {
         />
         <meta property="og:image" content={"url of image"} />
       </Head>
-      <Header language={title}  />
+      <Header  />
         {children}
       <Footer />
     </div>
