@@ -1,8 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const menus = ["Gastronomy", "Products", "Investing in Peru", "150 years of diplomatic relations "];
-export default function Header() {
+const menuEn = [  { title: 'Gastronomy', slug: 'gastronomy' },  { title: 'Products', slug: 'products' },  { title: 'Investing in Peru', slug: 'investing-in-peru' },  { title: '150 years of diplomatic relations', slug: '150-years-of-diplomatic-relations' }];
+const menuJp = [  { title: 'ガストロノミー', slug: 'gastronomy' },  { title: 'ペルー食品', slug: 'products' },  { title: 'ペルーへの投資', slug: 'investing-in-peru' },  { title: '外交関係樹立150周年', slug: '150-years-of-diplomatic-relations' }];
+
+interface HeaderProps {
+  language: string;
+}
+export default function Header({ language }: HeaderProps) {
+  let menu = {};
   return (
     <nav id="header" className="w-full z-30 top-0 py-1">
       <div className="w-full container mx-auto flex flex-wrap items-center md:justify-between  mt-0 px-6 py-3">
@@ -25,15 +31,27 @@ export default function Header() {
         >
           <nav>
             <ul className="md:flex items-center align-middle justify-between gap-3 text-base text-gray-600 pt-4 md:pt-0">
-              {menus.map((item) => (
-                <li className="md:border-b-4  md:border-red-600" key={item}>
+              { language === 'peruinjapan' ? 
+              menuEn.map((item) => (
+                  <li className="md:border-b-4  md:border-red-600" key={item.title}>
                   <Link
                     className="inline-block no-underline py-2 px-4 "
-                    href="/gastronomy"
+                    href={`/${item.slug}`}
                   >
-                    {item}
+                    {item.title}
                   </Link>
                 </li>
+              ))
+              : 
+              menuJp.map((item) => (
+                <li className="md:border-b-4  md:border-red-600" key={item.title}>
+                <Link
+                  className="inline-block no-underline py-2 px-4 "
+                  href={`/${item.slug}`}
+                >
+                  {item.title}
+                </Link>
+              </li>
               ))}
             </ul>
           </nav>

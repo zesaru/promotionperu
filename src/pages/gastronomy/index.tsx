@@ -6,7 +6,7 @@ import Layout from "../../components/Layout";
 
 const gastronomyPage = () => {
   return (
-    <Layout>
+    <Layout title={""}>
       <section className="flex justify-center align-middle ">
         <div className="">
           <Image

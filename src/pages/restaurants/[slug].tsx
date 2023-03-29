@@ -51,7 +51,7 @@ function getCities() {
 const Slug = ({restaurants, slug}:CardProps) => {
 
   return (
-    <Layout>
+    <Layout title={""}>
       <section
         className="w-full mx-auto bg-nordic-gray-light flex pt-12 md:pt-0 md:items-center bg-cover bg-right"
         style={{

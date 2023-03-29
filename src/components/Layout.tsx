@@ -5,12 +5,14 @@ import Header from "./Header";
 
 type LayoutProps = {
   children: ReactNode;
+  title: string;
 };
 
 const Footer = React.lazy(() => import('./Footer'));
 
 
-export default function Layout({ children }: LayoutProps) {
+export default function Layout({ children, title }: LayoutProps) {
+
   return (
     <div className="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
       <Head>
@@ -37,7 +39,7 @@ export default function Layout({ children }: LayoutProps) {
         />
         <meta property="og:image" content={"url of image"} />
       </Head>
-      <Header />
+      <Header language={title}  />
         {children}
       <Footer />
     </div>

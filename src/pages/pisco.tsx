@@ -3,7 +3,7 @@ import Pisco from "../components/Pisco";
 
 export default function pisco() {
   return (
-    <Layout>
+    <Layout title={""}>
       <Pisco />
     </Layout>
   );
