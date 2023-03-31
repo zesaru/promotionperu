@@ -39,7 +39,6 @@ export default function Home( { posts: posts }: { posts: any }) {
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const posts = await getPost();
-  console.log("posts static", posts)
   return {
     props: {
       posts,
