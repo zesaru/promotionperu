@@ -1,10 +1,9 @@
 import { withDocumentI18nPlugin } from "@sanity/document-internationalization";
 import { apiVersion, dataset, projectId } from "lib/sanity.api";
 import { deskTool } from "sanity/desk";
-import cityType from "schemas/city";
-import menuType from "schemas/menu";
-import postType from "schemas/post";
-import restaurantType from "schemas/restaurant";
+
+import schemas from "./schemas/schemaTypes";
+
 
 export const config = {
   projectId,
@@ -24,6 +23,6 @@ export const config = {
 ],
   }),
   schema: {
-    types: [cityType, restaurantType, menuType, postType],
+    types: schemas
   },
 };
