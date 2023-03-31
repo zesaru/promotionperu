@@ -3,6 +3,7 @@ import { apiVersion, dataset, projectId } from "lib/sanity.api";
 import { deskTool } from "sanity/desk";
 import cityType from "schemas/city";
 import menuType from "schemas/menu";
+import postType from "schemas/post";
 import restaurantType from "schemas/restaurant";
 
 export const config = {
@@ -23,6 +24,6 @@ export const config = {
 ],
   }),
   schema: {
-    types: [cityType, restaurantType, menuType],
+    types: [cityType, restaurantType, menuType, postType],
   },
 };

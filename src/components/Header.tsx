@@ -1,9 +1,8 @@
-import { apiVersion,dataset, projectId } from "lib/sanity.api";
+import { apiVersion, dataset, projectId } from "lib/sanity.api";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { createClient, groq } from "next-sanity";
-
 
 const clientConfig = {
   projectId,
@@ -22,9 +21,7 @@ function getMenu() {
   `);
 }
 
-
 const navBar = {
-
   menus: [
     { locale: "en", title: "Gastronomy", slug: "gastronomy" },
     { locale: "en", title: "Products", slug: "products" },
@@ -45,9 +42,8 @@ const navBar = {
   ],
 };
 
-export default  function Header() {
+export default function Header() {
   const { locale, locales, asPath } = useRouter();
-
 
   return (
     <nav id="header" className="w-full z-30 top-0 py-1">
@@ -74,33 +70,39 @@ export default  function Header() {
               {navBar.menus
                 .filter((item) => item.locale === locale)
                 .map((item, i) => (
-                  <li className="md:border-b-4  md:border-red-600" key={item.title}>
-                  <Link
-                    className="inline-block no-underline py-2 px-4 "
-                    href={`/${item.slug}`}
+                  <li
+                    className="md:border-b-4  md:border-red-600"
+                    key={item.title}
                   >
-                    {item.title}
-                  </Link>
-                </li>
-                ))               
-              }
+                    <Link
+                      className="inline-block no-underline py-2 px-4 "
+                      href={`/${item.slug}`}
+                    >
+                      {item.title}
+                    </Link>
+                  </li>
+                ))}
             </ul>
-            
           </nav>
           <div className="pl-10">
-          {locales?.map((l, i) => {
-            return (
-              <span key={i} className={l === locale ? "bg-red-500 text-white rounded-md" : ""}>
-                <Link href={asPath} locale={l} className="px-1">
-                  {l}
-                </Link>
-              </span>
-            );
-          })}
-        </div>
+            {locales?.map((l, i) => {
+              return (
+                <span
+                  key={i}
+                  className={
+                    l === locale ? "bg-red-500 text-white rounded-md" : ""
+                  }
+                >
+                  <Link href={asPath} locale={l} className="px-1">
+                    {l}
+                  </Link>
+                </span>
+              );
+            })}
+          </div>
         </div>
         <div className="order-1 md:order-2 mx-auto md:mr-0">
-                  <Link
+          <Link
             className="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl md:gap-1"
             href="/"
           >
@@ -110,7 +112,6 @@ export default  function Header() {
               width="35"
               alt="escudo del peru"
             />
-            
             <span className="w-1 h-8 bg-red-500 border border-red-600"></span>
             <span className="px-1 md:hidden lg:flex">PERUINJAPAN </span>
           </Link>
