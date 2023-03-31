@@ -17,7 +17,7 @@ export const config = {
         "id": "jp",
     },{
         "title": "English (EN)",
-        "id": "en-us",
+        "id": "en",
     }
 
 ],

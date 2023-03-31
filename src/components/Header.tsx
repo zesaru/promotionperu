@@ -1,8 +1,30 @@
+import { apiVersion,dataset, projectId } from "lib/sanity.api";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { createClient, groq } from "next-sanity";
+
+
+const clientConfig = {
+  projectId,
+  dataset,
+  apiVersion,
+  useCdn: true,
+};
+
+function getMenu() {
+  return createClient(clientConfig).fetch(groq`
+    *[_type == "menu"]{
+      __i18n_lang,
+      _id,
+      menu,
+    }
+  `);
+}
+
 
 const navBar = {
+
   menus: [
     { locale: "en", title: "Gastronomy", slug: "gastronomy" },
     { locale: "en", title: "Products", slug: "products" },
@@ -23,8 +45,9 @@ const navBar = {
   ],
 };
 
-export default function Header() {
+export default  function Header() {
   const { locale, locales, asPath } = useRouter();
+
 
   return (
     <nav id="header" className="w-full z-30 top-0 py-1">
