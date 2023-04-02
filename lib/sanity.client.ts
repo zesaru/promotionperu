@@ -1,19 +1,21 @@
-import { dataset, projectId } from 'lib/sanity.api'
-import { createClient, groq } from 'next-sanity'
+import { apiVersion,dataset, projectId } from 'lib/sanity.api'
+import { createClient } from 'next-sanity'
 
-const clientConfig = {
-    projectId,
-    dataset,
-    useCdn: false,
-  };
+import {
+  allPost,
+} from './sanity.queries'
+
+/**
+ * Checks if it's safe to create a client instance, as `@sanity/client` will throw an error if `projectId` is false
+ */
+const client = projectId
+  ? createClient({ projectId, dataset, apiVersion })
+  : null
 
 
-  function getCities() {
-    return createClient(clientConfig).fetch(groq`
-      *[_type == "cities"]{
-        _id,
-        name,
-        image,
-      }
-    `);
+export async function getAllPosts() {
+  if (client) {
+    return (await client.fetch(allPost)) || []
   }
+  return []
+}

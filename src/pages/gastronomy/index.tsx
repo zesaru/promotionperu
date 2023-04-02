@@ -5,13 +5,11 @@ import React from "react";
 
 import Layout from "../../components/Layout";
 
-
 const GastronomyPage = () => {
-
   const { locale } = useRouter();
 
   return (
-    <Layout language={locale} >
+    <Layout language={locale}>
       <section className="flex justify-center align-middle ">
         <div className="">
           <Image
@@ -19,7 +17,7 @@ const GastronomyPage = () => {
             src="http://embperujapan.org/gastronomia/gastronomyv2.jpg"
             width={1500}
             height={660}
-            className="hidden md:block md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl rounded-3xl shadow-2xl"
+            className="hidden md:block md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl rounded-3xl shadow-2xl"
           />
         </div>
       </section>
@@ -66,7 +64,9 @@ const GastronomyPage = () => {
               </div>
               <Link href="/restaurants" className="">
                 <div className="flex justify-start">
-                  <p className="py-4 text-xl hover:grow">Peruvians Restaurants</p>
+                  <p className="py-4 text-xl hover:grow">
+                    Peruvians Restaurants
+                  </p>
                 </div>
               </Link>
             </div>
