@@ -1,13 +1,19 @@
+import { getAllPosts } from "lib/sanity.client";
+import { GetStaticProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
+import PortableText from "react-portable-text";
 
 import Layout from "../../components/Layout";
 
-const GastronomyPage = () => {
-  const { locale } = useRouter();
+const GastronomyPage = ({ posts }: { posts: any }) => {
+  const { locale, route } = useRouter();
 
+  const data = posts.filter(
+    (post: { menu: string }) => `/${post.menu}` === route
+  );
   return (
     <Layout language={locale}>
       <section className="flex justify-center align-middle ">
@@ -37,15 +43,25 @@ const GastronomyPage = () => {
           className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8"
           href="#"
         >
-          GASTRONOMY
+          {data[0].__i18n_lang === locale ? data[0].title : data[1].title}
         </a>
-        <p className="mb-4">
-          Peruvian gastronomy is one of the most diverse and rich in the world.
-          Here you will find a list of the more of 20 Peruvian restaurants
-          located throughout Japan, recipes of traditional dishes that you can
-          replicate at home, videos promoting Peruvian food and information
-          about stores where you can buy some Peruvian products.
-        </p>
+        <PortableText
+          content={
+            locale === posts[0].__i18n_lang
+              ? posts[0].content
+              : posts[1].content
+          }
+          serializers={{
+            normal: (props: {
+              children:
+                | string
+                | number
+                | boolean
+                | null
+                | undefined;
+            }) => <p className="mt-8 mb-8">{props.children}</p>,
+          }}
+        />
       </div>
       <section className="bg-white py-1 ">
         <div className="container mx-auto flex flex-wrap md:pt-4 pb-12">
@@ -141,3 +157,12 @@ const GastronomyPage = () => {
 };
 
 export default GastronomyPage;
+
+export const getStaticProps: GetStaticProps = async (ctx) => {
+  const posts = await getAllPosts();
+  return {
+    props: {
+      posts,
+    },
+  };
+};

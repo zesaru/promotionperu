@@ -6,6 +6,7 @@ export const allPost = groq`
     _id,
     title,
     content,
+    menu,
   }
 `;
 export interface Post {
@@ -13,4 +14,5 @@ export interface Post {
   __i18n_lang?: string
   title?: string
   content?: any
+  menu?:string
 }

@@ -18,5 +18,11 @@ export default defineType({
       type: 'array',
       of: [{type: 'block'}]
     },
+    {
+      name: "menu",
+      title: "Menu",
+      type: "string",
+      validation: (rule) => rule.required(),
+    },
   ],
 });

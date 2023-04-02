@@ -1,4 +1,3 @@
-import { apiVersion, dataset, projectId } from "lib/sanity.api";
 import { getAllPosts } from "lib/sanity.client";
 import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
@@ -8,10 +7,7 @@ import Carrusel from "../components/Carrusel";
 import Layout from "../components/Layout";
 import Wellcome from "../components/Wellcome";
 
-
-
-
-export default function Home( { posts: posts }: { posts: any }) {
+export default function Home( { posts }:{ posts: any }) {
   const { locale } = useRouter();
   return (
     <Layout language={locale}>
@@ -23,7 +19,6 @@ export default function Home( { posts: posts }: { posts: any }) {
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const posts = await getAllPosts();
-  console.log(posts)
   return {
     props: {
       posts,
