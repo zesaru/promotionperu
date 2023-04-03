@@ -48,6 +48,7 @@ export default function Pisco() {
                   <img
                     className="hover:grow hover:shadow-lg w-auto"
                     src="https://xvzasgijcvsgewwwmlhn.supabase.co/storage/v1/object/public/images/PiscoisPeru.jpg"
+                    alt="Pisco is Peru"
                   />
                 </a>
                 <div className="text-5xl text-white bg-gray-900 bg-opacity-50 p-4 w-full text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 py-2 px-4 font-bold">

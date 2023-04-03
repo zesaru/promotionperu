@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const YoutubeEmbed = ({ embedId }) => (
+const YoutubeEmbed = ({ embedId }:{embedId:any}) => (
   <div className="overflow-hidden relative w-full" style={{ paddingBottom: '56.25%' }}>
     <iframe
       width="853"
