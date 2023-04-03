@@ -15,7 +15,6 @@ const RecipesPage = ({ posts }: { posts: any }) => {
     (post: { menu: string }) => `/${post.menu}` === route
   );
 
-
   return (
     <Layout language={locale}>
       <section className="flex justify-center align-middle ">

@@ -113,13 +113,13 @@ const GastronomyPage = ({ posts }: { posts: any }) => {
           <div className="w-full md:w-1/3 xl:w-1/4 p-3 md:p-4 lg:p-6 flex flex-col">
             <div>
               <div className="flex justify-center">
-                <Link href="/restaurants" className="">
+                <Link href="/suppliers" className="">
                   <Image
                     className="hover:grow hover:shadow-lg w-auto rounded-xl"
                     src="http://embperujapan.org/gastronomia/productos.jpg"
                     width={640}
                     height={480}
-                    alt="Restaurants"
+                    alt="販売会社 | SUPPLIERS "
                   />
                 </Link>
               </div>
