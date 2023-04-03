@@ -81,7 +81,7 @@ const GastronomyPage = ({ posts }: { posts: any }) => {
               <Link href="/restaurants" className="">
                 <div className="flex justify-start">
                   <p className="py-4 text-xl hover:grow">
-                    Peruvians Restaurants
+                    { locale === posts[0].__i18n_lang ? "ペルー料理レストラン" : "PERUVIAN RESTAURANTS" }
                   </p>
                 </div>
               </Link>
@@ -103,7 +103,9 @@ const GastronomyPage = ({ posts }: { posts: any }) => {
               </div>
               <Link href="/recipes" className="">
                 <div className="flex justify-start">
-                  <p className="py-4 text-xl hover:grow">Recipes</p>
+                  <p className="py-4 text-xl hover:grow">
+                  { locale === posts[0].__i18n_lang ? "ペルー料理レシピ" : "PERUVIAN RECIPES" }
+                  </p>
                 </div>
               </Link>
             </div>
@@ -124,7 +126,9 @@ const GastronomyPage = ({ posts }: { posts: any }) => {
               </div>
               <Link href="/restaurants" className="">
                 <div className="flex justify-start">
-                  <p className="py-4 text-xl hover:grow">Products</p>
+                  <p className="py-4 text-xl hover:grow">
+                  { locale === posts[0].__i18n_lang ? "販売会社" : "SUPPLIERS " }
+                  </p>
                 </div>
               </Link>
             </div>
@@ -145,7 +149,9 @@ const GastronomyPage = ({ posts }: { posts: any }) => {
               </div>
               <Link href="/restaurants" className="">
                 <div className="flex justify-start">
-                  <p className="py-4 text-xl hover:grow">Videos</p>
+                  <p className="py-4 text-xl hover:grow">
+                  { locale === posts[0].__i18n_lang ? "ビデオ" : "VIDEOS " }
+                  </p>
                 </div>
               </Link>
             </div>
