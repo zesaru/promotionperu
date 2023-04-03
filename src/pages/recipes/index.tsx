@@ -1,12 +1,20 @@
+import { getAllPosts } from "lib/sanity.client";
+import { GetStaticProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 
 import Layout from "../../components/Layout";
+import PortableText from "react-portable-text";
 
-const RecipesPage = () => {
-  const { locale } = useRouter();
+const RecipesPage = ({ posts }: { posts: any }) => {
+  const { locale, route } = useRouter();
+
+  const data = posts.filter(
+    (post: { menu: string }) => `/${post.menu}` === route
+  );
+
   return (
     <Layout language={locale}>
       <section className="flex justify-center align-middle ">
@@ -33,15 +41,28 @@ const RecipesPage = () => {
       </section>
       
       <div className="container p-6  mx-auto">
-        <a
+        <h2
           className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8"
-          href="#"
         >
-          PERUVIAN RECIPES
-        </a>
-        <p className="mb-4">
-        Here you can find the most traditional and delicious Peruvian recipes that you can try at home. 
-        </p>
+          {data[0].__i18n_lang === locale ? data[0].title : data[1].title}
+        </h2>
+        <PortableText
+          content={
+            locale === posts[0].__i18n_lang
+              ? posts[0].content
+              : posts[1].content
+          }
+          serializers={{
+            normal: (props: {
+              children:
+                | string
+                | number
+                | boolean
+                | null
+                | undefined;
+            }) => <p className="mt-8 mb-8">{props.children}</p>,
+          }}
+        />
       </div>
       <section className="bg-white py-1 ">
         <div className="container mx-auto flex flex-wrap md:pt-4 pb-12">
@@ -135,3 +156,12 @@ const RecipesPage = () => {
 };
 
 export default RecipesPage;
+
+export const getStaticProps: GetStaticProps = async (ctx) => {
+  const posts = await getAllPosts();
+  return {
+    props: {
+      posts,
+    },
+  };
+};

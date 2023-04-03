@@ -39,12 +39,11 @@ const GastronomyPage = ({ posts }: { posts: any }) => {
         </div>
       </section>
       <div className="container py-4 md:py-6 px-4 mx-auto">
-        <a
+        <h2
           className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8"
-          href="#"
         >
           {data[0].__i18n_lang === locale ? data[0].title : data[1].title}
-        </a>
+        </h2>
         <PortableText
           content={
             locale === posts[0].__i18n_lang
