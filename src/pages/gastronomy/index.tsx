@@ -136,17 +136,17 @@ const GastronomyPage = ({ posts }: { posts: any }) => {
           <div className="w-full md:w-1/3 xl:w-1/4 p-3 md:p-4 lg:p-6 flex flex-col">
             <div>
               <div className="flex justify-center">
-                <Link href="/restaurants" className="">
+                <Link href="/videos" className="">
                   <Image
                     className="hover:grow hover:shadow-lg w-auto rounded-xl"
                     src="http://embperujapan.org/gastronomia/video640480.jpg"
                     width={640}
                     height={480}
-                    alt="Restaurants"
+                    alt="ビデオ | VIDEOS"
                   />
                 </Link>
               </div>
-              <Link href="/restaurants" className="">
+              <Link href="/videos" className="">
                 <div className="flex justify-start">
                   <p className="py-4 text-xl hover:grow">
                   { locale === posts[0].__i18n_lang ? "ビデオ" : "VIDEOS " }
