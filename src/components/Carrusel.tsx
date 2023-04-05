@@ -6,7 +6,7 @@ export default function Carrusel() {
       <section className="flex justify-center align-middle ">
         <div className="">
           <Image
-            alt="Gastronomy"
+            alt="Peruinjapan"
             src="http://embperujapan.org/gastronomia/peruinjapan.jpg"
             width={1500}
             height={660}
@@ -17,7 +17,7 @@ export default function Carrusel() {
       <section className="flex justify-center align-middle ">
         <div className="mx-auto block md:hidden">
           <Image
-            alt="Gastronomy"
+            alt="Peruinjapan"
             src="http://embperujapan.org/gastronomia/peruinjapan400.jpg"
             width={400}
             height={380}
@@ -25,10 +25,6 @@ export default function Carrusel() {
           />
         </div>
       </section>
-
-
     </>
-
-    
   );
 }

@@ -60,7 +60,6 @@ const RecipesPage = ({ posts }: { posts: any }) => {
               </Link>
             </div>
           </div>
-          {/* Receta */}
           <div className="w-full md:w-1/2 p-3 md:p-4 lg:p-6 flex flex-col">
             <div>
               <div className="flex justify-center">
