@@ -23,8 +23,8 @@ const ProductsPage = () => {
       <section className="flex justify-center align-middle ">
         <div className="mx-auto block md:hidden">
           <Image
-            alt="Gastronomy"
-            src="http://embperujapan.org/gastronomia/products400.jpg"
+            alt="Investment guide 2022"
+            src="http://embperujapan.org/gastronomia/inversiones400.jpg"
             width={400}
             height={380}
             className="max-w-screen-xs rounded-3xl shadow-2xl"
