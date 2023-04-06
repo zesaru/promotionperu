@@ -43,71 +43,95 @@ const ProductsPage = () => {
         </span>
       </div>
       <section className="bg-white container mx-auto p-6">
+        {/* Pisco */}
         <div className="md:flex py-8">
-            <div className="w-3/4 flex justify-end p-2">
-                <Link href="/restaurants" className="">
-                  <Image
-                    className="hover:grow hover:shadow-lg w-auto rounded-xl"
-                    src="http://embperujapan.org/gastronomia/products.jpg"
-                    width={750}
-                    height={250}
-                    alt="Restaurants"
-                  />
-                </Link>
-            </div>
-            <div className="w-1/4">
-              <Link href="/restaurants" className="">
-                <div>
-                  <h3 className="text-xl hover:grow">Pisco</h3>
-                  
-                </div>
-                <div className="w-8/1 border-b-4 border-red-500"></div>
-              </Link>
-            </div>
+          <div className="xl:w-1/6"></div>
+          <div className="w-full xl:w-3/6 flex justify-end p-2">
+            <Link href="/pisco" className="">
+              <Image
+                className="hover:grow hover:shadow-lg w-auto rounded-xl"
+                src="http://embperujapan.org/gastronomia/product_piscov2.jpg"
+                width={750}
+                height={250}
+                alt="Peruvian Products Pisco"
+              />
+            </Link>
+          </div>
+          <div className="w-full xl:w-1/6 flex items-center">
+            <span className="py-10 md:py-0 border-l-8 border-red-500 h-2/3"></span>
+            <Link href="/pisco">
+              <div className="pl-2">
+                <h3 className="text-xl hover:grow">Pisco</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Molestiae sapiente unde amet enim recusandae obcaecati iusto
+                  soluta deleniti, explicabo et id quaerat reiciendis natus
+                  facere optio eius! Quam, architecto fuga?
+                </p>
+              </div>
+            </Link>
+          </div>
+          <div className="xl:w-1/6"></div>
         </div>
+        {/* Cacao */}
         <div className="md:flex py-8">
-            <div className="w-1/4">
-              <Link href="/restaurants" className="">
-                <div>
-                  <h3 className="text-xl hover:grow">Pisco</h3>
-                  
-                </div>
-                <div className="w-8/1 border-b-4 border-red-500"></div>
-              </Link>
-            </div>
-            <div className="w-3/4 flex justify-start p-2">
-                <Link href="/restaurants" className="">
-                  <Image
-                    className="hover:grow hover:shadow-lg w-auto rounded-xl"
-                    src="http://embperujapan.org/gastronomia/products.jpg"
-                    width={750}
-                    height={250}
-                    alt="Restaurants"
-                  />
-                </Link>
-            </div>
+          <div className="xl:w-1/6"></div>
+          <div className="w-full xl:w-1/6 flex items-center">
+            <span className="py-10 md:py-0 border-l-8 border-red-500 h-2/3"></span>
+            <Link href="/pisco">
+              <div className="pl-2">
+                <h3 className="text-xl hover:grow">Cacao</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Molestiae sapiente unde amet enim recusandae obcaecati iusto
+                  soluta deleniti, explicabo et id quaerat reiciendis natus
+                  facere optio eius! Quam, architecto fuga?
+                </p>
+              </div>
+            </Link>
+          </div>
+          <div className="w-full xl:w-3/6 flex justify-end p-2">
+            <Link href="/pisco" className="">
+              <Image
+                className="hover:grow hover:shadow-lg w-auto rounded-xl"
+                src="http://embperujapan.org/gastronomia/product_cacaov2.jpg"
+                width={750}
+                height={250}
+                alt="Peruvian Products Cacao"
+              />
+            </Link>
+          </div>
+          <div className="xl:w-1/5"></div>
         </div>
+        {/* Coffee */}
         <div className="md:flex py-8">
-            <div className="w-3/4 flex justify-end p-2">
-                <Link href="/restaurants" className="">
-                  <Image
-                    className="hover:grow hover:shadow-lg w-auto rounded-xl"
-                    src="http://embperujapan.org/gastronomia/products.jpg"
-                    width={750}
-                    height={250}
-                    alt="Restaurants"
-                  />
-                </Link>
-            </div>
-            <div className="w-1/4">
-              <Link href="/restaurants" className="">
-                <div>
-                  <h3 className="text-xl hover:grow">Pisco</h3>
-                  
-                </div>
-                <div className="w-8/1 border-b-4 border-red-500"></div>
-              </Link>
-            </div>
+          <div className="xl:w-1/6"></div>
+          <div className="w-full xl:w-3/6 flex justify-end p-2">
+            <Link href="/pisco" className="">
+              <Image
+                className="hover:grow hover:shadow-lg w-auto rounded-xl"
+                src="http://embperujapan.org/gastronomia/product_coffeev2.jpg"
+                width={750}
+                height={250}
+                alt="Peruvian Products Pisco"
+              />
+            </Link>
+          </div>
+          <div className="w-full xl:w-1/6 flex items-center">
+            <span className="py-10 md:py-0 border-l-8 border-red-500 h-2/3"></span>
+            <Link href="/pisco">
+              <div className="pl-2">
+                <h3 className="text-xl hover:grow">Coffee</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Molestiae sapiente unde amet enim recusandae obcaecati iusto
+                  soluta deleniti, explicabo et id quaerat reiciendis natus
+                  facere optio eius! Quam, architecto fuga?
+                </p>
+              </div>
+            </Link>
+          </div>
+          <div className="xl:w-1/6"></div>
         </div>
       </section>
     </Layout>
