@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { createClient, groq } from "next-sanity";
+import { BsTranslate } from "react-icons/bs";
 
 const clientConfig = {
   projectId,
@@ -48,7 +49,7 @@ export default function Header() {
   return (
     <nav id="header" className="w-full z-30 top-0 py-1">
       <div className="w-full container mx-auto flex flex-wrap items-center md:justify-between  mt-0 px-6 py-3">
-        <label htmlFor="menu-toggle" className="cursor-pointer md:hidden block">
+        <label htmlFor="menu-toggle" className="cursor-pointer lg:hidden block">
           <svg
             className="fill-current text-gray-900"
             xmlns="http://www.w3.org/2000/svg"
@@ -62,16 +63,16 @@ export default function Header() {
         </label>
         <input className="hidden" type="checkbox" id="menu-toggle" />
         <div
-          className="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1"
+          className="hidden lg:flex lg:items-center lg:w-auto w-full order-3 lg:order-1"
           id="menu"
         >
           <nav>
-            <ul className="md:flex items-center align-middle justify-between gap-3 text-base text-gray-600 pt-4 md:pt-0">
+            <ul className="lg:flex items-center align-middle justify-between gap-3 text-base text-gray-600 pt-4 md:pt-0">
               {navBar.menus
                 .filter((item) => item.locale === locale)
                 .map((item, i) => (
                   <li
-                    className="md:border-b-4  md:border-red-600"
+                    className="lg:border-b-4  lg:border-red-600"
                     key={item.title}
                   >
                     <Link
@@ -84,19 +85,22 @@ export default function Header() {
                 ))}
             </ul>
           </nav>
-          <div className="pl-10">
+          <div className="flex px-2 ">
+          <BsTranslate className="text-lg"/>
             {locales?.map((l, i) => {
               return (
                 <span
                   key={i}
                   className={
-                    l === locale ? "bg-red-500 text-white rounded-md" : ""
+                    l === locale ? "hidden" : "bg-red-400 text-white rounded-md"
                   }
                 >
-                  <Link href={asPath} locale={l} className="px-1">
-                    {l}
+                  
+                  <Link href={asPath} locale={l} className="p-1">
+                    {l.toUpperCase()}
                   </Link>
                 </span>
+
               );
             })}
           </div>
@@ -113,7 +117,7 @@ export default function Header() {
               alt="escudo del peru"
             />
             <span className="w-1 h-8 bg-red-500 border border-red-600"></span>
-            <span className="px-1 md:hidden lg:flex">PERUINJAPAN </span>
+            <span className="px-1 lg:flex">PERUINJAPAN </span>
           </Link>
         </div>
       </div>
