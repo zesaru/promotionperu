@@ -24,7 +24,7 @@ export default function Footer() {
                 <h3 className="font-bold text-gray-900 ">Social</h3>
               </div>
               <div className="flex w-full justify-start py-2">
-                <div className="flex gap-5">
+                <div className="flex gap-2">
                   <a
                     className="p-4 no-underline hover:text-black py-1 "
                     target="_blank"

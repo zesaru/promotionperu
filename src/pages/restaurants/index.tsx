@@ -29,7 +29,6 @@ function getCities() {
 
 export default function Restaurants({ cities: cities }: { cities: any }) {
   const { locale } = useRouter();
-  //http://embperujapan.org/gastronomia/restaurantsv2.jpg
   return (
     <Layout language={locale}>
       <section className="flex justify-center align-middle ">

@@ -45,11 +45,10 @@ const ProductsPage = () => {
       <section className="bg-white container mx-auto p-6">
         {/* Pisco */}
         <div className="md:flex py-8">
-          <div className="xl:w-1/6"></div>
-          <div className="w-full xl:w-3/6 flex justify-end p-2">
+          <div className="w-full xl:w-3/5 flex justify-end p-2">
             <Link href="/pisco" className="">
               <Image
-                className="hover:grow hover:shadow-lg w-auto rounded-xl"
+                className="hover:grow hover:shadow-lg rounded-xl"
                 src="http://embperujapan.org/gastronomia/product_piscov2.jpg"
                 width={750}
                 height={250}
@@ -57,10 +56,10 @@ const ProductsPage = () => {
               />
             </Link>
           </div>
-          <div className="w-full xl:w-1/6 flex items-center">
+          <div className="w-full xl:w-2/5 flex items-center">
             <span className="py-10 md:py-0 border-l-8 border-red-500 h-2/3"></span>
             <Link href="/pisco">
-              <div className="pl-2">
+              <div className="pl-2 md:pr-10">
                 <h3 className="text-xl hover:grow">Pisco</h3>
                 <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -71,12 +70,10 @@ const ProductsPage = () => {
               </div>
             </Link>
           </div>
-          <div className="xl:w-1/6"></div>
         </div>
         {/* Cacao */}
         <div className="md:flex py-8">
-          <div className="xl:w-1/6"></div>
-          <div className="w-full xl:w-1/6 flex items-center">
+          <div className="w-full xl:w-2/5 flex items-center">
             <span className="py-10 md:py-0 border-l-8 border-red-500 h-2/3"></span>
             <Link href="/pisco">
               <div className="pl-2">
@@ -90,10 +87,10 @@ const ProductsPage = () => {
               </div>
             </Link>
           </div>
-          <div className="w-full xl:w-3/6 flex justify-end p-2">
+          <div className="w-full xl:w-3/5 flex justify-end p-2">
             <Link href="/pisco" className="">
               <Image
-                className="hover:grow hover:shadow-lg w-auto rounded-xl"
+                className="hover:grow hover:shadow-lg rounded-xl"
                 src="http://embperujapan.org/gastronomia/product_cacaov2.jpg"
                 width={750}
                 height={250}
@@ -101,15 +98,13 @@ const ProductsPage = () => {
               />
             </Link>
           </div>
-          <div className="xl:w-1/5"></div>
         </div>
         {/* Coffee */}
         <div className="md:flex py-8">
-          <div className="xl:w-1/6"></div>
-          <div className="w-full xl:w-3/6 flex justify-end p-2">
+          <div className="w-full xl:w-3/5 flex justify-end p-2">
             <Link href="/pisco" className="">
               <Image
-                className="hover:grow hover:shadow-lg w-auto rounded-xl"
+                className="hover:grow hover:shadow-lg rounded-xl"
                 src="http://embperujapan.org/gastronomia/product_coffeev2.jpg"
                 width={750}
                 height={250}
@@ -117,7 +112,7 @@ const ProductsPage = () => {
               />
             </Link>
           </div>
-          <div className="w-full xl:w-1/6 flex items-center">
+          <div className="w-full xl:w-2/5 flex items-center">
             <span className="py-10 md:py-0 border-l-8 border-red-500 h-2/3"></span>
             <Link href="/pisco">
               <div className="pl-2">
@@ -131,7 +126,6 @@ const ProductsPage = () => {
               </div>
             </Link>
           </div>
-          <div className="xl:w-1/6"></div>
         </div>
       </section>
     </Layout>
