@@ -8,7 +8,7 @@ import Banner from "src/components/Banner";
 
 import Layout from "../components/Layout";
 
-export default function coffeePage ({ posts }: { posts: any }) {
+export default function CoffeePage ({ posts }: { posts: any }) {
   const { locale, route } = useRouter();
 
   const data = posts.filter(
