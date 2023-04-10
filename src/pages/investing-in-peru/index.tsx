@@ -40,13 +40,12 @@ const ProductsPage = () => {
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, exercitationem ad qui eum eligendi fuga mollitia ab perspiciatis ex labore vitae dolore, nisi aliquam, facere recusandae assumenda. Odit, id nulla.
         </span>
       </div>
-      <section className="bg-white container mx-auto p-6">
-        {/* Cacao */}
+      <section className="bg-white container mx-auto px-6 md:p-6">
         <div className="md:flex py-8">
-          <div className="xl:w-1/5"></div>
-          <div className="w-full xl:w-1/5 flex items-center">
-            <span className="py-10 md:py-0 border-l-8 border-red-500 h-2/3"></span>
-            <a href="http://embperujapan.org/guia_de_inversiones-2022.pdf">
+          <div className="w-full xl:w-2/5 flex flex-col justify-center">
+            <div className="flex">
+            <span className="py-10 md:py-16 border-l-8 border-red-500 h-2/3"></span>
+            <a href="http://embperujapan.org/guia_de_inversiones-2022.pdf" target="_blank" rel="noopener noreferrer">
               <div className="pl-2">
                 <h3 className="text-xl hover:grow">Investment guide 2022</h3>
                 <p>
@@ -54,17 +53,21 @@ const ProductsPage = () => {
                   Molestiae sapiente unde amet enim recusandae obcaecati iusto
                   soluta deleniti, explicabo et id quaerat reiciendis natus
                   facere optio eius! Quam, architecto fuga? 
-                  <a href="http://embperujapan.org/guia_de_inversiones-2022.pdf">
-                    <ImDownload2 className="text-red-600 m-2"/>
-                  </a>
                 </p>
-              </div>
+             </div>
             </a>
+            </div>
+            <div className="pl-1 py-2 flex md:justify-start justify-center">
+              <a href="http://embperujapan.org/guia_de_inversiones-2022.pdf" target="_blank" rel="noopener noreferrer" className="flex align-middle justify-center p-1 w-1/2 md:w-1/3   bg-red-600 text-white text-center rounded-md">
+                      <ImDownload2 className="text-white m-1"/> Download
+              </a>
+            </div>
           </div>
+
           <div className="w-full xl:w-3/5 flex justify-end p-2">
             <Link href="/pisco" className="">
               <Image
-                className="hover:grow hover:shadow-lg w-auto rounded-xl"
+                className="hover:grow hover:shadow-lg rounded-xl"
                 src="http://embperujapan.org/gastronomia/peruinjapanguiadeinversiones.jpg"
                 width={750}
                 height={250}
@@ -72,7 +75,6 @@ const ProductsPage = () => {
               />
             </Link>
           </div>
-          <div className="xl:w-1/5"></div>
         </div>
       </section>
     </Layout>

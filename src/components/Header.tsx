@@ -92,7 +92,7 @@ export default function Header() {
                 <span
                   key={i}
                   className={
-                    l === locale ? "hidden" : "bg-red-400 text-white rounded-md"
+                    l === locale ? "hidden" : "bg-red-500 text-white rounded-md"
                   }
                 >
                   
