@@ -51,7 +51,7 @@ const YearsPage = ({ posts }: { posts: any }) => {
             <div>
               <div className="flex justify-center">
                   <Image
-                    className="hover:grow hover:shadow-lg w-auto rounded-xl"
+                    className="hover:grow-0 hover:shadow-lg w-auto rounded-xl"
                     src="http://embperujapan.org/150/150-years-of-diplomatic-relations-2.jpg"
                     width={400}
                     height={500}
@@ -67,7 +67,7 @@ const YearsPage = ({ posts }: { posts: any }) => {
             <div>
               <div className="flex justify-center">
                   <Image
-                    className="hover:grow hover:shadow-lg w-auto rounded-xl"
+                    className="hover:grow-0 hover:shadow-lg w-auto rounded-xl"
                     src="http://embperujapan.org/150/150-years-of-diplomatic-relations-3.jpg"
                     width={400}
                     height={500}
@@ -83,7 +83,7 @@ const YearsPage = ({ posts }: { posts: any }) => {
             <div>
               <div className="flex justify-center">
                   <Image
-                    className="hover:grow hover:shadow-lg w-auto rounded-xl"
+                    className="hover:grow-0 hover:shadow-lg w-auto rounded-xl"
                     src="http://embperujapan.org/150/150-years-of-diplomatic-relations-4.jpg"
                     width={400}
                     height={500}
@@ -99,7 +99,7 @@ const YearsPage = ({ posts }: { posts: any }) => {
             <div>
               <div className="flex justify-center">
                   <Image
-                    className="hover:grow hover:shadow-lg w-auto rounded-xl"
+                    className="hover:grow-0 hover:shadow-lg w-auto rounded-xl"
                     src="http://embperujapan.org/150/150-years-of-diplomatic-relations-5.jpg"
                     width={400}
                     height={500}
@@ -115,7 +115,7 @@ const YearsPage = ({ posts }: { posts: any }) => {
             <div>
               <div className="flex justify-center">
                   <Image
-                    className="hover:grow hover:shadow-lg w-auto rounded-xl"
+                    className="hover:grow-0 hover:shadow-lg w-auto rounded-xl"
                     src="http://embperujapan.org/150/150-years-of-diplomatic-relations-6.jpg"
                     width={400}
                     height={500}
@@ -131,7 +131,7 @@ const YearsPage = ({ posts }: { posts: any }) => {
             <div>
               <div className="flex justify-center">
                   <Image
-                    className="hover:grow hover:shadow-lg w-auto rounded-xl"
+                    className="hover:grow-0 hover:shadow-lg w-auto rounded-xl"
                     src="http://embperujapan.org/150/150-years-of-diplomatic-relations-7.jpg"
                     width={400}
                     height={500}
@@ -147,7 +147,7 @@ const YearsPage = ({ posts }: { posts: any }) => {
             <div>
               <div className="flex justify-center">
                   <Image
-                    className="hover:grow hover:shadow-lg w-auto rounded-xl"
+                    className="hover:grow-0 hover:shadow-lg w-auto rounded-xl"
                     src="http://embperujapan.org/150/150-years-of-diplomatic-relations-8.jpg"
                     width={400}
                     height={500}
@@ -163,7 +163,7 @@ const YearsPage = ({ posts }: { posts: any }) => {
             <div>
               <div className="flex justify-center">
                   <Image
-                    className="hover:grow hover:shadow-lg w-auto rounded-xl"
+                    className="hover:grow-0 hover:shadow-lg w-auto rounded-xl"
                     src="http://embperujapan.org/150/150-years-of-diplomatic-relations-9.jpg"
                     width={400}
                     height={500}
@@ -179,7 +179,7 @@ const YearsPage = ({ posts }: { posts: any }) => {
             <div>
               <div className="flex justify-center">
                   <Image
-                    className="hover:grow hover:shadow-lg w-auto rounded-xl"
+                    className="hover:grow-0 hover:shadow-lg w-auto rounded-xl"
                     src="http://embperujapan.org/150/150-years-of-diplomatic-relations-10.jpg"
                     width={400}
                     height={500}
