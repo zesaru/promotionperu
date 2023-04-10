@@ -102,7 +102,7 @@ const ProductsPage = () => {
         {/* Coffee */}
         <div className="md:flex py-8">
           <div className="w-full xl:w-3/5 flex justify-end p-2">
-            <Link href="/pisco" className="">
+            <Link href="/coffee" className="">
               <Image
                 className="hover:grow hover:shadow-lg rounded-xl"
                 src="http://embperujapan.org/gastronomia/product_coffeev2.jpg"
