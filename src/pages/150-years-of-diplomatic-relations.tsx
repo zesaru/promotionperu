@@ -20,7 +20,7 @@ const YearsPage = ({ posts }: { posts: any }) => {
           <div className="">
             <Image
               alt="150-years-of-diplomatic-relations"
-              src="http://embperujapan.org/gastronomia/150yeas.jpg"
+              src="http://embperujapan.org/gastronomia/150years.jpg"
               width={1500}
               height={660}
               className="hidden md:block md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl rounded-3xl shadow-2xl"
@@ -31,7 +31,7 @@ const YearsPage = ({ posts }: { posts: any }) => {
           <div className="mx-auto block md:hidden">
             <Image
               alt="150-years-of-diplomatic-relations"
-              src="http://embperujapan.org/gastronomia/gastronomy500v2.jpg"
+              src="http://embperujapan.org/gastronomia/150years400.jpg"
               width={400}
               height={380}
               className="max-w-screen-xs rounded-3xl shadow-2xl"
@@ -63,6 +63,154 @@ const YearsPage = ({ posts }: { posts: any }) => {
           />
 
         </div>
+        <section className="bg-white py-1 ">
+        <div className="container mx-auto flex flex-wrap md:pt-4 pb-12">
+          <div className="w-full md:w-1/3 xl:w-1/4 p-3 md:p-4 lg:p-6 flex flex-col">
+            <div>
+              <div className="flex justify-center">
+                  <Image
+                    className="hover:grow hover:shadow-lg w-auto rounded-xl"
+                    src="http://embperujapan.org/150/150-years-of-diplomatic-relations-2.jpg"
+                    width={400}
+                    height={500}
+                    alt="150-years-of-diplomatic-relations"
+                  />
+              </div>
+              <div className="flex justify-center">
+                  <p className="py-4 text-xl ">{ locale === "en"? "Appointment of the First Peruvian Ambassador to Japan" :"日本への初のペルー国使節の任命" }</p>
+                </div>
+            </div>
+          </div>
+          <div className="w-full md:w-1/3 xl:w-1/4 p-3 md:p-4 lg:p-6 flex flex-col">
+            <div>
+              <div className="flex justify-center">
+                  <Image
+                    className="hover:grow hover:shadow-lg w-auto rounded-xl"
+                    src="http://embperujapan.org/150/150-years-of-diplomatic-relations-3.jpg"
+                    width={400}
+                    height={500}
+                    alt="150-years-of-diplomatic-relations"
+                  />
+              </div>
+              <div className="flex justify-center">
+                  <p className="py-4 text-xl ">{ locale === "en"? "Temporary Agreement on Trade and Navigation between Japan and Peru" :"日秘和親貿易航海仮条約" }</p>
+                </div>
+            </div>
+          </div>
+          <div className="w-full md:w-1/3 xl:w-1/4 p-3 md:p-4 lg:p-6 flex flex-col">
+            <div>
+              <div className="flex justify-center">
+                  <Image
+                    className="hover:grow hover:shadow-lg w-auto rounded-xl"
+                    src="http://embperujapan.org/150/150-years-of-diplomatic-relations-4.jpg"
+                    width={400}
+                    height={500}
+                    alt="150-years-of-diplomatic-relations"
+                  />
+              </div>
+              <div className="flex justify-center">
+                  <p className="py-4 text-xl ">{ locale === "en"? "" :"通商航海条約及び補足議定書" }</p>
+                </div>
+            </div>
+          </div>
+          <div className="w-full md:w-1/3 xl:w-1/4 p-3 md:p-4 lg:p-6 flex flex-col">
+            <div>
+              <div className="flex justify-center">
+                  <Image
+                    className="hover:grow hover:shadow-lg w-auto rounded-xl"
+                    src="http://embperujapan.org/150/150-years-of-diplomatic-relations-5.jpg"
+                    width={400}
+                    height={500}
+                    alt="150-years-of-diplomatic-relations"
+                  />
+              </div>
+              <div className="flex justify-center">
+                  <p className="py-4 text-xl ">{ locale === "en"? "" :"自筆書簡" }</p>
+                </div>
+            </div>
+          </div>
+          <div className="w-full md:w-1/3 xl:w-1/4 p-3 md:p-4 lg:p-6 flex flex-col">
+            <div>
+              <div className="flex justify-center">
+                  <Image
+                    className="hover:grow hover:shadow-lg w-auto rounded-xl"
+                    src="http://embperujapan.org/150/150-years-of-diplomatic-relations-6.jpg"
+                    width={400}
+                    height={500}
+                    alt="150-years-of-diplomatic-relations"
+                  />
+              </div>
+              <div className="flex justify-center">
+                  <p className="py-4 text-xl ">{ locale === "en"? "" :"ペルー独立100周年祝賀" }</p>
+                </div>
+            </div>
+          </div>
+          <div className="w-full md:w-1/3 xl:w-1/4 p-3 md:p-4 lg:p-6 flex flex-col">
+            <div>
+              <div className="flex justify-center">
+                  <Image
+                    className="hover:grow hover:shadow-lg w-auto rounded-xl"
+                    src="http://embperujapan.org/150/150-years-of-diplomatic-relations-7.jpg"
+                    width={400}
+                    height={500}
+                    alt="150-years-of-diplomatic-relations"
+                  />
+              </div>
+              <div className="flex justify-center">
+                  <p className="py-4 text-xl ">{ locale === "en"? "" :"マヌエル・プラド大統領の訪日" }</p>
+                </div>
+            </div>
+          </div>
+          <div className="w-full md:w-1/3 xl:w-1/4 p-3 md:p-4 lg:p-6 flex flex-col">
+            <div>
+              <div className="flex justify-center">
+                  <Image
+                    className="hover:grow hover:shadow-lg w-auto rounded-xl"
+                    src="http://embperujapan.org/150/150-years-of-diplomatic-relations-8.jpg"
+                    width={400}
+                    height={500}
+                    alt="150-years-of-diplomatic-relations"
+                  />
+              </div>
+              <div className="flex justify-center">
+                  <p className="py-4 text-xl ">{ locale === "en"? "" :"皇太子明仁親王殿下と美智子妃殿下のペルーご訪問" }</p>
+                </div>
+            </div>
+          </div>
+          <div className="w-full md:w-1/3 xl:w-1/4 p-3 md:p-4 lg:p-6 flex flex-col">
+            <div>
+              <div className="flex justify-center">
+                  <Image
+                    className="hover:grow hover:shadow-lg w-auto rounded-xl"
+                    src="http://embperujapan.org/150/150-years-of-diplomatic-relations-9.jpg"
+                    width={400}
+                    height={500}
+                    alt="150-years-of-diplomatic-relations"
+                  />
+              </div>
+              <div className="flex justify-center">
+                  <p className="py-4 text-xl ">{ locale === "en"? "" :"近年の公式訪問" }</p>
+                </div>
+            </div>
+          </div>
+          <div className="w-full md:w-1/3 xl:w-1/4 p-3 md:p-4 lg:p-6 flex flex-col">
+            <div>
+              <div className="flex justify-center">
+                  <Image
+                    className="hover:grow hover:shadow-lg w-auto rounded-xl"
+                    src="http://embperujapan.org/150/150-years-of-diplomatic-relations-10.jpg"
+                    width={400}
+                    height={500}
+                    alt="150-years-of-diplomatic-relations"
+                  />
+              </div>
+              <div className="flex justify-center">
+                  <p className="py-4 text-xl ">{ locale === "en"? "" :"日本人ペルー移住" }</p>
+                </div>
+            </div>
+          </div>                               
+        </div>
+      </section>
       </Layout>
     );
 }

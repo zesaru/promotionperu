@@ -15,8 +15,10 @@ export default defineType({
     {
       name: "content",
       title: "Content",
-      type: 'array',
-      of: [{type: 'block'}]
+      type: "array",
+      of: [
+        { type: "block" }
+      ],
     },
     {
       name: "menu",
