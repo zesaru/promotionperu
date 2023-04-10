@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
 import PortableText from "react-portable-text";
+import Banner from "src/components/Banner";
 
 import Layout from "../components/Layout";
 
@@ -14,30 +15,11 @@ const YearsPage = ({ posts }: { posts: any }) => {
         (post: { menu: string }) => `/${post.menu}` === route
     );
 
+    const altBanner =  `${data[0].title}  ${data[1].title}`
+
     return (
       <Layout language={locale}>
-        <section className="flex justify-center align-middle ">
-          <div className="">
-            <Image
-              alt="150-years-of-diplomatic-relations"
-              src="http://embperujapan.org/gastronomia/150years.jpg"
-              width={1500}
-              height={660}
-              className="hidden md:block md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl rounded-3xl shadow-2xl"
-            />
-          </div>
-        </section>
-        <section className="flex justify-center align-middle ">
-          <div className="mx-auto block md:hidden">
-            <Image
-              alt="150-years-of-diplomatic-relations"
-              src="http://embperujapan.org/gastronomia/150years400.jpg"
-              width={400}
-              height={380}
-              className="max-w-screen-xs rounded-3xl shadow-2xl"
-            />
-          </div>
-        </section>
+        <Banner alt={altBanner} src="http://embperujapan.org/gastronomia/150years.jpg" src2="http://embperujapan.org/gastronomia/150years400.jpg" />
         <div className="container py-4 md:py-6 px-4 mx-auto">
           <h2
             className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8"
