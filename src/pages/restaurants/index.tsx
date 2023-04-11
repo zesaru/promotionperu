@@ -34,7 +34,7 @@ export default function Restaurants({ cities: cities }: { cities: any }) {
       <section className="flex justify-center align-middle ">
         <div className="">
           <Image
-            alt="Gastronomy"
+            alt="Restaurants"
             src="http://embperujapan.org/gastronomia/restaurantsv2.jpg"
             width={1500}
             height={660}
@@ -45,8 +45,8 @@ export default function Restaurants({ cities: cities }: { cities: any }) {
       <section className="flex justify-center align-middle ">
         <div className="mx-auto block md:hidden">
           <Image
-            alt="Gastronomy"
-            src="http://embperujapan.org/gastronomia/gastronomy500v2.jpg"
+            alt="Restaurants"
+            src="http://embperujapan.org/gastronomia/restaurants400.jpg"
             width={400}
             height={380}
             className="max-w-screen-xs rounded-3xl shadow-2xl"
