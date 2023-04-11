@@ -2,6 +2,7 @@ import { apiVersion,dataset, projectId } from 'lib/sanity.api'
 import { createClient } from 'next-sanity'
 
 import {
+  allCities,
   allPost,
 } from './sanity.queries'
 
@@ -16,6 +17,13 @@ const client = projectId
 export async function getAllPosts() {
   if (client) {
     return (await client.fetch(allPost)) || []
+  }
+  return []
+}
+
+export async function getAllCities() {
+  if (client) {
+    return (await client.fetch(allCities)) || []
   }
   return []
 }

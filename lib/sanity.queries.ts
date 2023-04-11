@@ -10,9 +10,17 @@ export const allPost = groq`
   }
 `;
 export interface Post {
-  _id: string
-  __i18n_lang?: string
-  title?: string
-  content?: any
-  menu?:string
+  _id: string;
+  __i18n_lang?: string;
+  title?: string;
+  content?: any;
+  menu?: string;
 }
+
+export const allCities = groq`
+  *[_type == "cities"]{
+      _id,
+      city,
+      image,
+    }
+`;

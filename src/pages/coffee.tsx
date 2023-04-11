@@ -1,6 +1,5 @@
 import { getAllPosts } from "lib/sanity.client";
 import { GetStaticProps } from "next";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
 import PortableText from "react-portable-text";
