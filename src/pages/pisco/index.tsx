@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import PortableText from "react-portable-text";
 
-import Layout from "../components/Layout";
+import Layout from "../../components/Layout";
 
 const ProductsPage = ({ posts }: { posts: any }) => {
   const { locale, route } = useRouter();
