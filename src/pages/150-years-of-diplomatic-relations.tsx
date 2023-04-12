@@ -47,7 +47,7 @@ const YearsPage = ({ posts }: { posts: any }) => {
         </div>
         <section className="bg-white py-1 ">
         <div className="container mx-auto flex flex-wrap justify-center md:pt-4 pb-12">
-          <iframe style={{width: '1200px', height: '800px'}} src="https://online.fliphtml5.com/gofaj/ddjn/" seamless="seamless" scrolling="no" frameBorder={0} allowTransparency="true" allowFullScreen="true" />
+          <iframe style={{width: '1200px', height: '800px'}} src="https://online.fliphtml5.com/gofaj/ddjn/"   allowFullScreen={true} />
         </div>
       </section>
       </Layout>

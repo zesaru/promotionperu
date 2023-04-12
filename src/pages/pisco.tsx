@@ -134,16 +134,16 @@ const ProductsPage = ({ posts }: { posts: any }) => {
                 <Link href="/restaurants" className="">
                   <Image
                     className="hover:grow hover:shadow-lg w-auto rounded-xl"
-                    src="https://cdn.pixabay.com/photo/2017/02/15/10/39/salad-2068220__340.jpg"
-                    width={640}
-                    height={480}
+                    src="http://embperujapan.org/gastronomia/pisco-importing-company450x300.jpg"
+                    width={450}
+                    height={300}
                     alt="Restaurants"
                   />
                 </Link>
               </div>
               <Link href="/restaurants" className="">
                 <div className="flex justify-center md:justify-start">
-                  <p className="py-4 text-xl hover:grow">Recipe 1</p>
+                  <p className="py-4 text-xl hover:grow">ピスコの輸入会社</p>
                 </div>
               </Link>
             </div>
