@@ -30,14 +30,14 @@ export default function Footer() {
                     target="_blank"
                     href="https://www.facebook.com/embajadadelperuenjapon"
                   >
-                    <FaFacebook className="text-blue-700 hover:text-blue-500 w-8 h-8" />
+                    <FaFacebook className="text-blue-700 hover:text-blue-500 w-8 h-8" aria-label="Facebook" />
                   </a>
                   <a
                     className="p-4 no-underline hover:text-black py-1"
                     target="_blank"
                     href="https://twitter.com/peruinjapan"
                   >
-                    <FaTwitter className="text-blue-500 w-8 h-8" />
+                    <FaTwitter className="text-blue-500 w-8 h-8" aria-label="Twitter"/>
                   </a>
 
                   <a
@@ -45,7 +45,7 @@ export default function Footer() {
                     target="_blank"
                     href="https://www.instagram.com/peruinjapan/"
                   >
-                    <FaInstagram className="text-pink-600 hover:text-pink-400 w-8 h-8" />
+                    <FaInstagram className="text-pink-600 hover:text-pink-400 w-8 h-8" aria-label="Instagram" />
                   </a>
 
                   <a
@@ -53,7 +53,7 @@ export default function Footer() {
                     target="_blank"
                     href="https://www.youtube.com/@embajadadelperuenjapon"
                   >
-                    <FaYoutube className="text-red-600 hover:text-red-400 w-8 h-8" />
+                    <FaYoutube className="text-red-600 hover:text-red-400 w-8 h-8" aria-label="Youtube" />
                   </a>
                 </div>
               </div>
