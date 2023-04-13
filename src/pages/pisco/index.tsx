@@ -131,9 +131,9 @@ const ProductsPage = ({ posts }: { posts: any }) => {
           <div className="w-full md:w-1/3 xl:w-1/4 p-3 md:p-4 lg:p-6 flex flex-col">
             <div>
               <div className="flex justify-center">
-                <Link href="/restaurants" className="">
+                <Link href="/pisco/importing-companies" className="">
                   <Image
-                    className="hover:grow hover:shadow-lg w-auto rounded-xl"
+                    className="hover:grow hover:shadow-lg rounded-xl"
                     src="http://embperujapan.org/gastronomia/pisco-importing-company450x300.jpg"
                     width={450}
                     height={300}

@@ -119,7 +119,7 @@ const GastronomyPage = ({ posts }: { posts: any }) => {
                 <Link href="/videos" className="">
                   <Image
                     className="hover:grow hover:shadow-lg w-auto rounded-xl"
-                    src="http://embperujapan.org/gastronomia/video640480.jpg"
+                    src="http://embperujapan.org/gastronomia/videos640v2.jpg"
                     width={640}
                     height={480}
                     alt="ビデオ | VIDEOS"
