@@ -85,7 +85,6 @@ const ProductsPage = ({ posts }: { posts: any }) => {
               </Link>
             </div>
           </div>
-          {/* Receta */}
           <div className="w-full md:w-1/3 xl:w-1/4 p-3 md:p-4 lg:p-6 flex flex-col">
             <div>
               <div className="flex justify-center">
@@ -106,13 +105,12 @@ const ProductsPage = ({ posts }: { posts: any }) => {
               </Link>
             </div>
           </div>
-          {/* Video */}
           <div className="w-full md:w-1/3 xl:w-1/4 p-3 md:p-4 lg:p-6 flex flex-col">
             <div>
               <div className="flex justify-center">
                 <Link href="/pisco/recipes" className="">
                   <Image
-                    className="hover:grow hover:shadow-lg w-auto rounded-xl"
+                    className="hover:grow hover:shadow-lg rounded-xl"
                     src="http://embperujapan.org/gastronomia/piscorecipes450x300.jpg"
                     width={450}
                     height={300}
@@ -127,7 +125,6 @@ const ProductsPage = ({ posts }: { posts: any }) => {
               </Link>
             </div>
           </div>
-          {/* Video */}
           <div className="w-full md:w-1/3 xl:w-1/4 p-3 md:p-4 lg:p-6 flex flex-col">
             <div>
               <div className="flex justify-center">

@@ -76,20 +76,20 @@ const ProductsPage = () => {
         <div className="md:flex py-8">
           <div className="w-full xl:w-2/5 flex items-center">
             <span className="py-10 md:py-0 border-l-8 border-red-500 h-2/3"></span>
-            <Link href="/pisco">
+            <Link href="/cacao">
               <div className="pl-2">
-                <h3 className="text-xl hover:grow">Cacao</h3>
+                <h3 className="text-xl hover:grow">Cocoa</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Molestiae sapiente unde amet enim recusandae obcaecati iusto
-                  soluta deleniti, explicabo et id quaerat reiciendis natus
-                  facere optio eius! Quam, architecto fuga?
+                  Cocoa is a native species of America, probably native to
+                  Western Amazonia. In Peru, cacao is cultivated in the jungle
+                  of Loreto, San Martín, Ucayali, Huánuco, Junín, Pasco, Madre
+                  de Dios, Cusco and Ayacucho.
                 </p>
               </div>
             </Link>
           </div>
           <div className="w-full xl:w-3/5 flex justify-end p-2">
-            <Link href="/pisco" className="">
+            <Link href="/cacao" className="">
               <Image
                 className="hover:grow hover:shadow-lg rounded-xl"
                 src="http://embperujapan.org/gastronomia/product_cacaov2.jpg"
