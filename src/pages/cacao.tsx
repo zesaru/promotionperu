@@ -1,9 +1,6 @@
 import { getAllPosts } from "lib/sanity.client";
-import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { GetStaticProps } from "next/types";
-import { ImDownload2 } from "react-icons/im";
 import PortableText from "react-portable-text";
 import Banner from "src/components/Banner";
 import Layout from "src/components/Layout";
