@@ -110,19 +110,19 @@ const ProductsPage = ({ posts }: { posts: any }) => {
           <div className="w-full md:w-1/3 xl:w-1/4 p-3 md:p-4 lg:p-6 flex flex-col">
             <div>
               <div className="flex justify-center">
-                <Link href="/restaurants" className="">
+                <Link href="/pisco/recipes" className="">
                   <Image
                     className="hover:grow hover:shadow-lg w-auto rounded-xl"
-                    src="https://cdn.pixabay.com/photo/2017/02/15/10/39/salad-2068220__340.jpg"
-                    width={640}
-                    height={480}
+                    src="http://embperujapan.org/gastronomia/piscorecipes450x300.jpg"
+                    width={450}
+                    height={300}
                     alt="Restaurants"
                   />
                 </Link>
               </div>
               <Link href="/restaurants" className="">
               <div className="flex justify-center md:justify-start">
-                  <p className="py-4 text-xl hover:grow">Recipe 1</p>
+                  <p className="py-4 text-xl hover:grow">Recipe</p>
                 </div>
               </Link>
             </div>

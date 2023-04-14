@@ -63,7 +63,6 @@ const ProductsPage = () => {
               </a>
             </div>
           </div>
-
           <div className="w-full xl:w-3/5 flex justify-end p-2">
             <Link href="/pisco" className="">
               <Image

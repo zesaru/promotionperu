@@ -62,10 +62,11 @@ const ProductsPage = () => {
               <div className="pl-2 md:pr-10">
                 <h3 className="text-xl hover:grow">Pisco</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Molestiae sapiente unde amet enim recusandae obcaecati iusto
-                  soluta deleniti, explicabo et id quaerat reiciendis natus
-                  facere optio eius! Quam, architecto fuga?
+                  Pisco is a distilled spirit made from fermented must (juice)
+                  of fresh Pisco grapes and is a unique alcoholic beverage
+                  produced in Peru. Its origins date back to the late 16th
+                  century, and it is still produced today using traditional
+                  methods by the first generation of brandy producers.
                 </p>
               </div>
             </Link>
