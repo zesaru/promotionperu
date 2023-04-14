@@ -46,6 +46,20 @@ const RecipesPage = ({ posts }: { posts: any }) => {
       </div>
       <section className="bg-white py-1 ">
         <div className="container mx-auto flex flex-wrap md:pt-4 pb-12">
+        <div className="w-full md:w-1/2 p-3 md:p-4 lg:p-6 flex flex-col">
+            <div>
+              <div className="flex justify-center">
+                <YoutubeEmbed embedId="_Srw7Rtc8Zo" />
+              </div>
+              <Link href="/restaurants" className="">
+                <div className="flex justify-center md:justify-start">
+                  <p className="py-4 text-xl hover:grow">
+                  【国交150周年 　大使が語る「美食の国ペルー」(2023年4月3日)
+                  </p>
+                </div>
+              </Link>
+            </div>
+          </div>
           <div className="w-full md:w-1/2 p-3 md:p-4 lg:p-6 flex flex-col">
             <div>
               <div className="flex justify-center">
