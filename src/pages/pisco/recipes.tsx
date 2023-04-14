@@ -1,38 +1,71 @@
-import Image from "next/image"
+import { getAllPosts } from "lib/sanity.client";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { GetStaticProps } from "next/types";
 import { ImDownload2 } from "react-icons/im";
+import PortableText from "react-portable-text";
 import Banner from "src/components/Banner";
-import Layout from "src/components/Layout"
-const recipes = () => {
-  const { locale } = useRouter();
+import Layout from "src/components/Layout";
+
+const Recipes = ({ posts }: { posts: any }) => {
+  const { locale, route } = useRouter();
+
+  const data = posts.filter(
+    (post: { menu: string }) => `/${post.menu}` === route
+  );
+
+  console.log(data);
 
   return (
     <Layout language={locale}>
-    <Banner alt="Pisco Recipes" src="http://embperujapan.org/gastronomia/pisco.jpg" src2="http://embperujapan.org/gastronomia/pisco.jpg" />
-    <div className="container p-6  mx-auto">
-        <div className="flex uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8">
+      <Banner
+        alt="Pisco Recipes"
+        src="http://embperujapan.org/gastronomia/pisco.jpg"
+        src2="http://embperujapan.org/gastronomia/pisco400.jpg"
+      />
+      <div className="container p-2 md:p-4 mx-auto">
+        <div className="flex uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-2">
           <span className="pr-1 w-1 h-8 bg-red-500 border border-red-600"></span>
-          <h2 className="pl-2">Pisco Recipes</h2>
+          <h2 className="pl-2">
+            {data[0].__i18n_lang === locale ? data[0].title : data[1].title}
+          </h2>
         </div>
       </div>
-      <section className="bg-white container mx-auto px-6 md:p-6">
-        <div className="md:flex py-8">
+      <section className="bg-white container mx-auto px-2 md:p-6">
+        <div className="md:flex py-2 md:py-4">
           <div className="w-full xl:w-2/5 flex flex-col justify-center">
             <div className="flex">
-            <span className="py-10 md:py-16 border-l-8 border-red-500 h-2/3"></span>
-            <a href="http://embperujapan.org/gastronomia/PiscoisPeruRecipes.pdf" target="_blank" rel="noopener noreferrer">
-              <div className="pl-2">
-                <h3 className="text-xl ">Pisco is Peru</h3>
-                <p>
-                Discover the unique flavor of Pisco with our exquisite cocktail recipe book! Immerse yourself in a world of tastes and aromas that will transport you to Peru with each sip. Learn to prepare and enjoy the magic of these cocktails that celebrate the essence of our iconic national drink.
-                </p>
-             </div>
-            </a>
+              <span className="py-10 md:py-16 border-l-8 border-red-500 h-2/3"></span>
+              <a
+                href="http://embperujapan.org/gastronomia/PiscoisPeruRecipes.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="pl-2">
+                  <PortableText
+                    content={
+                      locale === data[0].__i18n_lang
+                        ? data[0].content
+                        : data[1].content
+                    }
+                    serializers={{
+                      normal: (props: {
+                        children: string | number | boolean | null | undefined;
+                      }) => <p className="mt-1 mb28">{props.children}</p>,
+                    }}
+                  />
+                </div>
+              </a>
             </div>
             <div className="pl-1 py-2 flex md:justify-start justify-center">
-              <a href="http://embperujapan.org/gastronomia/PiscoisPeruRecipes.pdf" target="_blank" rel="noopener noreferrer" className="flex align-middle justify-center p-1 w-1/2 md:w-1/3   bg-red-600 text-white text-center rounded-md">
-                      <ImDownload2 className="text-white m-1"/> Download
+              <a
+                href="http://embperujapan.org/gastronomia/PiscoisPeruRecipes.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex align-middle justify-center p-1 w-1/2 md:w-1/3   bg-red-600 text-white text-center rounded-md"
+              >
+                <ImDownload2 className="text-white m-1" /> Download
               </a>
             </div>
           </div>
@@ -50,8 +83,16 @@ const recipes = () => {
         </div>
       </section>
     </Layout>
-    
-  )
-}
+  );
+};
 
-export default recipes
+export default Recipes;
+
+export const getStaticProps: GetStaticProps = async (ctx) => {
+  const posts = await getAllPosts();
+  return {
+    props: {
+      posts,
+    },
+  };
+};
