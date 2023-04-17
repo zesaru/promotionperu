@@ -15,7 +15,6 @@ const Recipes = ({ posts }: { posts: any }) => {
     (post: { menu: string }) => `/${post.menu}` === route
   );
 
-  console.log(data);
 
   return (
     <Layout language={locale}>
