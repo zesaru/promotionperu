@@ -43,7 +43,6 @@ const ProductsPage = () => {
         </span>
       </div>
       <section className="bg-white container mx-auto p-6">
-        {/* Pisco */}
         <div className="md:flex py-8">
           <div className="w-full xl:w-3/5 flex justify-end p-2">
             <Link href="/pisco" className="">
@@ -72,7 +71,6 @@ const ProductsPage = () => {
             </Link>
           </div>
         </div>
-        {/* Cacao */}
         <div className="md:flex py-8">
           <div className="w-full xl:w-2/5 flex items-center">
             <span className="py-10 md:py-0 border-l-8 border-red-500 h-2/3"></span>
@@ -88,7 +86,7 @@ const ProductsPage = () => {
               </div>
             </Link>
           </div>
-          <div className="w-full xl:w-3/5 flex justify-end p-2">
+          <div className="w-full xl:w-3/5 flex justify-items-start p-2">
             <Link href="/cacao" className="">
               <Image
                 className="hover:grow hover:shadow-lg rounded-xl"
@@ -100,7 +98,6 @@ const ProductsPage = () => {
             </Link>
           </div>
         </div>
-        {/* Coffee */}
         <div className="md:flex py-8">
           <div className="w-full xl:w-3/5 flex justify-end p-2">
             <Link href="/coffee" className="">

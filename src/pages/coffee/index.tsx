@@ -49,23 +49,23 @@ export default function CoffeePage ({ posts }: { posts: any }) {
           <div className="w-full md:w-1/3 xl:w-1/4 p-3 md:p-4 lg:p-6 flex flex-col">
             <div>
               <div className="flex justify-center">
-                <Link href="/restaurants" className="">
+                <a href="http://embperujapan.org/coffee/PeruCoffee.pdf" className="" target="_blank">
                   <Image
-                    className="hover:grow hover:shadow-lg w-auto rounded-xl"
-                    src="http://embperujapan.org/gastronomia/restaurantsv640v2.jpg"
+                    className="hover:grow hover:shadow-lg rounded-xl"
+                    src="http://embperujapan.org/gastronomia/coffee450x300.jpg"
                     width={640}
                     height={480}
-                    alt="Restaurants"
+                    alt="Coffee"
                   />
-                </Link>
+                </a>
               </div>
-              <Link href="/restaurants" className="">
+              <a href="/restaurants" className="" target="_blank">
                 <div className="flex justify-start">
                   <p className="py-4 text-xl hover:grow">
-                    { locale === posts[0].__i18n_lang ? "ペルー料理レストラン" : "PERUVIAN RESTAURANTS" }
+                    { locale === posts[0].__i18n_lang ? "ペルー産コーヒー" : "PERUVIAN COFFEE" }
                   </p>
                 </div>
-              </Link>
+              </a>
             </div>
           </div>
           {/* Receta */}
@@ -74,8 +74,8 @@ export default function CoffeePage ({ posts }: { posts: any }) {
               <div className="flex justify-center">
                 <Link href="/recipes" className="">
                   <Image
-                    className="hover:grow hover:shadow-lg w-auto rounded-xl"
-                    src="http://embperujapan.org/gastronomia/lomosaltado640x480.jpg"
+                    className="hover:grow hover:shadow-lg rounded-xl"
+                    src="http://embperujapan.org/gastronomia/coffeevideos450x300.jpg"
                     width={640}
                     height={480}
                     alt="Restaurants"
@@ -97,8 +97,8 @@ export default function CoffeePage ({ posts }: { posts: any }) {
               <div className="flex justify-center">
                 <Link href="/suppliers" className="">
                   <Image
-                    className="hover:grow hover:shadow-lg w-auto rounded-xl"
-                    src="http://embperujapan.org/gastronomia/productos.jpg"
+                    className="hover:grow hover:shadow-lg rounded-xl"
+                    src="http://embperujapan.org/gastronomia/coffeevideos450x300.jpg"
                     width={640}
                     height={480}
                     alt="販売会社 | SUPPLIERS "
@@ -120,8 +120,8 @@ export default function CoffeePage ({ posts }: { posts: any }) {
               <div className="flex justify-center">
                 <Link href="/coffee/videos" className="">
                   <Image
-                    className="hover:grow hover:shadow-lg w-auto rounded-xl"
-                    src="http://embperujapan.org/gastronomia/videos640v2.jpg"
+                    className="hover:grow hover:shadow-lg rounded-xl"
+                    src="http://embperujapan.org/gastronomia/coffeevideos450x300.jpg"
                     width={640}
                     height={480}
                     alt="ビデオ | VIDEOS"
