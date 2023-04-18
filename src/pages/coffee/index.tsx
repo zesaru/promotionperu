@@ -59,7 +59,7 @@ export default function CoffeePage ({ posts }: { posts: any }) {
                   />
                 </a>
               </div>
-              <a href="/restaurants" className="" target="_blank">
+              <a href="http://embperujapan.org/coffee/PeruCoffee.pdf" className="" target="_blank">
                 <div className="flex justify-start">
                   <p className="py-4 text-xl hover:grow">
                     { locale === posts[0].__i18n_lang ? "ペルー産コーヒー" : "PERUVIAN COFFEE" }
@@ -68,30 +68,28 @@ export default function CoffeePage ({ posts }: { posts: any }) {
               </a>
             </div>
           </div>
-          {/* Receta */}
           <div className="w-full md:w-1/3 xl:w-1/4 p-3 md:p-4 lg:p-6 flex flex-col">
             <div>
               <div className="flex justify-center">
-                <Link href="/recipes" className="">
+                <Link href="/coffee/scaj2022" className="">
                   <Image
                     className="hover:grow hover:shadow-lg rounded-xl"
-                    src="http://embperujapan.org/gastronomia/coffeevideos450x300.jpg"
+                    src="http://embperujapan.org/coffee/coffeescaj450x300.jpg"
                     width={640}
                     height={480}
-                    alt="Restaurants"
+                    alt="SCAJ 2022"
                   />
                 </Link>
               </div>
-              <Link href="/recipes" className="">
+              <Link href="/coffee/scaj2022" className="">
                 <div className="flex justify-start">
                   <p className="py-4 text-xl hover:grow">
-                  { locale === posts[0].__i18n_lang ? "ペルー料理レシピ" : "PERUVIAN RECIPES" }
+                  { locale === posts[0].__i18n_lang ? "SCAJ 2022" : "SCAJ 2022" }
                   </p>
                 </div>
               </Link>
             </div>
           </div>
-          {/* Video */}
           <div className="w-full md:w-1/3 xl:w-1/4 p-3 md:p-4 lg:p-6 flex flex-col">
             <div>
               <div className="flex justify-center">
@@ -114,7 +112,6 @@ export default function CoffeePage ({ posts }: { posts: any }) {
               </Link>
             </div>
           </div>
-          {/* Video */}
           <div className="w-full md:w-1/3 xl:w-1/4 p-3 md:p-4 lg:p-6 flex flex-col">
             <div>
               <div className="flex justify-center">
