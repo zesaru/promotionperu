@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { createClient, groq } from "next-sanity";
 import { BsTranslate } from "react-icons/bs";
+import HamburgerMenu from "./HamburgerMenu";
 
 const clientConfig = {
   projectId,
@@ -48,7 +49,7 @@ export default function Header() {
 
   return (
     <nav id="header" className="w-full z-30 top-0 py-1">
-      <div className="w-full container mx-auto flex flex-wrap items-center md:justify-between  mt-0 px-6 py-3">
+      <div className="w-full container mx-auto flex flex-wrap items-center md:justify-between  mt-0 px-1 py-1 lg:px-6 lg:py-3 ">
         <label htmlFor="menu-toggle" className="cursor-pointer lg:hidden block">
           <svg
             className="fill-current text-gray-900"
@@ -57,26 +58,26 @@ export default function Header() {
             height={20}
             viewBox="0 0 20 20"
           >
-            <title>menu</title>
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
           </svg>
         </label>
         <input className="hidden" type="checkbox" id="menu-toggle" />
         <div
-          className="hidden lg:flex lg:items-center lg:w-auto w-full order-3 lg:order-1"
+          className="hidden lg:flex lg:items-center lg:w-auto w-full order-3 lg:order-1 bg-red-600 lg:bg-white bg-opacity-90"
           id="menu"
         >
           <nav>
-            <ul className="lg:flex items-center align-middle justify-between gap-3 text-base text-gray-600 pt-4 md:pt-0">
+            <ul className="lg:flex items-center align-middle justify-between gap-3 text-base text-white lg:text-gray-600 pt-4 md:pt-0">
               {navBar.menus
                 .filter((item) => item.locale === locale)
                 .map((item, i) => (
                   <li
-                    className="lg:border-b-4  lg:border-red-600"
+                    className="lg:border-b-4 border-red-600"
                     key={item.title}
                   >
+                    <span className="bg-white rounded-full text-white">.</span>
                     <Link
-                      className="inline-block no-underline py-2 px-4 "
+                      className="inline-block no-underline py-2 px-4"
                       href={`/${item.slug}`}
                     >
                       {item.title}
@@ -105,7 +106,7 @@ export default function Header() {
             })}
           </div>
         </div>
-        <div className="order-1 md:order-2 mx-auto md:mr-0">
+        <div className="flex order-1 md:order-2 mx-auto md:mr-0">
           <Link
             className="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl md:gap-1"
             href="/"

@@ -13,13 +13,12 @@ const Scaj2022 = ({ posts }: { posts: any }) => {
     (post: { menu: string }) => `/${post.menu}` === route
   );
 
-  console.log(data)
   return (
     <Layout language={locale}>
       <Banner
         alt={"Cesa"}
         src="http://embperujapan.org/gastronomia/coffee.jpg"
-        src2="http://embperujapan.org/gastronomia/coffee.jpg"
+        src2="http://embperujapan.org/gastronomia/coffee400.jpg"
       />
       <div className="container py-4 md:py-6 px-4 mx-auto">
         <h2 className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8">

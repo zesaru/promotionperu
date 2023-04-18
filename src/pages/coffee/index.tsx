@@ -19,7 +19,7 @@ export default function CoffeePage ({ posts }: { posts: any }) {
   const altBanner =  `${data[0].title}  ${data[1].title}`
   return (
     <Layout language={locale}>
-        <Banner alt={altBanner} src="http://embperujapan.org/gastronomia/coffee.jpg" src2="http://embperujapan.org/gastronomia/coffee.jpg" />
+        <Banner alt={altBanner} src="http://embperujapan.org/gastronomia/coffee.jpg" src2="http://embperujapan.org/gastronomia/coffee400.jpg" />
         <div className="container py-4 md:py-6 px-4 mx-auto">
           <h2
             className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8"
