@@ -16,7 +16,7 @@ const GastronomyPage = ({ posts }: { posts: any }) => {
     (post: { menu: string }) => `/${post.menu}` === route
   );
   return (
-    <Layout language={locale} title="Gastronomy ガストロノミー">
+    <Layout language={locale} title={data[0].__i18n_lang === locale ? data[0].title : data[1].title}>
       <Banner alt="Gastronoy" src="http://embperujapan.org/gastronomia/peruinjapangastronomia.jpg" src2="http://embperujapan.org/gastronomia/peruinjapangastronomy400.jpg" />
       <div className="container py-4 md:py-6 px-4 mx-auto">
         <h2

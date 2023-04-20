@@ -5,7 +5,7 @@ import PortableText from "react-portable-text";
 import Banner from "src/components/Banner";
 import Layout from "src/components/Layout";
 
-const Recipes = ({ posts }: { posts: any }) => {
+const Cacao = ({ posts }: { posts: any }) => {
   const { locale, route } = useRouter();
 
   const data = posts.filter(
@@ -13,9 +13,9 @@ const Recipes = ({ posts }: { posts: any }) => {
   );
 
   return (
-    <Layout language={locale}>
+    <Layout language={locale} title={data[0].__i18n_lang === locale ? data[0].title : data[1].title}>
       <Banner
-        alt="Pisco Recipes"
+        alt={data[0].__i18n_lang === locale ? data[0].title : data[1].title}
         src="http://embperujapan.org/gastronomia/peruinjapanbannercacao.jpg"
         src2="http://embperujapan.org/gastronomia/peruinjapanbannercacao400.jpg"
       />
@@ -29,8 +29,8 @@ const Recipes = ({ posts }: { posts: any }) => {
         <PortableText
           content={
             locale === posts[0].__i18n_lang
-              ? posts[0].content
-              : posts[1].content
+              ? data[0].content
+              : data[1].content
           }
           serializers={{
             normal: (props: {
@@ -48,9 +48,9 @@ const Recipes = ({ posts }: { posts: any }) => {
   );
 };
 
-export default Recipes;
+export default Cacao;
 
-export const getStaticProps: GetStaticProps = async (ctx) => {
+export const getStaticProps: GetStaticProps = async () => {
   const posts = await getAllPosts();
   return {
     props: {
