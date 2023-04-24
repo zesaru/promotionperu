@@ -116,7 +116,7 @@ const GastronomyPage = ({ posts }: { posts: any }) => {
           <div className="w-full md:w-1/3 xl:w-1/4 p-3 md:p-4 lg:p-6 flex flex-col">
             <div>
               <div className="flex justify-center">
-                <Link href="/videos" className="">
+                <Link href="gastronomy/videos" className="">
                   <Image
                     className="hover:grow hover:shadow-lg w-auto rounded-xl"
                     src="http://embperujapan.org/gastronomia/videos640v2.jpg"
@@ -126,7 +126,7 @@ const GastronomyPage = ({ posts }: { posts: any }) => {
                   />
                 </Link>
               </div>
-              <Link href="/videos" className="">
+              <Link href="gastronomy/videos" className="">
                 <div className="flex justify-start">
                   <p className="py-4 text-xl hover:grow">
                   { locale === posts[0].__i18n_lang ? "ビデオ" : "VIDEOS " }
@@ -143,7 +143,7 @@ const GastronomyPage = ({ posts }: { posts: any }) => {
 
 export default GastronomyPage;
 
-export const getStaticProps: GetStaticProps = async (ctx) => {
+export const getStaticProps: GetStaticProps = async () => {
   const posts = await getAllPosts();
   return {
     props: {
