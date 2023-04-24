@@ -7,11 +7,12 @@ import Card from "src/components/Card";
 
 import Layout from "../../components/Layout";
 
+
 export default function Restaurants({ cities: cities }: { cities: any }) {
   const { locale } = useRouter();
 
   return (
-    <Layout language={locale}>
+    <Layout language={locale} title="Restaurants">
     <Banner alt="Restaurants" src="http://embperujapan.org/gastronomia/restaurantsv2.jpg" src2="http://embperujapan.org/gastronomia/restaurants400.jpg" />
       <section className="bg-white py-8">
         <div className="container mx-auto flex items-center flex-wrap pt-4 pb-12">

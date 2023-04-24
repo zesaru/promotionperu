@@ -1,4 +1,5 @@
 import { apiVersion,dataset, projectId } from "lib/sanity.api";
+import { getAllCities } from "lib/sanity.client";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import { createClient, groq } from "next-sanity";
@@ -15,13 +16,10 @@ const clientConfig = {
   useCdn: false,
 };
 
-
 type CardProps = {
   restaurants: Array<any>;
   slug: string;
-
 };
-
 
 function getRestaurants(slug: string) {
   return createClient(clientConfig).fetch(groq`
@@ -39,22 +37,11 @@ function getRestaurants(slug: string) {
 `, { slug });
 }
 
-function getCities() {
-  return createClient(clientConfig).fetch(groq`
-    *[_type == "cities"]{
-      _id,
-      city,
-      "image": image.asset->url,
-    }
-  `);
-}
-
-
 
 const Slug = ({restaurants, slug}:CardProps) => {
   const { locale } = useRouter();
   return (
-    <Layout language={locale}>
+    <Layout language={locale} title="Restaurants">
       <Banner 
         alt="Restaurants"
         src="http://embperujapan.org/gastronomia/restaurantsbanner2.jpg"
@@ -85,7 +72,7 @@ export default Slug;
 
 export const getStaticPaths: GetStaticPaths = async (ctx) => {
 
-  const cities = await getCities();
+  const cities = await getAllCities();
   const LANGUAGES = ['', 'en'];
   const paths = [];
   
