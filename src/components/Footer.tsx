@@ -12,9 +12,7 @@ export default function Footer() {
             <div className="px-3 md:px-0">
               <h3 className="font-bold text-gray-900">About</h3>
               <p className="py-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Maecenas vel mi ut felis tempus commodo nec id erat. Suspendisse
-                consectetur dapibus velit ut lacinia.
+                The images related to Peru are copyright protected by ©PromPeru.
               </p>
             </div>
           </div>

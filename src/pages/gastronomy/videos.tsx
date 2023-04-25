@@ -16,7 +16,7 @@ const GastronomyVideosPage = ({ posts }: { posts: any }) => {
   );
 
   return (
-    <Layout language={locale}>
+    <Layout language={locale} title={data[0].__i18n_lang === locale ? data[0].title : data[1].title}>
       <Banner
         alt="Gastronoy"
         src="http://embperujapan.org/gastronomia/peruinjapangastronomia.jpg"
