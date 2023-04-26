@@ -2,35 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { ImDownload2 } from "react-icons/im";
+import Banner from "src/components/Banner";
 
 import Layout from "../../components/Layout";
 
 const ProductsPage = () => {
   const { locale } = useRouter();
   return (
-    <Layout language={locale}>
-      <section className="flex justify-center align-middle ">
-        <div className="">
-          <Image
-            alt="Gastronomy"
-            src="http://embperujapan.org/gastronomia/peruinjapaninversiones.jpg"
-            width={1500}
-            height={660}
-            className="hidden md:block md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl rounded-3xl shadow-2xl"
-          />
-        </div>
-      </section>
-      <section className="flex justify-center align-middle ">
-        <div className="mx-auto block md:hidden">
-          <Image
-            alt="Investment guide 2022"
-            src="http://embperujapan.org/gastronomia/inversiones400.jpg"
-            width={400}
-            height={380}
-            className="max-w-screen-xs rounded-3xl shadow-2xl"
-          />
-        </div>
-      </section>
+    <Layout language={locale} title="Investment guide 2022">
+      <Banner alt={"Investment guide 2022"} src={"http://embperujapan.org/gastronomia/peruinjapaninversiones.jpg"} src2={"http://embperujapan.org/gastronomia/inversiones400.jpg"} />
       <div className="container p-6  mx-auto">
         <div className="flex uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8">
           <span className="pr-1 w-1 h-8 bg-red-500 border border-red-600"></span>
