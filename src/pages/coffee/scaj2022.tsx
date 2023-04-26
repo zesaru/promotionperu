@@ -14,9 +14,9 @@ const Scaj2022 = ({ posts }: { posts: any }) => {
   );
 
   return (
-    <Layout language={locale}>
+    <Layout language={locale} title={data[0].__i18n_lang === locale ? data[0].title : data[1].title}>
       <Banner
-        alt={"Cesa"}
+        alt={"SCAJ2022"}
         src="http://embperujapan.org/gastronomia/coffee.jpg"
         src2="http://embperujapan.org/gastronomia/coffee400.jpg"
       />
