@@ -50,7 +50,7 @@ const GastronomyPage = ({ posts }: { posts: any }) => {
                 <Link href="/restaurants" className="">
                   <Image
                     className="hover:grow hover:shadow-lg w-auto rounded-xl"
-                    src="http://embperujapan.org/gastronomia/restaurantsv640v2.jpg"
+                    src="http://embperujapan.org/gastronomia/perurestaurants640x480.jpg"
                     width={640}
                     height={480}
                     alt="Restaurants"

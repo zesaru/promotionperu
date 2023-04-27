@@ -4,6 +4,7 @@ import { GetStaticProps } from "next/types";
 import PortableText from "react-portable-text";
 import Banner from "src/components/Banner";
 import Layout from "src/components/Layout";
+import YoutubeEmbed from "src/components/YoutubeEmbed";
 
 const Cacao = ({ posts }: { posts: any }) => {
   const { locale, route } = useRouter();
@@ -13,7 +14,10 @@ const Cacao = ({ posts }: { posts: any }) => {
   );
 
   return (
-    <Layout language={locale} title={data[0].__i18n_lang === locale ? data[0].title : data[1].title}>
+    <Layout
+      language={locale}
+      title={data[0].__i18n_lang === locale ? data[0].title : data[1].title}
+    >
       <Banner
         alt={data[0].__i18n_lang === locale ? data[0].title : data[1].title}
         src="http://embperujapan.org/gastronomia/peruinjapanbannercacao.jpg"
@@ -28,21 +32,22 @@ const Cacao = ({ posts }: { posts: any }) => {
         </div>
         <PortableText
           content={
-            locale === posts[0].__i18n_lang
-              ? data[0].content
-              : data[1].content
+            locale === posts[0].__i18n_lang ? data[0].content : data[1].content
           }
           serializers={{
             normal: (props: {
-              children:
-                | string
-                | number
-                | boolean
-                | null
-                | undefined;
+              children: string | number | boolean | null | undefined;
             }) => <p className="mt-8 mb-8">{props.children}</p>,
           }}
         />
+        <div>
+          <div className="flex justify-center">
+            <YoutubeEmbed embedId="NomaFRLxGmc" />
+          </div>
+          <div className="flex justify-center md:justify-start">
+            <p className="py-4 text-xl hover:grow">Cacao - カカオ</p>
+          </div>
+        </div>
       </div>
     </Layout>
   );

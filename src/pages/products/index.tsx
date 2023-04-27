@@ -65,10 +65,10 @@ const ProductsPage = () => {
             <span className="py-10 md:py-0 border-l-8 border-red-500 h-2/3"></span>
             <Link href="/cacao">
               <div className="pl-2">
-                <h3 className="text-xl hover:grow">{locale === "en" ? "Cocoa" : "カカオ"}</h3>
+                <h3 className="text-xl hover:grow">{locale === "en" ? "Cacao" : "カカオ"}</h3>
                 <p>
                   {locale === "en"
-                    ? `Cocoa is a native species of America, probably native to
+                    ? `Cacao is a native species of America, probably native to
                   Western Amazonia. In Peru, cacao is cultivated in the jungle
                   of Loreto, San Martín, Ucayali, Huánuco, Junín, Pasco, Madre
                   de Dios, Cusco and Ayacucho.`

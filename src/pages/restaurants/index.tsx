@@ -13,7 +13,7 @@ export default function Restaurants({ cities: cities }: { cities: any }) {
 
   return (
     <Layout language={locale} title="Restaurants">
-    <Banner alt="Restaurants" src="http://embperujapan.org/gastronomia/restaurantsv2.jpg" src2="http://embperujapan.org/gastronomia/restaurants400.jpg" />
+    <Banner alt="Restaurants" src="http://embperujapan.org/gastronomia/restaurantsbanner2.jpg" src2="http://embperujapan.org/gastronomia/restaurantsbanner2400.jpg" />
       <section className="bg-white py-8">
         <div className="container mx-auto flex items-center flex-wrap pt-4 pb-12">
           {cities.map(
