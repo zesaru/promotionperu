@@ -30,6 +30,41 @@ const Cacao = ({ posts }: { posts: any }) => {
             {data[0].__i18n_lang === locale ? data[0].title : data[1].title}
           </h2>
         </div>
+        <div className="w-full flex">
+          <div className="w-1/2">
+            <div>
+              <div className="flex justify-center items-center">
+                <YoutubeEmbed embedId="NomaFRLxGmc" />
+              </div>
+              <div className="flex justify-center  md:justify-start">
+                <p className="py-4 text-xl hover:grow">Cacao - カカオ</p>
+              </div>
+            </div>
+          </div>
+          <div className="w-1/2 p-4">
+            <p className="mt-4 mb-4">
+              Cacao is a native species of America, probably native to Western
+              Amazonia. In Peru, cacao is cultivated in the jungle of Loreto,
+              San Martín, Ucayali, Huánuco, Junín, Pasco, Madre de Dios, Cusco
+              and Ayacucho. Peruvian cacao has earned a good reputation in Japan
+              due to its high quality and exceptional flavor.
+            </p>
+            <p className="mt-4 mb-4">
+              The Japanese value high-quality food products and are willing to
+              pay premium prices for them, which makes Peruvian cacao very
+              popular in the Japanese market. In addition, Peruvian cacao is
+              considered one of the best in the world due to its variety and
+              richness in flavors, and it is used in the production of
+              high-quality chocolates and other confectionery products in Japan.
+            </p>
+            <p className="mt-4 mb-4">
+              Peruvian cacao farmers have worked hard to improve the quality of
+              their product and develop a reliable supply chain, which has
+              allowed Peruvian cacao to become a highly valued product in the
+              Japanese market.
+            </p>
+          </div>
+        </div>
         <PortableText
           content={
             locale === posts[0].__i18n_lang ? data[0].content : data[1].content
@@ -40,14 +75,6 @@ const Cacao = ({ posts }: { posts: any }) => {
             }) => <p className="mt-8 mb-8">{props.children}</p>,
           }}
         />
-        <div>
-          <div className="flex justify-center">
-            <YoutubeEmbed embedId="NomaFRLxGmc" />
-          </div>
-          <div className="flex justify-center md:justify-start">
-            <p className="py-4 text-xl hover:grow">Cacao - カカオ</p>
-          </div>
-        </div>
       </div>
     </Layout>
   );
