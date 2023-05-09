@@ -30,8 +30,8 @@ const Cacao = ({ posts }: { posts: any }) => {
             {data[0].__i18n_lang === locale ? data[0].title : data[1].title}
           </h2>
         </div>
-        <div className="w-full flex">
-          <div className="w-1/2">
+        <div className="w-full flex flex-col lg:flex-row">
+          <div className="flex flex-col justify-center w-full lg:w-1/2">
             <div>
               <div className="flex justify-center items-center">
                 <YoutubeEmbed embedId="NomaFRLxGmc" />
@@ -41,7 +41,7 @@ const Cacao = ({ posts }: { posts: any }) => {
               </div>
             </div>
           </div>
-          <div className="w-1/2 p-4">
+          <div className="flex flex-col justify-center lg:w-1/2 w-full lg:pl-4">
             <p className="mt-4 mb-4">
               Cacao is a native species of America, probably native to Western
               Amazonia. In Peru, cacao is cultivated in the jungle of Loreto,

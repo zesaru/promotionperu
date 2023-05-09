@@ -15,6 +15,9 @@ module.exports = {
       fontFamily: {
         sans: ["var(--bree-font)", ...fontFamily.sans],
       },
+      height: {
+        '192': '48rem',
+      }
     },
   },
   plugins: [],
