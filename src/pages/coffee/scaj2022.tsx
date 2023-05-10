@@ -1,11 +1,13 @@
 import { getAllPosts } from "lib/sanity.client";
 import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useCallback, useState } from "react";
+import Gallery from "react-photo-gallery";
 import PortableText from "react-portable-text";
 import Banner from "src/components/Banner";
 import Layout from "src/components/Layout";
 
+import { photos } from "./photos";
 const Scaj2022 = ({ posts }: { posts: any }) => {
   const { locale, route } = useRouter();
 
@@ -14,7 +16,10 @@ const Scaj2022 = ({ posts }: { posts: any }) => {
   );
 
   return (
-    <Layout language={locale} title={data[0].__i18n_lang === locale ? data[0].title : data[1].title}>
+    <Layout
+      language={locale}
+      title={data[0].__i18n_lang === locale ? data[0].title : data[1].title}
+    >
       <Banner
         alt={"SCAJ2022"}
         src="http://embperujapan.org/gastronomia/coffee.jpg"
@@ -25,23 +30,19 @@ const Scaj2022 = ({ posts }: { posts: any }) => {
           {data[0].__i18n_lang === locale ? data[0].title : data[1].title}
         </h2>
         <PortableText
-            content={
-              locale === data[0].__i18n_lang
-                ? data[0].content
-                : data[1].content
-            }
-            serializers={{
-              normal: (props: {
-                children:
-                  | string
-                  | number
-                  | boolean
-                  | null
-                  | undefined;
-              }) => <p className="mt-8 mb-8">{props.children}</p>,
-            }}
-          />
+          content={
+            locale === data[0].__i18n_lang ? data[0].content : data[1].content
+          }
+          serializers={{
+            normal: (props: {
+              children: string | number | boolean | null | undefined;
+            }) => <p className="mt-8 mb-8">{props.children}</p>,
+          }}
+        />
+         <Gallery photos={photos} />
       </div>
+      
+
     </Layout>
   );
 };
