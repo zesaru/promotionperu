@@ -24,3 +24,13 @@ export const allCities = groq`
       "image": image.asset->url,
     }
 `;
+
+export const allRecipes = groq`
+  *[_type == "recipes"]{
+      _id,
+      title,
+      ingredients,
+      preparation,
+      "image": image.asset->url,
+    }
+`;

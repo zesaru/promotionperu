@@ -4,6 +4,7 @@ import { createClient } from 'next-sanity'
 import {
   allCities,
   allPost,
+  allRecipes,
 } from './sanity.queries'
 
 /**
@@ -24,6 +25,13 @@ export async function getAllPosts() {
 export async function getAllCities() {
   if (client) {
     return (await client.fetch(allCities)) || []
+  }
+  return []
+}
+
+export async function getAllRecipes() {
+  if (client) {
+    return (await client.fetch(allRecipes)) || []
   }
   return []
 }
