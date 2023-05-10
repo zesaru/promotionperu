@@ -45,7 +45,6 @@ const ImportingPage = (({ posts }: { posts: any }) => {
                 | null
                 | undefined;
             }) => {
-              console.log(props.children);
               return (
                props.children== '' ? '' : 
               <div className="w-full md:w-1/3 xl:w-1/4 p-3 md:p-4 lg:p-6">{props.children}</div>

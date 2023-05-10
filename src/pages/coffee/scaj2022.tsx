@@ -1,13 +1,12 @@
 import { getAllPosts } from "lib/sanity.client";
 import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
-import React, { useCallback, useState } from "react";
+import React from "react";
 import Gallery from "react-photo-gallery";
 import PortableText from "react-portable-text";
 import Banner from "src/components/Banner";
 import Layout from "src/components/Layout";
 
-import { photos } from "./photos";
 const Scaj2022 = ({ posts }: { posts: any }) => {
   const { locale, route } = useRouter();
 
@@ -39,7 +38,7 @@ const Scaj2022 = ({ posts }: { posts: any }) => {
             }) => <p className="mt-8 mb-8">{props.children}</p>,
           }}
         />
-         <Gallery photos={photos} />
+         <Gallery photos={Photos} />
       </div>
       
 
@@ -57,3 +56,51 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
     },
   };
 };
+
+const Photos = [
+  {
+    src: "http://embperujapan.org/gastronomia/SCAJ2022/scaj_opening_roberto_seminario.jpg",
+    width: 4,
+    height: 3
+  },
+  {
+    src: "http://embperujapan.org/gastronomia/SCAJ2022/scaj_2022_1.jpg",
+    width: 1,
+    height: 1
+  },
+  {
+    src: "http://embperujapan.org/gastronomia/SCAJ2022/scaj_2022_flyer.jpg",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "http://embperujapan.org/gastronomia/SCAJ2022/scaj_2022_5.jpg",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "http://embperujapan.org/gastronomia/SCAJ2022/scaj_2022_6.jpg",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "http://embperujapan.org/gastronomia/SCAJ2022/scaj_2022.jpg",
+    width: 4,
+    height: 3
+  },
+  {
+    src: "http://embperujapan.org/gastronomia/SCAJ2022/scaj_2022_2.jpg",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "http://embperujapan.org/gastronomia/SCAJ2022/scaj_2022_4.jpg",
+    width: 4,
+    height: 3
+  },
+  {
+    src: "http://embperujapan.org/gastronomia/SCAJ2022/scaj_2022_3.jpg",
+    width: 4,
+    height: 3
+  }
+];
