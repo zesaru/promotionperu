@@ -29,8 +29,19 @@ export const allRecipes = groq`
   *[_type == "recipes"]{
       _id,
       title,
+      slug,
       ingredients,
       preparation,
+      "image": image.asset->url,
+    }
+`;
+
+export const Recipebyslug = groq`
+    *[_type == "recipes" && slug == $slug ] {
+      _id,
+      title,
+      ingredients,
+      preparation,      
       "image": image.asset->url,
     }
 `;

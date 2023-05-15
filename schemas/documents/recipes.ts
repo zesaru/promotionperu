@@ -12,6 +12,12 @@ export default defineType({
       validation: (rule) => rule.required(),
     },
     {
+      name: "slug",
+      title: "Slug",
+      type: "string",
+      validation: (rule) => rule.required(),
+    },
+    {
       name: "ingredients",
       title: "Ingredients",
       type: "array",

@@ -5,19 +5,22 @@ import React from "react";
 type CardProps = {
   title: string;
   image: string;
+  slug: string;
 };
 
 export default function CardRecipes({
   title,
   image,
+  slug,
 }: CardProps) {
   return (
     <div className="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
       <div className="flex flex-col justify-center items-center">
-        <Link href="#" target="_blank">
+      
+        <Link href={`/recipes/${slug}`} target="_blank">
           <Image
             loading="lazy"
-            className="hover:grow hover:shadow-lg"
+            className="hover:grow hover:shadow-lg rounded-xl"
             alt={title}
             src={image}
             height={450}
