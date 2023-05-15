@@ -13,6 +13,7 @@ module.exports = {
       "cdn.sanity.io",
       "embperujapan.org",
       "cdn.pixabay.com",
+      "res.cloudinary.com",
     ],
   },
   webpack: (config) => {
