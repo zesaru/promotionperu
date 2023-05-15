@@ -59,55 +59,55 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 
 const Photos = [
   {
-    src: "http://embperujapan.org/gastronomia/SCAJ2022/scaj_opening_roberto_seminario.jpg",
+    src: "https://res.cloudinary.com/de5ud82os/image/upload/v1684126978/WEB/SCAJ2022/scaj_opening_roberto_seminario_h2fbym.jpg",
     width: 4,
     height: 3,
     alt: "SCAJ2022 Opening Roberto Seminario"
   },
   {
-    src: "http://embperujapan.org/gastronomia/SCAJ2022/scaj_2022_1.jpg",
+    src: "https://res.cloudinary.com/de5ud82os/image/upload/v1684126979/WEB/SCAJ2022/scaj_2022_1_wjorax.jpg",
     width: 1,
     height: 1,
     alt: "SCAJ2022"
   },
   {
-    src: "http://embperujapan.org/gastronomia/SCAJ2022/scaj_2022_flyer.jpg",
+    src: "https://res.cloudinary.com/de5ud82os/image/upload/v1684126978/WEB/SCAJ2022/scaj_2022_flyer_vhah8s.jpg",
     width: 3,
     height: 4,
     alt: "SCAJ2022 Flyer"
   },
   {
-    src: "http://embperujapan.org/gastronomia/SCAJ2022/scaj_2022_5.jpg",
+    src: "https://res.cloudinary.com/de5ud82os/image/upload/v1684126978/WEB/SCAJ2022/scaj_2022_5_aswspf.jpg",
     width: 3,
     height: 4,
     alt: "SCAJ2022"
   },
   {
-    src: "http://embperujapan.org/gastronomia/SCAJ2022/scaj_2022_6.jpg",
+    src: "https://res.cloudinary.com/de5ud82os/image/upload/v1684126978/WEB/SCAJ2022/scaj_2022_6_vrhwrm.jpg",
     width: 3,
     height: 4,
     alt: "SCAJ2022"
   },
   {
-    src: "http://embperujapan.org/gastronomia/SCAJ2022/scaj_2022.jpg",
+    src: "https://res.cloudinary.com/de5ud82os/image/upload/v1684126978/WEB/SCAJ2022/scaj_2022_dyxqa3.jpg",
     width: 4,
     height: 3,
     alt: "SCAJ2022"
   },
   {
-    src: "http://embperujapan.org/gastronomia/SCAJ2022/scaj_2022_2.jpg",
+    src: "https://res.cloudinary.com/de5ud82os/image/upload/v1684126978/WEB/SCAJ2022/scaj_2022_2_fsl4ms.jpg",
     width: 3,
     height: 4,
     alt: "SCAJ2022"
   },
   {
-    src: "http://embperujapan.org/gastronomia/SCAJ2022/scaj_2022_4.jpg",
+    src: "https://res.cloudinary.com/de5ud82os/image/upload/v1684126978/WEB/SCAJ2022/scaj_2022_4_u2c3uw.jpg",
     width: 4,
     height: 3,
     alt: "SCAJ2022"
   },
   {
-    src: "http://embperujapan.org/gastronomia/SCAJ2022/scaj_2022_3.jpg",
+    src: "https://res.cloudinary.com/de5ud82os/image/upload/v1684126979/WEB/SCAJ2022/scaj_2022_3_lbypfg.jpg",
     width: 4,
     height: 3,
     alt: "SCAJ2022"
