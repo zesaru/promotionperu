@@ -52,7 +52,7 @@ const ImportingPage = (({ posts }: { posts: any }) => {
             },
           }}
         />
-        </div>
+      </div>
     </Layout>
   );
 });

@@ -17,7 +17,7 @@ export default function CardRecipes({
     <div className="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
       <div className="flex flex-col justify-center items-center">
       
-        <Link href={`/recipes/${slug}`} target="_blank">
+        <Link href={`/recipes/${slug}`} >
           <Image
             loading="lazy"
             className="hover:grow hover:shadow-lg rounded-xl"
