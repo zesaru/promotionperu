@@ -37,7 +37,7 @@ const InvesmentPage = () => {
             <div className="flex flex-col justify-center lg:w-1/2 w-full lg:pl-4">
               <p className="mt-4 mb-4">
                 {locale === "en"
-                  ? `Peru&apos;s robust economy, rich in natural resources and strategic
+                  ? `Peru's robust economy, rich in natural resources and strategic
                 Pacific location, makes it an enticing hub for business and
                 investment. With policies promoting an open and competitive
                 market, it has attracted significant investments. The young,

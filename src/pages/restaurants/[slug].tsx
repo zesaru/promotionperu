@@ -30,8 +30,6 @@ function getRestaurants(slug: string) {
       "city": city->city,
       facebook,
       homepage,
-      phone,
-      address,
       enabled,
     } | order(name)
 `, { slug });
@@ -57,8 +55,6 @@ const Slug = ({restaurants, slug}:CardProps) => {
               imageAlt={restaurant.name}
               facebook={restaurant.facebook}
               homepage={restaurant.homepage}
-              phone={restaurant.phone}
-              address={restaurant.address}
               city={restaurant.city}
             />
           ))}
