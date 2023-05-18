@@ -46,7 +46,7 @@ const ProductsPage = () => {
             <span className="py-10 md:py-0 border-l-8 border-red-500 h-2/3"></span>
             <Link href="/pisco">
               <div className="pl-2 md:pr-10">
-                <h3 className="text-xl hover:grow">{locale === "en" ? "Pisco" : "ピスコ"}</h3>
+                <h3 className="text-xl">{locale === "en" ? "Pisco" : "ピスコ"}</h3>
                 <p>
                   {locale === "en"
                     ? `Pisco is a distilled spirit made from fermented must (juice)
@@ -65,7 +65,7 @@ const ProductsPage = () => {
             <span className="py-10 md:py-0 border-l-8 border-red-500 h-2/3"></span>
             <Link href="/cacao">
               <div className="pl-2">
-                <h3 className="text-xl hover:grow">{locale === "en" ? "Cacao" : "カカオ"}</h3>
+                <h3 className="text-xl">{locale === "en" ? "Cacao" : "カカオ"}</h3>
                 <p>
                   {locale === "en"
                     ? `Cacao is a native species of America, probably native to
@@ -105,7 +105,7 @@ const ProductsPage = () => {
             <span className="py-10 md:py-0 border-l-8 border-red-500 h-2/3"></span>
             <Link href="/coffee">
               <div className="pl-2">
-                <h3 className="text-xl hover:grow">{ locale ==='en' ? "Coffee" : "コーヒー"}</h3>
+                <h3 className="text-xl">{ locale ==='en' ? "Coffee" : "コーヒー"}</h3>
                 <p>{
                   locale === "en" ?
                   `Peru produces Arabica coffee with various flavors, aromas, and acidity in the central Amazon region. `
