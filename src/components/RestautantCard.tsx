@@ -9,14 +9,11 @@ type CardProps = {
   city: string;
   facebook: string;
   homepage: string;
-  phone: string;
-  address: string;
 };
 
 export default function CardR({
   name,
   imageSrc,
-  city,
   facebook,
   homepage,
 }: CardProps) {

@@ -44,7 +44,7 @@ const GastronomyPage = ({ posts }: { posts: any }) => {
       </div>
       <section className="bg-white py-1 ">
         <div className="container mx-auto flex flex-wrap md:pt-4 pb-12">
-          <div className="w-full md:w-1/3 xl:w-1/4 p-3 md:p-4 lg:p-6 flex flex-col">
+          <div className="w-full md:w-1/3 p-3 md:p-4 lg:p-6 flex flex-col">
             <div>
               <div className="flex justify-center">
                 <Link href="/restaurants" className="">
@@ -66,9 +66,7 @@ const GastronomyPage = ({ posts }: { posts: any }) => {
               </Link>
             </div>
           </div>
-          {/* Receta */}
-          <div className="w-full md:w-1/3 xl:w-1/4 p-3 md:p-4 lg:p-6 flex flex-col">
-            <div>
+          <div className="w-full md:w-1/3 p-3 md:p-4 lg:p-6 flex flex-col">            <div>
               <div className="flex justify-center">
                 <Link href="/recipes" className="">
                   <Image
@@ -89,31 +87,7 @@ const GastronomyPage = ({ posts }: { posts: any }) => {
               </Link>
             </div>
           </div>
-          {/* Video */}
-          <div className="w-full md:w-1/3 xl:w-1/4 p-3 md:p-4 lg:p-6 flex flex-col">
-            <div>
-              <div className="flex justify-center">
-                <Link href="/suppliers" className="">
-                  <Image
-                    className="hover:grow hover:shadow-lg w-auto rounded-xl"
-                    src="http://embperujapan.org/gastronomia/productos.jpg"
-                    width={640}
-                    height={480}
-                    alt="販売会社 | SUPPLIERS "
-                  />
-                </Link>
-              </div>
-              <Link href="/restaurants" className="">
-                <div className="flex justify-center md:justify-start">
-                  <p className="py-4 text-xl hover:grow">
-                  { locale === posts[0].__i18n_lang ? "販売会社" : "SUPPLIERS " }
-                  </p>
-                </div>
-              </Link>
-            </div>
-          </div>
-          {/* Video */}
-          <div className="w-full md:w-1/3 xl:w-1/4 p-3 md:p-4 lg:p-6 flex flex-col">
+          <div className="w-full md:w-1/3 p-3 md:p-4 lg:p-6 flex flex-col">
             <div>
               <div className="flex justify-center">
                 <Link href="gastronomy/videos" className="">
