@@ -113,7 +113,7 @@ export default function CoffeePage({ posts }: { posts: any }) {
             <div className="w-full md:w-1/3 xl:w-1/4 p-3 md:p-4 lg:p-6 flex flex-col">
               <div>
                 <div className="flex justify-center">
-                  <Link href="/suppliers" className="">
+                  <Link href="coffee/suppliers" className="">
                     <Image
                       className="hover:grow hover:shadow-lg rounded-xl"
                       src="https://res.cloudinary.com/de5ud82os/image/upload/v1684201274/WEB/COFFEE/coffeesuppliers450x300_iwe7ro.jpg"
@@ -123,7 +123,7 @@ export default function CoffeePage({ posts }: { posts: any }) {
                     />
                   </Link>
                 </div>
-                <Link href="/restaurants" className="">
+                <Link href="coffee/suppliers" className="">
                   <div className="flex justify-start">
                     <p className="py-4 text-xl hover:grow">
                       {locale === posts[0].__i18n_lang
