@@ -12,6 +12,11 @@ export default defineType({
       validation: (rule) => rule.required(),
     },
     {
+      name: "title",
+      title: "Title",
+      type: "string",    
+    },
+    {
       name: "image",
       title: "Image",
       type: "image",

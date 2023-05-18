@@ -21,6 +21,7 @@ export const allCities = groq`
   *[_type == "cities"]{
       _id,
       city,
+      title,
       "image": image.asset->url,
     }
 `;
