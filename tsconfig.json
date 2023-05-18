@@ -24,7 +24,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/pages/suppliersx/suplierssx"  ],
   "exclude": [
     "node_modules"
   ]
