@@ -58,7 +58,7 @@ const GastronomyPage = ({ posts }: { posts: any }) => {
                 </Link>
               </div>
               <Link href="/restaurants" className="">
-                <div className="flex justify-start">
+                <div className="flex justify-center md:justify-start">
                   <p className="py-4 text-xl hover:grow">
                     { locale === posts[0].__i18n_lang ? "ペルー料理レストラン" : "PERUVIAN RESTAURANTS" }
                   </p>
@@ -76,12 +76,12 @@ const GastronomyPage = ({ posts }: { posts: any }) => {
                     src="http://embperujapan.org/gastronomia/lomosaltado640x480.jpg"
                     width={640}
                     height={480}
-                    alt="Restaurants"
+                    alt="Recipes"
                   />
                 </Link>
               </div>
               <Link href="/recipes" className="">
-                <div className="flex justify-start">
+                <div className="flex justify-center md:justify-start">
                   <p className="py-4 text-xl hover:grow">
                   { locale === posts[0].__i18n_lang ? "ペルー料理レシピ" : "PERUVIAN RECIPES" }
                   </p>
@@ -104,7 +104,7 @@ const GastronomyPage = ({ posts }: { posts: any }) => {
                 </Link>
               </div>
               <Link href="/restaurants" className="">
-                <div className="flex justify-start">
+                <div className="flex justify-center md:justify-start">
                   <p className="py-4 text-xl hover:grow">
                   { locale === posts[0].__i18n_lang ? "販売会社" : "SUPPLIERS " }
                   </p>
@@ -127,7 +127,7 @@ const GastronomyPage = ({ posts }: { posts: any }) => {
                 </Link>
               </div>
               <Link href="gastronomy/videos" className="">
-                <div className="flex justify-start">
+                <div className="flex justify-center md:justify-start">
                   <p className="py-4 text-xl hover:grow">
                   { locale === posts[0].__i18n_lang ? "ビデオ" : "VIDEOS " }
                   </p>
