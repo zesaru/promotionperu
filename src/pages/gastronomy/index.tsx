@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import PortableText from "react-portable-text";
+import Arrow from "src/components/Arrow";
 import Banner from "src/components/Banner";
 
 import Layout from "../../components/Layout";
@@ -58,10 +59,11 @@ const GastronomyPage = ({ posts }: { posts: any }) => {
                 </Link>
               </div>
               <Link href="/restaurants" className="">
-                <div className="flex justify-center md:justify-start">
-                  <p className="py-4 text-xl hover:grow">
+                <div className="flex justify-center md:justify-start items-center	 ">
+                  <p className="py-4 text-xl">
                     { locale === posts[0].__i18n_lang ? "ペルー料理レストラン" : "PERUVIAN RESTAURANTS" }
                   </p>
+                  <Arrow />
                 </div>
               </Link>
             </div>
@@ -79,10 +81,11 @@ const GastronomyPage = ({ posts }: { posts: any }) => {
                 </Link>
               </div>
               <Link href="/recipes" className="">
-                <div className="flex justify-center md:justify-start">
-                  <p className="py-4 text-xl hover:grow">
+                <div className="flex justify-center md:justify-start items-center">
+                  <p className="py-4 text-xl ">
                   { locale === posts[0].__i18n_lang ? "ペルー料理レシピ" : "PERUVIAN RECIPES" }
                   </p>
+                  <Arrow />
                 </div>
               </Link>
             </div>
@@ -101,10 +104,11 @@ const GastronomyPage = ({ posts }: { posts: any }) => {
                 </Link>
               </div>
               <Link href="gastronomy/videos" className="">
-                <div className="flex justify-center md:justify-start">
-                  <p className="py-4 text-xl hover:grow">
+                <div className="flex justify-center md:justify-start items-center">
+                  <p className="py-4 text-xl">
                   { locale === posts[0].__i18n_lang ? "ビデオ" : "VIDEOS " }
                   </p>
+                  <Arrow />
                 </div>
               </Link>
             </div>

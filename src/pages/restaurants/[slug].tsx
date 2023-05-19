@@ -1,4 +1,4 @@
-import { apiVersion,dataset, projectId } from "lib/sanity.api";
+import { apiVersion, dataset, projectId } from "lib/sanity.api";
 import { getAllCities } from "lib/sanity.client";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { useRouter } from "next/router";
@@ -22,7 +22,8 @@ type CardProps = {
 };
 
 function getRestaurants(slug: string) {
-  return createClient(clientConfig).fetch(groq`
+  return createClient(clientConfig).fetch(
+    groq`
     *[_type == "restaurant" && enabled == true && city->city == $slug ] {
       _id,
       name,
@@ -32,20 +33,29 @@ function getRestaurants(slug: string) {
       homepage,
       enabled,
     } | order(name)
-`, { slug });
+`,
+    { slug }
+  );
 }
 
-
-const Slug = ({restaurants, slug}:CardProps) => {
+const Slug = ({ restaurants, slug }: CardProps) => {
   const { locale } = useRouter();
+  const title =
+    "Restaunrants in " + slug.charAt(0).toUpperCase() + slug.slice(1);
   return (
-    <Layout language={locale} title="Restaurants">
-      <Banner 
+    <Layout language={locale} title={title}>
+      <Banner
         alt="Restaurants"
         src="http://embperujapan.org/gastronomia/restaurantsbanner2.jpg"
         src2="http://embperujapan.org/gastronomia/restaurantsbanner2400.jpg"
       />
       <section className="bg-white py-8">
+        <div className="container p-2 md:p-4 mx-auto">
+          <div className="flex uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-2">
+            <span className="pr-1 w-1 h-8 bg-red-500 border border-red-600"></span>
+            <h2 className="pl-2">{title}</h2>
+          </div>
+        </div>
         <div className="container mx-auto flex items-center flex-wrap pt-4 pb-12">
           {restaurants.map((restaurant: any) => (
             <RestaurantCard
@@ -67,11 +77,10 @@ const Slug = ({restaurants, slug}:CardProps) => {
 export default Slug;
 
 export const getStaticPaths: GetStaticPaths = async (ctx) => {
-
   const cities = await getAllCities();
-  const LANGUAGES = ['', 'en'];
+  const LANGUAGES = ["", "en"];
   const paths = [];
-  
+
   for (const lang of LANGUAGES) {
     for (const city of cities) {
       paths.push({
@@ -85,19 +94,19 @@ export const getStaticPaths: GetStaticPaths = async (ctx) => {
     paths,
     fallback: false,
   };
-}
+};
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   function capitalizeFirstLetter(str: string) {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
   const { slug } = params as { slug: string };
-  const  data  = await getRestaurants(capitalizeFirstLetter(slug));
+  const data = await getRestaurants(capitalizeFirstLetter(slug));
 
- return {
+  return {
     props: {
       restaurants: data,
-      slug: capitalizeFirstLetter(slug)
-    }
-  }
-}
+      slug: capitalizeFirstLetter(slug),
+    },
+  };
+};
