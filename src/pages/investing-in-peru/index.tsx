@@ -69,8 +69,7 @@ const InvesmentPage = () => {
       <section className="bg-white container mx-auto px-6 md:p-6">
         <div className="md:flex py-8">
           <div className="w-full xl:w-2/5 flex flex-col justify-center">
-            <div className="flex">
-              <span className="py-10 md:py-16 border-l-8 border-red-500 h-2/3"></span>
+            <div className="">
               <a
                 href="http://embperujapan.org/guia_de_inversiones-2022.pdf"
                 target="_blank"
@@ -78,16 +77,8 @@ const InvesmentPage = () => {
               >
                 <div className="pl-2">
                   <h3 className="text-xl">Investment guide 2022</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Molestiae sapiente unde amet enim recusandae obcaecati iusto
-                    soluta deleniti, explicabo et id quaerat reiciendis natus
-                    facere optio eius! Quam, architecto fuga?
-                  </p>
                 </div>
               </a>
-            </div>
-            <div className="pl-1 py-2 flex md:justify-start justify-center">
               <a
                 href="http://embperujapan.org/guia_de_inversiones-2022.pdf"
                 target="_blank"
@@ -96,7 +87,9 @@ const InvesmentPage = () => {
               >
                 <ImDownload2 className="text-white m-1" /> Download
               </a>
+
             </div>
+
           </div>
           <div className="w-full xl:w-3/5 flex justify-end p-2">
             <Link href="/pisco" className="">
