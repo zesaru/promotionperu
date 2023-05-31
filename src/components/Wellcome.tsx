@@ -44,8 +44,8 @@ export default function Wellcome(posts: any) {
         }}
       />
       {locale === data[0].__i18n_lang 
-      ?<p className="mt-8 mb-8">Contact us <a className="text-blue-600" href="https://m.me/embajadadelperuenjapon">https://m.me/embajadadelperuenjapon</a> or  <a className="text-blue-600" href="mailto:embtokyo@embperujapan.org">embtokyo@embperujapan.org</a></p>
-      :<p className="mt-8 mb-8">お問い合わせ <a className="text-blue-600" href="https://m.me/embajadadelperuenjapon">https://m.me/embajadadelperuenjapon</a> または  <a className="text-blue-600" href="mailto:embtokyo@embperujapan.org">embtokyo@embperujapan.org</a></p>
+      ?<p className="mt-8 mb-8">お問い合わせ <a className="text-blue-600" href="https://m.me/embajadadelperuenjapon">https://m.me/embajadadelperuenjapon</a> または  <a className="text-blue-600" href="mailto:embtokyo@embperujapan.org">embtokyo@embperujapan.org</a></p>
+      :<p className="mt-8 mb-8">Contact us <a className="text-blue-600" href="https://m.me/embajadadelperuenjapon">https://m.me/embajadadelperuenjapon</a> or  <a className="text-blue-600" href="mailto:embtokyo@embperujapan.org">embtokyo@embperujapan.org</a></p>
       }
       
     </div>
