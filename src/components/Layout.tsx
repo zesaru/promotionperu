@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { useRouter } from "next/router";
 import { NextSeo } from 'next-seo';
 import React, { ReactNode } from "react";
@@ -26,6 +27,7 @@ export default function Layout({ children, language,  title="Welcome" , descript
       />
       <Header />
         {children}
+        <Analytics />
       <Footer />
     </div>
   );
