@@ -24,8 +24,8 @@ export default function CoffeePage({ posts }: { posts: any }) {
     >
       <Banner
         alt={altBanner}
-        src="http://embperujapan.org/gastronomia/coffee.jpg"
-        src2="http://embperujapan.org/gastronomia/coffee400.jpg"
+        src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564001/WEB/gastronomia/coffee_i5qpiz.jpg"
+        src2="https://res.cloudinary.com/de5ud82os/image/upload/v1694564001/WEB/gastronomia/coffee400_w4detx.jpg"
       />
       <div className="container py-4 md:py-6 px-4 mx-auto">
         <h2 className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8">
