@@ -19,8 +19,8 @@ const ProductsPage = ({ posts }: { posts: any }) => {
     <Layout language={locale}>
       <Banner
         alt="Pisco ピスコ "
-        src={"http://embperujapan.org/gastronomia/pisco.jpg"}
-        src2={"http://embperujapan.org/gastronomia/pisco400.jpg"}
+        src={"https://res.cloudinary.com/de5ud82os/image/upload/v1694564008/WEB/gastronomia/pisco_kqmd66.jpg"}
+        src2={"https://res.cloudinary.com/de5ud82os/image/upload/v1694564008/WEB/gastronomia/pisco400_rzquod.jpg"}
       />
       <div className="container p-6  mx-auto">
         <div className="flex uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8">
@@ -58,7 +58,7 @@ const ProductsPage = ({ posts }: { posts: any }) => {
                 <Link href="/pisco/recipes" className="">
                   <Image
                     className="hover:grow hover:shadow-lg rounded-xl"
-                    src="http://embperujapan.org/gastronomia/piscorecipes450x300.jpg"
+                    src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564009/WEB/gastronomia/piscorecipes450x300_ftfgna.jpg"
                     width={450}
                     height={300}
                     alt="Restaurants"
@@ -78,7 +78,7 @@ const ProductsPage = ({ posts }: { posts: any }) => {
                 <Link href="/pisco/importing-companies" className="">
                   <Image
                     className="hover:grow hover:shadow-lg rounded-xl"
-                    src="http://embperujapan.org/gastronomia/pisco-importing-company450x300.jpg"
+                    src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564008/WEB/gastronomia/pisco-importing-company450x300_bi93s6.jpg"
                     width={450}
                     height={300}
                     alt="Restaurants"

@@ -18,7 +18,7 @@ const GastronomyPage = ({ posts }: { posts: any }) => {
   );
   return (
     <Layout language={locale} title={data[0].__i18n_lang === locale ? data[0].title : data[1].title}>
-      <Banner alt="Gastronoy" src="http://embperujapan.org/gastronomia/peruinjapangastronomia.jpg" src2="http://embperujapan.org/gastronomia/peruinjapangastronomy400.jpg" />
+      <Banner alt="Gastronoy" src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564006/WEB/gastronomia/peruinjapangastronomia_o0xsca.jpg" src2="https://res.cloudinary.com/de5ud82os/image/upload/v1694564006/WEB/gastronomia/peruinjapangastronomy400_useyoj.jpg" />
       <div className="container py-4 md:py-6 px-4 mx-auto">
         <h2
           className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8"
@@ -51,7 +51,7 @@ const GastronomyPage = ({ posts }: { posts: any }) => {
                 <Link href="/restaurants" className="">
                   <Image
                     className="hover:grow hover:shadow-lg w-auto rounded-xl"
-                    src="http://embperujapan.org/gastronomia/perurestaurants640x480.jpg"
+                    src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/perurestaurants640x480_vwusa9.jpg"
                     width={640}
                     height={480}
                     alt="Restaurants"
@@ -73,7 +73,7 @@ const GastronomyPage = ({ posts }: { posts: any }) => {
                 <Link href="/recipes" className="">
                   <Image
                     className="hover:grow hover:shadow-lg w-auto rounded-xl"
-                    src="http://embperujapan.org/gastronomia/lomosaltado640x480.jpg"
+                    src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564005/WEB/gastronomia/lomosaltado640x480_y6neni.jpg"
                     width={640}
                     height={480}
                     alt="Recipes"
@@ -96,7 +96,7 @@ const GastronomyPage = ({ posts }: { posts: any }) => {
                 <Link href="gastronomy/videos" className="">
                   <Image
                     className="hover:grow hover:shadow-lg w-auto rounded-xl"
-                    src="http://embperujapan.org/gastronomia/videos640v2.jpg"
+                    src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564018/WEB/gastronomia/videos640v2_hztsgm.jpg"
                     width={640}
                     height={480}
                     alt="ビデオ | VIDEOS"

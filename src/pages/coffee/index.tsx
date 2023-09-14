@@ -24,8 +24,8 @@ export default function CoffeePage({ posts }: { posts: any }) {
     >
       <Banner
         alt={altBanner}
-        src="http://embperujapan.org/gastronomia/coffee.jpg"
-        src2="http://embperujapan.org/gastronomia/coffee400.jpg"
+        src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564001/WEB/gastronomia/coffee_i5qpiz.jpg"
+        src2="https://res.cloudinary.com/de5ud82os/image/upload/v1694564001/WEB/gastronomia/coffee400_w4detx.jpg"
       />
       <div className="container py-4 md:py-6 px-4 mx-auto">
         <h2 className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8">
@@ -58,13 +58,13 @@ export default function CoffeePage({ posts }: { posts: any }) {
               <div>
                 <div className="flex justify-center">
                   <a
-                    href="http://embperujapan.org/coffee/PeruCoffee.pdf"
+                    href="https://cdn.www.gob.pe/uploads/document/file/5128037/PeruCoffee.pdf?v=1694668736"
                     className=""
                     target="_blank"
                   >
                     <Image
                       className="hover:grow hover:shadow-lg rounded-xl"
-                      src="http://embperujapan.org/gastronomia/coffee450x300.jpg"
+                      src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564001/WEB/gastronomia/coffee450x300_oow3qo.jpg"
                       width={640}
                       height={480}
                       alt="Coffee"
@@ -72,7 +72,7 @@ export default function CoffeePage({ posts }: { posts: any }) {
                   </a>
                 </div>
                 <a
-                  href="http://embperujapan.org/coffee/PeruCoffee.pdf"
+                  href="https://cdn.www.gob.pe/uploads/document/file/5128037/PeruCoffee.pdf?v=1694668736"
                   className=""
                   target="_blank"
                 >
@@ -92,7 +92,7 @@ export default function CoffeePage({ posts }: { posts: any }) {
                   <Link href="/coffee/scaj2022" className="">
                     <Image
                       className="hover:grow hover:shadow-lg rounded-xl"
-                      src="http://embperujapan.org/coffee/coffeescaj450x300.jpg"
+                      src="https://res.cloudinary.com/de5ud82os/image/upload/v1684201274/WEB/COFFEE/coffeesuppliers450x300_iwe7ro.jpg"
                       width={640}
                       height={480}
                       alt="SCAJ 2022"
@@ -140,7 +140,7 @@ export default function CoffeePage({ posts }: { posts: any }) {
                   <Link href="/coffee/videos" className="">
                     <Image
                       className="hover:grow hover:shadow-lg rounded-xl"
-                      src="http://embperujapan.org/gastronomia/coffeevideos450x300.jpg"
+                      src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564001/WEB/gastronomia/coffeevideos450x300_ymzg39.jpg"
                       width={640}
                       height={480}
                       alt="ビデオ | VIDEOS"

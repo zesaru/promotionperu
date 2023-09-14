@@ -13,8 +13,8 @@ const InvesmentPage = () => {
     <Layout language={locale} title="Investment guide 2022">
       <Banner
         alt={"Investment guide 2022"}
-        src={"http://embperujapan.org/gastronomia/peruinjapaninversiones.jpg"}
-        src2={"http://embperujapan.org/gastronomia/inversiones400.jpg"}
+        src={"https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapaninversiones_xop2nr.jpg"}
+        src2={"https://res.cloudinary.com/de5ud82os/image/upload/v1694564004/WEB/gastronomia/inversiones400_nb0noc.jpg"}
       />
       <div className="container p-6  mx-auto">
         <div className="container p-2 md:p-4 mx-auto">
@@ -71,7 +71,7 @@ const InvesmentPage = () => {
           <div className="w-full xl:w-2/5 flex flex-col justify-center">
             <div className="">
               <a
-                href="http://embperujapan.org/guia_de_inversiones-2022.pdf"
+                href="https://cdn.www.gob.pe/uploads/document/file/5127968/guia_de_inversiones-2022.pdf?v=1694662913"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -80,7 +80,7 @@ const InvesmentPage = () => {
                 </div>
               </a>
               <a
-                href="http://embperujapan.org/guia_de_inversiones-2022.pdf"
+                href="https://cdn.www.gob.pe/uploads/document/file/5127968/guia_de_inversiones-2022.pdf?v=1694662913"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex align-middle justify-center p-1 w-1/2 md:w-1/3   bg-red-600 text-white text-center rounded-md"
@@ -95,7 +95,7 @@ const InvesmentPage = () => {
             <Link href="/pisco" className="">
               <Image
                 className="hover:grow hover:shadow-lg rounded-xl"
-                src="http://embperujapan.org/gastronomia/peruinjapanguiadeinversiones.jpg"
+                src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564006/WEB/gastronomia/peruinjapanguiadeinversiones_qosebq.jpg"
                 width={750}
                 height={250}
                 alt=""

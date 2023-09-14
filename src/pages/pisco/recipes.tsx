@@ -20,8 +20,8 @@ const Recipes = ({ posts }: { posts: any }) => {
     <Layout language={locale}>
       <Banner
         alt="Pisco Recipes"
-        src="http://embperujapan.org/gastronomia/pisco.jpg"
-        src2="http://embperujapan.org/gastronomia/pisco400.jpg"
+        src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564008/WEB/gastronomia/pisco_kqmd66.jpg"
+        src2="https://res.cloudinary.com/de5ud82os/image/upload/v1694564008/WEB/gastronomia/pisco400_rzquod.jpg"
       />
       <div className="container p-2 md:p-4 mx-auto">
         <div className="flex uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-2">
@@ -37,7 +37,7 @@ const Recipes = ({ posts }: { posts: any }) => {
             <div className="flex">
               <span className="py-10 md:py-16 border-l-8 border-red-500 h-2/3"></span>
               <a
-                href="http://embperujapan.org/gastronomia/PiscoisPeruRecipes.pdf"
+                href="https://cdn.www.gob.pe/uploads/document/file/5127901/PiscoisPeruRecipes.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -59,7 +59,7 @@ const Recipes = ({ posts }: { posts: any }) => {
             </div>
             <div className="pl-1 py-2 flex md:justify-start justify-center">
               <a
-                href="http://embperujapan.org/gastronomia/PiscoisPeruRecipes.pdf"
+                href="https://cdn.www.gob.pe/uploads/document/file/5127901/PiscoisPeruRecipes.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex align-middle justify-center p-1 w-1/2 md:w-1/3   bg-red-600 text-white text-center rounded-md"
@@ -72,7 +72,7 @@ const Recipes = ({ posts }: { posts: any }) => {
             <Link href="/pisco" className="">
               <Image
                 className="hover:grow hover:shadow-lg rounded-xl"
-                src="http://embperujapan.org/gastronomia/peruinjapanpiscorecipes.jpg"
+                src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapanpiscorecipes_mvw5hm.jpg"
                 width={750}
                 height={250}
                 alt=""

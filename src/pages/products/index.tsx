@@ -10,7 +10,7 @@ const ProductsPage = () => {
 
   return (
     <Layout language={locale}>
-      <Banner alt={"Peruvian cocoa, pisco, and coffee"} src={"http://embperujapan.org/gastronomia/products.jpg"} src2={"http://embperujapan.org/gastronomia/products400.jpg"} />
+      <Banner alt={"Peruvian cocoa, pisco, and coffee"} src={"https://res.cloudinary.com/de5ud82os/image/upload/v1694564012/WEB/gastronomia/products_g6hfbw.jpg"} src2={"https://res.cloudinary.com/de5ud82os/image/upload/v1694564009/WEB/gastronomia/products400_z82at4.jpg"} />
       <div className="container p-6  mx-auto">
         <div className="flex uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8">
           <span className="pr-1 w-1 h-8 bg-red-500 border border-red-600"></span>
@@ -35,7 +35,7 @@ const ProductsPage = () => {
             <Link href="/pisco" className="">
               <Image
                 className="hover:grow hover:shadow-lg rounded-xl"
-                src="http://embperujapan.org/gastronomia/product_piscov2.jpg"
+                src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564010/WEB/gastronomia/product_piscov2_lobeaw.jpg"
                 width={750}
                 height={250}
                 alt="Peruvian Products Pisco"
@@ -81,7 +81,7 @@ const ProductsPage = () => {
             <Link href="/cacao" className="">
               <Image
                 className="hover:grow hover:shadow-lg rounded-xl"
-                src="http://embperujapan.org/gastronomia/product_cacaov2.jpg"
+                src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564010/WEB/gastronomia/product_cacaov2_tblzj4.jpg"
                 width={750}
                 height={250}
                 alt="Peruvian Products Cacao"
@@ -94,7 +94,7 @@ const ProductsPage = () => {
             <Link href="/coffee" className="">
               <Image
                 className="hover:grow hover:shadow-lg rounded-xl"
-                src="http://embperujapan.org/gastronomia/product_coffeev2.jpg"
+                src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564010/WEB/gastronomia/product_coffeev2_vcvqgi.jpg"
                 width={750}
                 height={250}
                 alt="Peruvian Products Pisco"

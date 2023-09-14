@@ -19,8 +19,8 @@ const GastronomyVideosPage = ({ posts }: { posts: any }) => {
     <Layout language={locale} title={data[0].__i18n_lang === locale ? data[0].title : data[1].title}>
       <Banner
         alt="Gastronoy"
-        src="http://embperujapan.org/gastronomia/peruinjapangastronomia.jpg"
-        src2="http://embperujapan.org/gastronomia/peruinjapangastronomy400.jpg"
+        src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564006/WEB/gastronomia/peruinjapangastronomia_o0xsca.jpg"
+        src2="https://res.cloudinary.com/de5ud82os/image/upload/v1694564006/WEB/gastronomia/peruinjapangastronomy400_useyoj.jpg"
       />
       <div className="container p-6 pb-0  mx-auto">
         <h2 className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl md:mb-2">
