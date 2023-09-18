@@ -11,7 +11,7 @@ const Banner: React.FC<Props> = (props) => {
   return (
     <>
       <section className="flex justify-center align-middle ">
-        <div className="">
+        <div>
           <Image
             alt={alt}
             src={src}

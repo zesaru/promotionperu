@@ -2,7 +2,6 @@ import { useRouter } from "next/router";
 import {
   JSXElementConstructor,
   ReactElement,
-  ReactFragment,
   ReactPortal,
 } from "react";
 import PortableText from "react-portable-text";
@@ -36,7 +35,6 @@ export default function Wellcome(posts: any) {
               | number
               | boolean
               | ReactElement<any, string | JSXElementConstructor<any>>
-              | ReactFragment
               | ReactPortal
               | null
               | undefined;

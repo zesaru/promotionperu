@@ -1,6 +1,10 @@
 {
   "extends": "next",
-  "plugins": ["simple-import-sort"],
+  "plugins": [
+    "simple-import-sort",
+    "plugin:testing-library/react",
+    "plugin:jest-dom/recommended"
+  ],
   "rules": {
     "simple-import-sort/imports": "warn",
     "simple-import-sort/exports": "warn",
