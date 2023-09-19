@@ -1,8 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## PeruinJapan
 
-## Getting Started
+Our primary goal is to promote the rich culture and products of Peru in Japan, connecting those who wish to explore Peruvian cuisine and business opportunities in the Japanese market."
 
-First, run the development server:
+## Instalation
+
+#### Download and clone repository
 
 ```bash
 npm run dev
