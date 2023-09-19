@@ -1,3 +1,7 @@
+<a href='peruinjapan.org'>
+  <img src='https://res.cloudinary.com/de5ud82os/image/upload/v1695087980/Screenshot_2023-09-19_103959_q7maoq.png' alt='peruinjapan'>
+</a>
+
 ## PeruinJapan
 
 Our primary goal is to promote the rich culture and products of Peru in Japan, connecting those who wish to explore Peruvian cuisine and business opportunities in the Japanese market."
