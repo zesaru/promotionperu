@@ -13,6 +13,7 @@
   "dependencies": {
     "@sanity/document-internationalization": "^1.1.1",
     "@sanity/image-url": "^1.0.2",
+    "@testing-library/dom": "^9.3.4",
     "@vercel/analytics": "^1.0.1",
     "next": "13.4.10",
     "next-sanity": "^4.1.5",
