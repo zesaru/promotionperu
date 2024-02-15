@@ -1,0 +1,62 @@
+"filename", "language", "TypeScript", "JavaScript", "Markdown", "JSON with Comments", "JSON", "TypeScript JSX", "CSS", "comment", "blank", "total"
+"c:\Users\embto\Documents\GitHub\promotionperu\.eslintrc.json", "JSON with Comments", 0, 0, 0, 13, 0, 0, 0, 0, 1, 14
+"c:\Users\embto\Documents\GitHub\promotionperu\README.md", "Markdown", 0, 0, 27, 0, 0, 0, 0, 0, 18, 45
+"c:\Users\embto\Documents\GitHub\promotionperu\__tests__\Banner.test.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 15, 0, 0, 8, 23
+"c:\Users\embto\Documents\GitHub\promotionperu\jest.config.mjs", "JavaScript", 0, 8, 0, 0, 0, 0, 0, 6, 4, 18
+"c:\Users\embto\Documents\GitHub\promotionperu\jest.setup.js", "JavaScript", 0, 1, 0, 0, 0, 0, 0, 0, 0, 1
+"c:\Users\embto\Documents\GitHub\promotionperu\jsconfig.json", "JSON with Comments", 0, 0, 0, 8, 0, 0, 0, 0, 1, 9
+"c:\Users\embto\Documents\GitHub\promotionperu\lib\sanity.api.ts", "TypeScript", 5, 0, 0, 0, 0, 0, 0, 0, 5, 10
+"c:\Users\embto\Documents\GitHub\promotionperu\lib\sanity.client.ts", "TypeScript", 35, 0, 0, 0, 0, 0, 0, 3, 7, 45
+"c:\Users\embto\Documents\GitHub\promotionperu\lib\sanity.image.ts", "TypeScript", 5, 0, 0, 0, 0, 0, 0, 0, 3, 8
+"c:\Users\embto\Documents\GitHub\promotionperu\lib\sanity.queries.ts", "TypeScript", 44, 0, 0, 0, 0, 0, 0, 0, 4, 48
+"c:\Users\embto\Documents\GitHub\promotionperu\next-env.d.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 4, 2, 6
+"c:\Users\embto\Documents\GitHub\promotionperu\next.config.js", "JavaScript", 0, 25, 0, 0, 0, 0, 0, 0, 2, 27
+"c:\Users\embto\Documents\GitHub\promotionperu\package-lock.json", "JSON", 0, 0, 0, 0, 16319, 0, 0, 0, 1, 16320
+"c:\Users\embto\Documents\GitHub\promotionperu\package.json", "JSON", 0, 0, 0, 0, 49, 0, 0, 0, 1, 50
+"c:\Users\embto\Documents\GitHub\promotionperu\postcss.config.js", "JavaScript", 0, 6, 0, 0, 0, 0, 0, 0, 1, 7
+"c:\Users\embto\Documents\GitHub\promotionperu\public\site.webmanifest", "JSON", 0, 0, 0, 0, 1, 0, 0, 0, 0, 1
+"c:\Users\embto\Documents\GitHub\promotionperu\sanity.config.ts", "TypeScript", 24, 0, 0, 0, 0, 0, 0, 0, 5, 29
+"c:\Users\embto\Documents\GitHub\promotionperu\schemas\documents\city.ts", "TypeScript", 33, 0, 0, 0, 0, 0, 0, 0, 2, 35
+"c:\Users\embto\Documents\GitHub\promotionperu\schemas\documents\menu.ts", "TypeScript", 26, 0, 0, 0, 0, 0, 0, 0, 2, 28
+"c:\Users\embto\Documents\GitHub\promotionperu\schemas\documents\post.ts", "TypeScript", 29, 0, 0, 0, 0, 0, 0, 0, 2, 31
+"c:\Users\embto\Documents\GitHub\promotionperu\schemas\documents\recipes.ts", "TypeScript", 40, 0, 0, 0, 0, 0, 0, 0, 2, 42
+"c:\Users\embto\Documents\GitHub\promotionperu\schemas\documents\restaurant.ts", "TypeScript", 55, 0, 0, 0, 0, 0, 0, 0, 3, 58
+"c:\Users\embto\Documents\GitHub\promotionperu\schemas\schemaTypes.ts", "TypeScript", 12, 0, 0, 0, 0, 0, 0, 1, 1, 14
+"c:\Users\embto\Documents\GitHub\promotionperu\src\components\Arrow.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 10, 0, 0, 3, 13
+"c:\Users\embto\Documents\GitHub\promotionperu\src\components\Banner.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 36, 0, 0, 4, 40
+"c:\Users\embto\Documents\GitHub\promotionperu\src\components\Card.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 31, 0, 0, 4, 35
+"c:\Users\embto\Documents\GitHub\promotionperu\src\components\CardVideo.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 22, 0, 0, 3, 25
+"c:\Users\embto\Documents\GitHub\promotionperu\src\components\Footer.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 61, 0, 0, 4, 65
+"c:\Users\embto\Documents\GitHub\promotionperu\src\components\Header.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 119, 0, 0, 8, 127
+"c:\Users\embto\Documents\GitHub\promotionperu\src\components\Layout.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 27, 0, 0, 8, 35
+"c:\Users\embto\Documents\GitHub\promotionperu\src\components\RecipesCard.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 34, 0, 0, 4, 38
+"c:\Users\embto\Documents\GitHub\promotionperu\src\components\RestautantCard.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 37, 0, 0, 3, 40
+"c:\Users\embto\Documents\GitHub\promotionperu\src\components\Wellcome.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 46, 0, 0, 6, 52
+"c:\Users\embto\Documents\GitHub\promotionperu\src\components\YoutubeEmbed.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 19, 0, 0, 3, 22
+"c:\Users\embto\Documents\GitHub\promotionperu\src\interfaces\index.ts", "TypeScript", 7, 0, 0, 0, 0, 0, 0, 0, 2, 9
+"c:\Users\embto\Documents\GitHub\promotionperu\src\pages\150-years-of-diplomatic-relations.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 59, 0, 0, 8, 67
+"c:\Users\embto\Documents\GitHub\promotionperu\src\pages\_app.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 15, 0, 0, 4, 19
+"c:\Users\embto\Documents\GitHub\promotionperu\src\pages\_document.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 13, 0, 0, 2, 15
+"c:\Users\embto\Documents\GitHub\promotionperu\src\pages\admin\index.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 14, 0, 0, 3, 17
+"c:\Users\embto\Documents\GitHub\promotionperu\src\pages\cacao.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 105, 0, 0, 6, 111
+"c:\Users\embto\Documents\GitHub\promotionperu\src\pages\coffee\index.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 167, 0, 0, 7, 174
+"c:\Users\embto\Documents\GitHub\promotionperu\src\pages\coffee\scaj2022.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 107, 0, 0, 9, 116
+"c:\Users\embto\Documents\GitHub\promotionperu\src\pages\coffee\suppliers.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 58, 0, 0, 7, 65
+"c:\Users\embto\Documents\GitHub\promotionperu\src\pages\coffee\videos.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 28, 0, 0, 5, 33
+"c:\Users\embto\Documents\GitHub\promotionperu\src\pages\gastronomy\index.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 126, 0, 0, 6, 132
+"c:\Users\embto\Documents\GitHub\promotionperu\src\pages\gastronomy\videos.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 43, 0, 0, 8, 51
+"c:\Users\embto\Documents\GitHub\promotionperu\src\pages\index.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 26, 0, 0, 4, 30
+"c:\Users\embto\Documents\GitHub\promotionperu\src\pages\investing-in-peru\index.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 112, 0, 22, 5, 139
+"c:\Users\embto\Documents\GitHub\promotionperu\src\pages\pisco\importing-companies.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 62, 0, 0, 7, 69
+"c:\Users\embto\Documents\GitHub\promotionperu\src\pages\pisco\index.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 104, 0, 0, 7, 111
+"c:\Users\embto\Documents\GitHub\promotionperu\src\pages\pisco\recipes.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 91, 0, 0, 7, 98
+"c:\Users\embto\Documents\GitHub\promotionperu\src\pages\products\index.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 120, 0, 0, 5, 125
+"c:\Users\embto\Documents\GitHub\promotionperu\src\pages\recipes\[slug].tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 101, 0, 0, 8, 109
+"c:\Users\embto\Documents\GitHub\promotionperu\src\pages\recipes\index.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 77, 0, 0, 10, 87
+"c:\Users\embto\Documents\GitHub\promotionperu\src\pages\restaurants\[slug].tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 101, 0, 0, 12, 113
+"c:\Users\embto\Documents\GitHub\promotionperu\src\pages\restaurants\index.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 60, 0, 0, 7, 67
+"c:\Users\embto\Documents\GitHub\promotionperu\src\styles\Home.module.css", "CSS", 0, 0, 0, 0, 0, 0, 42, 0, 8, 50
+"c:\Users\embto\Documents\GitHub\promotionperu\src\styles\globals.css", "CSS", 0, 0, 0, 0, 0, 0, 16, 0, 7, 23
+"c:\Users\embto\Documents\GitHub\promotionperu\tailwind.config.js", "JavaScript", 0, 20, 0, 0, 0, 0, 0, 2, 3, 25
+"c:\Users\embto\Documents\GitHub\promotionperu\tsconfig.json", "JSON with Comments", 0, 0, 0, 34, 0, 0, 0, 0, 1, 35
+"Total", "-", 315, 60, 27, 55, 16369, 2046, 58, 38, 283, 19251
