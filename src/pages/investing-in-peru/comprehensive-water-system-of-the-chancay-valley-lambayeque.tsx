@@ -12,7 +12,7 @@ const InvesmentPage = () => {
   return (
     <Layout
       language={locale}
-      title="HEADWORKS AND CONDUCTION WORKS FOR THE DRINKING WATER SUPPLY IN LIMA"
+      title="COMPREHENSIVE WATER SYSTEM OF THE CHANCAY VALLEY - LAMBAYEQUE"
     >
       <Banner
         alt={"Investment guide 2022"}

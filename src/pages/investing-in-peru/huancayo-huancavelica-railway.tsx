@@ -1,9 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/router";
-import { ImDownload2 } from "react-icons/im";
 import Banner from "src/components/Banner";
-import YoutubeEmbed from "src/components/YoutubeEmbed";
 
 import Layout from "../../components/Layout";
 
@@ -22,7 +19,7 @@ const InvesmentPage = () => {
       />
       <div className="container p-6 mx-auto">
         <h1 className="text-2xl text-red-600 py-8">
-          COMPREHENSIVE WATER SYSTEM OF THE CHANCAY VALLEY - LAMBAYEQUE
+          HUANCAYO – HUANCAVELICA RAILWAY
         </h1>
         <div className="lg:flex text-lg gap-20">
           <div className="lg:w-2/5 text-center">
@@ -31,7 +28,7 @@ const InvesmentPage = () => {
               <span className="text-white bg-orange-400 p-2">III QUARTER</span>
               <span className="p-2">2024</span>
             </div>
-            <div className="text-white bg-orange-400 p-2">FORMULATION</div>
+            <div className="text-white bg-orange-400 p-2">TRANSACTION</div>
             <div className="flex justify-center items-center p-2">
               <Image
                 className="rounded-full"
@@ -55,6 +52,9 @@ const InvesmentPage = () => {
               Renovation of the existing track. Refurbishment of stations and
               stops. Acquisition of rolling stock (4 DMU railcars, 2
               locomotives, 3 Passenger railroad cars, 5 freight warehouses).
+            </p>
+            <p className="py-2">
+              Co-financed state initiative modality for a term of 30 years.
             </p>
             <h2 className="py-4 font-bold">Investment amount:</h2>
             <p className="text-3xl">US$ 445 million</p>
