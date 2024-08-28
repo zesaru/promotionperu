@@ -40,9 +40,9 @@ const InvesmentPage = () => {
               <Image
                 className="rounded-full"
                 src="https://res.cloudinary.com/de5ud82os/image/upload/v1724720286/WEB/proinversion/jjbgr8b76k7cfgiz7oeq.jpg"
-                alt="Investment guide 2022"
-                width={400}
-                height={400}
+                alt="HEADWORKS AND CONDUCTION WORKS FOR THE DRINKING WATER SUPPLY IN LIMA"
+                width={370}
+                height={370}
               />
             </div>
           </div>
