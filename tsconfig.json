@@ -27,7 +27,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/pages/suppliersx/suplierssx"  ],
+, "src/pages/suppliersx/suplierssx", "src/pages/investing-in-peru/schools-at-risk-metropolitan-lima"  ],
   "exclude": [
     "node_modules"
   ],
