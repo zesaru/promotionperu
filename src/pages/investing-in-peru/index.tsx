@@ -20,28 +20,7 @@ const InvesmentPage = () => {
           "https://res.cloudinary.com/de5ud82os/image/upload/v1694564004/WEB/gastronomia/inversiones400_nb0noc.jpg"
         }
       />
-                  {/* <div className="">
-              <a
-                href="https://cdn.www.gob.pe/uploads/document/file/5127968/guia_de_inversiones-2022.pdf?v=1694662913"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="pl-2">
-                  <h3 className="text-xl">Investment guide 2022</h3>
-                </div>
-              </a>
-              <a
-                href="https://cdn.www.gob.pe/uploads/document/file/5127968/guia_de_inversiones-2022.pdf?v=1694662913"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex align-middle justify-center p-1 w-1/2 md:w-1/3   bg-red-600 text-white text-center rounded-md"
-              >
-                <ImDownload2 className="text-white m-1" /> Download
-              </a>
 
-            </div>
-
-          </div> */}
       <div className="container p-6  mx-auto">
         <div className="container p-2 md:p-4 mx-auto">
           <div className="flex uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-2">
@@ -94,6 +73,7 @@ const InvesmentPage = () => {
       </div>
       
       <section className="bg-white container mx-auto px-6 md:p-6">
+
         <div className="md:flex py-8">
           <div className="w-full xl:w-3/5 flex-col justify-end p-2">
             <div>
@@ -108,8 +88,8 @@ const InvesmentPage = () => {
             </Link>
             </div>
             <div className="p-2 text-center">
-            <a
-                href="https://cdn.www.gob.pe/uploads/document/file/5127968/guia_de_inversiones-2022.pdf?v=1694662913"
+              <a
+                href="https://embperujapan.org/guia_de_inversiones-2023.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex align-middle justify-center p-1 w-1/2 md:w-1/3 bg-red-600 text-white text-center rounded-md"
@@ -118,7 +98,9 @@ const InvesmentPage = () => {
               </a>
             </div>
           </div>
-          <div className="w-full xl:w-3/5 flex justify-end p-2">
+
+          <div className="w-full xl:w-3/5 flex-col justify-end p-2">
+            <div>
             <Link href="/investing-in-peru" className="">
               <Image
                 className="hover:grow hover:shadow-lg rounded-xl"
@@ -128,8 +110,22 @@ const InvesmentPage = () => {
                 alt=""
               />
             </Link>
+            </div>
+            <div className="p-2 text-center">
+              <a
+                href="https://cdn.www.gob.pe/uploads/document/file/5127968/guia_de_inversiones-2022.pdf?v=1694662913"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex align-middle justify-center p-1 w-1/2 md:w-1/3 bg-red-600 text-white text-center rounded-md"
+              >
+                <ImDownload2 className="text-white m-1" /> Download
+              </a>
+            </div>
           </div>
-        </div>
+
+
+          </div>
+          
       </section>
     </Layout>
   );

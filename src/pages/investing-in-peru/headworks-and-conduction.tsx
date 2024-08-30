@@ -1,9 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/router";
-import { ImDownload2 } from "react-icons/im";
 import Banner from "src/components/Banner";
-import YoutubeEmbed from "src/components/YoutubeEmbed";
 
 import Layout from "../../components/Layout";
 
