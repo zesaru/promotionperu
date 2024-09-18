@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.peruinjapan.org
+
+# Sitemaps
+Sitemap: https://www.peruinjapan.org/sitemap.xml
