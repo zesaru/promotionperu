@@ -24,6 +24,27 @@ export default function Layout({ children, language,  title="Welcome" , descript
       <NextSeo
         title={`Peru in Japan | ${title}`}
         description={description}
+        canonical="https://peruinjapan.org /"
+        openGraph={{
+          url: "https://peruinjapan.org",
+          title: `Peru in Japan | ${title}`,
+          description: description,
+          images: [
+            {
+              url: "https://res.cloudinary.com/de5ud82os/image/upload/v1726638710/WEB/home/nhplhoz0fvmrbph1jbst.png",
+              width: 800,
+              height: 600,
+              alt: "Peru in Japan",
+              type: 'image/jpeg',
+            },
+          ],
+          site_name: "Peru in Japan",
+        }}
+        twitter={{
+          handle: "@peruinjapan",
+          site: "@peruinjapan",
+          cardType: "summary_large_image",
+        }}
       />
       <Header />
         {children}
