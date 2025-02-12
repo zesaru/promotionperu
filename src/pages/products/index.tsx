@@ -9,7 +9,7 @@ const ProductsPage = () => {
   const { locale } = useRouter();
 
   return (
-    <Layout language={locale}>
+    <Layout language={locale} title={ locale==="en" ? "Products" : "ペルー食品"}>
       <Banner alt={"Peruvian cocoa, pisco, and coffee"} src={"https://res.cloudinary.com/de5ud82os/image/upload/v1694564012/WEB/gastronomia/products_g6hfbw.jpg"} src2={"https://res.cloudinary.com/de5ud82os/image/upload/v1694564009/WEB/gastronomia/products400_z82at4.jpg"} />
       <div className="container p-6  mx-auto">
         <div className="flex uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8">

@@ -21,7 +21,7 @@ const InvesmentPage = () => {
         }
       />
 
-      <div className="container p-6  mx-auto">
+      <div className="container p-6  mx-auto hidden md:block">
         <div className="container p-2 md:p-4 mx-auto">
           <div className="flex uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-2">
             <span className="pr-1 w-1 h-8 bg-red-500 border border-red-600"></span>
@@ -71,6 +71,18 @@ const InvesmentPage = () => {
           </div>
         </div>
       </div>
+
+      <section className="bg-white container mx-auto px-6 pt-6 md:p-6">
+        <div className="w-full flex justify-center items-center">
+        <Image
+                className="hover:grow hover:shadow-lg rounded-xl"
+                src="https://res.cloudinary.com/de5ud82os/image/upload/v1739330929/WEB/investing-in-peru/valeunperu2024_qd1k1i.jpg"
+                width={1488}                
+                height={440}
+                alt=""
+              />
+        </div>
+      </section>
       
       <section className="bg-white container mx-auto px-6 md:p-6">
 
