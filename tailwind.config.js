@@ -13,7 +13,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--bree-font)", ...fontFamily.sans],
+        sans: ["var(--bree-font)", "var(--noto-sans-jp-font)", ...fontFamily.sans],
+        japanese: ["var(--noto-sans-jp-font)", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", "sans-serif"],
       },
       height: {
         '192': '48rem',

@@ -3,7 +3,20 @@
 @tailwind utilities;
 
 .work-sans {
-  font-family: "bree", "Work Sans", sans-serif;
+  font-family: "bree", "Work Sans", var(--noto-sans-jp-font), "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", sans-serif;
+}
+
+/* Japanese text specific styling */
+.japanese-text {
+  font-family: var(--noto-sans-jp-font), "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+}
+
+/* Mixed content with Japanese characters */
+.multilingual-text {
+  font-family: var(--bree-font), var(--noto-sans-jp-font), "Work Sans", "Hiragino Sans", sans-serif;
+  line-height: 1.6;
 }
 
 #menu-toggle:checked + #menu {

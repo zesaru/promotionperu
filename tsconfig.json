@@ -29,7 +29,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/pages/investing-in-peru/2025/japan-majes-siguas1-project-arequipa.tsx"  ],
   "exclude": [
     "node_modules"
   ],
