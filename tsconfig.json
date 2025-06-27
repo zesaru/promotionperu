@@ -20,14 +20,16 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@src/*": ["./src/*"],
+      "@components/*": ["./src/components/*"]
     }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/pages/suppliersx/suplierssx", "src/pages/investing-in-peru/schools-at-risk-metropolitan-lima"  ],
+  ],
   "exclude": [
     "node_modules"
   ],

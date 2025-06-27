@@ -21,6 +21,10 @@ module.exports = {
       __dirname,
       "src/components"
     );
+    config.resolve.alias["@src"] = path.join(
+      __dirname,
+      "src"
+    );
     return config;
   },
 };
