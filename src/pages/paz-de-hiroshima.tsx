@@ -28,6 +28,8 @@ const PazHiroshimaPage = () => {
       language={locale}
       title={currentContent.title}
       description={currentContent.text.substring(0, 160)}
+      image="https://res.cloudinary.com/de5ud82os/image/upload/v1694564001/WEB/gastronomia/150years_bdwrpn.jpg"
+      type="article"
     >
       <div className="container py-4 md:py-12 px-2 mx-auto">
         <div className="max-w-4xl mx-auto">
