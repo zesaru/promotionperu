@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { createClient, groq } from "next-sanity";
 import { BsTranslate } from "react-icons/bs";
+import { useState } from "react";
 
 const clientConfig = {
   projectId,
@@ -32,6 +33,7 @@ const navBar = {
       title: "150 years of diplomatic relations",
       slug: "150-years-of-diplomatic-relations",
     },
+    { locale: "en", title: "Peace of Hiroshima", slug: "paz-de-hiroshima" },
     { locale: "jp", title: "ガストロノミー", slug: "gastronomy" },
     { locale: "jp", title: "ペルー食品", slug: "products" },
     { locale: "jp", title: "ペルーへの投資", slug: "investing-in-peru" },
@@ -40,44 +42,82 @@ const navBar = {
       title: "外交関係樹立150周年",
       slug: "150-years-of-diplomatic-relations",
     },
+    { locale: "jp", title: "広島の平和", slug: "paz-de-hiroshima" },
   ],
 };
 
 export default function Header() {
   const { locale, locales, asPath } = useRouter();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const isActiveRoute = (slug: string) => {
+    return asPath.includes(slug) || (asPath === "/" && slug === "home");
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   return (
-    <nav id="header" className="w-full z-30 top-0 py-1">
-      <div className="w-full container mx-auto flex flex-wrap items-center md:justify-between  mt-0 px-1 py-1 lg:px-6 lg:py-3 ">
-        <label htmlFor="menu-toggle" className="cursor-pointer lg:hidden block">
+    <nav id="header" className="w-full z-50 top-0 bg-white shadow-md sticky">
+      <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-4 py-3 lg:px-6">
+        
+        {/* Logo */}
+        <div className="flex order-1 lg:order-1">
+          <Link
+            className="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl gap-2 transition-all duration-200 hover:scale-105"
+            href="/"
+          >
+            <Image
+              src="/apple-touch-icon.png"
+              height="40"
+              width="40"
+              alt="escudo del peru"
+              className="rounded-full"
+            />
+            <span className="w-1 h-8 bg-red-500 border border-red-600 rounded-sm"></span>
+            <span className="hidden sm:block">PERUINJAPAN</span>
+          </Link>
+        </div>
+
+        {/* Mobile menu button */}
+        <button 
+          onClick={toggleMobileMenu}
+          className="lg:hidden order-2 p-2 text-gray-600 hover:text-red-600 transition-colors duration-200"
+          aria-label="Toggle menu"
+        >
           <svg
-            className="fill-current text-gray-900"
-            xmlns="http://www.w3.org/2000/svg"
-            width={20}
-            height={20}
+            className={`w-6 h-6 transform transition-transform duration-200 ${isMobileMenuOpen ? 'rotate-90' : ''}`}
+            fill="currentColor"
             viewBox="0 0 20 20"
           >
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            {isMobileMenuOpen ? (
+              <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+            ) : (
+              <path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
+            )}
           </svg>
-        </label>
-        <input className="hidden" type="checkbox" id="menu-toggle" />
-        <div
-          className="hidden lg:flex lg:items-center lg:w-auto w-full order-3 lg:order-1 bg-red-600 lg:bg-white bg-opacity-90"
-          id="menu"
-        >
-          <nav>
-            <ul className="lg:flex items-center align-middle justify-between gap-3 text-base text-white lg:text-gray-600 pt-4 md:pt-0">
+        </button>
+
+        {/* Navigation Menu */}
+        <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} lg:flex lg:items-center lg:w-auto w-full order-3 lg:order-2 mt-4 lg:mt-0`}>
+          <nav className="lg:flex lg:items-center">
+            <ul className="lg:flex items-center space-y-2 lg:space-y-0 lg:space-x-1 text-base">
               {navBar.menus
                 .filter((item) => item.locale === locale)
-                .map((item, i) => (
-                  <li
-                    className="lg:border-b-4 border-red-600"
+                .map((item) => (
+                  <li 
                     key={item.title}
+                    className={item.slug === "paz-de-hiroshima" ? "lg:hidden" : ""}
                   >
-                    <span className="bg-white rounded-full text-white">.</span>
                     <Link
-                      className="inline-block no-underline py-2 px-4"
+                      className={`block px-4 py-2 rounded-lg transition-all duration-200 hover:bg-red-50 hover:text-red-600 ${
+                        isActiveRoute(item.slug) 
+                          ? 'bg-red-600 text-white font-semibold' 
+                          : 'text-gray-700 hover:bg-red-50'
+                      }`}
                       href={`/${item.slug}`}
+                      onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {item.title}
                     </Link>
@@ -85,40 +125,30 @@ export default function Header() {
                 ))}
             </ul>
           </nav>
-          <div className="flex px-2 ">
-          <BsTranslate className="text-lg"/>
-            {locales?.map((l, i) => {
-              return (
-                <span
-                  key={i}
-                  className={
-                    l === locale ? "hidden" : "bg-red-500 text-white rounded-md"
-                  }
-                >
-                  
-                  <Link href={asPath} locale={l} className="p-1">
+
+          {/* Language Switcher */}
+          <div className="flex items-center mt-4 lg:mt-0 lg:ml-6 pt-4 lg:pt-0 border-t lg:border-t-0 border-gray-200">
+            <BsTranslate className="text-lg text-gray-600 mr-2"/>
+            <div className="flex space-x-1">
+              {locales?.map((l) => {
+                return (
+                  <Link
+                    key={l}
+                    href={asPath}
+                    locale={l}
+                    className={`px-3 py-1 rounded-md text-sm font-medium transition-all duration-200 ${
+                      l === locale 
+                        ? 'bg-red-600 text-white' 
+                        : 'bg-gray-100 text-gray-700 hover:bg-red-100 hover:text-red-600'
+                    }`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
                     {l.toUpperCase()}
                   </Link>
-                </span>
-
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
-        </div>
-        <div className="flex order-1 md:order-2 mx-auto md:mr-0">
-          <Link
-            className="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl md:gap-1"
-            href="/"
-          >
-            <Image
-              src="/apple-touch-icon.png"
-              height="35"
-              width="35"
-              alt="escudo del peru"
-            />
-            <span className="w-1 h-8 bg-red-500 border border-red-600"></span>
-            <span className="px-1 lg:flex">PERUINJAPAN </span>
-          </Link>
         </div>
       </div>
     </nav>
