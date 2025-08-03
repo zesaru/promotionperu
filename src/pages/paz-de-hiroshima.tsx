@@ -29,10 +29,9 @@ const PazHiroshimaPage = () => {
       title={currentContent.title}
       description={currentContent.text.substring(0, 160)}
     >
-      <div className="container py-8 md:py-12 px-4 mx-auto">
+      <div className="container py-4 md:py-12 px-2 mx-auto">
         <div className="max-w-4xl mx-auto">
-          {/* Memorial symbols */}
-          <div className="mt-12 text-center">
+          <div className="mt-4 text-center">
             <div className="inline-flex items-center space-x-4 text-2xl">
               <span className="text-pink-500">🌸</span>
               <span className="text-gray-600">🕊️</span>
@@ -40,9 +39,7 @@ const PazHiroshimaPage = () => {
             </div>
           </div>
 
-          {/* Display all three languages for reference */}
-          <div className="mt-16 border-t pt-8">
-            
+          <div className="mt-2 border-t pt-8">
             <div className="space-y-8">
               <div>
                 <p className="text-sm text-gray-600 leading-relaxed">{content.jp.text}</p>
