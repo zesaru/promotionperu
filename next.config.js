@@ -1,6 +1,9 @@
 const path = require("path");
 
 module.exports = {
+  compiler: {
+    removeConsole: process.env.NODE_ENV === "production",
+  },
   i18n: {
     locales: ['jp', 'en'],
     defaultLocale: 'jp',
