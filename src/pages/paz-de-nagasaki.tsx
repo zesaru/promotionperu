@@ -3,7 +3,7 @@ import React from "react";
 
 import Layout from "../components/Layout";
 
-const PazHiroshimaPage = () => {
+const PazNagasakiPage = () => {
   const { locale } = useRouter();
 
   const content = {
@@ -62,4 +62,4 @@ const PazHiroshimaPage = () => {
   );
 };
 
-export default PazHiroshimaPage;
+export default PazNagasakiPage;
