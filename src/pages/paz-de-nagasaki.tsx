@@ -12,11 +12,11 @@ const PazHiroshimaPage = () => {
       text: "広島および長崎の被爆80周年の節目にあたり、ペルー共和国政府および国民は、日本の皆様に対し、謹んで心からの連帯を表するとともに、世界平和と核兵器の廃絶、そして大量破壊兵器のない公平で安全な未来の実現に向けた揺るぎない決意を改めて表明します。",
     },
     en: {
-      title: "Peace of Hiroshima: Blossoming",
+      title: "Peace of Nagasaki: Blossoming",
       text: "On the solemn occasion of the 80th anniversary of the atomic bombings of Hiroshima and Nagasaki, the Government and people of the Republic of Peru extend their deepest solidarity to the people of Japan. We further reaffirm our unwavering commitment to the achievement of lasting world peace, nuclear disarmament, and the realization of a just and secure future free from weapons of mass destruction.",
     },
     es: {
-      title: "Paz de Hiroshima: Florecer",
+      title: "Paz de Nagasaki: Florecer",
       text: "Con ocasión del 80.º aniversario del bombardeo atómico de Hiroshima y Nagasaki, el Gobierno y pueblo peruanos expresan su más sentida solidaridad con el pueblo japonés y reafirman su compromiso inquebrantable con la paz mundial, el desarme nuclear y la promoción de un futuro justo, seguro y libre de armas de destrucción masiva.",
     },
   };
