@@ -30,14 +30,14 @@ const Perumin37Page = () => {
         </div>
 
         <div className="grid grid-cols-1 gap-4 mb-6">
-          <div className="lg:col-span-2 border-l border-gray-300 pl-6">
+          <div className="lg:col-span-2  pl-6">
             <div className="bg-red-600 text-white p-2 inline-block mb-2">
               <h1 className="text-xl font-bold">PERUMIN 37</h1>
             </div>
             <div className="bg-red-600 text-white p-1 inline-block mb-2">
               <p className="text-sm font-japanese">鉱業イベント開幕</p>
             </div>
-            <p className="text-xs text-gray-600 mb-4 font-japanese">2025年9月22日（月）アレキパのセロ・フリ国際会議場にて</p>
+            <p className="text-xs mb-4 font-japanese">2025年9月22日（月）アレキパのセロ・フリ国際会議場にて</p>
 
             <div className="bg-black text-white p-2 inline-block mb-4">
               <h2 className="text-lg font-bold font-japanese">ペルー、アレキパのセロ・フリで「ペルーミン37」を開幕</h2>
@@ -71,8 +71,8 @@ const Perumin37Page = () => {
           </p>
 
           {/* Participation details */}
-          <div className="border border-gray-400 mb-6">
-            <div className="bg-red-600 text-white p-2 border-b border-gray-400">
+          <div className="border mb-6">
+            <div className="bg-red-600 text-white p-2 border-b">
               <div className="grid grid-cols-3 gap-4 text-sm font-bold font-japanese">
                 <span>参加規模</span>
                 <span>16か国から800社以上</span>
@@ -87,7 +87,7 @@ const Perumin37Page = () => {
         </div>
 
         {/* Key statements section */}
-        <div className="border-t border-gray-400 pt-4 mb-6">
+        <div className="border-t pt-4 mb-6">
           <div className="bg-red-600 text-white p-2 inline-block mb-4">
             <h2 className="text-lg font-bold font-japanese">主要な発言</h2>
           </div>
@@ -116,7 +116,7 @@ const Perumin37Page = () => {
         </div>
 
         {/* Special initiatives section */}
-        <div className="border-t border-gray-400 pt-4 mb-6">
+        <div className="border-t pt-4 mb-6">
           <div className="bg-red-600 text-white p-2 inline-block mb-4">
             <h2 className="text-lg font-bold font-japanese">特別な取り組み</h2>
           </div>
@@ -126,22 +126,22 @@ const Perumin37Page = () => {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-            <div className="border border-gray-400 p-4">
+            <div className="border p-4">
               <h4 className="font-bold text-sm mb-2 font-japanese">🔧 Perumin Hub</h4>
               <p className="text-sm font-japanese">技術革新の中心拠点</p>
             </div>
 
-            <div className="border border-gray-400 p-4">
+            <div className="border p-4">
               <h4 className="font-bold text-sm mb-2 font-japanese">💡 Perumin Inspira</h4>
               <p className="text-sm font-japanese">インスピレーションとアイデアの交流</p>
             </div>
 
-            <div className="border border-gray-400 p-4">
+            <div className="border p-4">
               <h4 className="font-bold text-sm mb-2 font-japanese">📋 TISフォーラム</h4>
               <p className="text-sm font-japanese">技術情報システムフォーラム</p>
             </div>
 
-            <div className="border border-gray-400 p-4">
+            <div className="border p-4">
               <h4 className="font-bold text-sm mb-2 font-japanese">🏛️ アラメダ・デ・ラ・アカデミア</h4>
               <p className="text-sm font-japanese">学術交流の場</p>
             </div>
@@ -149,7 +149,7 @@ const Perumin37Page = () => {
         </div>
 
         {/* Conclusion section */}
-        <div className="border-t border-gray-400 pt-4 mb-6">
+        <div className="border-t pt-4 mb-6">
           <div className="bg-red-600 text-white p-2 inline-block mb-4">
             <h2 className="text-lg font-bold font-japanese">まとめ</h2>
           </div>
@@ -166,7 +166,7 @@ const Perumin37Page = () => {
         </div>
 
         {/* References */}
-        <div className="border-t border-gray-400 pt-4 mb-6">
+        <div className="border-t pt-4 mb-6">
           <h3 className="text-red-600 font-bold text-lg mb-4 font-japanese">参考文献</h3>
           <p className="text-sm mb-2">
             Revista desde adentro. (2025年09月22日). Perumin 37 abrió sus puertas en Cerro Juli con presencia de autoridades y cuerpo diplomático.
@@ -186,7 +186,7 @@ const Perumin37Page = () => {
         </div>
 
         {/* Bottom branding */}
-        <div className="flex justify-between items-center mt-6 pt-4 border-t border-gray-400">
+        <div className="flex justify-between items-center mt-6 pt-4 border-t">
           <div className="text-red-600 font-bold">#PeruMinería</div>
           <div className="flex items-center">
             <span className="text-red-600 font-bold text-lg mr-2">PERUMIN</span>
