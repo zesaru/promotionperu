@@ -33,7 +33,7 @@ const InvestmentPage = () => {
             民間投資促進庁（PROINVERSIÓN）
           </h1>
           <h2 className="text-xl font-bold text-gray-900 mb-4">
-            PROINVERSIÓN、ピウラ、ランバイエケ、フニン、アヤクーチョで4件の電力送電プロジェクトの入札を開始
+            PROINVERSIÓN: Piura、Lambayeque、JuninとAyacuchoで4件の電力送電プロジェクトの入札を開始
           </h2>
           <h3 className="text-lg font-semibold text-gray-800 mb-2">
             プレスリリース
