@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 import { ImDownload2 } from "react-icons/im";
 import Banner from "src/components/Banner";
 
-
 import Layout from "@/components/Layout";
 
 const Perumin37Page = () => {

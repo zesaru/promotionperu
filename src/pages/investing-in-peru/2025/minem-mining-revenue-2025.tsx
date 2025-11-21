@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import Layout from "@/components/Layout";
 import Banner from "@/components/Banner";
+import Layout from "@/components/Layout";
 
 const MinemMiningRevenuePage = () => {
   const { locale } = useRouter();

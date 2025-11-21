@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { ImDownload2 } from "react-icons/im";
-import Banner from "@/components/Banner";
 
+import Banner from "@/components/Banner";
 import Layout from "@/components/Layout";
 
 const MiningInvestmentPage = () => {
