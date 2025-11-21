@@ -1,24 +1,24 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import Layout from "@/components/Layout";
 import ImageSlider from "@/components/ImageSlider";
+import Layout from "@/components/Layout";
 
 const InvestmentPage = () => {
   const { locale } = useRouter();
 
-  // Seminar images array
+  // Seminar images array (optimized WebP images)
   const seminarImages = [
-    "/images/investment-seminar-2025/IMG_7492.JPG",
-    "/images/investment-seminar-2025/IMG_7494.JPG",
-    "/images/investment-seminar-2025/IMG_7503.JPG",
-    "/images/investment-seminar-2025/IMG_7504.JPG",
-    "/images/investment-seminar-2025/IMG_7505.JPG",
-    "/images/investment-seminar-2025/IMG_7506.JPG",
-    "/images/investment-seminar-2025/IMG_7507.JPG",
-    "/images/investment-seminar-2025/IMG_7508.JPG",
-    "/images/investment-seminar-2025/IMG_7510.JPG",
-    "/images/investment-seminar-2025/IMG_7511.JPG"
+    "/images/investment-seminar-2025/optimized/IMG_7492.webp",
+    "/images/investment-seminar-2025/optimized/IMG_7494.webp",
+    "/images/investment-seminar-2025/optimized/IMG_7503.webp",
+    "/images/investment-seminar-2025/optimized/IMG_7504.webp",
+    "/images/investment-seminar-2025/optimized/IMG_7505.webp",
+    "/images/investment-seminar-2025/optimized/IMG_7506.webp",
+    "/images/investment-seminar-2025/optimized/IMG_7507.webp",
+    "/images/investment-seminar-2025/optimized/IMG_7508.webp",
+    "/images/investment-seminar-2025/optimized/IMG_7510.webp",
+    "/images/investment-seminar-2025/optimized/IMG_7511.webp"
   ];
 
   return (
