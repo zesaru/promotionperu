@@ -149,6 +149,11 @@ const InvestmentPage = () => {
           <p className="mb-6 text-gray-700 leading-relaxed">
             「VALE UN PERÚ 2025」投資ガイドは、日本の投資家や企業にとって、ペルーの投資機会を理解するための重要な資料となります。
           </p>
+          <p>
+            <a href="https://embperujapan.org/guia_de_inversiones-2025.pdf" target="_blank" rel="noopener noreferrer">  
+            👉投資ガイドはこちらから
+            </a>
+          </p>
 
           {/* Footer */}
           <div className="mt-12 pt-6 border-t border-gray-300">
