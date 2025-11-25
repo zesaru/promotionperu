@@ -9,8 +9,8 @@ const InvestmentPage = () => {
 
   // Seminar images array (optimized WebP images)
   const seminarImages = [
-    "/images/investment-seminar-2025/optimized/IMG_7492.webp",
     "/images/investment-seminar-2025/optimized/IMG_7494.webp",
+    "/images/investment-seminar-2025/optimized/IMG_7492.webp",
     "/images/investment-seminar-2025/optimized/IMG_7503.webp",
     "/images/investment-seminar-2025/optimized/IMG_7504.webp",
     "/images/investment-seminar-2025/optimized/IMG_7505.webp",
@@ -158,11 +158,6 @@ const InvestmentPage = () => {
             <p className="text-sm text-gray-600">
               経済商務担当
             </p>
-          </div>
-
-          <div className="text-right mt-8">
-            <p className="text-sm text-gray-600">在日ペルー大使館</p>
-            <p className="text-sm text-gray-600">非公式翻訳</p>
           </div>
         </div>
       </div>
