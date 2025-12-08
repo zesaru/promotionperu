@@ -2,7 +2,6 @@ import { defineType } from "sanity";
 
 export default defineType({
   type: "document",
-  i18n: true,
   name: "post",
   title: "Post",
   fields: [
