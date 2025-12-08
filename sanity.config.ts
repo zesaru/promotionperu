@@ -7,7 +7,6 @@ import schemas from "./schemas/schemaTypes";
 export const config = defineConfig({
   projectId: projectId || '',
   dataset: dataset || '',
-  apiVersion,
   title: "PeruinJapan",
   basePath: "/admin",
   plugins: [deskTool()],
@@ -15,3 +14,5 @@ export const config = defineConfig({
     types: schemas
   },
 });
+
+export default config;
