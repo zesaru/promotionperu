@@ -2,7 +2,6 @@ import { getAllPosts } from "lib/sanity.client";
 import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import React from "react";
-import Gallery from "react-photo-gallery";
 import PortableText from "react-portable-text";
 import Banner from "src/components/Banner";
 import Layout from "src/components/Layout";
@@ -38,7 +37,10 @@ const Scaj2022 = ({ posts }: { posts: any }) => {
             }) => <p className="mt-8 mb-8">{props.children}</p>,
           }}
         />
-         <Gallery photos={Photos} />
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+          {/* Gallery placeholder - photos will be displayed here */}
+          <p className="col-span-full text-center text-gray-500">Gallery temporarily disabled</p>
+        </div>
       </div>
       
 
