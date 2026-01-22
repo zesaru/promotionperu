@@ -3,141 +3,159 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { ImDownload2 } from "react-icons/im";
 import Banner from "@src/components/Banner";
-import YoutubeEmbed from "@src/components/YoutubeEmbed";
 import Layout from "@src/components/Layout";
+import { getLatestNews } from "./news-index";
 
 const InvesmentPage = () => {
   const { locale } = useRouter();
+
+  const content = {
+    en: {
+      heroTitle: "Invest in Peru 2025",
+      heroDescription: "Peru's economic landscape offers macroeconomic stability and sustained growth. Explore our 2025 Investment Guide and learn why Japanese companies choose Peru as their strategic partner in the region.",
+      download: "Download",
+      investmentGuide: "Investment Guide 2025",
+      guideTitle: "Investment Guide 2025 \"VALE UN PERÚ\"",
+      guideDescription: "The most comprehensive and updated investment guide for 2025. Explore new opportunities and economic indicators.",
+      viewPrevious: "View Previous Versions →",
+      latestNews: "Latest News",
+      readMore: "Read More →"
+    },
+    jp: {
+      heroTitle: "ペルーへの投資 2025",
+      heroDescription: "ペルーと日本は友好と協力の歴史を共有し、確かなビジネスチャンスを生み出しています。ラテンアメリカへの玄関口として、資源豊富で安定したペルー市場の可能性をぜひご確認ください。",
+      download: "ダウンロード",
+      investmentGuide: "投資ガイド 2025",
+      guideTitle: "投資ガイド 2025 「VALE UN PERÚ」",
+      guideDescription: "2025年向けの最も包括的で最新の投資ガイド。新たな投資機会と経済指標を探索してください。",
+      viewPrevious: "過去のバージョンを見る →",
+      latestNews: "最新ニュース",
+      readMore: "続きを読む →"
+    }
+  };
+
+  const texts = content[locale as keyof typeof content] || content.en;
+
   return (
-    <Layout language={locale} title="Investment guide 2022">
+    <Layout language={locale} title="Invest in Peru 2025">
       <Banner
-        alt={"Investment guide 2022"}
+        alt={"Invest in Peru 2025"}
         src={
           "https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapaninversiones_xop2nr.jpg"
         }
-        src2={
-          "https://res.cloudinary.com/de5ud82os/image/upload/v1694564004/WEB/gastronomia/inversiones400_nb0noc.jpg"
-        }
       />
 
-      <div className="container p-6  mx-auto hidden md:block">
-        <div className="container p-2 md:p-4 mx-auto">
-          <div className="flex uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-2">
-            <span className="pr-1 w-1 h-8 bg-red-500 border border-red-600"></span>
-            <h2 className="pl-2">
-              {locale === "en"
-                ? "Peru a great choice for doing business"
-                : "ビジネスを行うにはペルーが素晴らしい選択です"}
-            </h2>
-          </div>
-          <div className="w-full flex flex-col lg:flex-row">
-            <div className="flex flex-col justify-center w-full lg:w-1/2">
-              <div>
-                <div className="flex justify-center items-center">
-                  <YoutubeEmbed embedId="LeLFIc2Gi8U" />
-                </div>
+      {/* Hero Section with New Image */}
+      <section className="bg-gradient-to-br from-slate-50 to-blue-50 container mx-auto px-4 py-8 md:py-12 lg:py-16">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center">
+            <div className="order-2 md:order-1">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 md:mb-6 leading-tight japanese-heading-1">
+                {texts.heroTitle}
+              </h1>
+              <p className="text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed mb-4 md:mb-6 japanese-text">
+                {texts.heroDescription}
+              </p>
+              <div className="flex flex-wrap gap-3 md:gap-4">
+                <a
+                  href="https://embperujapan.org/guia_de_inversiones-2025.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center bg-red-600 hover:bg-red-700 text-white font-semibold px-5 md:px-6 py-3 rounded-lg transition-colors shadow-lg hover:shadow-xl text-sm md:text-base"
+                >
+                  <ImDownload2 className="mr-2" />
+                  {texts.download}
+                </a>
+                <Link
+                  href="/investing-in-peru/previous-versions"
+                  className="inline-flex items-center text-red-600 hover:text-red-700 font-semibold transition-colors text-base md:text-lg py-3"
+                >
+                  {texts.viewPrevious}
+                </Link>
               </div>
             </div>
-            <div className="flex flex-col justify-center lg:w-1/2 w-full lg:pl-4">
-              <p className="mt-4 mb-4">
-                {locale === "en"
-                  ? `Peru's robust economy, rich in natural resources and strategic
-                Pacific location, makes it an enticing hub for business and
-                investment. With policies promoting an open and competitive
-                market, it has attracted significant investments. The young,
-                skilled, and cost-effective workforce across various sectors,
-                including manufacturing and tech, further enhances its business
-                appeal.`
-                  : `豊かな自然資源と戦略的な太平洋地域に位置するペルーの強固な経済は、ビジネスと投資の魅力的なハブとなっています。開放的で競争力のある市場を推進する政策により、大きな投資を引き付けています。製造業からテクノロジーまで、さまざまなセクターに渡る若く、スキル豊富でコスト効率の良い労働力は、さらなるビジネスの魅力を高めています。`}
-              </p>
-              <p className="mt-4 mb-4">
-                {locale === "en"
-                  ? `In addition to its natural and human resources, Peru offers a
-                range of incentives for foreign direct investment, including tax
-                exemptions, a stable legal framework, protection against
-                arbitrary expropriation, and unrestricted remittance of capital.
-                The country also benefits from free trade agreements with the US
-                and other major economies, providing advantageous conditions for
-                exporters and importers. The improvements in digital
-                connectivity have made Peru an appealing destination for tech
-                businesses and startups. Considering its political stability,
-                economic growth, strategic location, and various incentives,
-                Peru undoubtedly offers a lucrative landscape for conducting
-                business.`
-                  : `ペルー政府は、外国投資を促進するために税制優遇や資本の無制限送金などのインセンティブを提供しています。主要経済国との自由貿易協定は、輸出業者と輸入業者にとって有利な条件を提供します。これらの利点 - 経済の安定性、戦略的な立地、スキル豊かな労働力、投資家に優しい政策、そして有利な貿易協定を考えると、ペルーはビジネスを行うための魅力的な目的地として浮かび上がります。`}
-              </p>
+            <div className="order-1 md:order-2 flex justify-center">
+              <Image
+                className="rounded-xl shadow-2xl hover:shadow-3xl transition-shadow duration-300"
+                src="https://res.cloudinary.com/de5ud82os/image/upload/v1768974608/vale_un_peru_2025_fuphdw.png"
+                width={330}
+                height={468}
+                alt="Peru Investment Opportunities"
+                priority
+              />
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <section className="bg-white container mx-auto px-6 pt-6 md:p-6">
-        <div className="w-full flex justify-center items-center">
-        <Image
-                className="hover:grow hover:shadow-lg rounded-xl"
-                src="https://res.cloudinary.com/de5ud82os/image/upload/v1739330929/WEB/investing-in-peru/valeunperu2024_qd1k1i.jpg"
-                width={1488}                
-                height={440}
-                alt=""
-              />
+      {/* Key Statistics Section */}
+      <section className="bg-white container mx-auto px-4 py-8 md:py-12">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center">
+            <div className="p-4 md:p-6 bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-red-600 mb-2">$54B</div>
+              <div className="text-xs md:text-sm lg:text-base text-gray-700">Mining Investment Pipeline</div>
+            </div>
+            <div className="p-4 md:p-6 bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-red-600 mb-2">3.2%</div>
+              <div className="text-xs md:text-sm lg:text-base text-gray-700">GDP Growth 2025</div>
+            </div>
+            <div className="p-4 md:p-6 bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-red-600 mb-2">150+</div>
+              <div className="text-xs md:text-sm lg:text-base text-gray-700">Japanese Companies</div>
+            </div>
+            <div className="p-4 md:p-6 bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-red-600 mb-2">#2</div>
+              <div className="text-xs md:text-sm lg:text-base text-gray-700">World Copper Producer</div>
+            </div>
+          </div>
         </div>
       </section>
-      
-      <section className="bg-white container mx-auto px-6 md:p-6">
 
-        <div className="md:flex py-8">
-          <div className="w-full xl:w-3/5 flex-col justify-end p-2">
-            <div>
-            <Link href="/investing-in-peru" className="">
-              <Image
-                className="hover:grow hover:shadow-lg rounded-xl"
-                src="https://res.cloudinary.com/de5ud82os/image/upload/v1701071043/WEB/investing-in-peru/kqx7urufnxitt164oqf1.jpg"
-                width={750}
-                height={250}
-                alt=""
-              />
-            </Link>
-            </div>
-            <div className="p-2 text-center">
-              <a
-                href="https://embperujapan.org/guia_de_inversiones-2023.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex align-middle justify-center p-1 w-1/2 md:w-1/3 bg-red-600 text-white text-center rounded-md"
-              >
-                <ImDownload2 className="text-white m-1" /> Download
-              </a>
-            </div>
-          </div>
-
-          <div className="w-full xl:w-3/5 flex-col justify-end p-2">
-            <div>
-            <Link href="/investing-in-peru" className="">
-              <Image
-                className="hover:grow hover:shadow-lg rounded-xl"
-                src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564006/WEB/gastronomia/peruinjapanguiadeinversiones_qosebq.jpg"
-                width={750}
-                height={250}
-                alt=""
-              />
-            </Link>
-            </div>
-            <div className="p-2 text-center">
-              <a
-                href="https://cdn.www.gob.pe/uploads/document/file/5127968/guia_de_inversiones-2022.pdf?v=1694662913"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex align-middle justify-center p-1 w-1/2 md:w-1/3 bg-red-600 text-white text-center rounded-md"
-              >
-                <ImDownload2 className="text-white m-1" /> Download
-              </a>
+      {/* Latest News Section - Only show in Japanese */}
+      {locale === "jp" && (
+        <section className="bg-gradient-to-br from-slate-50 to-blue-50 container mx-auto px-4 py-8 md:py-12">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-8 md:mb-12 japanese-heading-1">
+              {texts.latestNews}
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+              {getLatestNews(6).map((news) => (
+                <Link
+                  key={news.slug}
+                  href={`/investing-in-peru/${news.year}/${news.slug}`}
+                  className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group"
+                >
+                  <div className="p-4 md:p-6">
+                    <div className="flex items-center justify-between mb-2 md:mb-3">
+                      <span className="inline-block bg-red-100 text-red-700 text-xs font-semibold px-2 md:px-3 py-1 rounded-full">
+                        {news.category}
+                      </span>
+                      <span className="text-xs md:text-sm text-gray-500">
+                        {new Date(news.date).toLocaleDateString("ja-JP", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric"
+                        })}
+                      </span>
+                    </div>
+                    <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2 md:mb-3 group-hover:text-red-600 transition-colors line-clamp-2 japanese-heading-3">
+                      {news.title}
+                    </h3>
+                    <p className="text-gray-600 text-xs md:text-sm mb-3 md:mb-4 line-clamp-3 japanese-text">
+                      {news.excerpt}
+                    </p>
+                    <span className="text-red-600 font-semibold text-xs md:text-sm group-hover:text-red-700 transition-colors">
+                      {texts.readMore}
+                    </span>
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
+        </section>
+      )}
 
-
-          </div>
-          
-      </section>
     </Layout>
   );
 };
