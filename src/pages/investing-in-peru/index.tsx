@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { ImDownload2 } from "react-icons/im";
 import Banner from "@src/components/Banner";
 import Layout from "@src/components/Layout";
-import { getLatestNews } from "./news-index";
+import { getLatestNews } from "@/lib/investing-news-index";
 
 const InvesmentPage = () => {
   const { locale } = useRouter();

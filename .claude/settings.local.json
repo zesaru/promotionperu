@@ -1,0 +1,46 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(npm audit:*)",
+      "Bash(npm run build:*)",
+      "WebSearch",
+      "Bash(npm install:*)",
+      "Bash(pnpm run dev:*)",
+      "Bash(timeout:*)",
+      "Bash(exit:*)",
+      "Bash(powershell:*)",
+      "Bash(dir \"%APPDATA%\\\\Claude\")",
+      "Bash(npx:*)",
+      "Bash(pnpm run build:*)",
+      "Bash(pnpm add:*)",
+      "Bash(if exist node_modules rmdir:*)",
+      "Bash(if exist pnpm-lock.yaml del pnpm-lock.yaml)",
+      "Bash(pnpm install:*)",
+      "mcp__playwright__browser_navigate",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(taskkill:*)",
+      "mcp__playwright__browser_take_screenshot",
+      "mcp__playwright__browser_wait_for",
+      "mcp__playwright__browser_click",
+      "Bash(cmd //c \"del /F C:\\\\Users\\\\embto\\\\Documents\\\\GitHub\\\\promotionperu\\\\.next\\\\dev\\\\lock\")",
+      "Bash(cmd //c:*)",
+      "Bash(npm run dev:*)",
+      "Bash(find:*)",
+      "Bash(node:*)",
+      "Bash(grep:*)",
+      "Bash(git push:*)",
+      "Bash(pnpm audit:*)",
+      "Bash(pnpm update:*)",
+      "Bash(vercel:*)"
+    ],
+    "deny": [],
+    "ask": []
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "next-devtools"
+  ]
+}

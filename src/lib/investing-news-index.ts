@@ -1,5 +1,5 @@
-import { news2025 } from "./2025/news-index";
-import { news2026 } from "./2026/news-index";
+import { news2025 } from "./investing-news-index-2025";
+import { news2026 } from "./investing-news-index-2026";
 
 export interface NewsItem {
   slug: string;
