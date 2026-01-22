@@ -18,7 +18,6 @@ const Slugrecipes = ({ recipe }: RecipeCardProps) => {
       <Banner
         alt="Gastronoy"
         src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564006/WEB/gastronomia/peruinjapangastronomia_o0xsca.jpg"
-        src2="https://res.cloudinary.com/de5ud82os/image/upload/v1694564006/WEB/gastronomia/peruinjapangastronomy400_useyoj.jpg"
       />
       <div className="container p-6  mx-auto">
         <h2 className="uppercase tracking-wide no-underline hover:no-underline font-bold text-xl mb-8 text-center text-orange-600">

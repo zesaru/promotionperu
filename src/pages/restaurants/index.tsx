@@ -26,7 +26,6 @@ export default function Restaurants({ cities }: RestaurantsProps) {
       <Banner
         alt="Restaurants"
         src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564012/WEB/gastronomia/restaurantsbanner2_ajlqai.jpg"
-        src2="https://res.cloudinary.com/de5ud82os/image/upload/v1694564011/WEB/gastronomia/restaurantsbanner2400_bxg6cp.jpg"
       />
       <section className="bg-white py-8">
       <div className="container p-2 md:p-4 mx-auto">

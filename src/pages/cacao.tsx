@@ -21,7 +21,6 @@ const Cacao = ({ posts }: { posts: any }) => {
       <Banner
         alt={data[0].__i18n_lang === locale ? data[0].title : data[1].title}
         src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564005/WEB/gastronomia/peruinjapanbannercacao_nzf9yw.jpg"
-        src2="https://res.cloudinary.com/de5ud82os/image/upload/v1694564005/WEB/gastronomia/peruinjapanbannercacao400_dfi123.jpg"
       />
       <div className="container p-2 md:p-4 mx-auto">
         <div className="flex uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-2">

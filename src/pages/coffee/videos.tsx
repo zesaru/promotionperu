@@ -13,7 +13,6 @@ const RecipesPage = () => {
       <Banner
         alt="coffee "
         src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564001/WEB/gastronomia/coffee_i5qpiz.jpg"
-        src2="https://res.cloudinary.com/de5ud82os/image/upload/v1694564001/WEB/gastronomia/coffee400_w4detx.jpg"
       />
       <div className="container p-6 pb-0  mx-auto">
         <h2 className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl md:mb-2"></h2>

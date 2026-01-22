@@ -20,7 +20,6 @@ const ProductsPage = ({ posts }: { posts: any }) => {
       <Banner
         alt="Pisco ピスコ "
         src={"https://res.cloudinary.com/de5ud82os/image/upload/v1694564008/WEB/gastronomia/pisco_kqmd66.jpg"}
-        src2={"https://res.cloudinary.com/de5ud82os/image/upload/v1694564008/WEB/gastronomia/pisco400_rzquod.jpg"}
       />
       <div className="container p-6  mx-auto">
         <div className="flex uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8">

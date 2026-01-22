@@ -24,7 +24,6 @@ const YearsPage = ({ posts }: { posts: any }) => {
       <Banner
         alt={altBanner}
         src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564001/WEB/gastronomia/150years_bdwrpn.jpg"
-        src2="https://res.cloudinary.com/de5ud82os/image/upload/v1694564000/WEB/gastronomia/150years400_qthagy.jpg"
       />
       <div className="container py-4 md:py-6 px-4 mx-auto">
         <h2 className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8">

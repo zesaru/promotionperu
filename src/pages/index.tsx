@@ -14,7 +14,7 @@ export default function Home( { posts }:Props) {
   const { locale } = useRouter();
   return (
     <Layout language={locale}>
-      <Banner alt={"Peruinjapan"} src={"https://res.cloudinary.com/de5ud82os/image/upload/v1694564005/WEB/gastronomia/peruinjapan_evsspv.jpg"} src2={"https://res.cloudinary.com/de5ud82os/image/upload/v1694564005/WEB/gastronomia/peruinjapan400_hdkevo.jpg"} />
+      <Banner alt={"Peruinjapan"} src={"https://res.cloudinary.com/de5ud82os/image/upload/v1694564005/WEB/gastronomia/peruinjapan_evsspv.jpg"} />
       <Wellcome post={posts} />
     </Layout>
   );
