@@ -9,16 +9,42 @@ module.exports = {
     defaultLocale: 'jp',
   },
   images: {
-    domains: [
-      "images.unsplash.com",
-      "via.placeholder.com",
-      "plus.unsplash.com",
-      "cdn.sanity.io",
-      "embperujapan.org",
-      "cdn.pixabay.com",
-      "res.cloudinary.com",
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'via.placeholder.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'plus.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+      },
+      {
+        protocol: 'https',
+        hostname: 'embperujapan.org',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.pixabay.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'asset.cloudinary.com',
+      },
     ],
   },
+  turbopack: {},
   webpack: (config) => {
     config.resolve.alias["@components"] = path.join(
       __dirname,
