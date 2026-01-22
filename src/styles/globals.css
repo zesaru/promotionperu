@@ -9,14 +9,142 @@
 /* Japanese text specific styling */
 .japanese-text {
   font-family: var(--noto-sans-jp-font), "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
-  line-height: 1.7;
-  letter-spacing: 0.02em;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
 }
 
 /* Mixed content with Japanese characters */
 .multilingual-text {
   font-family: var(--bree-font), var(--noto-sans-jp-font), "Work Sans", "Hiragino Sans", sans-serif;
-  line-height: 1.6;
+  line-height: 1.7;
+}
+
+/* ============================================
+   MOBILE-FIRST JAPANESE TYPOGRAPHY
+   ============================================ */
+
+/* Mobile-specific optimizations (< 768px) */
+@media (max-width: 768px) {
+  .japanese-text {
+    font-size: 1rem;
+    line-height: 1.9;
+    letter-spacing: 0.05em;
+    word-break: keep-word;
+    overflow-wrap: break-word;
+  }
+
+  .multilingual-text {
+    line-height: 1.8;
+  }
+
+  /* Prevent horizontal overflow on Japanese text */
+  * {
+    overflow-wrap: break-word;
+    word-break: keep-word;
+  }
+}
+
+/* Small mobile phones (< 480px) */
+@media (max-width: 480px) {
+  .japanese-text {
+    font-size: 0.9375rem;
+    line-height: 2.0;
+    letter-spacing: 0.06em;
+  }
+}
+
+/* Tablet and desktop (> 768px) */
+@media (min-width: 768px) {
+  .japanese-text {
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* ============================================
+   MOBILE TYPOGRAPHY UTILITIES
+   ============================================ */
+
+/* Mobile heading sizes */
+.ja-heading-1 {
+  font-size: 1.375rem;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+}
+
+.ja-heading-2 {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+}
+
+.ja-heading-3 {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+}
+
+/* Mobile body text */
+.ja-body-base {
+  font-size: 1rem;
+  line-height: 1.9;
+  letter-spacing: 0.05em;
+}
+
+.ja-body-small {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  letter-spacing: 0.04em;
+}
+
+/* Responsive heading utilities */
+@media (min-width: 768px) {
+  .ja-heading-1 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+  }
+
+  .ja-heading-2 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  .ja-heading-3 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .ja-body-base {
+    font-size: 1.125rem;
+    line-height: 1.7;
+  }
+}
+
+/* ============================================
+   MOBILE CONTAINER UTILITIES
+   ============================================ */
+
+/* Mobile-optimized container */
+.mobile-container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .mobile-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 #menu-toggle:checked + #menu {

@@ -63,7 +63,7 @@ export default function Layout({
 
 
   return (
-    <div className="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
+    <div className="bg-white text-gray-600 work-sans leading-loose text-base tracking-normal">
       <NextSeo
         title={pageTitle}
         description={finalDescription}
