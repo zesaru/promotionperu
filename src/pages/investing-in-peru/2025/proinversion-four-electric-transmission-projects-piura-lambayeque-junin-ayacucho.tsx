@@ -16,29 +16,26 @@ const InvestmentPage = () => {
         src={
           "https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapaninversiones_xop2nr.jpg"
         }
-        src2={
-          "https://res.cloudinary.com/de5ud82os/image/upload/v1694564004/WEB/gastronomia/inversiones400_nb0noc.jpg"
-        }
       />
 
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-right mb-4">
-          <p className="text-sm text-gray-600">在日ペルー大使館</p>
-          <p className="text-sm text-gray-600">非公式翻訳</p>
+          <p className="text-xs md:text-sm text-gray-600">在日ペルー大使館</p>
+          <p className="text-xs md:text-sm text-gray-600">非公式翻訳</p>
         </div>
 
         <div className="mb-6">
-          <h1 className="text-lg font-normal text-gray-800 mb-4">
+          <h1 className="text-lg md:text-xl font-normal text-gray-800 mb-3 md:mb-4 japanese-heading-3">
             民間投資促進庁（PROINVERSIÓN）
           </h1>
-          <h2 className="text-xl font-bold text-gray-900 mb-4">
+          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 japanese-heading-1">
             PROINVERSIÓN: Piura、Lambayeque、JuninとAyacuchoで4件の電力送電プロジェクトの入札を開始
           </h2>
           <h3 className="text-lg font-semibold text-gray-800 mb-2">
             プレスリリース
           </h3>
-          <p className="text-sm text-gray-600 mb-6">
+          <p className="text-xs md:text-sm text-gray-600 mb-6">
             2025年10月17日
           </p>
         </div>
@@ -57,17 +54,17 @@ const InvestmentPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
               <div>
                 <p className="text-4xl font-bold text-blue-700">2.31億</p>
-                <p className="text-sm text-gray-700 mt-2">米ドル</p>
+                <p className="text-sm text-gray-700 mt-2 japanese-text">米ドル</p>
                 <p className="text-xs text-gray-600">総投資額</p>
               </div>
               <div>
                 <p className="text-4xl font-bold text-blue-700">160万</p>
-                <p className="text-sm text-gray-700 mt-2">人</p>
+                <p className="text-sm text-gray-700 mt-2 japanese-text">人</p>
                 <p className="text-xs text-gray-600">受益者数</p>
               </div>
               <div>
                 <p className="text-4xl font-bold text-blue-700">4州</p>
-                <p className="text-sm text-gray-700 mt-2">地域</p>
+                <p className="text-sm text-gray-700 mt-2 japanese-text">地域</p>
                 <p className="text-xs text-gray-600">対象エリア</p>
               </div>
             </div>
@@ -102,7 +99,7 @@ const InvestmentPage = () => {
                   <p className="text-sm font-semibold text-gray-800">130万人以上</p>
                 </div>
               </div>
-              <p className="text-sm text-gray-700 mt-3 leading-relaxed">
+              <p className="text-sm text-gray-700 mt-3 leading-relaxed japanese-text">
                 Talara、Pariñas、Tumbes地域の住民に安定した電力供給をもたらします。
               </p>
             </div>
@@ -133,7 +130,7 @@ const InvestmentPage = () => {
                   <p className="text-sm font-semibold text-gray-800">12万人</p>
                 </div>
               </div>
-              <p className="text-sm text-gray-700 mt-3 leading-relaxed">
+              <p className="text-sm text-gray-700 mt-3 leading-relaxed japanese-text">
                 Tierras Nuevas – Pampa Pañalá およびMotupe – Olmos地域の電力供給を改善します。
               </p>
             </div>
@@ -263,8 +260,8 @@ const InvestmentPage = () => {
           </p>
 
           {/* Footer */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <p className="text-sm text-gray-600 mb-2">
+          <div className="mt-8 md:mt-12 pt-4 md:pt-6 border-t border-gray-200">
+            <p className="text-xs md:text-sm text-gray-600 mb-2 japanese-text">
               民間投資促進庁（PROINVERSIÓN）
             </p>
             <p className="text-sm text-gray-600 mb-4">
@@ -276,12 +273,12 @@ const InvestmentPage = () => {
           </div>
 
           {/* Reference */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
+          <div className="mt-8 md:mt-12 pt-4 md:pt-6 border-t border-gray-200">
             <h3 className="text-lg font-semibold text-blue-800 mb-4">参考文献</h3>
-            <p className="text-sm text-gray-700 mb-2">
+            <p className="text-sm text-gray-700 mb-2 japanese-text">
               PROINVERSIÓN. (2025年10月17日). PROINVERSIÓN convoca a concurso cuatro proyectos de transmisión eléctrica en Piura, Lambayeque, Junín y Ayacucho.
             </p>
-            <p className="text-sm text-gray-600">
+            <p className="text-xs md:text-sm text-gray-600">
               参照先: PROINVERSIÓN:<br/>
               <Link href="https://www.investinperu.pe/proinversion-convoca-a-concurso-cuatro-proyectos-de-transmision-electrica-en-piura-lambayeque-junin-y-ayacucho/" className="text-blue-600 hover:underline text-xs break-all">
                 https://www.investinperu.pe/proinversion-convoca-a-concurso-cuatro-proyectos-de-transmision-electrica-en-piura-lambayeque-junin-y-ayacucho/
@@ -290,8 +287,8 @@ const InvestmentPage = () => {
           </div>
 
           <div className="text-right mt-8">
-            <p className="text-sm text-gray-600">在日ペルー大使館</p>
-            <p className="text-sm text-gray-600">非公式翻訳</p>
+            <p className="text-xs md:text-sm text-gray-600">在日ペルー大使館</p>
+            <p className="text-xs md:text-sm text-gray-600">非公式翻訳</p>
           </div>
         </div>
       </div>

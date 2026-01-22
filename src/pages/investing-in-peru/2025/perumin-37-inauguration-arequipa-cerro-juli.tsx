@@ -16,16 +16,13 @@ const Perumin37Page = () => {
         src={
           "https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapaninversiones_xop2nr.jpg"
         }
-        src2={
-          "https://res.cloudinary.com/de5ud82os/image/upload/v1694564004/WEB/gastronomia/inversiones400_nb0noc.jpg"
-        }
       />
 
       <div className="container mx-auto px-4 py-8 max-w-6xl bg-white japanese-text">
         {/* Header */}
         <div className="text-right mb-6 font-japanese">
-          <p className="text-sm text-gray-700">在日ペルー大使館</p>
-          <p className="text-sm text-gray-700">非公式翻訳</p>
+          <p className="text-sm text-gray-700 japanese-text">在日ペルー大使館</p>
+          <p className="text-sm text-gray-700 japanese-text">非公式翻訳</p>
         </div>
 
         <div className="grid grid-cols-1 gap-4 mb-6">
@@ -160,7 +157,7 @@ const Perumin37Page = () => {
           </div>
 
           <div className="text-right font-japanese mb-6">
-            <p className="text-sm text-gray-600">[Revista desde adentro, 2025]</p>
+            <p className="text-xs md:text-sm text-gray-600">[Revista desde adentro, 2025]</p>
           </div>
         </div>
 
@@ -180,8 +177,8 @@ const Perumin37Page = () => {
 
         {/* Footer */}
         <div className="text-right">
-          <p className="text-sm text-gray-600">在日ペルー大使館</p>
-          <p className="text-sm text-gray-600">非公式翻訳</p>
+          <p className="text-xs md:text-sm text-gray-600">在日ペルー大使館</p>
+          <p className="text-xs md:text-sm text-gray-600">非公式翻訳</p>
         </div>
 
         {/* Bottom branding */}

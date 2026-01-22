@@ -16,29 +16,26 @@ const InvestmentPage = () => {
         src={
           "https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapaninversiones_xop2nr.jpg"
         }
-        src2={
-          "https://res.cloudinary.com/de5ud82os/image/upload/v1694564004/WEB/gastronomia/inversiones400_nb0noc.jpg"
-        }
       />
 
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-right mb-4">
-          <p className="text-sm text-gray-600">在日ペルー大使館</p>
-          <p className="text-sm text-gray-600">非公式翻訳</p>
+          <p className="text-xs md:text-sm text-gray-600">在日ペルー大使館</p>
+          <p className="text-xs md:text-sm text-gray-600">非公式翻訳</p>
         </div>
 
         <div className="mb-6">
-          <h1 className="text-lg font-normal text-gray-800 mb-4">
+          <h1 className="text-lg md:text-xl font-normal text-gray-800 mb-3 md:mb-4 japanese-heading-3">
             エネルギー鉱山省（MINEM）
           </h1>
-          <h2 className="text-xl font-bold text-gray-900 mb-4">
+          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 japanese-heading-1">
             エネルギー鉱山省（MINEM）、アレキパ、リマ、アプリマックおよびプーノにおける送電プロジェクトの落札を予定
           </h2>
           <h3 className="text-lg font-semibold text-gray-800 mb-2">
             プレスリリース
           </h3>
-          <p className="text-sm text-gray-600 mb-6">
+          <p className="text-xs md:text-sm text-gray-600 mb-6">
             2025年9月3日 午前9時51分
           </p>
         </div>
@@ -93,8 +90,8 @@ const InvestmentPage = () => {
           </p>
 
           {/* Footer */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <p className="text-sm text-gray-600 mb-2">
+          <div className="mt-8 md:mt-12 pt-4 md:pt-6 border-t border-gray-200">
+            <p className="text-xs md:text-sm text-gray-600 mb-2 japanese-text">
               エネルギー鉱山省（MINEM）
             </p>
             <p className="text-sm text-gray-600 mb-4">
@@ -106,12 +103,12 @@ const InvestmentPage = () => {
           </div>
 
           {/* Reference */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
+          <div className="mt-8 md:mt-12 pt-4 md:pt-6 border-t border-gray-200">
             <h3 className="text-lg font-semibold text-blue-800 mb-4">参考文献</h3>
-            <p className="text-sm text-gray-700 mb-2">
+            <p className="text-sm text-gray-700 mb-2 japanese-text">
               Ministerio de Energía y Minas. (2025年09月03日). MINEM otorgará buena pro para construcción de proyectos de transmisión eléctrica en Arequipa, Lima, Apurímac y Puno.
             </p>
-            <p className="text-sm text-gray-600">
+            <p className="text-xs md:text-sm text-gray-600">
               参照先: Sitio Web del Estado Peruano:<br/>
               <Link href="https://www.gob.pe/institucion/minem/noticias/1239158-minem-otorgara-buena-pro-para-construccion-de-proyectos-de-transmision-electrica-en-arequipa-lima-apurimac-y-puno" className="text-blue-600 hover:underline text-xs break-all">
                 https://www.gob.pe/institucion/minem/noticias/1239158-minem-otorgara-buena-pro-para-construccion-de-proyectos-de-transmision-electrica-en-arequipa-lima-apurimac-y-puno
@@ -120,8 +117,8 @@ const InvestmentPage = () => {
           </div>
 
           <div className="text-right mt-8">
-            <p className="text-sm text-gray-600">在日ペルー大使館</p>
-            <p className="text-sm text-gray-600">非公式翻訳</p>
+            <p className="text-xs md:text-sm text-gray-600">在日ペルー大使館</p>
+            <p className="text-xs md:text-sm text-gray-600">非公式翻訳</p>
           </div>
         </div>
       </div>

@@ -16,29 +16,26 @@ const InvestmentPage = () => {
         src={
           "https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapaninversiones_xop2nr.jpg"
         }
-        src2={
-          "https://res.cloudinary.com/de5ud82os/image/upload/v1694564004/WEB/gastronomia/inversiones400_nb0noc.jpg"
-        }
       />
 
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-right mb-4">
-          <p className="text-sm text-gray-600">在日ペルー大使館</p>
-          <p className="text-sm text-gray-600">非公式翻訳</p>
+          <p className="text-xs md:text-sm text-gray-600">在日ペルー大使館</p>
+          <p className="text-xs md:text-sm text-gray-600">非公式翻訳</p>
         </div>
 
         <div className="mb-6">
-          <h1 className="text-lg font-normal text-gray-800 mb-4">
+          <h1 className="text-lg md:text-xl font-normal text-gray-800 mb-3 md:mb-4 japanese-heading-3">
             農業灌漑省（MIDAGRI）
           </h1>
-          <h2 className="text-xl font-bold text-gray-900 mb-4">
+          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 japanese-heading-1">
             政府はアレキパへの約束を果たし、日本が Majes Siguas I の整備を担うことを発表
           </h2>
           <h3 className="text-lg font-semibold text-gray-800 mb-2">
             プレスリリース
           </h3>
-          <p className="text-sm text-gray-600 mb-6">
+          <p className="text-xs md:text-sm text-gray-600 mb-6">
             2025年6月19日 13時26分
           </p>
         </div>
@@ -83,8 +80,8 @@ const InvestmentPage = () => {
 
 
           {/* Footer */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <p className="text-sm text-gray-600 mb-2">
+          <div className="mt-8 md:mt-12 pt-4 md:pt-6 border-t border-gray-200">
+            <p className="text-xs md:text-sm text-gray-600 mb-2 japanese-text">
               農業灌漑省（MIDAGRI）
             </p>
             <p className="text-sm text-gray-600 mb-4">
@@ -96,12 +93,12 @@ const InvestmentPage = () => {
           </div>
 
           {/* Reference */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
+          <div className="mt-8 md:mt-12 pt-4 md:pt-6 border-t border-gray-200">
             <h3 className="text-lg font-semibold text-blue-800 mb-4">参考文献</h3>
-            <p className="text-sm text-gray-700 mb-2">
+            <p className="text-sm text-gray-700 mb-2 japanese-text">
               MINISTERIO DE DESARROLLO AGRARIO Y RIEGO - OFICINA DE COMUNICACIONES E IMAGEN INSTITUCIONAL. (2025年6月19日). Gobierno cumple con Arequipa y anuncia que Japón se hará cargo de la puesta a punto de Majes Siguas I.
             </p>
-            <p className="text-sm text-gray-600">
+            <p className="text-xs md:text-sm text-gray-600">
               参照先: Gog.pe - Plataforma Digital Única del Estado Peruano:<br/>
               <Link href="https://www.gob.pe/institucion/midagri/noticias/1190713-gobierno-cumple-con-arequipa-y-anuncia-que-japon-se-hara-cargo-de-la-puesta-a-punto-de-majes-siguas-i" className="text-blue-600 hover:underline text-xs break-all">
                 https://www.gob.pe/institucion/midagri/noticias/1190713-gobierno-cumple-con-arequipa-y-anuncia-que-japon-se-hara-cargo-de-la-puesta-a-punto-de-majes-siguas-i
@@ -110,8 +107,8 @@ const InvestmentPage = () => {
           </div>
 
           <div className="text-right mt-8">
-            <p className="text-sm text-gray-600">在日ペルー大使館</p>
-            <p className="text-sm text-gray-600">非公式翻訳</p>
+            <p className="text-xs md:text-sm text-gray-600">在日ペルー大使館</p>
+            <p className="text-xs md:text-sm text-gray-600">非公式翻訳</p>
           </div>
         </div>
       </div>

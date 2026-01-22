@@ -16,29 +16,26 @@ const InvestmentPage = () => {
         src={
           "https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapaninversiones_xop2nr.jpg"
         }
-        src2={
-          "https://res.cloudinary.com/de5ud82os/image/upload/v1694564004/WEB/gastronomia/inversiones400_nb0noc.jpg"
-        }
       />
 
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-right mb-4">
-          <p className="text-sm text-gray-600">在日ペルー大使館</p>
-          <p className="text-sm text-gray-600">非公式翻訳</p>
+          <p className="text-xs md:text-sm text-gray-600">在日ペルー大使館</p>
+          <p className="text-xs md:text-sm text-gray-600">非公式翻訳</p>
         </div>
 
         <div className="mb-6">
-          <h1 className="text-lg font-normal text-gray-800 mb-4">
+          <h1 className="text-lg md:text-xl font-normal text-gray-800 mb-3 md:mb-4 japanese-heading-3">
             ペルー投資促進庁（PROINVERSIÓN）
           </h1>
-          <h2 className="text-xl font-bold text-gray-900 mb-4">
+          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 japanese-heading-1">
             PROINVERSIÓN、官民連携投資に関する歴史的統計をまとめた年次統計書を発表
           </h2>
           <h3 className="text-lg font-semibold text-gray-800 mb-2">
             プレスリリース
           </h3>
-          <p className="text-sm text-gray-600 mb-6">
+          <p className="text-xs md:text-sm text-gray-600 mb-6">
             リマ、2025年8月4日
           </p>
         </div>
@@ -74,8 +71,8 @@ const InvestmentPage = () => {
           </p>
 
           {/* Footer */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <p className="text-sm text-gray-600 mb-2">
+          <div className="mt-8 md:mt-12 pt-4 md:pt-6 border-t border-gray-200">
+            <p className="text-xs md:text-sm text-gray-600 mb-2 japanese-text">
               ペルー投資促進庁（PROINVERSIÓN）
             </p>
             <p className="text-xs text-gray-500">
@@ -84,12 +81,12 @@ const InvestmentPage = () => {
           </div>
 
           {/* Reference */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
+          <div className="mt-8 md:mt-12 pt-4 md:pt-6 border-t border-gray-200">
             <h3 className="text-lg font-semibold text-blue-800 mb-4">参考文献</h3>
-            <p className="text-sm text-gray-700 mb-2">
+            <p className="text-sm text-gray-700 mb-2 japanese-text">
               PROINVERSION. (2025年8月4日). PROINVERSIÓN lanza anuario estadístico con cifras históricas en inversión público-privada.
             </p>
-            <p className="text-sm text-gray-600">
+            <p className="text-xs md:text-sm text-gray-600">
               参照先: PROINVERSION NOTICIAS:<br/>
               <Link href="https://www.investinperu.pe/es/pi/detalle-noticia/proinversion-lanza-anuario-estadistico-con-cifras" className="text-blue-600 hover:underline text-xs break-all">
                 https://www.investinperu.pe/es/pi/detalle-noticia/proinversion-lanza-anuario-estadistico-con-cifras
@@ -98,8 +95,8 @@ const InvestmentPage = () => {
           </div>
 
           <div className="text-right mt-8">
-            <p className="text-sm text-gray-600">在日ペルー大使館</p>
-            <p className="text-sm text-gray-600">非公式翻訳</p>
+            <p className="text-xs md:text-sm text-gray-600">在日ペルー大使館</p>
+            <p className="text-xs md:text-sm text-gray-600">非公式翻訳</p>
           </div>
         </div>
       </div>

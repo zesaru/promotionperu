@@ -16,16 +16,13 @@ const GDPReportPage = () => {
         src={
           "https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapaninversiones_xop2nr.jpg"
         }
-        src2={
-          "https://res.cloudinary.com/de5ud82os/image/upload/v1694564004/WEB/gastronomia/inversiones400_nb0noc.jpg"
-        }
       />
 
       <div className="container mx-auto px-4 py-8 max-w-6xl bg-white japanese-text">
         {/* Header - exactly like PDF */}
         <div className="text-right mb-6 font-japanese">
-          <p className="text-sm text-gray-700">在日ペルー大使館</p>
-          <p className="text-sm text-gray-700">非公式翻訳</p>
+          <p className="text-sm text-gray-700 japanese-text">在日ペルー大使館</p>
+          <p className="text-sm text-gray-700 japanese-text">非公式翻訳</p>
         </div>
         <div className="grid grid-cols-1 gap-4 mb-6">
 
@@ -115,7 +112,7 @@ const GDPReportPage = () => {
               増加額：約1,050万ドル<br/>
               成長率：+0.6%
             </div>
-            <p className="text-sm text-gray-700">
+            <p className="text-sm text-gray-700 japanese-text">
               この結果は、主に金融サービスの活動が減少したことによるものです。また、2024年同時期に**-4.7%というマイナス成長を記録していたことからの反動（リバウンド）でもあります。
             </p>
           </div>
@@ -179,8 +176,8 @@ const GDPReportPage = () => {
           </div>
 
           <div className="text-right font-japanese">
-            <p className="text-sm text-gray-600">在日ペルー大使館</p>
-            <p className="text-sm text-gray-600">非公式翻訳</p>
+            <p className="text-xs md:text-sm text-gray-600">在日ペルー大使館</p>
+            <p className="text-xs md:text-sm text-gray-600">非公式翻訳</p>
           </div>
         </div>
 
@@ -258,8 +255,8 @@ const GDPReportPage = () => {
 
         {/* Footer */}
         <div className="text-right">
-          <p className="text-sm text-gray-600">在日ペルー大使館</p>
-          <p className="text-sm text-gray-600">非公式翻訳</p>
+          <p className="text-xs md:text-sm text-gray-600">在日ペルー大使館</p>
+          <p className="text-xs md:text-sm text-gray-600">非公式翻訳</p>
         </div>
 
         {/* Bottom branding */}

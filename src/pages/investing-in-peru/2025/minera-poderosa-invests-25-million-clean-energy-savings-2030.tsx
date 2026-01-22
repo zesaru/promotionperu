@@ -16,29 +16,26 @@ const InvestmentPage = () => {
         src={
           "https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapaninversiones_xop2nr.jpg"
         }
-        src2={
-          "https://res.cloudinary.com/de5ud82os/image/upload/v1694564004/WEB/gastronomia/inversiones400_nb0noc.jpg"
-        }
       />
 
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-right mb-4">
-          <p className="text-sm text-gray-600">在日ペルー大使館</p>
-          <p className="text-sm text-gray-600">非公式翻訳</p>
+          <p className="text-xs md:text-sm text-gray-600">在日ペルー大使館</p>
+          <p className="text-xs md:text-sm text-gray-600">非公式翻訳</p>
         </div>
 
         <div className="mb-6">
-          <h1 className="text-lg font-normal text-gray-800 mb-4">
+          <h1 className="text-lg md:text-xl font-normal text-gray-800 mb-3 md:mb-4 japanese-heading-3">
             ペルー全国鉱業・石油・エネルギー協会
           </h1>
-          <h2 className="text-xl font-bold text-gray-900 mb-4">
+          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 japanese-heading-1">
             Minera Poderosa社、クリーンエネルギーに2,500万米ドルを投資、2030年までに8,910万米ドルの節約を見込む
           </h2>
           <h3 className="text-lg font-semibold text-gray-800 mb-2">
             プレスリリース
           </h3>
-          <p className="text-sm text-gray-600 mb-6">
+          <p className="text-xs md:text-sm text-gray-600 mb-6">
             2025年10月9日（木）
           </p>
         </div>
@@ -91,17 +88,17 @@ const InvestmentPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
               <div>
                 <p className="text-3xl font-bold text-green-700">55%</p>
-                <p className="text-sm text-gray-700 mt-1">2022年</p>
+                <p className="text-sm text-gray-700 mt-1 japanese-text">2022年</p>
                 <p className="text-xs text-gray-600">再生可能エネルギー比率</p>
               </div>
               <div>
                 <p className="text-3xl font-bold text-green-700">76%</p>
-                <p className="text-sm text-gray-700 mt-1">2024年</p>
+                <p className="text-sm text-gray-700 mt-1 japanese-text">2024年</p>
                 <p className="text-xs text-gray-600">再生可能エネルギー比率</p>
               </div>
               <div>
                 <p className="text-3xl font-bold text-green-700">100%</p>
-                <p className="text-sm text-gray-700 mt-1">2030年目標</p>
+                <p className="text-sm text-gray-700 mt-1 japanese-text">2030年目標</p>
                 <p className="text-xs text-gray-600">カーボンニュートラル達成</p>
               </div>
             </div>
@@ -145,8 +142,8 @@ const InvestmentPage = () => {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-lg font-semibold text-gray-900">106,893トン</p>
-                  <p className="text-sm text-gray-600">CO₂排出回避</p>
+                  <p className="text-base md:text-lg font-semibold text-gray-900 japanese-text">106,893トン</p>
+                  <p className="text-xs md:text-sm text-gray-600">CO₂排出回避</p>
                   <p className="text-xs text-gray-500 mt-1">気候目標の62%達成</p>
                 </div>
               </div>
@@ -157,8 +154,8 @@ const InvestmentPage = () => {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-lg font-semibold text-gray-900">8,910万米ドル</p>
-                  <p className="text-sm text-gray-600">2030年までの節約見込み</p>
+                  <p className="text-base md:text-lg font-semibold text-gray-900 japanese-text">8,910万米ドル</p>
+                  <p className="text-xs md:text-sm text-gray-600">2030年までの節約見込み</p>
                   <p className="text-xs text-gray-500 mt-1">ディーゼル消費削減</p>
                 </div>
               </div>
@@ -166,8 +163,8 @@ const InvestmentPage = () => {
           </div>
 
           {/* Footer */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <p className="text-sm text-gray-600 mb-2">
+          <div className="mt-8 md:mt-12 pt-4 md:pt-6 border-t border-gray-200">
+            <p className="text-xs md:text-sm text-gray-600 mb-2">
               ペルー全国鉱業・石油・エネルギー協会
             </p>
             <p className="text-sm text-gray-600 mb-4">
@@ -179,12 +176,12 @@ const InvestmentPage = () => {
           </div>
 
           {/* Reference */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
+          <div className="mt-8 md:mt-12 pt-4 md:pt-6 border-t border-gray-200">
             <h3 className="text-lg font-semibold text-blue-800 mb-4">参考文献</h3>
-            <p className="text-sm text-gray-700 mb-2">
+            <p className="text-sm text-gray-700 mb-2 japanese-text">
               Sociedad Nacional de Mineria, Petroleo y Energia. (2025年10月9日). Poderosa invertirá US$ 25 millones en energías limpias y generará ahorros de US$ 89 millones al 2030.
             </p>
-            <p className="text-sm text-gray-600">
+            <p className="text-xs md:text-sm text-gray-600">
               参照先: desde adentro revista de la Sociedad Nacional de Minería, Petróleo y Energía:<br/>
               <Link href="https://www.desdeadentro.pe/2025/10/poderosa-invertira-us-25-millones-en-energias-limpias-y-generara-ahorros-de-us-89-millones-al-2030/" className="text-blue-600 hover:underline text-xs break-all">
                 https://www.desdeadentro.pe/2025/10/poderosa-invertira-us-25-millones-en-energias-limpias-y-generara-ahorros-de-us-89-millones-al-2030/
@@ -193,8 +190,8 @@ const InvestmentPage = () => {
           </div>
 
           <div className="text-right mt-8">
-            <p className="text-sm text-gray-600">在日ペルー大使館</p>
-            <p className="text-sm text-gray-600">非公式翻訳</p>
+            <p className="text-xs md:text-sm text-gray-600">在日ペルー大使館</p>
+            <p className="text-xs md:text-sm text-gray-600">非公式翻訳</p>
           </div>
         </div>
       </div>

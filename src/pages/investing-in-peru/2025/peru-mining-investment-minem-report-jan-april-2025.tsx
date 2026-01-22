@@ -14,26 +14,23 @@ const MiningInvestmentPage = () => {
         src={
           "https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapaninversiones_xop2nr.jpg"
         }
-        src2={
-          "https://res.cloudinary.com/de5ud82os/image/upload/v1694564004/WEB/gastronomia/inversiones400_nb0noc.jpg"
-        }
       />
 
       <div className="container mx-auto px-4 py-8 max-w-6xl">
         {/* Header */}
         <div className="text-right mb-4">
-          <p className="text-sm text-gray-600">在日ペルー大使館</p>
-          <p className="text-sm text-gray-600">非公式翻訳</p>
+          <p className="text-xs md:text-sm text-gray-600 japanese-text">在日ペルー大使館</p>
+          <p className="text-xs md:text-sm text-gray-600 japanese-text">非公式翻訳</p>
         </div>
 
         <div className="mb-6">
-          <h1 className="text-xl font-bold text-gray-900 mb-4">
+          <h1 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 japanese-heading-1">
             MINEM: 2025年1月から4月の鉱業投資は14億4,300万米ドルを超える
           </h1>
           <h2 className="text-lg text-gray-800 mb-4">
             探鉱投資は48.9％増加、鉱山インフラが最も活発な分野として定着
           </h2>
-          <p className="text-sm text-gray-600 mb-6">
+          <p className="text-xs md:text-sm text-gray-600 mb-6">
             発表日：2025年6月16日（月）
           </p>
         </div>
@@ -82,12 +79,12 @@ const MiningInvestmentPage = () => {
 
 
           {/* Footer */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
+          <div className="mt-8 md:mt-12 pt-4 md:pt-6 border-t border-gray-200">
             <h3 className="text-lg font-semibold text-blue-800 mb-4">参考文献</h3>
-            <p className="text-sm text-gray-700 mb-2">
+            <p className="text-sm text-gray-700 mb-2 japanese-text">
               Sociedad Nacional de Minería, Petróleo y Energía. (2025年6月16日). MINEM: Inversión minera superó los US$ 1,443 millones entre enero y abril de 2025.
             </p>
-            <p className="text-sm text-gray-600">
+            <p className="text-xs md:text-sm text-gray-600 japanese-text">
               参照先: desde adentro:<br/>
               <Link href="https://www.desdeadentro.pe/2025/06/minem-inversion-minera-supero-los-us-1443-millones-entre-enero-y-abril-de-2025/" className="text-blue-600 hover:underline text-xs break-all">
                 https://www.desdeadentro.pe/2025/06/minem-inversion-minera-supero-los-us-1443-millones-entre-enero-y-abril-de-2025/
@@ -96,8 +93,8 @@ const MiningInvestmentPage = () => {
           </div>
 
           <div className="text-right mt-8">
-            <p className="text-sm text-gray-600">在日ペルー大使館</p>
-            <p className="text-sm text-gray-600">非公式翻訳</p>
+            <p className="text-xs md:text-sm text-gray-600 japanese-text">在日ペルー大使館</p>
+            <p className="text-xs md:text-sm text-gray-600 japanese-text">非公式翻訳</p>
           </div>
         </div>
       </div>

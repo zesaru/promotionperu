@@ -16,35 +16,32 @@ const PeruJapanStrategicPartnershipPage = () => {
         src={
           "https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapaninversiones_xop2nr.jpg"
         }
-        src2={
-          "https://res.cloudinary.com/de5ud82os/image/upload/v1694564004/WEB/gastronomia/inversiones400_nb0noc.jpg"
-        }
       />
 
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-right mb-4">
-          <p className="text-sm text-gray-600">在日ペルー大使館</p>
-          <p className="text-sm text-gray-600">非公式翻訳</p>
+          <p className="text-xs md:text-sm text-gray-600 japanese-text">在日ペルー大使館</p>
+          <p className="text-xs md:text-sm text-gray-600 japanese-text">非公式翻訳</p>
         </div>
 
         <div className="mb-6">
-          <h1 className="text-lg font-normal text-gray-800 mb-4">
+          <h1 className="text-lg md:text-xl font-normal text-gray-800 mb-3 md:mb-4 japanese-heading-3">
             ペルー外務省
           </h1>
-          <h2 className="text-xl font-bold text-gray-900 mb-4">
+          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 japanese-heading-1">
             ペルーと日本、東京での外相会談で戦略的パートナーシップを強化
           </h2>
           <h3 className="text-lg font-semibold text-gray-800 mb-2">
             プレスリリース
           </h3>
-          <ul className="text-sm text-gray-600 mb-6 list-disc ml-6">
+          <ul className="text-xs md:text-sm text-gray-600 mb-6 list-disc ml-6">
             <li>2024年ロードマップの進展と、わずか8か月間で実行された10の合意が強調されました。</li>
           </ul>
           <p className="text-sm text-gray-600 mb-4">
             2025年8月8日 17時38分
           </p>
-          <p className="text-sm text-gray-600 mb-6">
+          <p className="text-xs md:text-sm text-gray-600 mb-6">
             プレスリリース No.171-25
           </p>
         </div>
@@ -84,12 +81,12 @@ const PeruJapanStrategicPartnershipPage = () => {
           </p>
 
           {/* Footer */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
+          <div className="mt-8 md:mt-12 pt-4 md:pt-6 border-t border-gray-200">
             <h3 className="text-lg font-semibold text-blue-800 mb-4">参考文献</h3>
-            <p className="text-sm text-gray-700 mb-2">
+            <p className="text-sm text-gray-700 mb-2 japanese-text">
               Ministerio de Relaciones Exteriores. (2025年08月08日). Perú y Japón fortalecen su asociación estratégica en reunión de cancilleres en Tokio.
             </p>
-            <p className="text-sm text-gray-600">
+            <p className="text-xs md:text-sm text-gray-600 japanese-text">
               参照先: Estado Peruano:<br/>
               <Link href="https://www.gob.pe/institucion/rree/noticias/1223456-peru-y-japon-fortalecen-su-asociacion-estrategica-en-reunion-de-cancilleres-en-tokio" className="text-blue-600 hover:underline text-xs break-all">
                 https://www.gob.pe/institucion/rree/noticias/1223456-peru-y-japon-fortalecen-su-asociacion-estrategica-en-reunion-de-cancilleres-en-tokio
@@ -98,8 +95,8 @@ const PeruJapanStrategicPartnershipPage = () => {
           </div>
 
           <div className="text-right mt-8">
-            <p className="text-sm text-gray-600">在日ペルー大使館</p>
-            <p className="text-sm text-gray-600">非公式翻訳</p>
+            <p className="text-xs md:text-sm text-gray-600 japanese-text">在日ペルー大使館</p>
+            <p className="text-xs md:text-sm text-gray-600 japanese-text">非公式翻訳</p>
           </div>
         </div>
       </div>

@@ -16,32 +16,29 @@ const PresidentBoluarteInvestmentPage = () => {
         src={
           "https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapaninversiones_xop2nr.jpg"
         }
-        src2={
-          "https://res.cloudinary.com/de5ud82os/image/upload/v1694564004/WEB/gastronomia/inversiones400_nb0noc.jpg"
-        }
       />
 
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-right mb-4">
-          <p className="text-sm text-gray-600">在日ペルー大使館</p>
-          <p className="text-sm text-gray-600">非公式翻訳</p>
+          <p className="text-xs md:text-sm text-gray-600 japanese-text">在日ペルー大使館</p>
+          <p className="text-xs md:text-sm text-gray-600 japanese-text">非公式翻訳</p>
         </div>
 
         <div className="mb-6">
-          <h1 className="text-lg font-normal text-gray-800 mb-4">
+          <h1 className="text-lg md:text-xl font-normal text-gray-800 mb-3 md:mb-4 japanese-heading-3">
             ペルー共和国大統領府
           </h1>
-          <h2 className="text-xl font-bold text-gray-900 mb-4">
+          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 japanese-heading-1">
             ディナ・ボルアルテ大統領、日本で170億米ドル超のペルー投資案件を推進
           </h2>
           <h3 className="text-lg font-semibold text-gray-800 mb-2">
             プレスリリース
           </h3>
-          <ul className="text-sm text-gray-600 mb-6 list-disc ml-6">
+          <ul className="text-xs md:text-sm text-gray-600 mb-6 list-disc ml-6">
             <li>大統領は、日本の企業関係者に対し、外国投資に有利な条件を強化することを目的とした第2次規制緩和パッケージについて説明しました。</li>
           </ul>
-          <p className="text-sm text-gray-600 mb-6">
+          <p className="text-xs md:text-sm text-gray-600 mb-6">
             2025年8月6日 20時56分
           </p>
         </div>
@@ -101,12 +98,12 @@ const PresidentBoluarteInvestmentPage = () => {
           </p>
 
           {/* Footer */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
+          <div className="mt-8 md:mt-12 pt-4 md:pt-6 border-t border-gray-200">
             <h3 className="text-lg font-semibold text-blue-800 mb-4">参考文献</h3>
-            <p className="text-sm text-gray-700 mb-2">
+            <p className="text-sm text-gray-700 mb-2 japanese-text">
               Presidencia de la República del Perú. (2025年08月06日). Presidenta Dina Boluarte promueve cartera de proyectos del Perú por más de US$ 17 000 millones en Japón.
             </p>
-            <p className="text-sm text-gray-600">
+            <p className="text-xs md:text-sm text-gray-600 japanese-text">
               参照先: Estado Peruano:<br/>
               <Link href="https://www.gob.pe/institucion/presidencia/noticias/1222261-presidenta-dina-boluarte-promueve-cartera-de-proyectos-del-peru-por-mas-de-us-17-000-millones-en-japon" className="text-blue-600 hover:underline text-xs break-all">
                 https://www.gob.pe/institucion/presidencia/noticias/1222261-presidenta-dina-boluarte-promueve-cartera-de-proyectos-del-peru-por-mas-de-us-17-000-millones-en-japon
@@ -115,8 +112,8 @@ const PresidentBoluarteInvestmentPage = () => {
           </div>
 
           <div className="text-right mt-8">
-            <p className="text-sm text-gray-600">在日ペルー大使館</p>
-            <p className="text-sm text-gray-600">非公式翻訳</p>
+            <p className="text-xs md:text-sm text-gray-600 japanese-text">在日ペルー大使館</p>
+            <p className="text-xs md:text-sm text-gray-600 japanese-text">非公式翻訳</p>
           </div>
         </div>
       </div>
