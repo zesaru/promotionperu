@@ -33,9 +33,6 @@ const MefPeruGrowth2025Page = () => {
             MEFの予測通り、ペルーは2025年に3.4%の成長を達成
           </h2>
           <p className="text-xs md:text-sm text-gray-600 mb-2">プレスリリース</p>
-          <p className="text-xs md:text-sm text-gray-600 mb-2">
-            WhatsApp Image 2026-02-15 at 12.08.02 PM
-          </p>
           <p className="text-xs md:text-sm text-gray-600 mb-6">
             2026年2月15日 - 午後12時15分
           </p>
