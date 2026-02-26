@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useRouter } from "next/router";
 
 import Banner from "@/components/Banner";
@@ -8,9 +7,13 @@ const ProinversionApp5Page = () => {
   const { locale } = useRouter();
 
   return (
-    <Layout language={locale} title="PROINVERSIÓN、新モデル「APP 5.0」の下で 210 億米ドル超の投資サイクルを活性化">
+    <Layout
+      language={locale}
+      title="PROINVERSIÓN、新モデル「APP 5.0」の下で 210 億米ドル超の投資サイクルを活性化"
+      description="PROINVERSIÓNは、新モデル「APP 5.0」の下で、2026～2028年に向けた210億米ドル超・66件のプロジェクト投資サイクルを提示しました。"
+    >
       <Banner
-        alt={"Investment guide 2022"}
+        alt={"Peru public investment projects news banner"}
         src={
           "https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapaninversiones_xop2nr.jpg"
         }

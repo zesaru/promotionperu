@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useRouter } from "next/router";
 
 import Banner from "@/components/Banner";
@@ -8,9 +7,13 @@ const MefPrivateSectorPage = () => {
   const { locale } = useRouter();
 
   return (
-    <Layout language={locale} title="MEF：民間セクターの信頼が2025年の経済成長を支えた">
+    <Layout
+      language={locale}
+      title="MEF：民間セクターの信頼が2025年の経済成長を支えた"
+      description="経済財務省（MEF）は、2025年末の先行経済指標と民間投資関連指標の改善を受け、企業セクターの信頼がペルー経済の成長を支えたと報告しました。"
+    >
       <Banner
-        alt={"Investment guide 2022"}
+        alt={"Peru investment and economic news banner"}
         src={
           "https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapaninversiones_xop2nr.jpg"
         }

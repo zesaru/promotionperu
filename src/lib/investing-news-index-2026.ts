@@ -8,6 +8,13 @@ export interface NewsItem {
 
 export const news2026: NewsItem[] = [
   {
+    slug: "roque-benavides-peru-largest-undeveloped-copper-project-portfolio-americas",
+    title: "ロケ・ベナビデス：ペルーは米州で最大の未開発銅プロジェクトのポートフォリオを保有",
+    date: "2026-02-18",
+    category: "鉱業",
+    excerpt: "ロケ・ベナビデス氏は、ペルーが米州の未開発銅プロジェクト67件のうち19件を占めると指摘し、投資加速と競争条件の強化による世界的リーダーシップ確立の必要性を強調しました。"
+  },
+  {
     slug: "mef-private-sector-confidence-2025",
     title: "MEF：民間セクターの信頼が2025年の経済成長を支えた",
     date: "2026-01-08",

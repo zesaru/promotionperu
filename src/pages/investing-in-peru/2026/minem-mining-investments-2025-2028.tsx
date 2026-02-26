@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useRouter } from "next/router";
 
 import Banner from "@/components/Banner";
@@ -8,9 +7,13 @@ const MinemMiningInvestmentsPage = () => {
   const { locale } = useRouter();
 
   return (
-    <Layout language={locale} title="MINEM、2025～2028 年に 119 億 2,100 万米ドル超の鉱業投資の具体化を予測">
+    <Layout
+      language={locale}
+      title="MINEM、2025～2028 年に 119 億 2,100 万米ドル超の鉱業投資の具体化を予測"
+      description="MINEMは、2025～2028年に119億2,100万米ドル超の鉱業投資の具体化を予測し、銅を中心としたプロジェクト・ポートフォリオと探査ポテンシャルを強調しました。"
+    >
       <Banner
-        alt={"Investment guide 2022"}
+        alt={"Peru mining investment news banner"}
         src={
           "https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapaninversiones_xop2nr.jpg"
         }
