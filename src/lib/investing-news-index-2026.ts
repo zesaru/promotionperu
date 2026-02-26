@@ -15,6 +15,20 @@ export const news2026: NewsItem[] = [
     excerpt: "ロケ・ベナビデス氏は、ペルーが米州の未開発銅プロジェクト67件のうち19件を占めると指摘し、投資加速と競争条件の強化による世界的リーダーシップ確立の必要性を強調しました。"
   },
   {
+    slug: "mef-peru-grew-3-4-percent-2025",
+    title: "MEFの予測通り、ペルーは2025年に3.4%の成長を達成",
+    date: "2026-02-15",
+    category: "経済",
+    excerpt: "MEFは、ペルーが2025年に3.4%成長し、2025年12月も3.8%成長で21カ月連続の拡大を記録したと発表。内需回復、投資、建設・商業・サービスの成長が経済を牽引しました。"
+  },
+  {
+    slug: "senace-approves-cerro-verde-second-eias-modification-2053",
+    title: "Senace、厳格な技術評価を経てセロ・ベルデの環境社会影響評価 第2回変更を承認",
+    date: "2026-02-08",
+    category: "鉱業",
+    excerpt: "Senaceはセロ・ベルデのEIA第2回変更を承認し、約21億ドルの投資具体化、処理能力増強、アレキパ州での操業を2053年まで延長する見通しを示しました。"
+  },
+  {
     slug: "mef-private-sector-confidence-2025",
     title: "MEF：民間セクターの信頼が2025年の経済成長を支えた",
     date: "2026-01-08",
