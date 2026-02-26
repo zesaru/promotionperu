@@ -20,6 +20,11 @@ const RoqueBenavidesCopperPortfolioPage = () => {
       />
 
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:max-w-4xl ">
+        <div className="text-right mb-4">
+          <p className="text-xs md:text-sm text-gray-600">在日ペルー大使館</p>
+          <p className="text-xs md:text-sm text-gray-600">非公式翻訳</p>
+        </div>
+
         <div className="m-4">
           <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 japanese-heading-1">
             ロケ・ベナビデス：ペルーは米州で最大の未開発銅プロジェクトのポートフォリオを保有
@@ -191,6 +196,11 @@ const RoqueBenavidesCopperPortfolioPage = () => {
           <div className="mt-8 md:mt-12 pt-4 md:pt-6 border-t border-gray-300">
             <p className="text-xs md:text-sm text-gray-600 mb-2">在日ペルー大使館</p>
             <p className="text-xs md:text-sm text-gray-600">経済商務担当</p>
+          </div>
+
+          <div className="text-right mt-8">
+            <p className="text-xs md:text-sm text-gray-600">在日ペルー大使館</p>
+            <p className="text-xs md:text-sm text-gray-600">非公式翻訳</p>
           </div>
 
         </div>
