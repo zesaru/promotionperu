@@ -1,22 +1,20 @@
-import Banner from '@/components/Banner';
-import { render, screen } from '@testing-library/react'
+import { render, screen } from "@testing-library/react";
 
-describe('Banner', () => {
+import Banner from "@/components/Banner";
 
-    const Imageurl = 'https://unsplash.com/es/fotos/U7Hq8kN8apM'
+describe("Banner", () => {
+  const imageUrl = "https://unsplash.com/es/fotos/U7Hq8kN8apM";
 
-    it('should render alt the banner component', () => {
-        render(<Banner alt="test" src={Imageurl} src2={Imageurl} />)
-        const testImage = document.querySelector("img") as HTMLImageElement;
-        expect(testImage.alt).toContain("test");
-    })
+  it("should render alt the banner component", () => {
+    render(<Banner alt="test" src={imageUrl} src2={imageUrl} />);
 
-    it('should render src the banner component', () => {
-        render(<Banner alt="test" src={Imageurl} src2={Imageurl} />)
-        const testImage = document.querySelector("img") as HTMLImageElement;
-        expect(testImage.srcset).toContain('https');
+    expect(screen.getByAltText("test")).toBeInTheDocument();
+  });
 
-    })
+  it("should render src the banner component", () => {
+    render(<Banner alt="test" src={imageUrl} src2={imageUrl} />);
 
-})
-    
+    const testImage = screen.getByAltText("test");
+    expect(testImage).toHaveAttribute("srcset", expect.stringContaining("https"));
+  });
+});
