@@ -38,7 +38,7 @@ const InvesmentPage = () => {
   const texts = content[locale as keyof typeof content] || content.en;
 
   return (
-    <Layout language={locale} title="Invest in Peru 2025">
+    <Layout language={locale} title={texts.heroTitle}>
       <Banner
         alt={"Invest in Peru 2025"}
         src={
