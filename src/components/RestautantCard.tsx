@@ -20,7 +20,11 @@ export default function CardR({
   return (
     <div className="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
       <div className="flex flex-col justify-center items-center">
-        <Link href={homepage ? homepage : facebook} target="_blank">
+        <Link
+          href={homepage ? homepage : facebook}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Image
             loading="lazy"
             className="hover:grow hover:shadow-lg"

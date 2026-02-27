@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { NextSeo } from 'next-seo';
 import React, { ReactNode } from "react";
 
+import Footer from "./Footer";
 import Header from "./Header";
 
 type LayoutProps = {
@@ -13,8 +14,6 @@ type LayoutProps = {
   image?: string;
   type?: string;
 };
-
-const Footer = React.lazy(() => import('./Footer'));
 
 const defaultDescriptions = {
   jp: "ペルーの多様で豊かな料理の文化を祝い、幅広い国際的な料理の実践と料理スタイルを歓迎する日本での良好な受け入れを示したいと思います。",
@@ -31,17 +30,35 @@ export default function Layout({
   type = "website"
 }: LayoutProps) {
   const { locale, asPath } = useRouter();
+  const pathWithoutQuery = asPath.split("#")[0]?.split("?")[0] || "/";
+  const normalizedPath = pathWithoutQuery.replace(/^\/(en|jp)(?=\/|$)/, "") || "/";
+  const currentLocaleCode = locale === "en" ? "en" : "jp";
+  const localizedPath =
+    currentLocaleCode === "en"
+      ? normalizedPath === "/"
+        ? "/en"
+        : `/en${normalizedPath}`
+      : normalizedPath;
   
   const currentLocale = (locale as keyof typeof defaultDescriptions) || 'en';
   const finalDescription = description || defaultDescriptions[currentLocale];
-  const canonicalUrl = `https://www.peruinjapan.org${asPath === '/' ? '' : asPath}`;
-  const pageTitle = locale === 'jp' ? `ペルー・イン・ジャパン | ${title}` : `Peru in Japan | ${title}`;
+  const canonicalUrl = `https://www.peruinjapan.org${localizedPath === '/' ? '' : localizedPath}`;
+  const pageTitle = locale === 'jp' ? `PERUINJAPAN | ${title}` : `Peru in Japan | ${title}`;
   
   // Generate hreflang URLs
   const hreflangs = [
-    { hrefLang: 'ja', href: `https://www.peruinjapan.org${asPath}` },
-    { hrefLang: 'en', href: `https://www.peruinjapan.org/en${asPath === '/' ? '' : asPath}` },
-    { hrefLang: 'x-default', href: `https://www.peruinjapan.org${asPath === '/' ? '' : asPath}` }
+    {
+      hrefLang: 'ja',
+      href: `https://www.peruinjapan.org${normalizedPath === "/" ? "" : normalizedPath}`,
+    },
+    {
+      hrefLang: 'en',
+      href: `https://www.peruinjapan.org${normalizedPath === "/" ? "/en" : `/en${normalizedPath}`}`,
+    },
+    {
+      hrefLang: 'x-default',
+      href: `https://www.peruinjapan.org${normalizedPath === "/" ? "" : normalizedPath}`,
+    }
   ];
 
   // JSON-LD structured data
