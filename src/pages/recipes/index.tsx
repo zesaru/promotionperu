@@ -6,6 +6,8 @@ import PortableText from "react-portable-text";
 import Banner from "src/components/Banner";
 import CardRecipes from "src/components/RecipesCard";
 
+import { getLocalizedEntry } from "@/lib/get-localized-entry";
+
 import Layout from "../../components/Layout";
 
 type Post = {
@@ -33,6 +35,8 @@ const RecipesPage = ({ posts, recipes }: RecipesProps) => {
   const data = useMemo(() => {
     return posts.filter((post: { menu: string }) => `/${post.menu}` === route);
   }, [posts, route]);
+  const localizedPost = getLocalizedEntry(data, locale);
+  const title = localizedPost?.title || "Recipes";
 
   return (
     <Layout language={locale}>
@@ -42,12 +46,10 @@ const RecipesPage = ({ posts, recipes }: RecipesProps) => {
       />
       <div className="container p-6  mx-auto">
         <h2 className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8">
-          {data[0].__i18n_lang === locale ? data[0].title : data[1].title}
+          {title}
         </h2>
         <PortableText
-          content={
-            locale === data[0].__i18n_lang ? data[0].content : data[1].content
-          }
+          content={localizedPost?.content || []}
           serializers={{
             normal: (props: {
               children: string | number | boolean | null | undefined;

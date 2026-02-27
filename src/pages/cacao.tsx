@@ -6,28 +6,28 @@ import Banner from "src/components/Banner";
 import Layout from "src/components/Layout";
 import YoutubeEmbed from "src/components/YoutubeEmbed";
 
+import { getLocalizedEntry } from "@/lib/get-localized-entry";
+
 const Cacao = ({ posts }: { posts: any }) => {
   const { locale, route } = useRouter();
 
   const data = posts.filter(
     (post: { menu: string }) => `/${post.menu}` === route
   );
+  const localizedPost = getLocalizedEntry(data, locale);
+  const title = localizedPost?.title || "Cacao";
+  const isJapanese = locale === "jp";
 
   return (
-    <Layout
-      language={locale}
-      title={data[0].__i18n_lang === locale ? data[0].title : data[1].title}
-    >
+    <Layout language={locale} title={title}>
       <Banner
-        alt={data[0].__i18n_lang === locale ? data[0].title : data[1].title}
+        alt={title}
         src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564005/WEB/gastronomia/peruinjapanbannercacao_nzf9yw.jpg"
       />
       <div className="container p-2 md:p-4 mx-auto">
         <div className="flex uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-2">
           <span className="pr-1 w-1 h-8 bg-red-500 border border-red-600"></span>
-          <h2 className="pl-2">
-            {data[0].__i18n_lang === locale ? data[0].title : data[1].title}
-          </h2>
+          <h2 className="pl-2">{title}</h2>
         </div>
         <div className="w-full flex flex-col lg:flex-row">
           <div className="flex flex-col justify-center w-full lg:w-1/2">
@@ -41,7 +41,7 @@ const Cacao = ({ posts }: { posts: any }) => {
             </div>
           </div>
           <div className="flex flex-col justify-center lg:w-1/2 w-full lg:pl-4">
-            {locale === posts[0].__i18n_lang ? (
+            {isJapanese ? (
               <div>
                 <p className="mt-4 mb-4">
                   カカオはアメリカの原産種であり、おそらく西アマゾン地域がその起源です。ペルーでは、カカオはロレト、サンマルティン、ウカヤリ、ワヌコ、フニン、パスコ、マドレデディオス、クスコ、アヤクチョのジャングル地帯で栽培されています。ペルーのカカオは、その高品質と特別な風味のために日本で評判を得ています。
@@ -83,9 +83,7 @@ const Cacao = ({ posts }: { posts: any }) => {
           </div>
         </div>
         <PortableText
-          content={
-            locale === posts[0].__i18n_lang ? data[0].content : data[1].content
-          }
+          content={localizedPost?.content || []}
           serializers={{
             normal: (props: {
               children: string | number | boolean | null | undefined;
