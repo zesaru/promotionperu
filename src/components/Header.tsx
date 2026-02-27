@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { createClient, groq } from "next-sanity";
-import { BsTranslate } from "react-icons/bs";
 import { useState } from "react";
+import { BsTranslate } from "react-icons/bs";
 
 const clientConfig = {
   projectId,

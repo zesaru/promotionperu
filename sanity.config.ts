@@ -1,5 +1,5 @@
-import { defineConfig } from "sanity";
 import { apiVersion, dataset, projectId } from "lib/sanity.api";
+import { defineConfig } from "sanity";
 import { deskTool } from "sanity/desk";
 
 import schemas from "./schemas/schemaTypes";

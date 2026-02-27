@@ -1,7 +1,7 @@
 import { getAllPosts } from "lib/sanity.client";
 import { GetStaticProps } from "next";
-import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
+import { NextSeo } from "next-seo";
 import PortableText from "react-portable-text";
 import Banner from "src/components/Banner";
 import Layout from "src/components/Layout";

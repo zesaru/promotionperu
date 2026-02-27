@@ -1,9 +1,9 @@
+import Banner from "@src/components/Banner";
+import Layout from "@src/components/Layout";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { ImDownload2, ImArrowLeft } from "react-icons/im";
-import Banner from "@src/components/Banner";
-import Layout from "@src/components/Layout";
+import { ImArrowLeft,ImDownload2 } from "react-icons/im";
 
 const PreviousVersionsPage = () => {
   const { locale } = useRouter();
