@@ -41,13 +41,13 @@ const RecipesPage = ({ posts, recipes }: RecipesProps) => {
   return (
     <Layout language={locale}>
       <Banner
-        alt="Gastronoy"
+        alt="Peruvian gastronomy in Japan"
         src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564006/WEB/gastronomia/peruinjapangastronomia_o0xsca.jpg"
       />
       <div className="container p-6  mx-auto">
-        <h2 className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8">
+        <h1 className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8">
           {title}
-        </h2>
+        </h1>
         <PortableText
           content={localizedPost?.content || []}
           serializers={{

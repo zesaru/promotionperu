@@ -8,12 +8,23 @@ import PortableText from "react-portable-text";
 import Banner from "src/components/Banner";
 import Layout from "src/components/Layout";
 
-const Recipes = ({ posts }: { posts: any }) => {
+import { getLocalizedEntry } from "@/lib/get-localized-entry";
+
+type Post = {
+  menu: string;
+  title: string;
+  content: any;
+  __i18n_lang?: string;
+};
+
+const Recipes = ({ posts }: { posts: Post[] }) => {
   const { locale, route } = useRouter();
 
   const data = posts.filter(
-    (post: { menu: string }) => `/${post.menu}` === route
+    (post) => `/${post.menu}` === route
   );
+  const localizedPost = getLocalizedEntry(data, locale);
+  const title = localizedPost?.title || (locale === "en" ? "Pisco Recipes" : "ピスコレシピ");
 
 
   return (
@@ -25,9 +36,7 @@ const Recipes = ({ posts }: { posts: any }) => {
       <div className="container p-2 md:p-4 mx-auto">
         <div className="flex uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-2">
           <span className="pr-1 w-1 h-8 bg-red-500 border border-red-600"></span>
-          <h2 className="pl-2">
-            {data[0].__i18n_lang === locale ? data[0].title : data[1].title}
-          </h2>
+          <h1 className="pl-2">{title}</h1>
         </div>
       </div>
       <section className="bg-white container mx-auto px-2 md:p-6">
@@ -42,11 +51,7 @@ const Recipes = ({ posts }: { posts: any }) => {
               >
                 <div className="pl-2">
                   <PortableText
-                    content={
-                      locale === data[0].__i18n_lang
-                        ? data[0].content
-                        : data[1].content
-                    }
+                    content={localizedPost?.content || []}
                     serializers={{
                       normal: (props: {
                         children: string | number | boolean | null | undefined;
@@ -74,7 +79,7 @@ const Recipes = ({ posts }: { posts: any }) => {
                 src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapanpiscorecipes_mvw5hm.jpg"
                 width={750}
                 height={250}
-                alt=""
+                alt="Pisco recipe booklet cover"
               />
             </Link>
           </div>

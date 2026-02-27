@@ -7,15 +7,18 @@ import Layout from "../../components/Layout";
 
 const RecipesPage = () => {
   const { locale } = useRouter();
+  const pageTitle = locale === "en" ? "Coffee Videos" : "コーヒービデオ";
 
   return (
-    <Layout language={locale}>
+    <Layout language={locale} title={pageTitle}>
       <Banner
-        alt="coffee "
+        alt="Peruvian coffee in Japan"
         src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564001/WEB/gastronomia/coffee_i5qpiz.jpg"
       />
       <div className="container p-6 pb-0  mx-auto">
-        <h2 className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl md:mb-2"></h2>
+        <h1 className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl md:mb-2">
+          {pageTitle}
+        </h1>
       </div>
       <section className="bg-white py-1 ">
         <div className="container mx-auto flex flex-wrap md:pt-4 pb-12">

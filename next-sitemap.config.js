@@ -15,9 +15,6 @@ module.exports = {
         disallow: ['/admin', '/admin/*'],
       },
     ],
-    additionalSitemaps: [
-      'https://www.peruinjapan.org/sitemap.xml',
-    ],
   },
   transform: async (config, path) => {
     return {

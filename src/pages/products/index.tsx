@@ -7,14 +7,22 @@ import Layout from "../../components/Layout";
 
 const ProductsPage = () => {
   const { locale } = useRouter();
+  const productsDescription =
+    locale === "en"
+      ? "Discover featured Peruvian products in Japan, including Pisco, cacao, and coffee, with practical information for consumers and businesses."
+      : "日本で注目されるペルー産品（ピスコ、カカオ、コーヒー）を紹介し、魅力と活用情報を分かりやすくお届けします。";
 
   return (
-    <Layout language={locale} title={ locale==="en" ? "Products" : "ペルー食品"}>
+    <Layout
+      language={locale}
+      title={ locale==="en" ? "Products" : "ペルー食品"}
+      description={productsDescription}
+    >
       <Banner alt={"Peruvian cocoa, pisco, and coffee"} src={"https://res.cloudinary.com/de5ud82os/image/upload/v1694564012/WEB/gastronomia/products_g6hfbw.jpg"} />
       <div className="container p-6  mx-auto">
         <div className="flex uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8">
           <span className="pr-1 w-1 h-8 bg-red-500 border border-red-600"></span>
-          <h2 className="pl-2">{ locale==="en" ? "Products" : "ペルー食品"}</h2>
+          <h1 className="pl-2">{ locale==="en" ? "Products" : "ペルー食品"}</h1>
         </div>
         <span className="mt-4 mb-4">
           {locale === "en"
@@ -38,7 +46,7 @@ const ProductsPage = () => {
                 src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564010/WEB/gastronomia/product_piscov2_lobeaw.jpg"
                 width={750}
                 height={250}
-                alt="Peruvian Products Pisco"
+                alt="Peruvian Pisco products"
               />
             </Link>
           </div>

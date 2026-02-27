@@ -4,33 +4,38 @@ import { useRouter } from "next/router";
 import PortableText from "react-portable-text";
 import Banner from "src/components/Banner";
 
+import { getLocalizedEntry } from "@/lib/get-localized-entry";
+
 import Layout from "../../components/Layout";
 
-const CoffeeSuppliersPage = ({ posts }: { posts: any }) => {
+type Post = {
+  menu: string;
+  title: string;
+  content: any;
+  __i18n_lang?: string;
+};
+
+const CoffeeSuppliersPage = ({ posts }: { posts: Post[] }) => {
   const { locale, route } = useRouter();
 
   const data = posts.filter(
-    (post: { menu: string }) => `/${post.menu}` === route
+    (post) => `/${post.menu}` === route
   );
+  const localizedPost = getLocalizedEntry(data, locale);
+  const title = localizedPost?.title || (locale === "en" ? "Coffee Suppliers" : "販売会社");
 
   return (
-    <Layout language={locale} title={data[0].__i18n_lang === locale ? data[0].title : data[1].title}>
-      <Banner alt="Gastronoy" src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564006/WEB/gastronomia/peruinjapangastronomia_o0xsca.jpg" />
+    <Layout language={locale} title={title}>
+      <Banner alt="Peruvian gastronomy in Japan" src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564006/WEB/gastronomia/peruinjapangastronomia_o0xsca.jpg" />
       <div className="container p-6  mx-auto">
         <div className="flex uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8">
           <span className="pr-1 w-1 h-8 bg-red-500 border border-red-600"></span>
-          <h2 className="pl-2">
-            {data[0].__i18n_lang === locale ? data[0].title : data[1].title}
-          </h2>
+          <h1 className="pl-2">{title}</h1>
         </div>
       </div>
       <div className="flex container p-6 mx-auto">
         <PortableText className="container mx-auto flex-wrap flex"
-          content={
-            locale === data[0].__i18n_lang
-              ? data[0].content
-              : data[1].content
-          }
+          content={localizedPost?.content || []}
          
           serializers={{
             normal: (props: {

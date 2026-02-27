@@ -6,30 +6,39 @@ import PortableText from "react-portable-text";
 import Banner from "src/components/Banner";
 import Layout from "src/components/Layout";
 
-const Scaj2022 = ({ posts }: { posts: any }) => {
+import { getLocalizedEntry } from "@/lib/get-localized-entry";
+
+type Post = {
+  menu: string;
+  title: string;
+  content: any;
+  __i18n_lang?: string;
+};
+
+const Scaj2022 = ({ posts }: { posts: Post[] }) => {
   const { locale, route } = useRouter();
 
   const data = posts.filter(
-    (post: { menu: string }) => `/${post.menu}` === route
+    (post) => `/${post.menu}` === route
   );
+  const localizedPost = getLocalizedEntry(data, locale);
+  const title = localizedPost?.title || "SCAJ 2022";
 
   return (
     <Layout
       language={locale}
-      title={data[0].__i18n_lang === locale ? data[0].title : data[1].title}
+      title={title}
     >
       <Banner
         alt={"SCAJ2022"}
         src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564001/WEB/gastronomia/coffee_i5qpiz.jpg"
       />
       <div className="container py-4 md:py-6 px-4 mx-auto">
-        <h2 className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8">
-          {data[0].__i18n_lang === locale ? data[0].title : data[1].title}
-        </h2>
+        <h1 className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8">
+          {title}
+        </h1>
         <PortableText
-          content={
-            locale === data[0].__i18n_lang ? data[0].content : data[1].content
-          }
+          content={localizedPost?.content || []}
           serializers={{
             normal: (props: {
               children: string | number | boolean | null | undefined;

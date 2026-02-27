@@ -52,7 +52,7 @@ const Slug = ({ restaurants, slug }: CardProps) => {
         <div className="container p-2 md:p-4 mx-auto">
           <div className="flex uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-2">
             <span className="pr-1 w-1 h-8 bg-red-500 border border-red-600"></span>
-            <h2 className="pl-2">{title}</h2>
+            <h1 className="pl-2">{title}</h1>
           </div>
         </div>
         <div className="container mx-auto flex items-center flex-wrap pt-4 pb-12">

@@ -5,26 +5,35 @@ import React from "react";
 import Banner from "src/components/Banner";
 import CardVideo from "src/components/CardVideo";
 
+import { getLocalizedEntry } from "@/lib/get-localized-entry";
+
 import Layout from "../../components/Layout";
 
+type Post = {
+  menu: string;
+  title: string;
+  __i18n_lang?: string;
+};
 
-const GastronomyVideosPage = ({ posts }: { posts: any }) => {
+const GastronomyVideosPage = ({ posts }: { posts: Post[] }) => {
   const { locale, route } = useRouter();
 
   const data = posts.filter(
-    (post: { menu: string }) => `/${post.menu}` === route
+    (post) => `/${post.menu}` === route
   );
+  const localizedPost = getLocalizedEntry(data, locale);
+  const title = localizedPost?.title || (locale === "en" ? "Gastronomy Videos" : "ガストロノミービデオ");
 
   return (
-    <Layout language={locale} title={data[0].__i18n_lang === locale ? data[0].title : data[1].title}>
+    <Layout language={locale} title={title}>
       <Banner
-        alt="Gastronoy"
+        alt="Peruvian gastronomy in Japan"
         src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564006/WEB/gastronomia/peruinjapangastronomia_o0xsca.jpg"
       />
       <div className="container p-6 pb-0  mx-auto">
-        <h2 className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl md:mb-2">
-          {data[0].__i18n_lang === locale ? data[0].title : data[1].title}
-        </h2>
+        <h1 className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl md:mb-2">
+          {title}
+        </h1>
       </div>
       <section className="bg-white py-1 ">
         <div className="container mx-auto flex flex-wrap md:pt-4 pb-12">

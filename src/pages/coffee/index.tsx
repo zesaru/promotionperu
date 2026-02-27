@@ -7,33 +7,43 @@ import React from "react";
 import PortableText from "react-portable-text";
 import Banner from "src/components/Banner";
 
+import { getLocalizedEntry } from "@/lib/get-localized-entry";
+
 import Layout from "../../components/Layout";
 
-export default function CoffeePage({ posts }: { posts: any }) {
+type Post = {
+  menu: string;
+  title: string;
+  content: any;
+  __i18n_lang?: string;
+};
+
+export default function CoffeePage({ posts }: { posts: Post[] }) {
   const { locale, route } = useRouter();
 
   const data = posts.filter(
-    (post: { menu: string }) => `/${post.menu}` === route
+    (post) => `/${post.menu}` === route
   );
+  const localizedPost = getLocalizedEntry(data, locale);
+  const title = localizedPost?.title || (locale === "en" ? "Coffee" : "コーヒー");
+  const isJapanese = locale === "jp";
 
-  const altBanner = `${data[0].title}  ${data[1].title}`;
+  const altBanner = title;
   return (
     <Layout
       language={locale}
-      title={data[0].__i18n_lang === locale ? data[0].title : data[1].title}
+      title={title}
     >
       <Banner
         alt={altBanner}
         src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564001/WEB/gastronomia/coffee_i5qpiz.jpg"
       />
       <div className="container py-4 md:py-6 px-4 mx-auto">
-        <h2 className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8">
-          {data[0].__i18n_lang === locale ? data[0].title : data[1].title}
-        </h2>
+        <h1 className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8">
+          {title}
+        </h1>
         <PortableText
-          content={
-            locale === data[0].__i18n_lang ? data[0].content : data[1].content
-          }
+          content={localizedPost?.content || []}
           serializers={{
             normal: (props: {
               children: string | number | boolean | null | undefined;
@@ -77,7 +87,7 @@ export default function CoffeePage({ posts }: { posts: any }) {
                 >
                   <div className="flex justify-start">
                     <p className="py-4 text-xl hover:grow">
-                      {locale === posts[0].__i18n_lang
+                      {isJapanese
                         ? "ペルー産コーヒー"
                         : "PERUVIAN COFFEE"}
                     </p>
@@ -101,7 +111,7 @@ export default function CoffeePage({ posts }: { posts: any }) {
                 <Link href="/coffee/scaj2022" className="">
                   <div className="flex justify-start">
                     <p className="py-4 text-xl hover:grow">
-                      {locale === posts[0].__i18n_lang
+                      {isJapanese
                         ? "SCAJ 2022"
                         : "SCAJ 2022"}
                     </p>
@@ -112,7 +122,7 @@ export default function CoffeePage({ posts }: { posts: any }) {
             <div className="w-full md:w-1/3 xl:w-1/4 p-3 md:p-4 lg:p-6 flex flex-col">
               <div>
                 <div className="flex justify-center">
-                  <Link href="coffee/suppliers" className="">
+                  <Link href="/coffee/suppliers" className="">
                     <Image
                       className="hover:grow hover:shadow-lg rounded-xl"
                       src="https://res.cloudinary.com/de5ud82os/image/upload/v1684201274/WEB/COFFEE/coffeesuppliers450x300_iwe7ro.jpg"
@@ -122,10 +132,10 @@ export default function CoffeePage({ posts }: { posts: any }) {
                     />
                   </Link>
                 </div>
-                <Link href="coffee/suppliers" className="">
+                <Link href="/coffee/suppliers" className="">
                   <div className="flex justify-start">
                     <p className="py-4 text-xl hover:grow">
-                      {locale === posts[0].__i18n_lang
+                      {isJapanese
                         ? "販売会社"
                         : "SUPPLIERS "}
                     </p>
@@ -149,7 +159,7 @@ export default function CoffeePage({ posts }: { posts: any }) {
                 <Link href="/coffee/videos" className="">
                   <div className="flex justify-start">
                     <p className="py-4 text-xl hover:grow">
-                      {locale === posts[0].__i18n_lang ? "ビデオ" : "VIDEOS "}
+                      {isJapanese ? "ビデオ" : "VIDEOS "}
                     </p>
                   </div>
                 </Link>

@@ -5,34 +5,41 @@ import React from "react";
 import PortableText from "react-portable-text";
 import Banner from "src/components/Banner";
 
+import { getLocalizedEntry } from "@/lib/get-localized-entry";
+
 import Layout from "../components/Layout";
 
-const YearsPage = ({ posts }: { posts: any }) => {
+type Post = {
+  menu: string;
+  title: string;
+  content: any;
+  __i18n_lang?: string;
+};
+
+const YearsPage = ({ posts }: { posts: Post[] }) => {
   const { locale, route } = useRouter();
 
-  const data = posts.filter(
-    (post: { menu: string }) => `/${post.menu}` === route
-  );
-
-  const altBanner = `${data[0].title}  ${data[1].title}`;
+  const data = posts.filter((post) => `/${post.menu}` === route);
+  const localizedPost = getLocalizedEntry(data, locale);
+  const title =
+    localizedPost?.title ||
+    (locale === "en"
+      ? "150 Years of Diplomatic Relations"
+      : "外交関係樹立150周年");
+  const altBanner = title;
 
   return (
-    <Layout
-      language={locale}
-      title={data[0].__i18n_lang === locale ? data[0].title : data[1].title}
-    >
+    <Layout language={locale} title={title}>
       <Banner
         alt={altBanner}
         src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564001/WEB/gastronomia/150years_bdwrpn.jpg"
       />
       <div className="container py-4 md:py-6 px-4 mx-auto">
-        <h2 className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8">
-          {data[0].__i18n_lang === locale ? data[0].title : data[1].title}
-        </h2>
+        <h1 className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8">
+          {title}
+        </h1>
         <PortableText
-          content={
-            locale === data[0].__i18n_lang ? data[0].content : data[1].content
-          }
+          content={localizedPost?.content || []}
           serializers={{
             normal: (props: {
               children: string | number | boolean | null | undefined;

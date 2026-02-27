@@ -6,17 +6,32 @@ import { useRouter } from "next/router";
 import PortableText from "react-portable-text";
 import Banner from "src/components/Banner";
 
+import { getLocalizedEntry } from "@/lib/get-localized-entry";
+
 import Layout from "../../components/Layout";
 
-const ProductsPage = ({ posts }: { posts: any }) => {
+type Post = {
+  menu: string;
+  title: string;
+  content: any;
+  __i18n_lang?: string;
+};
+
+const ProductsPage = ({ posts }: { posts: Post[] }) => {
   const { locale, route } = useRouter();
+  const piscoDescription =
+    locale === "en"
+      ? "Learn about Peruvian Pisco in Japan with recipes, importer listings, and downloadable resources about Peru's signature spirit."
+      : "日本で楽しむペルー産ピスコの魅力を紹介。レシピ、輸入企業情報、資料を通じてピスコ文化を発信します。";
 
   const data = posts.filter(
-    (post: { menu: string }) => `/${post.menu}` === route
+    (post) => `/${post.menu}` === route
   );
+  const localizedPost = getLocalizedEntry(data, locale);
+  const title = localizedPost?.title || (locale === "en" ? "Pisco" : "ピスコ");
 
   return (
-    <Layout language={locale}>
+    <Layout language={locale} description={piscoDescription}>
       <Banner
         alt="Pisco ピスコ "
         src={"https://res.cloudinary.com/de5ud82os/image/upload/v1694564008/WEB/gastronomia/pisco_kqmd66.jpg"}
@@ -24,9 +39,7 @@ const ProductsPage = ({ posts }: { posts: any }) => {
       <div className="container p-6  mx-auto">
         <div className="flex uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8">
           <span className="pr-1 w-1 h-8 bg-red-500 border border-red-600"></span>
-          <h2 className="pl-2">
-            {data[0].__i18n_lang === locale ? data[0].title : data[1].title}
-          </h2>
+          <h1 className="pl-2">{title}</h1>
         </div>
         <section className="bg-white py-1">
           <div className="md:pt-4 pb-12">
@@ -39,9 +52,7 @@ const ProductsPage = ({ posts }: { posts: any }) => {
           </div>
         </section>
         <PortableText
-          content={
-            locale === data[0].__i18n_lang ? data[0].content : data[1].content
-          }
+          content={localizedPost?.content || []}
           serializers={{
             normal: (props: {
               children: string | number | boolean | null | undefined;
@@ -60,11 +71,11 @@ const ProductsPage = ({ posts }: { posts: any }) => {
                     src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564009/WEB/gastronomia/piscorecipes450x300_ftfgna.jpg"
                     width={450}
                     height={300}
-                    alt="Restaurants"
+                    alt="Pisco cocktail recipes"
                   />
                 </Link>
               </div>
-              <Link href="/restaurants" className="">
+              <Link href="/pisco/recipes" className="">
                 <div className="flex justify-center">
                   <p className="py-4 text-xl">レシピ</p>
                 </div>
@@ -80,11 +91,11 @@ const ProductsPage = ({ posts }: { posts: any }) => {
                     src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564008/WEB/gastronomia/pisco-importing-company450x300_bi93s6.jpg"
                     width={450}
                     height={300}
-                    alt="Restaurants"
+                    alt="Pisco importing companies in Japan"
                   />
                 </Link>
               </div>
-              <Link href="/restaurants" className="">
+              <Link href="/pisco/importing-companies" className="">
                 <div className="flex justify-center">
                   <p className="py-4 text-xl">ピスコの輸入会社</p>
                 </div>

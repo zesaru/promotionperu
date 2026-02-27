@@ -36,9 +36,13 @@ const InvesmentPage = () => {
   };
 
   const texts = content[locale as keyof typeof content] || content.en;
+  const investmentDescription =
+    locale === "en"
+      ? "Explore Peru investment opportunities, infrastructure projects, and economic updates tailored for Japanese companies and investors."
+      : "日本企業・投資家向けに、ペルーの投資機会、インフラ案件、経済動向を分かりやすく紹介します。";
 
   return (
-    <Layout language={locale} title={texts.heroTitle}>
+    <Layout language={locale} title={texts.heroTitle} description={investmentDescription}>
       <Banner
         alt={"Invest in Peru 2025"}
         src={

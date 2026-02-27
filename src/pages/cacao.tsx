@@ -8,12 +8,17 @@ import YoutubeEmbed from "src/components/YoutubeEmbed";
 
 import { getLocalizedEntry } from "@/lib/get-localized-entry";
 
-const Cacao = ({ posts }: { posts: any }) => {
+type Post = {
+  menu: string;
+  title: string;
+  content: any;
+  __i18n_lang?: string;
+};
+
+const Cacao = ({ posts }: { posts: Post[] }) => {
   const { locale, route } = useRouter();
 
-  const data = posts.filter(
-    (post: { menu: string }) => `/${post.menu}` === route
-  );
+  const data = posts.filter((post) => `/${post.menu}` === route);
   const localizedPost = getLocalizedEntry(data, locale);
   const title = localizedPost?.title || "Cacao";
   const isJapanese = locale === "jp";

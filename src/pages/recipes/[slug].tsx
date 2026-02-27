@@ -16,13 +16,13 @@ const Slugrecipes = ({ recipe }: RecipeCardProps) => {
   return (
     <Layout language={router.locale}>
       <Banner
-        alt="Gastronoy"
+        alt="Peruvian gastronomy in Japan"
         src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564006/WEB/gastronomia/peruinjapangastronomia_o0xsca.jpg"
       />
       <div className="container p-6  mx-auto">
-        <h2 className="uppercase tracking-wide no-underline hover:no-underline font-bold text-xl mb-8 text-center text-orange-600">
+        <h1 className="uppercase tracking-wide no-underline hover:no-underline font-bold text-xl mb-8 text-center text-orange-600">
           {recipe[0].title}
-        </h2>
+        </h1>
         <PortableText
           className="my-7"
           content={ingredients}

@@ -6,14 +6,26 @@ import PortableText from "react-portable-text";
 import Banner from "src/components/Banner";
 import Layout from "src/components/Layout";
 
-const ImportingPage = (({ posts }: { posts: any }) => {
+import { getLocalizedEntry } from "@/lib/get-localized-entry";
+
+type Post = {
+  menu: string;
+  title: string;
+  content: any;
+  __i18n_lang?: string;
+};
+
+const ImportingPage = (({ posts }: { posts: Post[] }) => {
   const { locale, route } = useRouter();
  
   const data = posts.filter(
-    (post: { menu: string }) => `/${post.menu}` === route
+    (post) => `/${post.menu}` === route
   );
+  const localizedPost = getLocalizedEntry(data, locale);
 
-  const title = data[0].__i18n_lang === locale ? data[0].title : data[1].title;
+  const title = localizedPost?.title || (locale === "en"
+    ? "Pisco Importing Companies"
+    : "ピスコ輸入会社");
   const seoTitle = locale === 'jp'
     ? 'ピスコ輸入会社 | 日本のペルー製品輸入業者'
     : 'Pisco Importing Companies | Peruvian Products Importers in Japan';
@@ -26,7 +38,7 @@ const ImportingPage = (({ posts }: { posts: any }) => {
     "@type": "CollectionPage",
     "name": seoTitle,
     "description": seoDescription,
-    "url": `https://peruinjapan.com${route}`,
+    "url": `https://www.peruinjapan.org${route}`,
     "mainEntity": {
       "@type": "ItemList",
       "numberOfItems": 6,
@@ -145,13 +157,13 @@ const ImportingPage = (({ posts }: { posts: any }) => {
   };
 
   return (
-    <Layout language={locale}>
+    <Layout language={locale} disableDefaultSeo>
       <NextSeo
         title={seoTitle}
         description={seoDescription}
-        canonical={`https://peruinjapan.com${route}`}
+        canonical={`https://www.peruinjapan.org${route}`}
         openGraph={{
-          url: `https://peruinjapan.com${route}`,
+          url: `https://www.peruinjapan.org${route}`,
           title: seoTitle,
           description: seoDescription,
           images: [
@@ -188,9 +200,7 @@ const ImportingPage = (({ posts }: { posts: any }) => {
       <div className="container p-6 mx-auto">
         <PortableText className="flex flex-wrap -mx-3 md:-mx-4 lg:-mx-6"
           content={
-            locale === data[0].__i18n_lang
-              ? data[0].content
-              : data[1].content
+            localizedPost?.content || []
           }
 
           serializers={{

@@ -146,6 +146,7 @@ const PazNagasakiPage = () => {
         description={currentContent.description}
         image="https://res.cloudinary.com/de5ud82os/image/upload/v1694564001/WEB/gastronomia/150years_bdwrpn.jpg"
         type="article"
+        disableDefaultSeo
       >
         <article className="container py-4 md:py-12 px-2 mx-auto">
           <div className="max-w-4xl mx-auto">
