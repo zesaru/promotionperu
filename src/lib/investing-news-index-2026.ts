@@ -8,6 +8,13 @@ export interface NewsItem {
 
 export const news2026: NewsItem[] = [
   {
+    slug: "proinversion-app-5-governance-risk-reduction-long-term-projects",
+    title: "APP 5.0：ペルーはガバナンスを強化し、長期プロジェクトへの投資家リスクを軽減",
+    date: "2026-02-19",
+    category: "投資",
+    excerpt: "PROINVERSIÓNは、APP 5.0の下で、プロセス迅速化・法的安定性・契約予見可能性の強化を進め、長期インフラ案件における投資家リスク低減を加速しています。"
+  },
+  {
     slug: "roque-benavides-peru-largest-undeveloped-copper-project-portfolio-americas",
     title: "ロケ・ベナビデス：ペルーは米州で最大の未開発銅プロジェクトのポートフォリオを保有",
     date: "2026-02-18",
