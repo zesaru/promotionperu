@@ -8,6 +8,27 @@ export interface NewsItem {
 
 export const news2026: NewsItem[] = [
   {
+    slug: "proinversion-seven-strategic-road-corridors-1-billion",
+    title: "PROINVERSIÓN、総額10億米ドル超の7つの戦略的道路回廊の構造化を推進",
+    date: "2026-03-23",
+    category: "投資",
+    excerpt: "PROINVERSIÓNは、APP 5.0の下で総額10億米ドル超の7つの戦略的道路回廊を構造化し、全国の接続性強化と280万人超の市民への便益創出を目指しています。"
+  },
+  {
+    slug: "anglo-american-quellaveco-mining-innovation-hub-productivity-sustainability",
+    title: "ANGLO AMERICAN QUELLAVECO、ペルー鉱業イノベーションハブに参画 生産性と持続可能性の向上へ",
+    date: "2026-03-01",
+    category: "鉱業",
+    excerpt: "Anglo American Quellavecoはペルー鉱業イノベーションハブに参画し、生産性、持続可能性、技術適応能力の向上に向けて、スタートアップ、技術プロバイダー、学術機関との協働を加速させます。"
+  },
+  {
+    slug: "proinversion-railway-portfolio-20-billion-app-5-0",
+    title: "PROINVERSIÓN、APP 5.0モデルの下で200億米ドル超の鉄道ポートフォリオを推進",
+    date: "2026-02-25",
+    category: "投資",
+    excerpt: "PROINVERSIÓNは、APP 5.0の下で総額200億米ドル超の鉄道プロジェクト群を推進し、ペルーを今後10年間の中南米における主要な鉄道インフラ市場の一つとして位置付けています。"
+  },
+  {
     slug: "proinversion-app-5-governance-risk-reduction-long-term-projects",
     title: "APP 5.0：ペルーはガバナンスを強化し、長期プロジェクトへの投資家リスクを軽減",
     date: "2026-02-19",
