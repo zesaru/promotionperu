@@ -1,7 +1,7 @@
-import { FaTwitter } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -35,9 +35,9 @@ export default function Footer() {
                     className="p-4 no-underline hover:text-black py-1"
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://twitter.com/peruinjapan"
+                    href="https://x.com/peruinjapan"
                   >
-                    <FaTwitter className="text-blue-500 w-8 h-8" aria-label="Twitter"/>
+                    <FaXTwitter className="text-black w-8 h-8" aria-label="X" />
                   </a>
 
                   <a

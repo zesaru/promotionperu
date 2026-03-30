@@ -175,7 +175,7 @@ export default function Layout({
     "logo": "https://www.peruinjapan.org/apple-touch-icon.png",
     "description": finalDescription,
     "sameAs": [
-      "https://twitter.com/peruinjapan"
+      "https://x.com/peruinjapan"
     ],
     "address": {
       "@type": "PostalAddress",
