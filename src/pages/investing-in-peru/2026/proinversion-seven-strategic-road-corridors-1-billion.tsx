@@ -171,12 +171,12 @@ const ProinversionRoadCorridorsPage = () => {
               <br />
               参照先:{" "}
               <a
-                href="https://www.investinperu.pe"
+                href="https://www.investinperu.pe/proinversion-avanza-en-la-estructuracion-de-siete-corredores-viales-estrategicos-por-mas-de-us-1000-millones/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:underline"
               >
-                Invest in Peru: https://www.investinperu.pe
+                Invest in Peru: https://www.investinperu.pe/proinversion-avanza-en-la-estructuracion-de-siete-corredores-viales-estrategicos-por-mas-de-us-1000-millones/
               </a>
             </p>
           </div>
