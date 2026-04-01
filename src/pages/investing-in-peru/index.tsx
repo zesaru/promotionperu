@@ -1,4 +1,3 @@
-import Banner from "@src/components/Banner";
 import Layout from "@src/components/Layout";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,6 +5,57 @@ import { useRouter } from "next/router";
 import { ImDownload2 } from "react-icons/im";
 
 import { getLatestNews } from "@/lib/investing-news-index";
+
+const eyGuides = [
+  {
+    title: "Peru's Business and Investment Guide 2026/2027",
+    category: "General",
+    publisher: "EY",
+    href: "https://www.ey.com/content/dam/ey-unified-site/ey-com/es-pe/insights/entrepreneurship/documents/ey-peru-business-investment-guide-2026-2027.pdf",
+    cover: "/images/investment-guides/business-guide-2026-2027.png",
+    alt: "Peru's Business and Investment Guide 2026/2027 cover",
+  },
+  {
+    title: "Peru's Mining & Metals Investment Guide 2026/2027",
+    category: "Mining",
+    publisher: "EY",
+    href: "https://www.ey.com/content/dam/ey-unified-site/ey-com/es-pe/insights/mining-metals/documents/ey-peru-mining-metals-guide-2026-2027.pdf",
+    cover: "/images/investment-guides/mining-metals-guide-2026-2027.png",
+    alt: "Peru's Mining and Metals Investment Guide 2026/2027 cover",
+  },
+  {
+    title: "Peru's Business and Investment Guide in Agriculture and Agribusiness 2024/2025",
+    category: "Agribusiness",
+    publisher: "EY",
+    href: "https://www.ey.com/content/dam/ey-unified-site/ey-com/es-pe/campaigns/guia-negocios-inversion-peru/ey-perus-business-investment-guide-agriculture-agribusiness-2024-2025-v2.pdf",
+    cover: "/images/investment-guides/agribusiness-guide-2024-2025.png",
+    alt: "Peru's Agriculture and Agribusiness Investment Guide 2024/2025 cover",
+  },
+  {
+    title: "FinTech Business Guide 2024/2025",
+    category: "FinTech",
+    publisher: "EY",
+    href: "https://www.ey.com/content/dam/ey-unified-site/ey-com/es-pe/insights/law/documents/ey-peru-fintech-business-guide-2024-2025-vf.pdf",
+    cover: "/images/investment-guides/fintech-guide-2024-2025.png",
+    alt: "FinTech Business Guide 2024/2025 cover",
+  },
+  {
+    title: "Peru's Energy Investment Guide 2024/2025",
+    category: "Energy",
+    publisher: "EY",
+    href: "https://www.ey.com/content/dam/ey-unified-site/ey-com/es-pe/insights/energy-resources/documents/ey-peru-energy-investment-guide-2024-2025-vf.pdf",
+    cover: "/images/investment-guides/energy-guide-2024-2025.png",
+    alt: "Peru's Energy Investment Guide 2024/2025 cover",
+  },
+  {
+    title: "Guide to Investing in Infrastructure Projects in Peru 2024/2025",
+    category: "Infrastructure",
+    publisher: "EY",
+    href: "https://www.ey.com/content/dam/ey-unified-site/ey-com/es-pe/campaigns/guia-negocios-inversion-peru/ey-guide-investing-infrastructure-projects-peru-2024-2025.pdf",
+    cover: "/images/investment-guides/infrastructure-guide-2024-2025.png",
+    alt: "Guide to Investing in Infrastructure Projects in Peru 2024/2025 cover",
+  },
+];
 
 const InvesmentPage = () => {
   const { locale } = useRouter();
@@ -19,6 +69,9 @@ const InvesmentPage = () => {
       guideTitle: "Investment Guide 2025 \"VALE UN PERÚ\"",
       guideDescription: "The most comprehensive and updated investment guide for 2025. Explore new opportunities and economic indicators.",
       viewPrevious: "View Previous Versions →",
+      eyGuidesTitle: "Specialized Investment Guides",
+      eyGuidesDescription: "Explore sector-specific EY publications for investors evaluating Peru across mining, agribusiness, fintech, energy, infrastructure, and broader business opportunities.",
+      openGuide: "Open PDF →",
       latestNews: "Latest News",
       readMore: "Read More →"
     },
@@ -43,13 +96,6 @@ const InvesmentPage = () => {
 
   return (
     <Layout language={locale} title={texts.heroTitle} description={investmentDescription}>
-      <Banner
-        alt={"Invest in Peru 2025"}
-        src={
-          "https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapaninversiones_xop2nr.jpg"
-        }
-      />
-
       {/* Hero Section with New Image */}
       <section className="bg-gradient-to-br from-slate-50 to-blue-50 container mx-auto px-4 py-8 md:py-12 lg:py-16">
         <div className="max-w-6xl mx-auto">
@@ -116,6 +162,59 @@ const InvesmentPage = () => {
           </div>
         </div>
       </section>
+
+      {locale === "en" && (
+        <section className="bg-gradient-to-br from-white to-slate-50 container mx-auto px-4 py-8 md:py-12 lg:py-16">
+          <div className="max-w-6xl mx-auto">
+            <div className="max-w-3xl mb-8 md:mb-12">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                {texts.eyGuidesTitle}
+              </h2>
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                {texts.eyGuidesDescription}
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-6">
+              {eyGuides.map((guide) => (
+                <a
+                  key={guide.href}
+                  href={guide.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-slate-200"
+                >
+                  <div className="bg-slate-100 p-4">
+                    <Image
+                      src={guide.cover}
+                      alt={guide.alt}
+                      width={540}
+                      height={765}
+                      className="w-full h-auto rounded-xl shadow-lg group-hover:scale-[1.02] transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-5 md:p-6">
+                    <div className="flex items-center justify-between gap-3 mb-3">
+                      <span className="inline-flex items-center rounded-full bg-red-100 text-red-700 text-xs font-semibold px-3 py-1">
+                        {guide.category}
+                      </span>
+                      <span className="text-xs font-semibold tracking-[0.18em] text-slate-500 uppercase">
+                        {guide.publisher}
+                      </span>
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-3 leading-snug group-hover:text-red-700 transition-colors">
+                      {guide.title}
+                    </h3>
+                    <span className="inline-flex items-center text-red-600 font-semibold text-sm group-hover:text-red-700 transition-colors">
+                      {texts.openGuide}
+                    </span>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Latest News Section - Only show in Japanese */}
       {locale === "jp" && (
