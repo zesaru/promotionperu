@@ -49,14 +49,14 @@ const PazNagasakiPage = () => {
       "name": "Peru in Japan",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.peruinjapan.org/apple-touch-icon.png"
+        "url": "https://peruinjapan.org/apple-touch-icon.png"
       }
     },
     "datePublished": "2025-08-09",
     "dateModified": "2025-09-22",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.peruinjapan.org/paz-de-nagasaki"
+      "@id": "https://peruinjapan.org/paz-de-nagasaki"
     },
     "about": [
       {
@@ -77,11 +77,11 @@ const PazNagasakiPage = () => {
       <NextSeo
         title={currentContent.metaTitle}
         description={currentContent.description}
-        canonical={`https://www.peruinjapan.org${locale === 'en' ? '/en' : ''}/paz-de-nagasaki`}
+        canonical={`https://peruinjapan.org${locale === 'en' ? '/en' : ''}/paz-de-nagasaki`}
         openGraph={{
           type: 'article',
           locale: locale === 'jp' ? 'ja_JP' : locale === 'en' ? 'en_US' : 'es_ES',
-          url: `https://www.peruinjapan.org${locale === 'en' ? '/en' : ''}/paz-de-nagasaki`,
+          url: `https://peruinjapan.org${locale === 'en' ? '/en' : ''}/paz-de-nagasaki`,
           title: currentContent.metaTitle,
           description: currentContent.description,
           images: [

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-BASE_URL="${1:-https://www.peruinjapan.org}"
+BASE_URL="${1:-https://peruinjapan.org}"
 
 pass() {
   echo "PASS: $1"
@@ -70,4 +70,3 @@ for path in / /investing-in-peru /products /pisco; do
   fi
   check_contains "$HTML" "$EXPECTED" "canonical for $path"
 done
-

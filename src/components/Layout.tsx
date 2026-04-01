@@ -140,7 +140,7 @@ export default function Layout({
   
   const finalDescription = description || getDefaultDescription(currentLocaleCode, normalizedPath);
   const finalKeywords = keywords || getDefaultKeywords(currentLocaleCode, normalizedPath);
-  const canonicalUrl = `https://www.peruinjapan.org${localizedPath === '/' ? '' : localizedPath}`;
+  const canonicalUrl = `https://peruinjapan.org${localizedPath === '/' ? '' : localizedPath}`;
   const pathTitle =
     normalizedPath === "/"
       ? locale === "jp"
@@ -154,15 +154,15 @@ export default function Layout({
   const hreflangs = [
     {
       hrefLang: 'ja',
-      href: `https://www.peruinjapan.org${normalizedPath === "/" ? "" : normalizedPath}`,
+      href: `https://peruinjapan.org${normalizedPath === "/" ? "" : normalizedPath}`,
     },
     {
       hrefLang: 'en',
-      href: `https://www.peruinjapan.org${normalizedPath === "/" ? "/en" : `/en${normalizedPath}`}`,
+      href: `https://peruinjapan.org${normalizedPath === "/" ? "/en" : `/en${normalizedPath}`}`,
     },
     {
       hrefLang: 'x-default',
-      href: `https://www.peruinjapan.org${normalizedPath === "/" ? "" : normalizedPath}`,
+      href: `https://peruinjapan.org${normalizedPath === "/" ? "" : normalizedPath}`,
     }
   ];
 
@@ -171,8 +171,8 @@ export default function Layout({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Peru in Japan",
-    "url": "https://www.peruinjapan.org",
-    "logo": "https://www.peruinjapan.org/apple-touch-icon.png",
+    "url": "https://peruinjapan.org",
+    "logo": "https://peruinjapan.org/apple-touch-icon.png",
     "description": finalDescription,
     "sameAs": [
       "https://x.com/peruinjapan"

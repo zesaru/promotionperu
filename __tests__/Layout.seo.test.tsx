@@ -50,11 +50,11 @@ describe("Layout SEO", () => {
       languageAlternates: Array<{ hrefLang: string; href: string }>;
     };
 
-    expect(seoProps.canonical).toBe("https://www.peruinjapan.org/en/investing-in-peru");
+    expect(seoProps.canonical).toBe("https://peruinjapan.org/en/investing-in-peru");
     expect(seoProps.languageAlternates).toEqual([
-      { hrefLang: "ja", href: "https://www.peruinjapan.org/investing-in-peru" },
-      { hrefLang: "en", href: "https://www.peruinjapan.org/en/investing-in-peru" },
-      { hrefLang: "x-default", href: "https://www.peruinjapan.org/investing-in-peru" },
+      { hrefLang: "ja", href: "https://peruinjapan.org/investing-in-peru" },
+      { hrefLang: "en", href: "https://peruinjapan.org/en/investing-in-peru" },
+      { hrefLang: "x-default", href: "https://peruinjapan.org/investing-in-peru" },
     ]);
   });
 
@@ -76,11 +76,11 @@ describe("Layout SEO", () => {
       languageAlternates: Array<{ hrefLang: string; href: string }>;
     };
 
-    expect(seoProps.canonical).toBe("https://www.peruinjapan.org");
+    expect(seoProps.canonical).toBe("https://peruinjapan.org");
     expect(seoProps.languageAlternates).toEqual([
-      { hrefLang: "ja", href: "https://www.peruinjapan.org" },
-      { hrefLang: "en", href: "https://www.peruinjapan.org/en" },
-      { hrefLang: "x-default", href: "https://www.peruinjapan.org" },
+      { hrefLang: "ja", href: "https://peruinjapan.org" },
+      { hrefLang: "en", href: "https://peruinjapan.org/en" },
+      { hrefLang: "x-default", href: "https://peruinjapan.org" },
     ]);
   });
 });

@@ -5,7 +5,7 @@ Disallow: /admin
 Disallow: /admin/*
 
 # Host
-Host: https://www.peruinjapan.org
+Host: https://peruinjapan.org
 
 # Sitemaps
-Sitemap: https://www.peruinjapan.org/sitemap.xml
+Sitemap: https://peruinjapan.org/sitemap.xml

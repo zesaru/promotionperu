@@ -38,7 +38,7 @@ const ImportingPage = (({ posts }: { posts: Post[] }) => {
     "@type": "CollectionPage",
     "name": seoTitle,
     "description": seoDescription,
-    "url": `https://www.peruinjapan.org${route}`,
+    "url": `https://peruinjapan.org${route}`,
     "mainEntity": {
       "@type": "ItemList",
       "numberOfItems": 6,
@@ -161,9 +161,9 @@ const ImportingPage = (({ posts }: { posts: Post[] }) => {
       <NextSeo
         title={seoTitle}
         description={seoDescription}
-        canonical={`https://www.peruinjapan.org${route}`}
+        canonical={`https://peruinjapan.org${route}`}
         openGraph={{
-          url: `https://www.peruinjapan.org${route}`,
+          url: `https://peruinjapan.org${route}`,
           title: seoTitle,
           description: seoDescription,
           images: [
