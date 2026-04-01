@@ -83,6 +83,9 @@ const InvesmentPage = () => {
       guideTitle: "投資ガイド 2025 「VALE UN PERÚ」",
       guideDescription: "2025年向けの最も包括的で最新の投資ガイド。新たな投資機会と経済指標を探索してください。",
       viewPrevious: "過去のバージョンを見る →",
+      eyGuidesTitle: "Specialized Investment Guides",
+      eyGuidesDescription: "Explore sector-specific EY publications for investors evaluating Peru across mining, agribusiness, fintech, energy, infrastructure, and broader business opportunities.",
+      openGuide: "Open PDF ?",
       latestNews: "最新ニュース",
       readMore: "続きを読む →"
     }
@@ -265,3 +268,4 @@ const InvesmentPage = () => {
 };
 
 export default InvesmentPage;
+
