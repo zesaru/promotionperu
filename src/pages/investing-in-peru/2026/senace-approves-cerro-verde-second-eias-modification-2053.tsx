@@ -10,11 +10,11 @@ const SenaceCerroVerdeApprovalPage = () => {
     <Layout
       language={locale}
       articlePublishedTime="2026-02-08T00:00:00+09:00"
-      title="Senace、厳格な技術評価を経てセロ・ベルデの環境社会影響評価 第2回変更を承認"
-      description="Senaceはセロ・ベルデのEIA第2回変更を承認。約21億ドルの投資具体化、処理能力の増強、アレキパ州での操業期間を2053年まで延長する見通しです。"
+      title="SENACE、セロ・ベルデの環境社会影響評価第2回変更を承認"
+      description="SENACEは、セロ・ベルデの環境社会影響評価第2回変更を承認。約21億ドルの投資具体化、処理能力の増強、アレキパ州での操業期間を2053年まで延長する見通しが示された。"
     >
       <Banner
-        alt={"Peru mining environmental permitting news banner"}
+        alt={"セロ・ベルデEIA変更承認を伝えるSENACE関連バナー"}
         src={
           "https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapaninversiones_xop2nr.jpg"
         }

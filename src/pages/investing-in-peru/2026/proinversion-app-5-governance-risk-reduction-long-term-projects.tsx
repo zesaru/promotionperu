@@ -10,11 +10,11 @@ const ProinversionApp5GovernanceRiskReductionPage = () => {
     <Layout
       language={locale}
       articlePublishedTime="2026-02-19T00:00:00+09:00"
-      title="APP 5.0：ペルーはガバナンスを強化し、長期プロジェクトへの投資家リスクを軽減"
-      description="PROINVERSIÓNは、APP 5.0の下で、より迅速なプロセス、法的安定性の向上、競争条件の改善を通じて、長期インフラ投資の予測可能性を高める新段階を推進しています。"
+      title="APP 5.0: ペルー、ガバナンス強化で長期インフラ投資のリスクを低減"
+      description="PROINVERSIÓNは、APP 5.0の下でプロセス迅速化、法的安定性、契約の予見可能性を強化し、長期インフラ投資に対する投資家リスクの低減と民間参加の拡大を進めている。"
     >
       <Banner
-        alt={"Peru APP 5.0 investment governance news banner"}
+        alt={"APP 5.0による投資ガバナンス強化を伝えるPROINVERSIÓNのバナー"}
         src={
           "https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapaninversiones_xop2nr.jpg"
         }

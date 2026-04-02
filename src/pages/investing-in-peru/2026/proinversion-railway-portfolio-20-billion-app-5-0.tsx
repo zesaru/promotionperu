@@ -10,11 +10,11 @@ const ProinversionRailwayPortfolioPage = () => {
     <Layout
       language={locale}
       articlePublishedTime="2026-02-25T00:00:00+09:00"
-      title="PROINVERSIÓN、APP 5.0モデルの下で200億米ドル超の鉄道ポートフォリオを推進"
-      description="PROINVERSIÓNは、新たなAPP 5.0モデルの下で総額200億米ドル超の鉄道プロジェクト群を推進し、ペルーを今後10年間の中南米における主要な鉄道インフラ市場の一つとして位置付けています。"
+      title="PROINVERSIÓN、APP 5.0の下で200億米ドル超の鉄道ポートフォリオを推進"
+      description="PROINVERSIÓNは、APP 5.0の新モデルの下で200億米ドル超の鉄道プロジェクト群を推進。リマ・イカ鉄道やSan Juan de Marcona-Andahuaylas鉄道、地下鉄3号線・4号線を通じて物流競争力と地域統合の強化を目指す。"
     >
       <Banner
-        alt={"Peru railway investment portfolio and APP 5.0 news banner"}
+        alt={"200億米ドル超の鉄道ポートフォリオを伝えるPROINVERSIÓNのバナー"}
         src={
           "https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapaninversiones_xop2nr.jpg"
         }
