@@ -26,22 +26,22 @@ const InvestmentPage = () => {
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-right mb-4">
-          <p className="text-xs md:text-sm text-gray-600">åœ¨æ—¥ãƒšãƒ«ãƒ¼å¤§ä½¿é¤¨</p>
-          <p className="text-xs md:text-sm text-gray-600">éžå…¬å¼ç¿»è¨³</p>
+          <p className="text-xs md:text-sm text-gray-600">在日ペルー大使館</p>
+          <p className="text-xs md:text-sm text-gray-600">非公式翻訳</p>
         </div>
 
         <div className="mb-6">
           <h1 className="text-lg md:text-xl font-normal text-gray-800 mb-3 md:mb-4 japanese-heading-3">
-            æ°‘é–“æŠ•è³‡ä¿ƒé€²åºï¼ˆPROINVERSIÃ“Nï¼‰
+            民間投資促進庁（PROINVERSIÓN）
           </h1>
           <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 japanese-heading-1">
-            PROINVERSIÃ“N: Piuraã€Lambayequeã€Juninã¨Ayacuchoã§4ä»¶ã®é›»åŠ›é€é›»ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®å…¥æœ­ã‚’é–‹å§‹
+            PROINVERSIÓN、ピウラ、ランバイエケ、フニンとアヤクチョで4件の送電プロジェクトの入札を開始
           </h2>
           <h3 className="text-lg font-semibold text-gray-800 mb-2">
-            ãƒ—ãƒ¬ã‚¹ãƒªãƒªãƒ¼ã‚¹
+            プレスリリース
           </h3>
           <p className="text-xs md:text-sm text-gray-600 mb-6">
-            2025å¹´10æœˆ17æ—¥
+            2025年10月17日
           </p>
         </div>
 

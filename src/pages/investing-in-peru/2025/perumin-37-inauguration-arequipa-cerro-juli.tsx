@@ -26,8 +26,8 @@ const Perumin37Page = () => {
       <div className="container mx-auto px-4 py-8 max-w-6xl bg-white japanese-text">
         {/* Header */}
         <div className="text-right mb-6 font-japanese">
-          <p className="text-sm text-gray-700 japanese-text">åœ¨æ—¥ãƒšãƒ«ãƒ¼å¤§ä½¿é¤¨</p>
-          <p className="text-sm text-gray-700 japanese-text">éžå…¬å¼ç¿»è¨³</p>
+          <p className="text-sm text-gray-700 japanese-text">在日ペルー大使館</p>
+          <p className="text-sm text-gray-700 japanese-text">非公式翻訳</p>
         </div>
 
         <div className="grid grid-cols-1 gap-4 mb-6">
@@ -36,12 +36,12 @@ const Perumin37Page = () => {
               <h1 className="text-xl font-bold">PERUMIN 37</h1>
             </div>
             <div className="bg-red-600 text-white p-1 inline-block mb-2">
-              <p className="text-sm font-japanese">é‰±æ¥­ã‚¤ãƒ™ãƒ³ãƒˆé–‹å¹•</p>
+              <p className="text-sm font-japanese">鉱業イベント開幕</p>
             </div>
-            <p className="text-xs mb-4 font-japanese">2025å¹´9æœˆ22æ—¥ï¼ˆæœˆï¼‰ã‚¢ãƒ¬ã‚­ãƒ‘ã®ã‚»ãƒ­ãƒ»ãƒ•ãƒªå›½éš›ä¼šè­°å ´ã«ã¦</p>
+            <p className="text-xs mb-4 font-japanese">2025年9月22日（月）アレキパのセロ・フリ国際会議場にて</p>
 
             <div className="bg-black text-white p-2 inline-block mb-4">
-              <h2 className="text-lg font-bold font-japanese">ãƒšãƒ«ãƒ¼ã€ã‚¢ãƒ¬ã‚­ãƒ‘ã®ã‚»ãƒ­ãƒ»ãƒ•ãƒªã§ã€Œãƒšãƒ«ãƒ¼ãƒŸãƒ³37ã€ã‚’é–‹å¹•</h2>
+              <h2 className="text-lg font-bold font-japanese">ペルー、アレキパのセロ・フリで「ペルミン37」を開幕</h2>
             </div>
 
             <div className="bg-gray-200 p-4 mb-4">
