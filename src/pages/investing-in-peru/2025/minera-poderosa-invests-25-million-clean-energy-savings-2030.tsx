@@ -82,11 +82,11 @@ const InvestmentPage = () => {
           </ul>
 
           <h3 className="text-lg font-semibold text-blue-800 mb-3 mt-6">
-            é›»å‹•åŒ–ãƒ»æŒç¶šå¯èƒ½æ€§ã¸ã®å–ã‚Šçµ„ã¿
+            電動化・持続可能性への取り組み
           </h3>
 
           <p className="mb-4 text-gray-800 leading-relaxed">
-            ã‚¨ã‚¹ãƒ†ãƒ©æ°ã¯ã€Minera Poderosaç¤¾ã®ã‚¨ãƒãƒ«ã‚®ãƒ¼æˆ¦ç•¥ãŒ<strong>è„±ç‚­ç´ åŒ–ã ã‘ã§ãªãã€åŠ¹çŽ‡æ€§ã¨é›»åŠ›éœ€è¦å¢—åŠ ã«å¯¾ã™ã‚‹ãƒ¬ã‚¸ãƒªã‚¨ãƒ³ã‚¹</strong>ã«ã‚‚ç„¦ç‚¹ã‚’å½“ã¦ã¦ã„ã‚‹ã“ã¨ã‚’å¼·èª¿ã—ã¾ã—ãŸã€‚
+            エステラ氏は、Minera Poderosa社のエネルギー戦略が<strong>脱炭素化だけでなく、効率性の向上と電力需要の増加に対応するレジリエンス強化</strong>にも重点を置いていると説明しました。
           </p>
 
           <div className="bg-green-50 border-l-4 border-green-600 p-5 my-6">
@@ -110,32 +110,32 @@ const InvestmentPage = () => {
           </div>
 
           <p className="mb-4 text-gray-800 leading-relaxed">
-            åŠ ãˆã¦ã€åŒç¤¾ã¯ä»¥ä¸‹ã®å–ã‚Šçµ„ã¿ã«ã‚‚æ³¨åŠ›ã—ã¦ã„ã¾ã™ï¼š
+            さらに同社は、次のような取り組みにも注力しています。
           </p>
 
           <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-800">
             <li className="leading-relaxed">
-              <strong>é›»å‹•ãƒ¢ãƒ“ãƒªãƒ†ã‚£</strong>ã®æŽ¨é€²
+              <strong>電動モビリティ</strong>の推進
             </li>
             <li className="leading-relaxed">
-              <strong>740ä¸‡æœ¬ä»¥ä¸Šã®æ¤æž—</strong>
+              <strong>740万本以上の植林</strong>
             </li>
             <li className="leading-relaxed">
-              <strong>å†ç”Ÿåž‹æ–‡åŒ–ã®æŽ¨é€²</strong> â€” æ°´è³‡æºã€è³‡æã€ç”Ÿç‰©å¤šæ§˜æ€§ã®ãƒ•ãƒƒãƒˆãƒ—ãƒªãƒ³ãƒˆç®¡ç†ã‚’çµ±åˆ
+              <strong>再生型の企業文化の推進</strong> - 水資源、資材、生物多様性のフットプリント管理を統合
             </li>
           </ul>
 
           <div className="bg-blue-50 border-l-4 border-blue-600 p-4 my-6">
             <p className="text-gray-800 leading-relaxed italic">
-              ã€Œèª²é¡Œã¯ã€<strong>ã‚°ãƒªãƒ¼ãƒ³ãƒžã‚¤ãƒ‹ãƒ³ã‚°ã‹ã‚‰è‡ªç„¶ç’°å¢ƒã‚’ã‚ˆã‚Šè‰¯ãã™ã‚‹å†ç”Ÿåž‹ãƒžã‚¤ãƒ‹ãƒ³ã‚°ã¸ã¨é€²åŒ–ã•ã›ã‚‹ã“ã¨</strong>ã§ã™ã€
+              「課題は、<strong>グリーンマイニングから、自然環境をより良くする再生型マイニングへと進化させること</strong>です」
             </p>
             <p className="text-sm text-gray-600 mt-2">
-              â€” ã‚¨ãƒãƒ«ã‚®ãƒ¼ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆæ‹…å½“ãƒªãƒ¼ãƒ€ãƒ¼ ãƒ›ã‚»ãƒ»ã‚¨ã‚¹ãƒ†ãƒ©ãƒ»ãƒ©ãƒŸãƒ¬ã‚¹æ°
+              - エネルギープロジェクト責任者 ホセ・エステラ・ラミレス氏
             </p>
           </div>
 
           <h3 className="text-lg font-semibold text-blue-800 mb-3 mt-6">
-            ç’°å¢ƒã‚¤ãƒ³ãƒ‘ã‚¯ãƒˆã®æˆæžœ
+            環境インパクトの成果
           </h3>
 
           <div className="bg-gray-50 rounded-lg p-5 my-6">
