@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { useRouter } from "next/router";
 
 import Banner from "@/components/Banner";
@@ -8,7 +8,7 @@ const ProinversionProjectsPage = () => {
   const { locale } = useRouter();
 
   return (
-    <Layout language={locale} title="PROINVERSION、8億5,000万米ドル以上の港湾・道路プロジェクトを推進">
+    <Layout language={locale} articlePublishedTime="2025-11-18T00:00:00+09:00" title="PROINVERSIONã€8å„„5,000ä¸‡ç±³ãƒ‰ãƒ«ä»¥ä¸Šã®æ¸¯æ¹¾ãƒ»é“è·¯ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã‚’æŽ¨é€²">
       <Banner
         alt={"Investment guide 2022"}
         src={
@@ -18,16 +18,16 @@ const ProinversionProjectsPage = () => {
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:max-w-4xl">
         {/* Header */}
         <div className="text-right mb-4">
-          <p className="text-xs md:text-sm text-gray-600">在日ペルー大使館</p>
-          <p className="text-xs md:text-sm text-gray-600">非公式翻訳</p>
+          <p className="text-xs md:text-sm text-gray-600">åœ¨æ—¥ãƒšãƒ«ãƒ¼å¤§ä½¿é¤¨</p>
+          <p className="text-xs md:text-sm text-gray-600">éžå…¬å¼ç¿»è¨³</p>
         </div>
 
         <div className="mb-8">
           <h1 className="text-lg md:text-xl font-normal text-gray-800 mb-3 md:mb-4 japanese-heading-3">
-            PROINVERSION、8億5,000万米ドル以上の港湾・道路プロジェクトを推進
+            PROINVERSIONã€8å„„5,000ä¸‡ç±³ãƒ‰ãƒ«ä»¥ä¸Šã®æ¸¯æ¹¾ãƒ»é“è·¯ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã‚’æŽ¨é€²
           </h1>
           <p className="text-xs md:text-sm text-gray-600 mb-6">
-            リマ、2025年11月18日
+            ãƒªãƒžã€2025å¹´11æœˆ18æ—¥
           </p>
         </div>
 
@@ -35,142 +35,142 @@ const ProinversionProjectsPage = () => {
         <div className="max-w-full mx-auto px-4 sm:px-6 lg:max-w-4xl">
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 sm:p-6 mb-6 md:mb-8">
             <p className="text-base md:text-lg font-semibold text-blue-900 mb-2 japanese-text">
-              これらのプロジェクトの実施により、国内の物流ネットワークの強化と国土統合の促進を目指しています。
+              ã“ã‚Œã‚‰ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®å®Ÿæ–½ã«ã‚ˆã‚Šã€å›½å†…ã®ç‰©æµãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯ã®å¼·åŒ–ã¨å›½åœŸçµ±åˆã®ä¿ƒé€²ã‚’ç›®æŒ‡ã—ã¦ã„ã¾ã™ã€‚
             </p>
           </div>
 
           <p className="mb-6 text-gray-700 leading-relaxed japanese-text">
-            ペルー政府は、輸出促進、戦略的セクターの活性化、そして国土統合を目的とした、総額8億5,000万米ドル以上の港湾・道路の官民連携（PPP）プロジェクトポートフォリオを通じ、近代的で競争力のある物流ネットワークの構築を進めています。
+            ãƒšãƒ«ãƒ¼æ”¿åºœã¯ã€è¼¸å‡ºä¿ƒé€²ã€æˆ¦ç•¥çš„ã‚»ã‚¯ã‚¿ãƒ¼ã®æ´»æ€§åŒ–ã€ãã—ã¦å›½åœŸçµ±åˆã‚’ç›®çš„ã¨ã—ãŸã€ç·é¡8å„„5,000ä¸‡ç±³ãƒ‰ãƒ«ä»¥ä¸Šã®æ¸¯æ¹¾ãƒ»é“è·¯ã®å®˜æ°‘é€£æºï¼ˆPPPï¼‰ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆãƒãƒ¼ãƒˆãƒ•ã‚©ãƒªã‚ªã‚’é€šã˜ã€è¿‘ä»£çš„ã§ç«¶äº‰åŠ›ã®ã‚ã‚‹ç‰©æµãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯ã®æ§‹ç¯‰ã‚’é€²ã‚ã¦ã„ã¾ã™ã€‚
           </p>
 
           <p className="mb-6 text-gray-700 leading-relaxed japanese-text">
-            COMEX主催の「外国貿易とインフラ」セミナーでは、PROINVERSIÓNのエグゼクティブ・ディレクター、ルイス・デル・カルピオ氏（Luis Del Carpio）が、同庁が経済財務省に付属する機関として管理する主要な港湾および道路プロジェクトについて発表しました。
+            COMEXä¸»å‚¬ã®ã€Œå¤–å›½è²¿æ˜“ã¨ã‚¤ãƒ³ãƒ•ãƒ©ã€ã‚»ãƒŸãƒŠãƒ¼ã§ã¯ã€PROINVERSIÃ“Nã®ã‚¨ã‚°ã‚¼ã‚¯ãƒ†ã‚£ãƒ–ãƒ»ãƒ‡ã‚£ãƒ¬ã‚¯ã‚¿ãƒ¼ã€ãƒ«ã‚¤ã‚¹ãƒ»ãƒ‡ãƒ«ãƒ»ã‚«ãƒ«ãƒ”ã‚ªæ°ï¼ˆLuis Del Carpioï¼‰ãŒã€åŒåºãŒçµŒæ¸ˆè²¡å‹™çœã«ä»˜å±žã™ã‚‹æ©Ÿé–¢ã¨ã—ã¦ç®¡ç†ã™ã‚‹ä¸»è¦ãªæ¸¯æ¹¾ãŠã‚ˆã³é“è·¯ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã«ã¤ã„ã¦ç™ºè¡¨ã—ã¾ã—ãŸã€‚
           </p>
 
           {/* Port Projects Section */}
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 sm:p-6 my-6 md:my-8">
-            <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-4 japanese-text">港湾プロジェクト</h3>
+            <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-4 japanese-text">æ¸¯æ¹¾ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆ</h3>
 
             <div className="space-y-6">
               <div>
-                <h4 className="text-base md:text-lg font-semibold text-gray-900 mb-2 japanese-heading-3 japanese-text">チンボテ港ターミナル</h4>
-                <p className="text-sm md:text-base text-blue-600 font-medium mb-2 japanese-text">3億5,400万米ドル</p>
+                <h4 className="text-base md:text-lg font-semibold text-gray-900 mb-2 japanese-heading-3 japanese-text">ãƒãƒ³ãƒœãƒ†æ¸¯ã‚¿ãƒ¼ãƒŸãƒŠãƒ«</h4>
+                <p className="text-sm md:text-base text-blue-600 font-medium mb-2 japanese-text">3å„„5,400ä¸‡ç±³ãƒ‰ãƒ«</p>
                 <p className="text-sm text-gray-700 leading-relaxed japanese-text">
-                  このプロジェクトは、Áncash、La Libertad、Huanuco、北部Limaの約120万人の住民に恩恵をもたらします。この施設は、園芸、漁業、鉱業部門の物流チェーンを最適化し、北部ペルーの輸出競争力を強化します。
+                  ã“ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã¯ã€Ãncashã€La Libertadã€Huanucoã€åŒ—éƒ¨Limaã®ç´„120ä¸‡äººã®ä½æ°‘ã«æ©æµã‚’ã‚‚ãŸã‚‰ã—ã¾ã™ã€‚ã“ã®æ–½è¨­ã¯ã€åœ’èŠ¸ã€æ¼æ¥­ã€é‰±æ¥­éƒ¨é–€ã®ç‰©æµãƒã‚§ãƒ¼ãƒ³ã‚’æœ€é©åŒ–ã—ã€åŒ—éƒ¨ãƒšãƒ«ãƒ¼ã®è¼¸å‡ºç«¶äº‰åŠ›ã‚’å¼·åŒ–ã—ã¾ã™ã€‚
                 </p>
               </div>
 
               <div>
-                <h4 className="text-base md:text-lg font-semibold text-gray-900 mb-2 japanese-heading-3 japanese-text">SaramirizaおよびIquitos港ターミナル</h4>
-                <p className="text-sm md:text-base text-blue-600 font-medium mb-2 japanese-text">1億8,100万米ドル</p>
+                <h4 className="text-base md:text-lg font-semibold text-gray-900 mb-2 japanese-heading-3 japanese-text">SaramirizaãŠã‚ˆã³Iquitosæ¸¯ã‚¿ãƒ¼ãƒŸãƒŠãƒ«</h4>
+                <p className="text-sm md:text-base text-blue-600 font-medium mb-2 japanese-text">1å„„8,100ä¸‡ç±³ãƒ‰ãƒ«</p>
                 <p className="text-sm text-gray-700 leading-relaxed japanese-text">
-                  Loreto地域での建設が計画されており、河川輸送の促進とアマゾン地域の物流連結性向上に不可欠なインフラとなります。これらのプロジェクトにより、100万人以上の住民が恩恵を受け、アマゾン地域の経済・商業発展が促進される見込みです。
+                  Loretoåœ°åŸŸã§ã®å»ºè¨­ãŒè¨ˆç”»ã•ã‚Œã¦ãŠã‚Šã€æ²³å·è¼¸é€ã®ä¿ƒé€²ã¨ã‚¢ãƒžã‚¾ãƒ³åœ°åŸŸã®ç‰©æµé€£çµæ€§å‘ä¸Šã«ä¸å¯æ¬ ãªã‚¤ãƒ³ãƒ•ãƒ©ã¨ãªã‚Šã¾ã™ã€‚ã“ã‚Œã‚‰ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã«ã‚ˆã‚Šã€100ä¸‡äººä»¥ä¸Šã®ä½æ°‘ãŒæ©æµã‚’å—ã‘ã€ã‚¢ãƒžã‚¾ãƒ³åœ°åŸŸã®çµŒæ¸ˆãƒ»å•†æ¥­ç™ºå±•ãŒä¿ƒé€²ã•ã‚Œã‚‹è¦‹è¾¼ã¿ã§ã™ã€‚
                 </p>
               </div>
 
               <div>
-                <h4 className="text-base md:text-lg font-semibold text-gray-900 mb-2 japanese-heading-3 japanese-text">プカルパ港ターミナル近代化</h4>
-                <p className="text-sm md:text-base text-blue-600 font-medium mb-2 japanese-text">3億1,500万米ドル</p>
+                <h4 className="text-base md:text-lg font-semibold text-gray-900 mb-2 japanese-heading-3 japanese-text">ãƒ—ã‚«ãƒ«ãƒ‘æ¸¯ã‚¿ãƒ¼ãƒŸãƒŠãƒ«è¿‘ä»£åŒ–</h4>
+                <p className="text-sm md:text-base text-blue-600 font-medium mb-2 japanese-text">3å„„1,500ä¸‡ç±³ãƒ‰ãƒ«</p>
                 <p className="text-sm text-gray-700 leading-relaxed japanese-text">
-                  Ucayali地域で進められており、地域の物流能力を向上させ、初年度には80万トン以上の貨物を取り扱う見込みです。このプロジェクトにより物流コストが削減され、Lima、Ucayali、Loreto間の商取引が強化され、約60万人の住民が恩恵を受けます。
+                  Ucayaliåœ°åŸŸã§é€²ã‚ã‚‰ã‚Œã¦ãŠã‚Šã€åœ°åŸŸã®ç‰©æµèƒ½åŠ›ã‚’å‘ä¸Šã•ã›ã€åˆå¹´åº¦ã«ã¯80ä¸‡ãƒˆãƒ³ä»¥ä¸Šã®è²¨ç‰©ã‚’å–ã‚Šæ‰±ã†è¦‹è¾¼ã¿ã§ã™ã€‚ã“ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã«ã‚ˆã‚Šç‰©æµã‚³ã‚¹ãƒˆãŒå‰Šæ¸›ã•ã‚Œã€Limaã€Ucayaliã€Loretoé–“ã®å•†å–å¼•ãŒå¼·åŒ–ã•ã‚Œã€ç´„60ä¸‡äººã®ä½æ°‘ãŒæ©æµã‚’å—ã‘ã¾ã™ã€‚
                 </p>
               </div>
             </div>
 
             <div className="mt-6 pt-4 border-t border-gray-300">
               <p className="text-sm text-gray-700 leading-relaxed japanese-text">
-                全体として、ポートプロジェクトの実施により、1,450以上の直接雇用が創出され、経済再活性化と戦略的インフラの強化に貢献します。
+                å…¨ä½“ã¨ã—ã¦ã€ãƒãƒ¼ãƒˆãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®å®Ÿæ–½ã«ã‚ˆã‚Šã€1,450ä»¥ä¸Šã®ç›´æŽ¥é›‡ç”¨ãŒå‰µå‡ºã•ã‚Œã€çµŒæ¸ˆå†æ´»æ€§åŒ–ã¨æˆ¦ç•¥çš„ã‚¤ãƒ³ãƒ•ãƒ©ã®å¼·åŒ–ã«è²¢çŒ®ã—ã¾ã™ã€‚
               </p>
             </div>
           </div>
 
           {/* Port Community System */}
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 sm:p-6 my-6 md:my-8">
-            <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-4 japanese-text">Port Community System（PCS）導入</h3>
+            <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-4 japanese-text">Port Community Systemï¼ˆPCSï¼‰å°Žå…¥</h3>
             <p className="text-sm text-gray-700 leading-relaxed japanese-text">
-              さらに、国内港湾システムの近代化の一環として、PROINVERSIONはPort Community System（PCS）の導入も推進しており、港湾事業者間の情報交換を統合することで、プロセスの最適化、コスト削減、物流チェーンの競争力向上を図ります。
+              ã•ã‚‰ã«ã€å›½å†…æ¸¯æ¹¾ã‚·ã‚¹ãƒ†ãƒ ã®è¿‘ä»£åŒ–ã®ä¸€ç’°ã¨ã—ã¦ã€PROINVERSIONã¯Port Community Systemï¼ˆPCSï¼‰ã®å°Žå…¥ã‚‚æŽ¨é€²ã—ã¦ãŠã‚Šã€æ¸¯æ¹¾äº‹æ¥­è€…é–“ã®æƒ…å ±äº¤æ›ã‚’çµ±åˆã™ã‚‹ã“ã¨ã§ã€ãƒ—ãƒ­ã‚»ã‚¹ã®æœ€é©åŒ–ã€ã‚³ã‚¹ãƒˆå‰Šæ¸›ã€ç‰©æµãƒã‚§ãƒ¼ãƒ³ã®ç«¶äº‰åŠ›å‘ä¸Šã‚’å›³ã‚Šã¾ã™ã€‚
             </p>
           </div>
 
           {/* New PPP Framework */}
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 sm:p-6 my-6 md:my-8">
-            <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-4 japanese-text">新たな官民連携（PPP）制度</h3>
+            <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-4 japanese-text">æ–°ãŸãªå®˜æ°‘é€£æºï¼ˆPPPï¼‰åˆ¶åº¦</h3>
             <p className="text-sm text-gray-700 leading-relaxed mb-4 japanese-text">
-              デル・カルピオ氏はまた、新たな官民連携（PPP）制度がPROINVERSIÓNの役割を強化し、より秩序ある予測可能でバランスの取れた地域開発への重要な一歩になることを指摘しました。
+              ãƒ‡ãƒ«ãƒ»ã‚«ãƒ«ãƒ”ã‚ªæ°ã¯ã¾ãŸã€æ–°ãŸãªå®˜æ°‘é€£æºï¼ˆPPPï¼‰åˆ¶åº¦ãŒPROINVERSIÃ“Nã®å½¹å‰²ã‚’å¼·åŒ–ã—ã€ã‚ˆã‚Šç§©åºã‚ã‚‹äºˆæ¸¬å¯èƒ½ã§ãƒãƒ©ãƒ³ã‚¹ã®å–ã‚ŒãŸåœ°åŸŸé–‹ç™ºã¸ã®é‡è¦ãªä¸€æ­©ã«ãªã‚‹ã“ã¨ã‚’æŒ‡æ‘˜ã—ã¾ã—ãŸã€‚
             </p>
             <blockquote className="border-l-4 border-blue-500 pl-4 text-sm text-gray-700 italic">
-              「この規制更新により、投資促進の加速と全国規模での戦略的インフラプロジェクトの実施改善が可能となります。Anillo Vial Periferico、Longitudinal de la Sierra – Tramo 4、Huancayo–Huancavelica鉄道などのプロジェクトは、物流の接続性に直接影響を与え、輸送時間の短縮と地域間統合の強化に貢与するでしょう」
+              ã€Œã“ã®è¦åˆ¶æ›´æ–°ã«ã‚ˆã‚Šã€æŠ•è³‡ä¿ƒé€²ã®åŠ é€Ÿã¨å…¨å›½è¦æ¨¡ã§ã®æˆ¦ç•¥çš„ã‚¤ãƒ³ãƒ•ãƒ©ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®å®Ÿæ–½æ”¹å–„ãŒå¯èƒ½ã¨ãªã‚Šã¾ã™ã€‚Anillo Vial Perifericoã€Longitudinal de la Sierra â€“ Tramo 4ã€Huancayoâ€“Huancavelicaé‰„é“ãªã©ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã¯ã€ç‰©æµã®æŽ¥ç¶šæ€§ã«ç›´æŽ¥å½±éŸ¿ã‚’ä¸Žãˆã€è¼¸é€æ™‚é–“ã®çŸ­ç¸®ã¨åœ°åŸŸé–“çµ±åˆã®å¼·åŒ–ã«è²¢ä¸Žã™ã‚‹ã§ã—ã‚‡ã†ã€
             </blockquote>
           </div>
 
           {/* Road Projects */}
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 sm:p-6 my-6 md:my-8">
-            <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-4 japanese-text">道路プロジェクト</h3>
+            <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-4 japanese-text">é“è·¯ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆ</h3>
             <p className="text-sm text-gray-700 leading-relaxed mb-4 japanese-text">
-              同時に、デル・カルピオ氏は、官民連携（PPP）による地域統合を強化する22件の道路維持プロジェクトも紹介しました。総投資額は550万米ドルを超え、15地域に恩恵をもたらす見込みです。これらの投資により、年間を通じた交通の継続性が確保され、利用者のサービス水準が向上します。
+              åŒæ™‚ã«ã€ãƒ‡ãƒ«ãƒ»ã‚«ãƒ«ãƒ”ã‚ªæ°ã¯ã€å®˜æ°‘é€£æºï¼ˆPPPï¼‰ã«ã‚ˆã‚‹åœ°åŸŸçµ±åˆã‚’å¼·åŒ–ã™ã‚‹22ä»¶ã®é“è·¯ç¶­æŒãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã‚‚ç´¹ä»‹ã—ã¾ã—ãŸã€‚ç·æŠ•è³‡é¡ã¯550ä¸‡ç±³ãƒ‰ãƒ«ã‚’è¶…ãˆã€15åœ°åŸŸã«æ©æµã‚’ã‚‚ãŸã‚‰ã™è¦‹è¾¼ã¿ã§ã™ã€‚ã“ã‚Œã‚‰ã®æŠ•è³‡ã«ã‚ˆã‚Šã€å¹´é–“ã‚’é€šã˜ãŸäº¤é€šã®ç¶™ç¶šæ€§ãŒç¢ºä¿ã•ã‚Œã€åˆ©ç”¨è€…ã®ã‚µãƒ¼ãƒ“ã‚¹æ°´æº–ãŒå‘ä¸Šã—ã¾ã™ã€‚
             </p>
 
             <div className="bg-white border border-gray-300 rounded-lg p-4">
-              <h4 className="text-base font-semibold text-gray-900 mb-3">マクロ地域別の投資配分</h4>
+              <h4 className="text-base font-semibold text-gray-900 mb-3">ãƒžã‚¯ãƒ­åœ°åŸŸåˆ¥ã®æŠ•è³‡é…åˆ†</h4>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">•</span>
-                  <span><strong>中央地域：</strong>10件、21億6,200万米ドル</span>
+                  <span className="text-blue-600 mr-2">â€¢</span>
+                  <span><strong>ä¸­å¤®åœ°åŸŸï¼š</strong>10ä»¶ã€21å„„6,200ä¸‡ç±³ãƒ‰ãƒ«</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">•</span>
-                  <span><strong>南部地域：</strong>8件、23億6,800万米ドル</span>
+                  <span className="text-blue-600 mr-2">â€¢</span>
+                  <span><strong>å—éƒ¨åœ°åŸŸï¼š</strong>8ä»¶ã€23å„„6,800ä¸‡ç±³ãƒ‰ãƒ«</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">•</span>
-                  <span><strong>北部地域：</strong>2件、5億6,000万米ドル</span>
+                  <span className="text-blue-600 mr-2">â€¢</span>
+                  <span><strong>åŒ—éƒ¨åœ°åŸŸï¼š</strong>2ä»¶ã€5å„„6,000ä¸‡ç±³ãƒ‰ãƒ«</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">•</span>
-                  <span><strong>東部地域：</strong>1件、3億9,000万米ドル</span>
+                  <span className="text-blue-600 mr-2">â€¢</span>
+                  <span><strong>æ±éƒ¨åœ°åŸŸï¼š</strong>1ä»¶ã€3å„„9,000ä¸‡ç±³ãƒ‰ãƒ«</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">•</span>
-                  <span><strong>リマ：</strong>1件、9,300万米ドル</span>
+                  <span className="text-blue-600 mr-2">â€¢</span>
+                  <span><strong>ãƒªãƒžï¼š</strong>1ä»¶ã€9,300ä¸‡ç±³ãƒ‰ãƒ«</span>
                 </li>
               </ul>
             </div>
 
             <blockquote className="border-l-4 border-blue-500 pl-4 text-sm text-gray-700 italic mt-4">
-              デル・カルピオ氏は、これらの道路回廊の整備により、地域間接続が強化され、移動時間や物流コストの削減、国内外市場の連携促進が可能になると述べ、「地域経済の再活性化とより効率的かつ持続可能な移動の実現に大きく貢献することが期待されます」と付け加えました。
+              ãƒ‡ãƒ«ãƒ»ã‚«ãƒ«ãƒ”ã‚ªæ°ã¯ã€ã“ã‚Œã‚‰ã®é“è·¯å›žå»Šã®æ•´å‚™ã«ã‚ˆã‚Šã€åœ°åŸŸé–“æŽ¥ç¶šãŒå¼·åŒ–ã•ã‚Œã€ç§»å‹•æ™‚é–“ã‚„ç‰©æµã‚³ã‚¹ãƒˆã®å‰Šæ¸›ã€å›½å†…å¤–å¸‚å ´ã®é€£æºä¿ƒé€²ãŒå¯èƒ½ã«ãªã‚‹ã¨è¿°ã¹ã€ã€Œåœ°åŸŸçµŒæ¸ˆã®å†æ´»æ€§åŒ–ã¨ã‚ˆã‚ŠåŠ¹çŽ‡çš„ã‹ã¤æŒç¶šå¯èƒ½ãªç§»å‹•ã®å®Ÿç¾ã«å¤§ããè²¢çŒ®ã™ã‚‹ã“ã¨ãŒæœŸå¾…ã•ã‚Œã¾ã™ã€ã¨ä»˜ã‘åŠ ãˆã¾ã—ãŸã€‚
             </blockquote>
           </div>
 
           {/* Results */}
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 sm:p-6 my-6 md:my-8">
-            <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-4 japanese-text">PROINVERSIONの成果</h3>
+            <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-4 japanese-text">PROINVERSIONã®æˆæžœ</h3>
             <p className="text-sm text-gray-700 leading-relaxed japanese-text">
-              2002年の創設以来、PROINVERSIONは輸送関連で33件のプロジェクトを総額170億米ドルで受注しており、国内輸出は10倍に拡大し、2024年には740億米ドルに達しました。
+              2002å¹´ã®å‰µè¨­ä»¥æ¥ã€PROINVERSIONã¯è¼¸é€é–¢é€£ã§33ä»¶ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã‚’ç·é¡170å„„ç±³ãƒ‰ãƒ«ã§å—æ³¨ã—ã¦ãŠã‚Šã€å›½å†…è¼¸å‡ºã¯10å€ã«æ‹¡å¤§ã—ã€2024å¹´ã«ã¯740å„„ç±³ãƒ‰ãƒ«ã«é”ã—ã¾ã—ãŸã€‚
             </p>
           </div>
 
           {/* References */}
           <div className="mt-8 md:mt-12 pt-4 md:pt-6 border-t border-gray-300">
-            <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-2 japanese-heading-3 japanese-text">参考文献</h3>
+            <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-2 japanese-heading-3 japanese-text">å‚è€ƒæ–‡çŒ®</h3>
             <p className="text-sm text-gray-700 japanese-text">
-              PROINVERSION. (2025年11月18日). PROINVERSION promueve proyectos portuarios y viales por más de US$ 850 millones.<br />
-              参照先: <a href="https://www.investinperu.pe/proinversion-promueve-proyectos-portuarios-y-viales-por-mas-de-us-850-millones/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">PROINVERSION</a>
+              PROINVERSION. (2025å¹´11æœˆ18æ—¥). PROINVERSION promueve proyectos portuarios y viales por mÃ¡s de US$ 850 millones.<br />
+              å‚ç…§å…ˆ: <a href="https://www.investinperu.pe/proinversion-promueve-proyectos-portuarios-y-viales-por-mas-de-us-850-millones/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">PROINVERSION</a>
             </p>
           </div>
 
           {/* Footer */}
           <div className="mt-8 md:mt-12 pt-4 md:pt-6 border-t border-gray-300">
             <p className="text-xs md:text-sm text-gray-600 mb-2">
-              在日ペルー大使館
+              åœ¨æ—¥ãƒšãƒ«ãƒ¼å¤§ä½¿é¤¨
             </p>
             <p className="text-xs md:text-sm text-gray-600">
-              経済商務担当
+              çµŒæ¸ˆå•†å‹™æ‹…å½“
             </p>
           </div>
 
           <div className="text-right mt-8">
-            <p className="text-xs md:text-sm text-gray-600">在日ペルー大使館</p>
-            <p className="text-xs md:text-sm text-gray-600">非公式翻訳</p>
+            <p className="text-xs md:text-sm text-gray-600">åœ¨æ—¥ãƒšãƒ«ãƒ¼å¤§ä½¿é¤¨</p>
+            <p className="text-xs md:text-sm text-gray-600">éžå…¬å¼ç¿»è¨³</p>
           </div>
         </div>
       </div>
