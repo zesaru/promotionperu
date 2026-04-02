@@ -10,9 +10,14 @@ const InvestmentPage = () => {
   const { locale } = useRouter();
 
   return (
-    <Layout language={locale} articlePublishedTime="2025-08-04T00:00:00+09:00" title="PROINVERSIÃ“Nã€å®˜æ°‘é€£æºæŠ•è³‡ã«é–¢ã™ã‚‹æ­´å²çš„çµ±è¨ˆã‚’ã¾ã¨ã‚ãŸå¹´æ¬¡çµ±è¨ˆæ›¸ã‚’ç™ºè¡¨">
+    <Layout
+      language={locale}
+      articlePublishedTime="2025-08-04T00:00:00+09:00"
+      title="PROINVERSIÓN、官民連携投資の歴史的データをまとめた2024年版年次統計書を発表"
+      description="PROINVERSIÓNは、2002年から2024年までのAPP、資産活用プロジェクト、OxI、外国直接投資に関する実績をまとめた2024年版年次統計書を公表。2024年の過去最高水準の落札実績も紹介している。"
+    >
       <Banner
-        alt={"PROINVERSIÃ“Nã€å®˜æ°‘é€£æºæŠ•è³‡ã«é–¢ã™ã‚‹æ­´å²çš„çµ±è¨ˆã‚’ã¾ã¨ã‚ãŸå¹´æ¬¡çµ±è¨ˆæ›¸ã‚’ç™ºè¡¨"}
+        alt={"PROINVERSIÓNの2024年版年次統計書の発表を伝えるバナー"}
         src={
           "https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapaninversiones_xop2nr.jpg"
         }

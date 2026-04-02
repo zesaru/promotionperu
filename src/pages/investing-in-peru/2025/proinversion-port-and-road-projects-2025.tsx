@@ -8,9 +8,14 @@ const ProinversionProjectsPage = () => {
   const { locale } = useRouter();
 
   return (
-    <Layout language={locale} articlePublishedTime="2025-11-18T00:00:00+09:00" title="PROINVERSIONã€8å„„5,000ä¸‡ç±³ãƒ‰ãƒ«ä»¥ä¸Šã®æ¸¯æ¹¾ãƒ»é“è·¯ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã‚’æŽ¨é€²">
+    <Layout
+      language={locale}
+      articlePublishedTime="2025-11-18T00:00:00+09:00"
+      title="PROINVERSION、8億5,000万米ドル超の港湾・道路プロジェクトを推進"
+      description="ペルー政府とPROINVERSIONは、港湾・道路分野で総額8億5,000万米ドル超のPPPプロジェクトを推進。港湾物流の強化、地域統合、輸送効率の向上を通じて国内の競争力向上を目指す。"
+    >
       <Banner
-        alt={"Investment guide 2022"}
+        alt={"港湾・道路PPPプロジェクトの推進を伝えるPROINVERSIONのバナー"}
         src={
           "https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapaninversiones_xop2nr.jpg"
         }

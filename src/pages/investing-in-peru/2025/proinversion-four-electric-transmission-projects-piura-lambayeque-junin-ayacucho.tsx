@@ -10,9 +10,14 @@ const InvestmentPage = () => {
   const { locale } = useRouter();
 
   return (
-    <Layout language={locale} articlePublishedTime="2025-10-17T00:00:00+09:00" title="PROINVERSIÃ“Nã€ãƒ”ã‚¦ãƒ©ã€ãƒ©ãƒ³ãƒã‚¤ã‚¨ã‚±ã€ãƒ•ãƒ‹ãƒ³ã€ã‚¢ãƒ¤ã‚¯ãƒ¼ãƒãƒ§ã§4ä»¶ã®é›»åŠ›é€é›»ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®å…¥æœ­ã‚’é–‹å§‹">
+    <Layout
+      language={locale}
+      articlePublishedTime="2025-10-17T00:00:00+09:00"
+      title="PROINVERSIÓN、ピウラ・ランバイエケ・フニン・アヤクチョで4件の送電プロジェクト入札を開始"
+      description="PROINVERSIÓNは、総額2億3,100万米ドル規模の4件の送電プロジェクトの国際入札を開始。ピウラ、ランバイエケ、フニン、アヤクチョの約160万人に安定した電力供給の改善をもたらす見込み。"
+    >
       <Banner
-        alt={"PROINVERSIÃ“Nã€4ä»¶ã®é›»åŠ›é€é›»ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®å…¥æœ­ã‚’é–‹å§‹"}
+        alt={"4件の送電プロジェクト入札開始を伝えるPROINVERSIÓNのバナー"}
         src={
           "https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapaninversiones_xop2nr.jpg"
         }

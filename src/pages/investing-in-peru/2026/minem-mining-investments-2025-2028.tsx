@@ -10,11 +10,11 @@ const MinemMiningInvestmentsPage = () => {
     <Layout
       language={locale}
       articlePublishedTime="2025-12-15T00:00:00+09:00"
-      title="MINEM、2025～2028 年に 119 億 2,100 万米ドル超の鉱業投資の具体化を予測"
-      description="MINEMは、2025～2028年に119億2,100万米ドル超の鉱業投資の具体化を予測し、銅を中心としたプロジェクト・ポートフォリオと探査ポテンシャルを強調しました。"
+      title="MINEM、2025年から2028年にかけて119億2,100万米ドル超の鉱業投資具体化を予測"
+      description="MINEMは、2025年から2028年にかけて119億2,100万米ドル超の鉱業投資が具体化すると予測。65件のプロジェクト、銅中心の投資構成、探鉱ポテンシャル、2025年の投資増加を示した。"
     >
       <Banner
-        alt={"Peru mining investment news banner"}
+        alt={"2025年から2028年のペルー鉱業投資見通しを伝えるMINEMのバナー"}
         src={
           "https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapaninversiones_xop2nr.jpg"
         }
