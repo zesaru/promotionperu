@@ -10,9 +10,14 @@ const InvestmentPage = () => {
   const { locale } = useRouter();
 
   return (
-    <Layout language={locale} articlePublishedTime="2025-10-10T00:00:00+09:00" title="ãƒšãƒ«ãƒ¼ã¨æ—¥æœ¬ã€Majes Siguasè¨ˆç”»ã®æ”¹ä¿®ãƒ»æ‹¡å¼µã«é–¢ã™ã‚‹æ­´å²çš„å¥‘ç´„ã‚’ç· çµ">
+    <Layout
+      language={locale}
+      articlePublishedTime="2025-10-10T00:00:00+09:00"
+      title="ペルーと日本、Majes Siguas計画の改修・拡張に関する歴史的契約を締結"
+      description="ペルーと日本は、Majes Siguas計画の改修・拡張に向けた歴史的契約を締結し、アレキパ州における重要インフラ整備の前進を確認しました。"
+    >
       <Banner
-        alt={"ãƒšãƒ«ãƒ¼ã¨æ—¥æœ¬ã€Majes Siguasè¨ˆç”»ã®æ”¹ä¿®ãƒ»æ‹¡å¼µã«é–¢ã™ã‚‹æ­´å²çš„å¥‘ç´„ã‚’ç· çµ"}
+        alt={"ペルーと日本によるMajes Siguas計画の歴史的契約に関するニュースバナー"}
         src={
           "https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapaninversiones_xop2nr.jpg"
         }

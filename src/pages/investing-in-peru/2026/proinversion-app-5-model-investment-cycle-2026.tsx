@@ -10,8 +10,8 @@ const ProinversionApp5Page = () => {
     <Layout
       language={locale}
       articlePublishedTime="2025-12-03T00:00:00+09:00"
-      title="PROINVERSIÃ“Nã€æ–°ãƒ¢ãƒ‡ãƒ«ã€ŒAPP 5.0ã€ã®ä¸‹ã§ 210 å„„ç±³ãƒ‰ãƒ«è¶…ã®æŠ•è³‡ã‚µã‚¤ã‚¯ãƒ«ã‚’æ´»æ€§åŒ–"
-      description="PROINVERSIÃ“Nã¯ã€æ–°ãƒ¢ãƒ‡ãƒ«ã€ŒAPP 5.0ã€ã®ä¸‹ã§ã€2026ï½ž2028å¹´ã«å‘ã‘ãŸ210å„„ç±³ãƒ‰ãƒ«è¶…ãƒ»66ä»¶ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆæŠ•è³‡ã‚µã‚¤ã‚¯ãƒ«ã‚’æç¤ºã—ã¾ã—ãŸã€‚"
+      title="PROINVERSIÓN、新モデル「APP 5.0」の下で210億米ドル超の投資サイクルを活性化"
+      description="PROINVERSIÓNは、新モデル「APP 5.0」の下で、2026年から2028年に向けた210億米ドル超・66件のプロジェクト投資サイクルを提示しました。"
     >
       <Banner
         alt={"Peru public investment projects news banner"}

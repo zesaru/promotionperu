@@ -8,9 +8,14 @@ const MinemMiningRevenuePage = () => {
   const { locale } = useRouter();
 
   return (
-    <Layout language={locale} articlePublishedTime="2025-11-18T00:00:00+09:00" title="MINEMï¼š2025å¹´9æœˆã¾ã§ã«é‰±æ¥­æ´»å‹•ã§91å„„8,300ä¸‡ã‚½ãƒ«ä»¥ä¸Šã‚’å‰µå‡º">
+    <Layout
+      language={locale}
+      articlePublishedTime="2025-11-18T00:00:00+09:00"
+      title="MINEM：2025年9月までに鉱業活動で91億8,300万ソル以上を創出"
+      description="ペルーのエネルギー鉱山省（MINEM）は、2025年9月までの鉱業活動が91億8,300万ソル超の経済効果を生み出したと発表しました。"
+    >
       <Banner
-        alt={"Investment guide 2022"}
+        alt={"MINEMの鉱業収入に関するニュースバナー"}
         src={
           "https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapaninversiones_xop2nr.jpg"
         }

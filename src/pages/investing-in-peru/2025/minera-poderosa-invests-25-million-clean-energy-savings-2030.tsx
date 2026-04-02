@@ -10,9 +10,14 @@ const InvestmentPage = () => {
   const { locale } = useRouter();
 
   return (
-    <Layout language={locale} articlePublishedTime="2025-10-09T00:00:00+09:00" title="Minera Poderosaç¤¾ã€ã‚¯ãƒªãƒ¼ãƒ³ã‚¨ãƒãƒ«ã‚®ãƒ¼ã«2,500ä¸‡ç±³ãƒ‰ãƒ«ã‚’æŠ•è³‡ã€2030å¹´ã¾ã§ã«8,910ä¸‡ç±³ãƒ‰ãƒ«ã®ç¯€ç´„ã‚’è¦‹è¾¼ã‚€">
+    <Layout
+      language={locale}
+      articlePublishedTime="2025-10-09T00:00:00+09:00"
+      title="Minera Poderosa社、クリーンエネルギーに2,500万米ドルを投資、2030年までに8,910万米ドルの節約を見込む"
+      description="Minera Poderosaは、クリーンエネルギー転換プロジェクトに2,500万米ドルを投資し、2030年までにディーゼル消費削減などで8,910万米ドルの節約を見込んでいます。"
+    >
       <Banner
-        alt={"Minera Poderosaç¤¾ã€ã‚¯ãƒªãƒ¼ãƒ³ã‚¨ãƒãƒ«ã‚®ãƒ¼ã«2,500ä¸‡ç±³ãƒ‰ãƒ«ã‚’æŠ•è³‡"}
+        alt={"Minera Poderosa社のクリーンエネルギー投資に関するニュースバナー"}
         src={
           "https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapaninversiones_xop2nr.jpg"
         }
