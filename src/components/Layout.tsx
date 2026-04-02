@@ -15,6 +15,7 @@ type LayoutProps = {
   image?: string;
   type?: string;
   disableDefaultSeo?: boolean;
+  structuredData?: Record<string, unknown> | Array<Record<string, unknown>>;
 };
 
 function toTitleCase(value: string) {
@@ -23,6 +24,14 @@ function toTitleCase(value: string) {
     .filter(Boolean)
     .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
     .join(" ");
+}
+
+function getInvestingArticleDescription(localeCode: "jp" | "en", resolvedTitle: string) {
+  if (localeCode === "jp") {
+    return `${resolvedTitle} に関する記事。Peru in Japan がペルーの投資、経済、インフラ、ビジネス機会に関する最新情報を日本向けにお届けします。`;
+  }
+
+  return `${resolvedTitle}. Read this Peru in Japan article covering Peru's investment opportunities, economic developments, infrastructure, and business outlook.`;
 }
 
 const defaultDescriptions = {
@@ -125,21 +134,25 @@ export default function Layout({
   keywords,
   image = "https://res.cloudinary.com/de5ud82os/image/upload/v1726638710/WEB/home/nhplhoz0fvmrbph1jbst.png",
   type = "website",
-  disableDefaultSeo = false
+  disableDefaultSeo = false,
+  structuredData
 }: LayoutProps) {
   const { locale, asPath } = useRouter();
   const pathWithoutQuery = asPath.split("#")[0]?.split("?")[0] || "/";
   const normalizedPath = pathWithoutQuery.replace(/^\/(en|jp)(?=\/|$)/, "") || "/";
   const currentLocaleCode: "jp" | "en" = locale === "en" ? "en" : "jp";
+  const pathSegments = normalizedPath === "/" ? [] : normalizedPath.split("/").filter(Boolean);
+  const isInvestingArticle =
+    pathSegments[0] === "investing-in-peru" &&
+    pathSegments.length >= 2 &&
+    pathSegments[1] !== "previous-versions";
   const localizedPath =
     currentLocaleCode === "en"
       ? normalizedPath === "/"
         ? "/en"
         : `/en${normalizedPath}`
       : normalizedPath;
-  
-  const finalDescription = description || getDefaultDescription(currentLocaleCode, normalizedPath);
-  const finalKeywords = keywords || getDefaultKeywords(currentLocaleCode, normalizedPath);
+
   const canonicalUrl = `https://peruinjapan.org${localizedPath === '/' ? '' : localizedPath}`;
   const pathTitle =
     normalizedPath === "/"
@@ -148,6 +161,11 @@ export default function Layout({
         : "Home"
       : toTitleCase(normalizedPath.split("/").filter(Boolean).pop()?.replace(/-/g, " ") || "");
   const resolvedTitle = title || pathTitle;
+  const effectiveType = type === "website" && isInvestingArticle ? "article" : type;
+  const finalDescription =
+    description ||
+    (isInvestingArticle ? getInvestingArticleDescription(currentLocaleCode, resolvedTitle) : getDefaultDescription(currentLocaleCode, normalizedPath));
+  const finalKeywords = keywords || getDefaultKeywords(currentLocaleCode, normalizedPath);
   const pageTitle = locale === 'jp' ? `PERUINJAPAN | ${resolvedTitle}` : `Peru in Japan | ${resolvedTitle}`;
   
   // Generate hreflang URLs
@@ -182,6 +200,72 @@ export default function Layout({
       "addressCountry": "Japan"
     }
   };
+  const articleStructuredData =
+    effectiveType === "article"
+      ? {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": resolvedTitle,
+          "description": finalDescription,
+          "image": [image],
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": canonicalUrl,
+          },
+          "author": {
+            "@type": "Organization",
+            "name": "Peru in Japan",
+            "url": "https://peruinjapan.org",
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Peru in Japan",
+            "url": "https://peruinjapan.org",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://peruinjapan.org/apple-touch-icon.png",
+            },
+          },
+          "inLanguage": currentLocaleCode === "jp" ? "ja" : "en",
+          "articleSection": pathSegments[0] === "investing-in-peru" ? "Investing in Peru" : undefined,
+        }
+      : null;
+  const breadcrumbStructuredData =
+    isInvestingArticle
+      ? {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": currentLocaleCode === "en" ? "Home" : "ãƒ›ãƒ¼ãƒ ",
+              "item": currentLocaleCode === "en" ? "https://peruinjapan.org/en" : "https://peruinjapan.org",
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Investing in Peru",
+              "item":
+                currentLocaleCode === "en"
+                  ? "https://peruinjapan.org/en/investing-in-peru"
+                  : "https://peruinjapan.org/investing-in-peru",
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": resolvedTitle,
+              "item": canonicalUrl,
+            },
+          ],
+        }
+      : null;
+  const additionalStructuredData = Array.isArray(structuredData)
+    ? structuredData
+    : structuredData
+      ? [structuredData]
+      : [];
+  const autoStructuredData = [articleStructuredData, breadcrumbStructuredData].filter(Boolean) as Record<string, unknown>[];
 
 
   return (
@@ -194,7 +278,7 @@ export default function Layout({
             canonical={canonicalUrl}
             languageAlternates={hreflangs}
             openGraph={{
-              type: type as any,
+              type: effectiveType as any,
               locale: locale === 'jp' ? 'ja_JP' : 'en_US',
               url: canonicalUrl,
               title: pageTitle,
@@ -236,6 +320,13 @@ export default function Layout({
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
           />
+          {[...autoStructuredData, ...additionalStructuredData].map((entry, index) => (
+            <script
+              key={`structured-data-${index}`}
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(entry) }}
+            />
+          ))}
         </>
       )}
       

@@ -36,10 +36,57 @@ const RecipesPage = ({ posts, recipes }: RecipesProps) => {
     return posts.filter((post: { menu: string }) => `/${post.menu}` === route);
   }, [posts, route]);
   const localizedPost = getLocalizedEntry(data, locale);
-  const title = localizedPost?.title || "Recipes";
+  const isEnglish = locale === "en";
+  const title = localizedPost?.title || (isEnglish ? "Recipes" : "レシピ");
+  const recipesDescription = isEnglish
+    ? "Browse Peruvian recipes with classic dishes, ingredients, and preparation ideas for cooking at home."
+    : "定番のペルー料理を中心に、材料や作り方がわかるレシピをまとめて紹介します。";
+
+  const localizedPath = locale === "en" ? "/en/recipes" : "/recipes";
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": title,
+      "description": recipesDescription,
+      "url": `https://peruinjapan.org${localizedPath}`,
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": recipes.map((recipe: Recipe, index: number) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "url": `https://peruinjapan.org${locale === "en" ? "/en" : ""}/recipes/${recipe.slug}`,
+          "name": recipe.title,
+        })),
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": locale === "en" ? "Home" : "ホーム",
+          "item": `https://peruinjapan.org${locale === "en" ? "/en" : ""}`,
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": title,
+          "item": `https://peruinjapan.org${localizedPath}`,
+        },
+      ],
+    },
+  ];
 
   return (
-    <Layout language={locale}>
+    <Layout
+      language={locale}
+      title={title}
+      description={recipesDescription}
+      structuredData={structuredData}
+    >
       <Banner
         alt="Peruvian gastronomy in Japan"
         src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564006/WEB/gastronomia/peruinjapangastronomia_o0xsca.jpg"

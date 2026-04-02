@@ -83,4 +83,30 @@ describe("Layout SEO", () => {
       { hrefLang: "x-default", href: "https://peruinjapan.org" },
     ]);
   });
+
+  it("infers article SEO for investing detail pages without manual description", () => {
+    mockUseRouter.mockReturnValue({
+      locale: "en",
+      asPath: "/en/investing-in-peru/2026/mef-peru-grew-3-4-percent-2025",
+      locales: ["jp", "en"],
+    });
+
+    render(
+      <Layout language="en" title="MEF growth update">
+        <div>content</div>
+      </Layout>
+    );
+
+    const seoProps = mockNextSeo.mock.calls.at(-1)?.[0] as {
+      description: string;
+      openGraph: { type: string };
+    };
+
+    expect(seoProps.description).toContain("MEF growth update.");
+    expect(seoProps.openGraph.type).toBe("article");
+
+    expect(document.body.innerHTML).toContain('"@type":"Article"');
+    expect(document.body.innerHTML).toContain('"headline":"MEF growth update"');
+    expect(document.body.innerHTML).toContain('"@type":"BreadcrumbList"');
+  });
 });

@@ -13,15 +13,66 @@ type RecipeCardProps = {
 const Slugrecipes = ({ recipe }: RecipeCardProps) => {
   const { title, ingredients, preparation } = recipe[0];
   const router = useRouter();
+  const isEnglish = router.locale === "en";
+  const recipeTitle = title || (isEnglish ? "Peruvian recipe" : "ペルー料理レシピ");
+  const recipeDescription = isEnglish
+    ? `Learn how to prepare ${recipeTitle} with ingredients and step-by-step instructions from Peru in Japan.`
+    : `${recipeTitle}の材料と作り方を、Peru in Japanがステップごとにわかりやすく紹介します。`;
+
+  const slug = typeof router.query.slug === "string" ? router.query.slug : "";
+  const recipePath = `${isEnglish ? "/en" : ""}/recipes/${slug}`;
+  const recipeImage = recipe[0]?.image || "https://res.cloudinary.com/de5ud82os/image/upload/v1694564006/WEB/gastronomia/peruinjapangastronomia_o0xsca.jpg";
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Recipe",
+      "name": recipeTitle,
+      "description": recipeDescription,
+      "image": recipeImage,
+      "mainEntityOfPage": `https://peruinjapan.org${recipePath}`,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": isEnglish ? "Home" : "ホーム",
+          "item": `https://peruinjapan.org${isEnglish ? "/en" : ""}`,
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": isEnglish ? "Recipes" : "レシピ",
+          "item": `https://peruinjapan.org${isEnglish ? "/en/recipes" : "/recipes"}`,
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": recipeTitle,
+          "item": `https://peruinjapan.org${recipePath}`,
+        },
+      ],
+    },
+  ];
+
   return (
-    <Layout language={router.locale}>
+    <Layout
+      language={router.locale}
+      title={recipeTitle}
+      description={recipeDescription}
+      type="article"
+      image={recipeImage}
+      structuredData={structuredData}
+    >
       <Banner
         alt="Peruvian gastronomy in Japan"
         src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564006/WEB/gastronomia/peruinjapangastronomia_o0xsca.jpg"
       />
       <div className="container p-6  mx-auto">
         <h1 className="uppercase tracking-wide no-underline hover:no-underline font-bold text-xl mb-8 text-center text-orange-600">
-          {recipe[0].title}
+          {recipeTitle}
         </h1>
         <PortableText
           className="my-7"

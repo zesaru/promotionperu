@@ -40,10 +40,62 @@ function getRestaurants(slug: string) {
 
 const Slug = ({ restaurants, slug }: CardProps) => {
   const { locale } = useRouter();
+  const cityName = slug.charAt(0).toUpperCase() + slug.slice(1);
   const title =
-    "Restaunrants in " + slug.charAt(0).toUpperCase() + slug.slice(1);
+    locale === "en"
+      ? `Peruvian Restaurants in ${cityName}`
+      : `${cityName}のペルー料理レストラン`;
+  const description =
+    locale === "en"
+      ? `Explore ${restaurants.length} Peruvian restaurants in ${cityName}, Japan, with direct links to each venue.`
+      : `日本の${cityName}でペルー料理を楽しめるレストラン${restaurants.length}件をまとめて紹介します。`;
+
+  const localizedPath = `${locale === "en" ? "/en" : ""}/restaurants/${slug.toLowerCase()}`;
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": title,
+      "description": description,
+      "url": `https://peruinjapan.org${localizedPath}`,
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": restaurants.map((restaurant: any, index: number) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "name": restaurant.name,
+          ...(restaurant.homepage ? { "url": restaurant.homepage } : {}),
+        })),
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": locale === "en" ? "Home" : "ホーム",
+          "item": `https://peruinjapan.org${locale === "en" ? "/en" : ""}`,
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": locale === "en" ? "Peruvian Restaurants in Japan" : "日本のペルー料理店",
+          "item": `https://peruinjapan.org${locale === "en" ? "/en/restaurants" : "/restaurants"}`,
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": title,
+          "item": `https://peruinjapan.org${localizedPath}`,
+        },
+      ],
+    },
+  ];
+
   return (
-    <Layout language={locale} title={title}>
+    <Layout language={locale} title={title} description={description} structuredData={structuredData}>
       <Banner
         alt="Restaurants"
         src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564012/WEB/gastronomia/restaurantsbanner2_ajlqai.jpg"

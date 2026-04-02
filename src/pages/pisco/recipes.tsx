@@ -27,8 +27,22 @@ const Recipes = ({ posts }: { posts: Post[] }) => {
   const title = localizedPost?.title || (locale === "en" ? "Pisco Recipes" : "ピスコレシピ");
 
 
+  const description = locale === "en"
+    ? "Download and explore Pisco cocktail recipes that showcase Peru's signature spirit."
+    : "ペルーを代表する蒸留酒ピスコのカクテルレシピ集をダウンロードして楽しめます。";
+
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": title,
+      "description": description,
+      "url": `https://peruinjapan.org${locale === "en" ? "/en/pisco/recipes" : "/pisco/recipes"}`,
+    },
+  ];
+
   return (
-    <Layout language={locale}>
+    <Layout language={locale} title={title} description={description} structuredData={structuredData}>
       <Banner
         alt="Pisco Recipes"
         src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564008/WEB/gastronomia/pisco_kqmd66.jpg"

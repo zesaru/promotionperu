@@ -1,5 +1,6 @@
 module.exports = {
   siteUrl: 'https://peruinjapan.org', 
+  autoLastmod: false,
   generateRobotsTxt: true, 
   sitemapSize: 7000, 
   outDir: './public',
@@ -21,7 +22,6 @@ module.exports = {
       loc: path,
       changefreq: 'daily',
       priority: path === '/' ? 1.0 : 0.8,
-      lastmod: new Date().toISOString(),
     }
   },
 };

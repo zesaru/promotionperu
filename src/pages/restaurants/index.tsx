@@ -20,9 +20,51 @@ interface RestaurantsProps {
 
 export default function Restaurants({ cities }: RestaurantsProps) {
   const { locale } = useRouter();
+  const title = locale === "en" ? "Peruvian Restaurants in Japan" : "日本のペルー料理店";
+  const description = locale === "en"
+    ? "Find Peruvian restaurants across Japan by city and discover where to enjoy authentic Peruvian cuisine."
+    : "日本各地の都市別に、ペルー料理を楽しめるレストランを探せます。";
+
+  const localizedPath = locale === "en" ? "/en/restaurants" : "/restaurants";
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": title,
+      "description": description,
+      "url": `https://peruinjapan.org${localizedPath}`,
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": cities.map((city, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "url": `https://peruinjapan.org${locale === "en" ? "/en" : ""}/restaurants/${city.city.toLowerCase()}`,
+          "name": city.title,
+        })),
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": locale === "en" ? "Home" : "ホーム",
+          "item": `https://peruinjapan.org${locale === "en" ? "/en" : ""}`,
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": title,
+          "item": `https://peruinjapan.org${localizedPath}`,
+        },
+      ],
+    },
+  ];
 
   return (
-    <Layout language={locale} title="Restaurants">
+    <Layout language={locale} title={title} description={description} structuredData={structuredData}>
       <Banner
         alt="Restaurants"
         src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564012/WEB/gastronomia/restaurantsbanner2_ajlqai.jpg"
