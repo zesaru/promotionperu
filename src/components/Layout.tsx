@@ -18,6 +18,7 @@ type LayoutProps = {
   structuredData?: Record<string, unknown> | Array<Record<string, unknown>>;
   articlePublishedTime?: string;
   articleModifiedTime?: string;
+  disableAutoArticle?: boolean;
 };
 
 function toTitleCase(value: string) {
@@ -139,7 +140,8 @@ export default function Layout({
   disableDefaultSeo = false,
   structuredData,
   articlePublishedTime,
-  articleModifiedTime
+  articleModifiedTime,
+  disableAutoArticle = false
 }: LayoutProps) {
   const { locale, asPath } = useRouter();
   const pathWithoutQuery = asPath.split("#")[0]?.split("?")[0] || "/";
@@ -165,7 +167,8 @@ export default function Layout({
         : "Home"
       : toTitleCase(normalizedPath.split("/").filter(Boolean).pop()?.replace(/-/g, " ") || "");
   const resolvedTitle = title || pathTitle;
-  const effectiveType = type === "website" && isInvestingArticle ? "article" : type;
+  const effectiveType =
+    type === "website" && isInvestingArticle && !disableAutoArticle ? "article" : type;
   const resolvedArticleModifiedTime = articleModifiedTime || articlePublishedTime;
   const finalDescription =
     description ||
@@ -238,7 +241,7 @@ export default function Layout({
         }
       : null;
   const breadcrumbStructuredData =
-    isInvestingArticle
+    isInvestingArticle && !disableAutoArticle
       ? {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",

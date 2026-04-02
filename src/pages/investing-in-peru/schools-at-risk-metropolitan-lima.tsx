@@ -6,8 +6,54 @@ import Layout from "../../components/Layout";
 
 const InvesmentPage = () => {
   const { locale } = useRouter();
+  const title = "SCHOOLS AT RISK: METROPOLITAN LIMA";
+  const description =
+    "Review the Lima schools PPP project in Peru, including service scope, beneficiary scale, concession model, and the US$ 255 million investment opportunity.";
+  const localizedPath =
+    locale === "en"
+      ? "/en/investing-in-peru/schools-at-risk-metropolitan-lima"
+      : "/investing-in-peru/schools-at-risk-metropolitan-lima";
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: title,
+      description,
+      url: `https://peruinjapan.org${localizedPath}`,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: locale === "en" ? "Home" : "ホーム",
+          item: `https://peruinjapan.org${locale === "en" ? "/en" : ""}`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Investing in Peru",
+          item: `https://peruinjapan.org${locale === "en" ? "/en/investing-in-peru" : "/investing-in-peru"}`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: title,
+          item: `https://peruinjapan.org${localizedPath}`,
+        },
+      ],
+    },
+  ];
   return (
-    <Layout language={locale} title="SCHOOLS AT RISK: METROPOLITAN LIMA">
+    <Layout
+      language={locale}
+      title={title}
+      description={description}
+      structuredData={structuredData}
+      disableAutoArticle
+    >
       <Banner
         alt={"Investment guide 2022"}
         src={

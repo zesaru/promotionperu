@@ -6,8 +6,54 @@ import Layout from "../../components/Layout";
 
 const InvesmentPage = () => {
   const { locale } = useRouter();
+  const title = "HUANCAYO - HUANCAVELICA RAILWAY";
+  const description =
+    "Explore Peru's Huancayo - Huancavelica Railway project, including rehabilitation scope, rolling stock plan, concession term, and US$ 445 million investment value.";
+  const localizedPath =
+    locale === "en"
+      ? "/en/investing-in-peru/huancayo-huancavelica-railway"
+      : "/investing-in-peru/huancayo-huancavelica-railway";
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      name: title,
+      description,
+      url: `https://peruinjapan.org${localizedPath}`,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: locale === "en" ? "Home" : "ホーム",
+          item: `https://peruinjapan.org${locale === "en" ? "/en" : ""}`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Investing in Peru",
+          item: `https://peruinjapan.org${locale === "en" ? "/en/investing-in-peru" : "/investing-in-peru"}`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: title,
+          item: `https://peruinjapan.org${localizedPath}`,
+        },
+      ],
+    },
+  ];
   return (
-    <Layout language={locale} title="HUANCAYO – HUANCAVELICA RAILWAY">
+    <Layout
+      language={locale}
+      title={title}
+      description={description}
+      structuredData={structuredData}
+      disableAutoArticle
+    >
       <Banner
         alt={"Investment guide 2022"}
         src={
@@ -15,9 +61,7 @@ const InvesmentPage = () => {
         }
       />
       <div className="container p-6 mx-auto">
-        <h1 className="text-2xl text-red-600 py-8">
-          HUANCAYO – HUANCAVELICA RAILWAY
-        </h1>
+        <h1 className="text-2xl text-red-600 py-8">{title}</h1>
         <div className="lg:flex text-lg gap-20">
           <div className="lg:w-2/5 text-center">
             <div className="py-2">ESTIMATED AWARD DATE</div>

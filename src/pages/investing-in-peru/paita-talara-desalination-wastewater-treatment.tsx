@@ -6,10 +6,54 @@ import Layout from "../../components/Layout";
 
 const InvesmentPage = () => {
   const { locale } = useRouter();
+  const title =
+    "PAITA - TALARA DESALINATION PLANT AND WASTEWATER TREATMENT FOR TALARA";
+  const description =
+    "Review the Paita and Talara water infrastructure opportunity in Peru, covering desalination, wastewater treatment scope, delivery model, and US$ 150 million investment.";
+  const localizedPath =
+    locale === "en"
+      ? "/en/investing-in-peru/paita-talara-desalination-wastewater-treatment"
+      : "/investing-in-peru/paita-talara-desalination-wastewater-treatment";
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      name: title,
+      description,
+      url: `https://peruinjapan.org${localizedPath}`,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: locale === "en" ? "Home" : "ホーム",
+          item: `https://peruinjapan.org${locale === "en" ? "/en" : ""}`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Investing in Peru",
+          item: `https://peruinjapan.org${locale === "en" ? "/en/investing-in-peru" : "/investing-in-peru"}`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: title,
+          item: `https://peruinjapan.org${localizedPath}`,
+        },
+      ],
+    },
+  ];
   return (
     <Layout
       language={locale}
-      title="PAITA - TALARA DESALINATION PLANT AND WASTEWATER TREATMENT FOR TALARA"
+      title={title}
+      description={description}
+      structuredData={structuredData}
+      disableAutoArticle
     >
       <Banner
         alt={"Invesment"}

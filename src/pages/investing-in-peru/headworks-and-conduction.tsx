@@ -6,10 +6,54 @@ import Layout from "../../components/Layout";
 
 const InvesmentPage = () => {
   const { locale } = useRouter();
+  const title =
+    "HEADWORKS AND CONDUCTION WORKS FOR THE DRINKING WATER SUPPLY IN LIMA";
+  const description =
+    "Learn about Lima's drinking water infrastructure project, including Huachipa expansion, reservoirs, tunnel works, concession model, and US$ 476 million investment.";
+  const localizedPath =
+    locale === "en"
+      ? "/en/investing-in-peru/headworks-and-conduction"
+      : "/investing-in-peru/headworks-and-conduction";
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      name: title,
+      description,
+      url: `https://peruinjapan.org${localizedPath}`,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: locale === "en" ? "Home" : "ホーム",
+          item: `https://peruinjapan.org${locale === "en" ? "/en" : ""}`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Investing in Peru",
+          item: `https://peruinjapan.org${locale === "en" ? "/en/investing-in-peru" : "/investing-in-peru"}`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: title,
+          item: `https://peruinjapan.org${localizedPath}`,
+        },
+      ],
+    },
+  ];
   return (
     <Layout
       language={locale}
-      title="HEADWORKS AND CONDUCTION WORKS FOR THE DRINKING WATER SUPPLY IN LIMA"
+      title={title}
+      description={description}
+      structuredData={structuredData}
+      disableAutoArticle
     >
       <Banner
         alt={"Investment guide 2022"}

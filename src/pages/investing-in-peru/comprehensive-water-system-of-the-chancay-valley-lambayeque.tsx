@@ -9,10 +9,54 @@ import Layout from "../../components/Layout";
 
 const InvesmentPage = () => {
   const { locale } = useRouter();
+  const title =
+    "COMPREHENSIVE WATER SYSTEM OF THE CHANCAY VALLEY - LAMBAYEQUE";
+  const description =
+    "Explore the Chancay-Lambayeque water system project in Peru, including dam construction, irrigation scope, concession model, and US$ 619 million investment potential.";
+  const localizedPath =
+    locale === "en"
+      ? "/en/investing-in-peru/comprehensive-water-system-of-the-chancay-valley-lambayeque"
+      : "/investing-in-peru/comprehensive-water-system-of-the-chancay-valley-lambayeque";
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      name: title,
+      description,
+      url: `https://peruinjapan.org${localizedPath}`,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: locale === "en" ? "Home" : "ホーム",
+          item: `https://peruinjapan.org${locale === "en" ? "/en" : ""}`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Investing in Peru",
+          item: `https://peruinjapan.org${locale === "en" ? "/en/investing-in-peru" : "/investing-in-peru"}`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: title,
+          item: `https://peruinjapan.org${localizedPath}`,
+        },
+      ],
+    },
+  ];
   return (
     <Layout
       language={locale}
-      title="COMPREHENSIVE WATER SYSTEM OF THE CHANCAY VALLEY - LAMBAYEQUE"
+      title={title}
+      description={description}
+      structuredData={structuredData}
+      disableAutoArticle
     >
       <Banner
         alt={"Investment guide 2022"}

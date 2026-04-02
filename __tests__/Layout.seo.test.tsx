@@ -120,4 +120,31 @@ describe("Layout SEO", () => {
     expect(document.body.innerHTML).toContain('"datePublished":"2026-02-15T12:15:00+09:00"');
     expect(document.body.innerHTML).toContain('"@type":"BreadcrumbList"');
   });
+
+  it("keeps investing project pages as website when auto article is disabled", () => {
+    mockUseRouter.mockReturnValue({
+      locale: "en",
+      asPath: "/en/investing-in-peru/huancayo-huancavelica-railway",
+      locales: ["jp", "en"],
+    });
+
+    render(
+      <Layout
+        language="en"
+        title="Huancayo - Huancavelica Railway"
+        description="Railway project overview."
+        disableAutoArticle
+      >
+        <div>content</div>
+      </Layout>
+    );
+
+    const seoProps = mockNextSeo.mock.calls.at(-1)?.[0] as {
+      openGraph: { type: string; article?: unknown };
+    };
+
+    expect(seoProps.openGraph.type).toBe("website");
+    expect(seoProps.openGraph.article).toBeUndefined();
+    expect(document.body.innerHTML).not.toContain('"@type":"Article"');
+  });
 });
