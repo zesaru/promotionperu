@@ -31,13 +31,13 @@ const MinemMiningInvestmentsPage = () => {
             MINEM（エネルギー鉱山省）
           </h1>
           <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 japanese-heading-1">
-            MINEM、2025～2028 年に 119 億 2,100 万米ドル超の鉱業投資の具体化を予測
+            MINEM、2025～2028年に119億2,100万米ドル超の鉱業投資の具体化を予測
           </h2>
           <p className="text-xs md:text-sm text-gray-600 mb-2">
             プレスリリース
           </p>
           <p className="text-xs md:text-sm text-gray-600 mb-6">
-            2025 年 12 月 15 日
+            2025年12月15日
           </p>
         </div>
 
