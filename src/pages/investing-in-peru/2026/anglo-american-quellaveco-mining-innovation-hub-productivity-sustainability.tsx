@@ -9,6 +9,7 @@ const AngloAmericanQuellavecoInnovationHubPage = () => {
   return (
     <Layout
       language={locale}
+      type="article"
       title="ANGLO AMERICAN QUELLAVECO、ペルー鉱業イノベーションハブに参画 生産性と持続可能性の向上へ"
       description="Anglo American Quellavecoはペルー鉱業イノベーションハブに参画し、生産性、持続可能性、技術適応力の向上に向けて、スタートアップ、技術プロバイダー、学術機関との協働を加速させます。"
     >

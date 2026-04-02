@@ -53,7 +53,6 @@ const InvesmentPage = () => {
       title={title}
       description={description}
       structuredData={structuredData}
-      disableAutoArticle
     >
       <Banner
         alt={"Invesment"}

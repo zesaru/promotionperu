@@ -84,7 +84,7 @@ describe("Layout SEO", () => {
     ]);
   });
 
-  it("infers article SEO for investing detail pages without manual description", () => {
+  it("uses article SEO when articlePublishedTime is provided", () => {
     mockUseRouter.mockReturnValue({
       locale: "en",
       asPath: "/en/investing-in-peru/2026/mef-peru-grew-3-4-percent-2025",
@@ -121,7 +121,7 @@ describe("Layout SEO", () => {
     expect(document.body.innerHTML).toContain('"@type":"BreadcrumbList"');
   });
 
-  it("keeps investing project pages as website when auto article is disabled", () => {
+  it("keeps investing project pages as website without editorial signals", () => {
     mockUseRouter.mockReturnValue({
       locale: "en",
       asPath: "/en/investing-in-peru/huancayo-huancavelica-railway",
@@ -133,7 +133,6 @@ describe("Layout SEO", () => {
         language="en"
         title="Huancayo - Huancavelica Railway"
         description="Railway project overview."
-        disableAutoArticle
       >
         <div>content</div>
       </Layout>
@@ -146,5 +145,33 @@ describe("Layout SEO", () => {
     expect(seoProps.openGraph.type).toBe("website");
     expect(seoProps.openGraph.article).toBeUndefined();
     expect(document.body.innerHTML).not.toContain('"@type":"Article"');
+  });
+
+  it("keeps article SEO for investing stories marked explicitly as articles", () => {
+    mockUseRouter.mockReturnValue({
+      locale: "en",
+      asPath: "/en/investing-in-peru/2026/anglo-american-quellaveco-mining-innovation-hub-productivity-sustainability",
+      locales: ["jp", "en"],
+    });
+
+    render(
+      <Layout
+        language="en"
+        type="article"
+        title="Quellaveco joins Peru mining innovation hub"
+        description="Editorial mining innovation coverage."
+      >
+        <div>content</div>
+      </Layout>
+    );
+
+    const seoProps = mockNextSeo.mock.calls.at(-1)?.[0] as {
+      openGraph: { type: string; article?: Record<string, unknown> };
+    };
+
+    expect(seoProps.openGraph.type).toBe("article");
+    expect(document.body.innerHTML).toContain('"@type":"Article"');
+    expect(document.body.innerHTML).not.toContain('"datePublished"');
+    expect(document.body.innerHTML).toContain('"@type":"BreadcrumbList"');
   });
 });

@@ -18,7 +18,6 @@ type LayoutProps = {
   structuredData?: Record<string, unknown> | Array<Record<string, unknown>>;
   articlePublishedTime?: string;
   articleModifiedTime?: string;
-  disableAutoArticle?: boolean;
 };
 
 function toTitleCase(value: string) {
@@ -140,8 +139,7 @@ export default function Layout({
   disableDefaultSeo = false,
   structuredData,
   articlePublishedTime,
-  articleModifiedTime,
-  disableAutoArticle = false
+  articleModifiedTime
 }: LayoutProps) {
   const { locale, asPath } = useRouter();
   const pathWithoutQuery = asPath.split("#")[0]?.split("?")[0] || "/";
@@ -167,12 +165,14 @@ export default function Layout({
         : "Home"
       : toTitleCase(normalizedPath.split("/").filter(Boolean).pop()?.replace(/-/g, " ") || "");
   const resolvedTitle = title || pathTitle;
-  const effectiveType =
-    type === "website" && isInvestingArticle && !disableAutoArticle ? "article" : type;
+  const isEditorialArticle = type === "article" || Boolean(articlePublishedTime);
+  const effectiveType = isEditorialArticle ? "article" : type;
   const resolvedArticleModifiedTime = articleModifiedTime || articlePublishedTime;
   const finalDescription =
     description ||
-    (isInvestingArticle ? getInvestingArticleDescription(currentLocaleCode, resolvedTitle) : getDefaultDescription(currentLocaleCode, normalizedPath));
+    (isEditorialArticle && isInvestingArticle
+      ? getInvestingArticleDescription(currentLocaleCode, resolvedTitle)
+      : getDefaultDescription(currentLocaleCode, normalizedPath));
   const finalKeywords = keywords || getDefaultKeywords(currentLocaleCode, normalizedPath);
   const pageTitle = locale === 'jp' ? `PERUINJAPAN | ${resolvedTitle}` : `Peru in Japan | ${resolvedTitle}`;
   
@@ -209,7 +209,7 @@ export default function Layout({
     }
   };
   const articleStructuredData =
-    effectiveType === "article"
+    isEditorialArticle
       ? {
           "@context": "https://schema.org",
           "@type": "Article",
@@ -241,7 +241,7 @@ export default function Layout({
         }
       : null;
   const breadcrumbStructuredData =
-    isInvestingArticle && !disableAutoArticle
+    isEditorialArticle && isInvestingArticle
       ? {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
