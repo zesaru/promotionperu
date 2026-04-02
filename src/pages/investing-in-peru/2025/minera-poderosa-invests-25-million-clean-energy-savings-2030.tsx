@@ -65,19 +65,19 @@ const InvestmentPage = () => {
 
           <ul className="list-disc pl-6 mb-6 space-y-3 text-gray-800">
             <li className="leading-relaxed">
-              <strong>Chagualé£›è¡Œå ´ã®ãƒã‚¤ãƒ–ãƒªãƒƒãƒ‰å¤ªé™½å…‰ã‚·ã‚¹ãƒ†ãƒ </strong>
+              <strong>Chagual飛行場におけるハイブリッド型太陽光発電システムの導入</strong>
             </li>
             <li className="leading-relaxed">
-              <strong>æ–°ãŸãªã‚°ãƒªãƒ¼ãƒ³é›»åŠ›ä¾›çµ¦å¥‘ç´„</strong>
+              <strong>新たなグリーン電力供給契約の締結</strong>
             </li>
             <li className="leading-relaxed">
-              <strong>BESSLa Morenaã‚·ã‚¹ãƒ†ãƒ </strong> â€” ãƒ”ãƒ¼ã‚¯æ™‚ã®é›»åŠ›æ¶ˆè²»ã¨åŒ–çŸ³ç‡ƒæ–™ä½¿ç”¨ã‚’å‰Šæ¸›ï¼ˆ2024å¹´ã®CONAMINè³žã‚’å—è³žï¼‰
+              <strong>BESS La Morenaシステムの導入</strong> - ピーク時の電力消費と化石燃料使用を削減（2024年のCONAMIN賞を受賞）
             </li>
             <li className="leading-relaxed">
-              <strong>Santa MarÃ­aã‚­ãƒ£ãƒ³ãƒ—ã§ã®åˆ†æ•£åž‹ç™ºé›»ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆ</strong>ï¼ˆ2024å¹´å®Ÿæ–½ï¼‰ â€” ã‚¨ãƒãƒ«ã‚®ãƒ¼å®‰å…¨ä¿éšœã‚’å‘ä¸Š
+              <strong>Santa Mariaキャンプにおける分散型発電プロジェクト</strong>（2024年実施） - エネルギー安全保障を向上
             </li>
             <li className="leading-relaxed">
-              <strong>7MWpã®å¤ªé™½å…‰ç™ºé›»ã‚·ã‚¹ãƒ†ãƒ </strong>ï¼ˆé–‹ç™ºä¸­ï¼‰ â€” ä¸€éƒ¨ã®é‰±å±±ä½œæ¥­ã«é›»åŠ›ã‚’ä¾›çµ¦äºˆå®š
+              <strong>7MWp規模の太陽光発電システム</strong>（開発中） - 鉱山操業の一部に再生可能電力を供給予定
             </li>
           </ul>
 
@@ -93,18 +93,18 @@ const InvestmentPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
               <div>
                 <p className="text-3xl font-bold text-green-700">55%</p>
-                <p className="text-sm text-gray-700 mt-1 japanese-text">2022å¹´</p>
-                <p className="text-xs text-gray-600">å†ç”Ÿå¯èƒ½ã‚¨ãƒãƒ«ã‚®ãƒ¼æ¯”çŽ‡</p>
+                <p className="text-sm text-gray-700 mt-1 japanese-text">2022年</p>
+                <p className="text-xs text-gray-600">再生可能エネルギー比率</p>
               </div>
               <div>
                 <p className="text-3xl font-bold text-green-700">76%</p>
-                <p className="text-sm text-gray-700 mt-1 japanese-text">2024å¹´</p>
-                <p className="text-xs text-gray-600">å†ç”Ÿå¯èƒ½ã‚¨ãƒãƒ«ã‚®ãƒ¼æ¯”çŽ‡</p>
+                <p className="text-sm text-gray-700 mt-1 japanese-text">2024年</p>
+                <p className="text-xs text-gray-600">再生可能エネルギー比率</p>
               </div>
               <div>
                 <p className="text-3xl font-bold text-green-700">100%</p>
-                <p className="text-sm text-gray-700 mt-1 japanese-text">2030å¹´ç›®æ¨™</p>
-                <p className="text-xs text-gray-600">ã‚«ãƒ¼ãƒœãƒ³ãƒ‹ãƒ¥ãƒ¼ãƒˆãƒ©ãƒ«é”æˆ</p>
+                <p className="text-sm text-gray-700 mt-1 japanese-text">2030年目標</p>
+                <p className="text-xs text-gray-600">再生可能エネルギーによる操業</p>
               </div>
             </div>
           </div>
@@ -147,9 +147,9 @@ const InvestmentPage = () => {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-base md:text-lg font-semibold text-gray-900 japanese-text">106,893ãƒˆãƒ³</p>
-                  <p className="text-xs md:text-sm text-gray-600">COâ‚‚æŽ’å‡ºå›žé¿</p>
-                  <p className="text-xs text-gray-500 mt-1">æ°—å€™ç›®æ¨™ã®62%é”æˆ</p>
+                  <p className="text-base md:text-lg font-semibold text-gray-900 japanese-text">106,893トン</p>
+                  <p className="text-xs md:text-sm text-gray-600">CO2排出回避量</p>
+                  <p className="text-xs text-gray-500 mt-1">気候目標の62%を達成</p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -159,9 +159,9 @@ const InvestmentPage = () => {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-base md:text-lg font-semibold text-gray-900 japanese-text">8,910ä¸‡ç±³ãƒ‰ãƒ«</p>
-                  <p className="text-xs md:text-sm text-gray-600">2030å¹´ã¾ã§ã®ç¯€ç´„è¦‹è¾¼ã¿</p>
-                  <p className="text-xs text-gray-500 mt-1">ãƒ‡ã‚£ãƒ¼ã‚¼ãƒ«æ¶ˆè²»å‰Šæ¸›</p>
+                  <p className="text-base md:text-lg font-semibold text-gray-900 japanese-text">8,910万米ドル</p>
+                  <p className="text-xs md:text-sm text-gray-600">2030年までの節約見込み</p>
+                  <p className="text-xs text-gray-500 mt-1">ディーゼル消費削減による効果</p>
                 </div>
               </div>
             </div>

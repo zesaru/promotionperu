@@ -66,39 +66,39 @@ const ProinversionApp5Page = () => {
 
             <div className="space-y-3 md:space-y-4">
               <div className="flex items-start">
-                <span className="text-blue-600 mr-2 text-lg flex-shrink-0">â€¢</span>
+                <span className="text-blue-600 mr-2 text-lg flex-shrink-0">•</span>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed japanese-text">
-                  <strong className="text-gray-900">Loretoå·žã®æ–°æ¸¯æ¹¾ã‚¿ãƒ¼ãƒŸãƒŠãƒ«</strong>
+                  <strong className="text-gray-900">ロレート州の新港湾ターミナル</strong>
                 </p>
               </div>
               <div className="flex items-start">
-                <span className="text-blue-600 mr-2 text-lg flex-shrink-0">â€¢</span>
+                <span className="text-blue-600 mr-2 text-lg flex-shrink-0">•</span>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed japanese-text">
-                  <strong className="text-gray-900">ç¬¬ 3 ã‚°ãƒ«ãƒ¼ãƒ—ã®ç©ºæ¸¯ç¾¤</strong>
+                  <strong className="text-gray-900">第3グループ空港プロジェクト</strong>
                 </p>
               </div>
               <div className="flex items-start">
-                <span className="text-blue-600 mr-2 text-lg flex-shrink-0">â€¢</span>
+                <span className="text-blue-600 mr-2 text-lg flex-shrink-0">•</span>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed japanese-text">
-                  <strong className="text-gray-900">Huascaranã®ãƒ†ãƒ¬ãƒ•ã‚§ãƒªãƒƒã‚¯</strong>
+                  <strong className="text-gray-900">ワスカランのロープウェー計画</strong>
                 </p>
               </div>
               <div className="flex items-start">
-                <span className="text-blue-600 mr-2 text-lg flex-shrink-0">â€¢</span>
+                <span className="text-blue-600 mr-2 text-lg flex-shrink-0">•</span>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed japanese-text">
-                  <strong className="text-gray-900">Arequipaãƒ»Moqueguaãƒ»Tacnaå·žã¸ã®å¤©ç„¶ã‚¬ã‚¹ç¶²ã®æ‹¡å¼µ</strong>
+                  <strong className="text-gray-900">アレキパ、モケグア、タクナ州への天然ガス網拡張</strong>
                 </p>
               </div>
               <div className="flex items-start">
-                <span className="text-blue-600 mr-2 text-lg flex-shrink-0">â€¢</span>
+                <span className="text-blue-600 mr-2 text-lg flex-shrink-0">•</span>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed japanese-text">
-                  <strong className="text-gray-900">PaitaãŠã‚ˆã³Talaraã®æ°´å‡¦ç†ãƒ»æµ·æ°´æ·¡æ°´åŒ–ãƒ—ãƒ©ãƒ³ãƒˆ</strong>
+                  <strong className="text-gray-900">パイタおよびタララの水処理・海水淡水化プラント</strong>
                 </p>
               </div>
               <div className="flex items-start">
-                <span className="text-blue-600 mr-2 text-lg flex-shrink-0">â€¢</span>
+                <span className="text-blue-600 mr-2 text-lg flex-shrink-0">•</span>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed japanese-text">
-                  <strong className="text-gray-900">Lambayequeå·žã®é«˜æ©Ÿèƒ½ç—…é™¢</strong>
+                  <strong className="text-gray-900">ランバイェケ州の高機能病院</strong>
                 </p>
               </div>
             </div>
@@ -122,34 +122,34 @@ const ProinversionApp5Page = () => {
 
           {/* Impact Section */}
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 sm:p-6 my-6 md:my-8">
-            <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-4 japanese-text">å½±éŸ¿ã¨æœŸå¾…</h3>
+            <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-4 japanese-text">影響と期待</h3>
             <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-4 japanese-text">
-              ã“ã® 210 å„„ç±³ãƒ‰ãƒ«è¶…ã®æŠ•è³‡ã‚µã‚¤ã‚¯ãƒ«ã¯ã€ä»¥ä¸‹ã®ã‚ˆã†ãªé‡è¦ãªå½±éŸ¿ã‚’ã‚‚ãŸã‚‰ã™è¦‹è¾¼ã¿ã§ã™ï¼š
+              この210億米ドル超の投資サイクルは、以下のような重要な影響をもたらすと見込まれています。
             </p>
 
             <div className="space-y-3 md:space-y-4">
               <div className="flex items-start">
-                <span className="text-blue-600 mr-2 text-lg flex-shrink-0">â€¢</span>
+                <span className="text-blue-600 mr-2 text-lg flex-shrink-0">•</span>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed japanese-text">
-                  <strong>22 åœ°åŸŸ</strong>ã«ã‚¤ãƒ³ãƒ•ãƒ©ã¨å…¬å…±ã‚µãƒ¼ãƒ“ã‚¹ã®å¤‰é©ã‚’ã‚‚ãŸã‚‰ã™
+                  <strong>22地域</strong>にインフラと公共サービスの変革をもたらす
                 </p>
               </div>
               <div className="flex items-start">
-                <span className="text-blue-600 mr-2 text-lg flex-shrink-0">â€¢</span>
+                <span className="text-blue-600 mr-2 text-lg flex-shrink-0">•</span>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed japanese-text">
-                  <strong>2,500 ä¸‡äººä»¥ä¸Š</strong>ã®å›½æ°‘ã«æ©æµã‚’æä¾›
+                  <strong>2,500万人超</strong>の国民に恩恵を提供
                 </p>
               </div>
               <div className="flex items-start">
-                <span className="text-blue-600 mr-2 text-lg flex-shrink-0">â€¢</span>
+                <span className="text-blue-600 mr-2 text-lg flex-shrink-0">•</span>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed japanese-text">
-                  <strong>66 ã®ãƒ¡ã‚¬ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆ</strong>ã§æ•°ç™¾ä¸‡äººã®ç”Ÿæ´»ã®è³ªã‚’å‘ä¸Š
+                  <strong>66件のメガプロジェクト</strong>で数百万人の生活の質を向上
                 </p>
               </div>
               <div className="flex items-start">
-                <span className="text-blue-600 mr-2 text-lg flex-shrink-0">â€¢</span>
+                <span className="text-blue-600 mr-2 text-lg flex-shrink-0">•</span>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed japanese-text">
-                  <strong>è¼¸é€ã€è¡›ç”Ÿã€ã‚¨ãƒãƒ«ã‚®ãƒ¼ã€ä¿å¥ã€æ•™è‚²ã€è¦³å…‰</strong>ãªã©å¤šå²ã«ã‚ãŸã‚‹åˆ†é‡Žã‚’ã‚«ãƒãƒ¼
+                  <strong>輸送、衛生、エネルギー、保健、教育、観光</strong>など多岐にわたる分野をカバー
                 </p>
               </div>
             </div>
