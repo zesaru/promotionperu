@@ -10,9 +10,14 @@ const InvestmentPage = () => {
   const { locale } = useRouter();
 
   return (
-    <Layout language={locale} articlePublishedTime="2025-08-15T00:00:00+09:00" title="PROINVERSIÃ“Nã€ç´„20å„„ç±³ãƒ‰ãƒ«è¦æ¨¡ã®ä¿å¥åˆ†é‡Ž7ä»¶ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã‚’æŽ¨é€²">
+    <Layout
+      language={locale}
+      articlePublishedTime="2025-08-15T00:00:00+09:00"
+      title="PROINVERSIÓN、約20億米ドル規模の保健分野7案件を推進"
+      description="PROINVERSIÓNは、リマ、ピウラ、カハマルカなどで約20億米ドル規模の保健分野7案件を官民連携で推進。病院運営、設備更新、廃棄物管理を通じて医療サービスの質と効率の向上を目指す。"
+    >
       <Banner
-        alt={"PROINVERSIÃ“Nã€ç´„20å„„ç±³ãƒ‰ãƒ«è¦æ¨¡ã®ä¿å¥åˆ†é‡Ž7ä»¶ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã‚’æŽ¨é€²"}
+        alt={"PROINVERSIÓNによる保健分野7案件の推進を伝えるバナー"}
         src={
           "https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapaninversiones_xop2nr.jpg"
         }

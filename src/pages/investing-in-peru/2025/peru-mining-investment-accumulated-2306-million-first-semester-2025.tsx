@@ -10,9 +10,14 @@ const MiningInvestmentPage = () => {
   const { locale } = useRouter();
   
   return (
-    <Layout language={locale} articlePublishedTime="2025-08-18T00:00:00+09:00" title="2025å¹´ä¸ŠåŠæœŸã®é‰±æ¥­æŠ•è³‡ç´¯è¨ˆã¯23å„„600ä¸‡ç±³ãƒ‰ãƒ«ã«åˆ°é”">
+    <Layout
+      language={locale}
+      articlePublishedTime="2025-08-18T00:00:00+09:00"
+      title="2025年上半期のペルー鉱業投資累計は23億600万米ドルに到達"
+      description="ペルーの2025年上半期の鉱業投資は23億600万米ドルに達し、前年同期比7.2%増を記録。探鉱、インフラ、選鉱・処理設備への投資拡大が成長を後押しした。"
+    >
       <Banner
-        alt={"2025å¹´ä¸ŠåŠæœŸã®é‰±æ¥­æŠ•è³‡ç´¯è¨ˆã¯23å„„600ä¸‡ç±³ãƒ‰ãƒ«ã«åˆ°é”"}
+        alt={"2025年上半期のペルー鉱業投資が23億600万米ドルに達したことを伝えるバナー"}
         src={
           "https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapaninversiones_xop2nr.jpg"
         }

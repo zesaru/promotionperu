@@ -10,9 +10,14 @@ const Perumin37Page = () => {
   const { locale } = useRouter();
 
   return (
-    <Layout language={locale} articlePublishedTime="2025-09-22T00:00:00+09:00" title="PERUMIN 37 - ãƒšãƒ«ãƒ¼æœ€å¤§ã®é‰±æ¥­ã‚¤ãƒ™ãƒ³ãƒˆé–‹å¹•">
+    <Layout
+      language={locale}
+      articlePublishedTime="2025-09-22T00:00:00+09:00"
+      title="PERUMIN 37がアレキパのセロ・フリで開幕"
+      description="ペルー最大級の鉱業イベント「PERUMIN 37」が2025年9月22日にアレキパのセロ・フリ国際会議場で開幕。EXTEMINの開始とともに、政府関係者や各国外交団が参加した。"
+    >
       <Banner
-        alt={"PERUMIN 37 Mining Event Arequipa"}
+        alt={"PERUMIN 37の開幕を伝えるバナー"}
         src={
           "https://res.cloudinary.com/de5ud82os/image/upload/v1694564007/WEB/gastronomia/peruinjapaninversiones_xop2nr.jpg"
         }
