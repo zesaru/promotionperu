@@ -26,22 +26,22 @@ const InvestmentPage = () => {
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-right mb-4">
-          <p className="text-xs md:text-sm text-gray-600">åœ¨æ—¥ãƒšãƒ«ãƒ¼å¤§ä½¿é¤¨</p>
-          <p className="text-xs md:text-sm text-gray-600">éžå…¬å¼ç¿»è¨³</p>
+          <p className="text-xs md:text-sm text-gray-600">在日ペルー大使館</p>
+          <p className="text-xs md:text-sm text-gray-600">非公式翻訳</p>
         </div>
 
         <div className="mb-6">
           <h1 className="text-lg md:text-xl font-normal text-gray-800 mb-3 md:mb-4 japanese-heading-3">
-            è¾²æ¥­çŒæ¼‘çœï¼ˆMIDAGRIï¼‰
+            農業灌漑省（MIDAGRI）
           </h1>
           <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 japanese-heading-1">
-            æ”¿åºœã¯ã‚¢ãƒ¬ã‚­ãƒ‘ã¸ã®ç´„æŸã‚’æžœãŸã—ã€æ—¥æœ¬ãŒ Majes Siguas I ã®æ•´å‚™ã‚’æ‹…ã†ã“ã¨ã‚’ç™ºè¡¨
+            政府はアレキパへの約束を果たし、日本が Majes Siguas I の整備を担うことを発表
           </h2>
           <h3 className="text-lg font-semibold text-gray-800 mb-2">
-            ãƒ—ãƒ¬ã‚¹ãƒªãƒªãƒ¼ã‚¹
+            プレスリリース
           </h3>
           <p className="text-xs md:text-sm text-gray-600 mb-6">
-            2025å¹´6æœˆ19æ—¥ 13æ™‚26åˆ†
+            2025年6月19日 13時26分
           </p>
         </div>
 

@@ -26,22 +26,22 @@ const MiningInvestmentPage = () => {
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-right mb-4">
-          <p className="text-xs md:text-sm text-gray-600">åœ¨æ—¥ãƒšãƒ«ãƒ¼å¤§ä½¿é¤¨</p>
-          <p className="text-xs md:text-sm text-gray-600">éžå…¬å¼ç¿»è¨³</p>
+          <p className="text-xs md:text-sm text-gray-600">在日ペルー大使館</p>
+          <p className="text-xs md:text-sm text-gray-600">非公式翻訳</p>
         </div>
 
         <div className="mb-6">
           <h1 className="text-lg md:text-xl font-normal text-gray-800 mb-3 md:mb-4 japanese-heading-3">
-            Sociedad Nacional de MinerÃ­a, PetrÃ³leo y EnergÃ­a
+            Sociedad Nacional de Minería, Petróleo y Energía
           </h1>
           <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 japanese-heading-1">
-            2025å¹´ä¸ŠåŠæœŸã®é‰±æ¥­æŠ•è³‡ç´¯è¨ˆã¯23å„„600ä¸‡ç±³ãƒ‰ãƒ«ã«åˆ°é”
+            2025年上半期のペルー鉱業投資累計は23億600万米ドルに到達
           </h2>
           <h3 className="text-lg font-semibold text-gray-800 mb-2">
-            ãƒ—ãƒ¬ã‚¹ãƒªãƒªãƒ¼ã‚¹
+            プレスリリース
           </h3>
           <p className="text-xs md:text-sm text-gray-600 mb-6">
-            2025å¹´8æœˆ18æ—¥ï¼ˆæœˆï¼‰
+            2025年8月18日（月）
           </p>
         </div>
 

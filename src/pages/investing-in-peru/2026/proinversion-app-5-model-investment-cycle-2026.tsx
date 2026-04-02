@@ -22,22 +22,22 @@ const ProinversionApp5Page = () => {
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:max-w-4xl">
         {/* Header */}
         <div className="text-right mb-4">
-          <p className="text-xs md:text-sm text-gray-600">åœ¨æ—¥ãƒšãƒ«ãƒ¼å¤§ä½¿é¤¨</p>
-          <p className="text-xs md:text-sm text-gray-600">éžå…¬å¼ç¿»è¨³</p>
+          <p className="text-xs md:text-sm text-gray-600">在日ペルー大使館</p>
+          <p className="text-xs md:text-sm text-gray-600">非公式翻訳</p>
         </div>
 
         <div className="mb-8">
           <h1 className="text-lg md:text-xl font-normal text-gray-800 mb-3 md:mb-4 japanese-heading-3">
-            æ°‘é–“æŠ•è³‡ä¿ƒé€²åºï¼ˆPROINVERSIÃ“Nï¼‰
+            民間投資促進庁（PROINVERSIÓN）
           </h1>
           <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 japanese-heading-1">
-            PROINVERSIÃ“Nã€æ–°ãƒ¢ãƒ‡ãƒ«ã€ŒAPP 5.0ã€ã®ä¸‹ã§ 210 å„„ç±³ãƒ‰ãƒ«è¶…ã®æŠ•è³‡ã‚µã‚¤ã‚¯ãƒ«ã‚’æ´»æ€§åŒ–
+            PROINVERSIÓN、新モデル「APP 5.0」の下で210億米ドル超の投資サイクルを活性化
           </h2>
           <p className="text-xs md:text-sm text-gray-600 mb-2">
-            ãƒ—ãƒ¬ã‚¹ãƒªãƒªãƒ¼ã‚¹
+            プレスリリース
           </p>
           <p className="text-xs md:text-sm text-gray-600 mb-6">
-            2025 å¹´ 12 æœˆ 3 æ—¥
+            2025年12月3日
           </p>
         </div>
 

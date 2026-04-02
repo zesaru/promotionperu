@@ -26,22 +26,22 @@ const InvestmentPage = () => {
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-right mb-4">
-          <p className="text-xs md:text-sm text-gray-600">åœ¨æ—¥ãƒšãƒ«ãƒ¼å¤§ä½¿é¤¨</p>
-          <p className="text-xs md:text-sm text-gray-600">éžå…¬å¼ç¿»è¨³</p>
+          <p className="text-xs md:text-sm text-gray-600">在日ペルー大使館</p>
+          <p className="text-xs md:text-sm text-gray-600">非公式翻訳</p>
         </div>
 
         <div className="mb-6">
           <h1 className="text-lg md:text-xl font-normal text-gray-800 mb-3 md:mb-4 japanese-heading-3">
-            ãƒšãƒ«ãƒ¼å…¨å›½é‰±æ¥­ãƒ»çŸ³æ²¹ãƒ»ã‚¨ãƒãƒ«ã‚®ãƒ¼å”ä¼š
+            ペルー全国鉱業・石油・エネルギー協会
           </h1>
           <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 japanese-heading-1">
-            Minera Poderosaç¤¾ã€ã‚¯ãƒªãƒ¼ãƒ³ã‚¨ãƒãƒ«ã‚®ãƒ¼ã«2,500ä¸‡ç±³ãƒ‰ãƒ«ã‚’æŠ•è³‡ã€2030å¹´ã¾ã§ã«8,910ä¸‡ç±³ãƒ‰ãƒ«ã®ç¯€ç´„ã‚’è¦‹è¾¼ã‚€
+            Minera Poderosa社、クリーンエネルギーに2,500万米ドルを投資、2030年までに8,910万米ドルの節約を見込む
           </h2>
           <h3 className="text-lg font-semibold text-gray-800 mb-2">
-            ãƒ—ãƒ¬ã‚¹ãƒªãƒªãƒ¼ã‚¹
+            プレスリリース
           </h3>
           <p className="text-xs md:text-sm text-gray-600 mb-6">
-            2025å¹´10æœˆ9æ—¥ï¼ˆæœ¨ï¼‰
+            2025年10月9日（木）
           </p>
         </div>
 
