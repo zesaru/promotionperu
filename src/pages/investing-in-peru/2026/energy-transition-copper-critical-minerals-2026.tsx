@@ -9,6 +9,7 @@ const EnergyTransitionCopperPage = () => {
   return (
     <Layout
       language={locale}
+      articlePublishedTime="2025-12-24"
       title="正念場を迎えるエネルギー転換：銅、重要鉱物、そして鉱業の新たな力"
       description="エネルギー転換の鍵は鉱物供給能力にあり、2026年以降の銅市場の供給不足リスク、重要鉱物の戦略性、そしてペルー・ラテンアメリカの役割を論じた寄稿。"
     >

@@ -9,6 +9,7 @@ const MefPrivateSectorPage = () => {
   return (
     <Layout
       language={locale}
+      articlePublishedTime="2026-01-08T00:00:00+09:00"
       title="MEF：民間セクターの信頼が2025年の経済成長を支えた"
       description="経済財務省（MEF）は、2025年末の先行経済指標と民間投資関連指標の改善を受け、企業セクターの信頼がペルー経済の成長を支えたと報告しました。"
     >

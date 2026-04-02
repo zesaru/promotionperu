@@ -8,9 +8,14 @@ import Layout from "@/components/Layout";
 
 const InvestmentPage = () => {
   const { locale } = useRouter();
+  const articlePublishedTime = "2025-09-03T09:51:00+09:00";
 
   return (
-    <Layout language={locale} title="エネルギー鉱山省（MINEM）、アレキパ、リマ、アプリマックおよびプーノにおける送電プロジェクトの落札を予定">
+    <Layout
+      language={locale}
+      title="エネルギー鉱山省（MINEM）、アレキパ、リマ、アプリマックおよびプーノにおける送電プロジェクトの落札を予定"
+      articlePublishedTime={articlePublishedTime}
+    >
       <Banner
         alt={"エネルギー鉱山省（MINEM）、アレキパ、リマ、アプリマックおよびプーノにおける送電プロジェクトの落札を予定"}
         src={

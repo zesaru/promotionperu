@@ -92,21 +92,32 @@ describe("Layout SEO", () => {
     });
 
     render(
-      <Layout language="en" title="MEF growth update">
+      <Layout
+        language="en"
+        title="MEF growth update"
+        articlePublishedTime="2026-02-15T12:15:00+09:00"
+      >
         <div>content</div>
       </Layout>
     );
 
     const seoProps = mockNextSeo.mock.calls.at(-1)?.[0] as {
       description: string;
-      openGraph: { type: string };
+      openGraph: { type: string; article?: { publishedTime?: string; modifiedTime?: string } };
     };
 
     expect(seoProps.description).toContain("MEF growth update.");
     expect(seoProps.openGraph.type).toBe("article");
+    expect(seoProps.openGraph.article).toEqual({
+      publishedTime: "2026-02-15T12:15:00+09:00",
+      modifiedTime: "2026-02-15T12:15:00+09:00",
+      section: "Investing in Peru",
+      authors: ["Peru in Japan"],
+    });
 
     expect(document.body.innerHTML).toContain('"@type":"Article"');
     expect(document.body.innerHTML).toContain('"headline":"MEF growth update"');
+    expect(document.body.innerHTML).toContain('"datePublished":"2026-02-15T12:15:00+09:00"');
     expect(document.body.innerHTML).toContain('"@type":"BreadcrumbList"');
   });
 });

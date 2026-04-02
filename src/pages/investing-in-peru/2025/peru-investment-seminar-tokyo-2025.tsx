@@ -6,6 +6,7 @@ import Layout from "@/components/Layout";
 
 const InvestmentPage = () => {
   const { locale } = useRouter();
+  const articlePublishedTime = "2025-11-14T00:00:00+09:00";
 
   // Seminar images array (optimized WebP images)
   const seminarImages = [
@@ -22,7 +23,12 @@ const InvestmentPage = () => {
   ];
 
   return (
-    <Layout language={locale} title="ペルー投資機会セミナー2025開催">
+    <Layout
+      language={locale}
+      title="ペルー投資機会セミナー2025開催"
+      image="https://peruinjapan.org/images/investment-seminar-2025/optimized/IMG_7494.webp"
+      articlePublishedTime={articlePublishedTime}
+    >
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:max-w-4xl">
         {/* Header */}
         <div className="text-right mb-4">

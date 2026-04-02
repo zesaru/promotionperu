@@ -9,6 +9,7 @@ const ProinversionRoadCorridorsPage = () => {
   return (
     <Layout
       language={locale}
+      articlePublishedTime="2026-03-23T00:00:00+09:00"
       title="PROINVERSIÓN、総額10億米ドル超の7つの戦略的道路回廊の構造化を推進"
       description="PROINVERSIÓNは、APP 5.0の下で総額10億米ドル超の7つの戦略的道路回廊を構造化し、全国の接続性強化と280万人超の市民への便益創出を目指しています。"
     >

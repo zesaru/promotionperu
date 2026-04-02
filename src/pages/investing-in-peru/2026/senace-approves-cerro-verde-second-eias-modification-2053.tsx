@@ -9,6 +9,7 @@ const SenaceCerroVerdeApprovalPage = () => {
   return (
     <Layout
       language={locale}
+      articlePublishedTime="2026-02-08T00:00:00+09:00"
       title="Senace、厳格な技術評価を経てセロ・ベルデの環境社会影響評価 第2回変更を承認"
       description="Senaceはセロ・ベルデのEIA第2回変更を承認。約21億ドルの投資具体化、処理能力の増強、アレキパ州での操業期間を2053年まで延長する見通しです。"
     >

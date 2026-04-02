@@ -8,7 +8,7 @@ const MiningInvestmentPage = () => {
   const { locale } = useRouter();
   
   return (
-    <Layout language={locale} title="MINEM Mining Investment Report Jan-April 2025">
+    <Layout language={locale} title="MINEM Mining Investment Report Jan-April 2025" articlePublishedTime="2025-06-16T00:00:00+09:00">
       <Banner
         alt={"Peru Mining Investment Report 2025"}
         src={

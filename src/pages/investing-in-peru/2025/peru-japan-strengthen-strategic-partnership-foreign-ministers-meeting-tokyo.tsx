@@ -10,7 +10,7 @@ const PeruJapanStrategicPartnershipPage = () => {
   const { locale } = useRouter();
   
   return (
-    <Layout language={locale} title="Peru and Japan Strengthen Strategic Partnership in Foreign Ministers Meeting in Tokyo">
+    <Layout language={locale} title="Peru and Japan Strengthen Strategic Partnership in Foreign Ministers Meeting in Tokyo" articlePublishedTime="2025-08-08T17:38:00+09:00">
       <Banner
         alt={"Peru and Japan Strengthen Strategic Partnership in Foreign Ministers Meeting in Tokyo"}
         src={

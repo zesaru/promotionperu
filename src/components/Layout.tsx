@@ -16,6 +16,8 @@ type LayoutProps = {
   type?: string;
   disableDefaultSeo?: boolean;
   structuredData?: Record<string, unknown> | Array<Record<string, unknown>>;
+  articlePublishedTime?: string;
+  articleModifiedTime?: string;
 };
 
 function toTitleCase(value: string) {
@@ -135,7 +137,9 @@ export default function Layout({
   image = "https://res.cloudinary.com/de5ud82os/image/upload/v1726638710/WEB/home/nhplhoz0fvmrbph1jbst.png",
   type = "website",
   disableDefaultSeo = false,
-  structuredData
+  structuredData,
+  articlePublishedTime,
+  articleModifiedTime
 }: LayoutProps) {
   const { locale, asPath } = useRouter();
   const pathWithoutQuery = asPath.split("#")[0]?.split("?")[0] || "/";
@@ -162,6 +166,7 @@ export default function Layout({
       : toTitleCase(normalizedPath.split("/").filter(Boolean).pop()?.replace(/-/g, " ") || "");
   const resolvedTitle = title || pathTitle;
   const effectiveType = type === "website" && isInvestingArticle ? "article" : type;
+  const resolvedArticleModifiedTime = articleModifiedTime || articlePublishedTime;
   const finalDescription =
     description ||
     (isInvestingArticle ? getInvestingArticleDescription(currentLocaleCode, resolvedTitle) : getDefaultDescription(currentLocaleCode, normalizedPath));
@@ -228,6 +233,8 @@ export default function Layout({
           },
           "inLanguage": currentLocaleCode === "jp" ? "ja" : "en",
           "articleSection": pathSegments[0] === "investing-in-peru" ? "Investing in Peru" : undefined,
+          "datePublished": articlePublishedTime,
+          "dateModified": resolvedArticleModifiedTime,
         }
       : null;
   const breadcrumbStructuredData =
@@ -283,6 +290,16 @@ export default function Layout({
               url: canonicalUrl,
               title: pageTitle,
               description: finalDescription,
+              ...(effectiveType === "article" && articlePublishedTime
+                ? {
+                    article: {
+                      publishedTime: articlePublishedTime,
+                      modifiedTime: resolvedArticleModifiedTime,
+                      section: pathSegments[0] === "investing-in-peru" ? "Investing in Peru" : undefined,
+                      authors: ["Peru in Japan"],
+                    },
+                  }
+                : {}),
               images: [
                 {
                   url: image,

@@ -10,7 +10,7 @@ const PresidentBoluarteInvestmentPage = () => {
   const { locale } = useRouter();
   
   return (
-    <Layout language={locale} title="President Dina Boluarte Promotes Peru's Investment Portfolio of Over US$ 17 Billion in Japan">
+    <Layout language={locale} title="President Dina Boluarte Promotes Peru's Investment Portfolio of Over US$ 17 Billion in Japan" articlePublishedTime="2025-08-06T20:56:00+09:00">
       <Banner
         alt={"President Dina Boluarte Promotes Peru's Investment Portfolio of Over US$ 17 Billion in Japan"}
         src={

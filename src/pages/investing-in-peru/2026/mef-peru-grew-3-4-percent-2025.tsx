@@ -5,12 +5,14 @@ import Layout from "@/components/Layout";
 
 const MefPeruGrowth2025Page = () => {
   const { locale } = useRouter();
+  const articlePublishedTime = "2026-02-15T12:15:00+09:00";
 
   return (
     <Layout
       language={locale}
       title="MEFの予測通り、ペルーは2025年に3.4%の成長を達成"
       description="MEFは、ペルーが2025年に3.4%成長し、2025年12月単月でも3.8%成長して21カ月連続の拡大を記録したと発表。内需、投資、建設・商業・サービスの回復が成長を牽引しました。"
+      articlePublishedTime={articlePublishedTime}
     >
       <Banner
         alt={"Peru economic growth and MEF news banner"}
