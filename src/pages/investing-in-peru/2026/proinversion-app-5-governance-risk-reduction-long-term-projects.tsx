@@ -9,7 +9,7 @@ const ProinversionApp5GovernanceRiskReductionPage = () => {
   return (
     <Layout
       language={locale}
-      articlePublishedTime="2026-02-19"
+      articlePublishedTime="2026-02-19T00:00:00+09:00"
       title="APP 5.0：ペルーはガバナンスを強化し、長期プロジェクトへの投資家リスクを軽減"
       description="PROINVERSIÓNは、APP 5.0の下で、より迅速なプロセス、法的安定性の向上、競争条件の改善を通じて、長期インフラ投資の予測可能性を高める新段階を推進しています。"
     >

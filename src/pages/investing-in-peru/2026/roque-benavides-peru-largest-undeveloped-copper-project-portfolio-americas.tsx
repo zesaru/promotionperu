@@ -9,7 +9,7 @@ const RoqueBenavidesCopperPortfolioPage = () => {
   return (
     <Layout
       language={locale}
-      articlePublishedTime="2026-02-18"
+      articlePublishedTime="2026-02-18T00:00:00+09:00"
       title="ロケ・ベナビデス：ペルーは米州で最大の未開発銅プロジェクトのポートフォリオを保有"
       description="ロケ・ベナビデス氏は、ペルーが米州の未開発銅プロジェクト67件のうち19件を占めると指摘し、投資加速と競争条件の強化による世界的リーダーシップ確立の必要性を強調しました。"
     >

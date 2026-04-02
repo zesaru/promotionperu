@@ -9,7 +9,7 @@ const ProinversionRailwayPortfolioPage = () => {
   return (
     <Layout
       language={locale}
-      articlePublishedTime="2026-02-25"
+      articlePublishedTime="2026-02-25T00:00:00+09:00"
       title="PROINVERSIÓN、APP 5.0モデルの下で200億米ドル超の鉄道ポートフォリオを推進"
       description="PROINVERSIÓNは、新たなAPP 5.0モデルの下で総額200億米ドル超の鉄道プロジェクト群を推進し、ペルーを今後10年間の中南米における主要な鉄道インフラ市場の一つとして位置付けています。"
     >

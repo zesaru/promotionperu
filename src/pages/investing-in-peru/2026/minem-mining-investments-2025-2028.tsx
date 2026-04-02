@@ -9,7 +9,7 @@ const MinemMiningInvestmentsPage = () => {
   return (
     <Layout
       language={locale}
-      articlePublishedTime="2025-12-15"
+      articlePublishedTime="2025-12-15T00:00:00+09:00"
       title="MINEM、2025～2028 年に 119 億 2,100 万米ドル超の鉱業投資の具体化を予測"
       description="MINEMは、2025～2028年に119億2,100万米ドル超の鉱業投資の具体化を予測し、銅を中心としたプロジェクト・ポートフォリオと探査ポテンシャルを強調しました。"
     >
