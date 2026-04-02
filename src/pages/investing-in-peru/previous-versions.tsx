@@ -36,9 +36,61 @@ const PreviousVersionsPage = () => {
   };
 
   const texts = content[locale as keyof typeof content] || content.en;
+  const title = texts.title;
+  const description = texts.subtitle;
+  const localizedPath = locale === "en" ? "/en/investing-in-peru/previous-versions" : "/investing-in-peru/previous-versions";
+  const homepagePath = locale === "en" ? "/en" : "";
+  const investingInPeruLabel = locale === "en" ? "Investing in Peru" : "ペルーへの投資";
+  const guideItems = [
+    { name: texts.guide2024, url: "https://embperujapan.org/guia_de_inversiones-2024.pdf" },
+    { name: texts.guide2023, url: "https://embperujapan.org/guia_de_inversiones-2023.pdf" },
+    { name: texts.guide2022, url: "https://cdn.www.gob.pe/uploads/document/file/5127968/guia_de_inversiones-2022.pdf?v=1694662913" },
+  ];
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": title,
+      "description": description,
+      "url": `https://peruinjapan.org${localizedPath}`,
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": guideItems.map((guide, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "name": guide.name,
+          "url": guide.url,
+        })),
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": locale === "en" ? "Home" : "ホーム",
+          "item": `https://peruinjapan.org${homepagePath}`,
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": investingInPeruLabel,
+          "item": `https://peruinjapan.org${locale === "en" ? "/en/investing-in-peru" : "/investing-in-peru"}`,
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": title,
+          "item": `https://peruinjapan.org${localizedPath}`,
+        },
+      ],
+    },
+  ];
 
   return (
-    <Layout language={locale} title="Previous Investment Guides">
+    <Layout language={locale} title={title} description={description} structuredData={structuredData}>
       <Banner
         alt={"Previous Investment Guides"}
         src={

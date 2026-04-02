@@ -97,8 +97,64 @@ const InvesmentPage = () => {
       ? "Explore Peru investment opportunities, infrastructure projects, and economic updates tailored for Japanese companies and investors."
       : "日本企業・投資家向けに、ペルーの投資機会、インフラ案件、経済動向を分かりやすく紹介します。";
 
+  const homepagePath = locale === "en" ? "/en" : "";
+  const localizedPath = locale === "en" ? "/en/investing-in-peru" : "/investing-in-peru";
+  const previousVersionsLabel =
+    locale === "en" ? "Previous Investment Guides" : "過去の投資ガイド";
+  const homeLabel = locale === "en" ? "Home" : "ホーム";
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": texts.heroTitle,
+      "description": investmentDescription,
+      "url": `https://peruinjapan.org${localizedPath}`,
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": texts.guideTitle,
+            "url": "https://embperujapan.org/guia_de_inversiones-2025.pdf",
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": previousVersionsLabel,
+            "url": `https://peruinjapan.org${homepagePath}/investing-in-peru/previous-versions`,
+          },
+          ...eyGuides.map((guide, index) => ({
+            "@type": "ListItem",
+            "position": index + 3,
+            "name": guide.title,
+            "url": guide.href,
+          })),
+        ],
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": homeLabel,
+          "item": `https://peruinjapan.org${homepagePath}`,
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": texts.heroTitle,
+          "item": `https://peruinjapan.org${localizedPath}`,
+        },
+      ],
+    },
+  ];
+
   return (
-    <Layout language={locale} title={texts.heroTitle} description={investmentDescription}>
+    <Layout language={locale} title={texts.heroTitle} description={investmentDescription} structuredData={structuredData}>
       {/* Hero Section with New Image */}
       <section className="bg-gradient-to-br from-slate-50 to-blue-50 container mx-auto px-4 py-8 md:py-12 lg:py-16">
         <div className="max-w-6xl mx-auto">
