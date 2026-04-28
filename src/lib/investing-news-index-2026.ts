@@ -8,6 +8,27 @@ export interface NewsItem {
 
 export const news2026: NewsItem[] = [
   {
+    slug: "minem-wind-projects-arequipa-ica-piura-lambayeque",
+    title: "Arequipa、Ica、Piura、Lambayequeの各州に大規模な風力発電パークプロジェクトが集中",
+    date: "2026-04-20",
+    category: "エネルギー",
+    excerpt: "MINEMは、Arequipa、Ica、Piura、Lambayequeの各州で進む5つの風力発電プロジェクトが恒久発電コンセッションを取得したと発表。合計988.2MW、10億7,360万米ドル超の投資を通じて、再生可能エネルギー供給を拡大します。"
+  },
+  {
+    slug: "minem-puno-mining-exploration-investment-portfolio",
+    title: "Puno州、国内鉱山探査投資ポートフォリオで首位に",
+    date: "2026-04-16",
+    category: "鉱業",
+    excerpt: "MINEMは、Puno州が5つの鉱山探査プロジェクト、総額1億4,620万米ドルで国内首位に立ったと報告。金、銅、銀、錫、ウランの高いポテンシャルを背景に、2026年探査ポートフォリオの19.3%を占めます。"
+  },
+  {
+    slug: "proinversion-five-electric-projects-165-million",
+    title: "PROINVERSIÓN、1億6,500万米ドル規模の5つの電力プロジェクトの入札を公示",
+    date: "2026-03-12",
+    category: "エネルギー",
+    excerpt: "PROINVERSIÓNは、Piura、La Libertad、Junin、Limaの送電インフラを強化する5つの電力プロジェクトについて、総額1億6,500万米ドル規模の総合入札を公示。約140万人の住民に恩恵をもたらします。"
+  },
+  {
     slug: "proinversion-seven-strategic-road-corridors-1-billion",
     title: "PROINVERSIÓN、総額10億米ドル超の7つの戦略的道路回廊の構造化を推進",
     date: "2026-03-23",
