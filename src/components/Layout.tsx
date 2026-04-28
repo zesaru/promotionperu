@@ -146,35 +146,40 @@ export default function Layout({
   const normalizedPath = pathWithoutQuery.replace(/^\/(en|jp)(?=\/|$)/, "") || "/";
   const currentLocaleCode: "jp" | "en" = locale === "en" ? "en" : "jp";
   const pathSegments = normalizedPath === "/" ? [] : normalizedPath.split("/").filter(Boolean);
-  const isInvestingArticle =
+  const isAnnualInvestingEditorial =
     pathSegments[0] === "investing-in-peru" &&
-    pathSegments.length >= 2 &&
-    pathSegments[1] !== "previous-versions";
-  const localizedPath =
-    currentLocaleCode === "en"
-      ? normalizedPath === "/"
-        ? "/en"
-        : `/en${normalizedPath}`
-      : normalizedPath;
+    /^(20\d{2})$/.test(pathSegments[1] ?? "") &&
+    pathSegments.length === 3;
+  const canonicalPath =
+    isAnnualInvestingEditorial
+      ? normalizedPath
+      : currentLocaleCode === "en"
+        ? normalizedPath === "/"
+          ? "/en"
+          : `/en${normalizedPath}`
+        : normalizedPath;
+  const contentLocaleCode: "jp" | "en" =
+    isAnnualInvestingEditorial ? "jp" : currentLocaleCode;
 
-  const canonicalUrl = `https://peruinjapan.org${localizedPath === '/' ? '' : localizedPath}`;
+  const canonicalUrl = `https://peruinjapan.org${canonicalPath === '/' ? '' : canonicalPath}`;
   const pathTitle =
     normalizedPath === "/"
-      ? locale === "jp"
+      ? currentLocaleCode === "jp"
         ? "ホーム"
         : "Home"
       : toTitleCase(normalizedPath.split("/").filter(Boolean).pop()?.replace(/-/g, " ") || "");
   const resolvedTitle = title || pathTitle;
   const isEditorialArticle = type === "article" || Boolean(articlePublishedTime);
+  const shouldEmitArticleStructuredData = Boolean(articlePublishedTime);
   const effectiveType = isEditorialArticle ? "article" : type;
   const resolvedArticleModifiedTime = articleModifiedTime || articlePublishedTime;
   const finalDescription =
     description ||
-    (isEditorialArticle && isInvestingArticle
-      ? getInvestingArticleDescription(currentLocaleCode, resolvedTitle)
-      : getDefaultDescription(currentLocaleCode, normalizedPath));
-  const finalKeywords = keywords || getDefaultKeywords(currentLocaleCode, normalizedPath);
-  const pageTitle = locale === 'jp' ? `PERUINJAPAN | ${resolvedTitle}` : `Peru in Japan | ${resolvedTitle}`;
+    (isEditorialArticle && isAnnualInvestingEditorial
+      ? getInvestingArticleDescription(contentLocaleCode, resolvedTitle)
+      : getDefaultDescription(contentLocaleCode, normalizedPath));
+  const finalKeywords = keywords || getDefaultKeywords(contentLocaleCode, normalizedPath);
+  const pageTitle = `Peru in Japan | ${resolvedTitle}`;
   
   // Generate hreflang URLs
   const hreflangs = [
@@ -183,14 +188,16 @@ export default function Layout({
       href: `https://peruinjapan.org${normalizedPath === "/" ? "" : normalizedPath}`,
     },
     {
-      hrefLang: 'en',
-      href: `https://peruinjapan.org${normalizedPath === "/" ? "/en" : `/en${normalizedPath}`}`,
-    },
-    {
       hrefLang: 'x-default',
       href: `https://peruinjapan.org${normalizedPath === "/" ? "" : normalizedPath}`,
     }
   ];
+  if (!isAnnualInvestingEditorial) {
+    hreflangs.splice(1, 0, {
+      hrefLang: 'en',
+      href: `https://peruinjapan.org${normalizedPath === "/" ? "/en" : `/en${normalizedPath}`}`,
+    });
+  }
 
   // JSON-LD structured data
   const jsonLd = {
@@ -209,7 +216,7 @@ export default function Layout({
     }
   };
   const articleStructuredData =
-    isEditorialArticle
+    isEditorialArticle && shouldEmitArticleStructuredData
       ? {
           "@context": "https://schema.org",
           "@type": "Article",
@@ -234,14 +241,14 @@ export default function Layout({
               "url": "https://peruinjapan.org/apple-touch-icon.png",
             },
           },
-          "inLanguage": currentLocaleCode === "jp" ? "ja" : "en",
+          "inLanguage": contentLocaleCode === "jp" ? "ja" : "en",
           "articleSection": pathSegments[0] === "investing-in-peru" ? "Investing in Peru" : undefined,
           "datePublished": articlePublishedTime,
           "dateModified": resolvedArticleModifiedTime,
         }
       : null;
   const breadcrumbStructuredData =
-    isEditorialArticle && isInvestingArticle
+    isEditorialArticle && isAnnualInvestingEditorial
       ? {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
@@ -249,17 +256,14 @@ export default function Layout({
             {
               "@type": "ListItem",
               "position": 1,
-              "name": currentLocaleCode === "en" ? "Home" : "ãƒ›ãƒ¼ãƒ ",
-              "item": currentLocaleCode === "en" ? "https://peruinjapan.org/en" : "https://peruinjapan.org",
+              "name": "ホーム",
+              "item": "https://peruinjapan.org",
             },
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "Investing in Peru",
-              "item":
-                currentLocaleCode === "en"
-                  ? "https://peruinjapan.org/en/investing-in-peru"
-                  : "https://peruinjapan.org/investing-in-peru",
+              "name": "ペルーへの投資",
+              "item": "https://peruinjapan.org/investing-in-peru",
             },
             {
               "@type": "ListItem",
@@ -289,7 +293,7 @@ export default function Layout({
             languageAlternates={hreflangs}
             openGraph={{
               type: effectiveType as any,
-              locale: locale === 'jp' ? 'ja_JP' : 'en_US',
+              locale: contentLocaleCode === 'jp' ? 'ja_JP' : 'en_US',
               url: canonicalUrl,
               title: pageTitle,
               description: finalDescription,
@@ -330,7 +334,9 @@ export default function Layout({
               },
               {
                 name: 'robots',
-                content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+                content: isAnnualInvestingEditorial && currentLocaleCode === "en"
+                  ? 'noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+                  : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
               }
             ]}
           />

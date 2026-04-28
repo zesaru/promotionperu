@@ -102,12 +102,21 @@ describe("Layout SEO", () => {
     );
 
     const seoProps = mockNextSeo.mock.calls.at(-1)?.[0] as {
+      canonical: string;
+      additionalMetaTags: Array<{ name: string; content: string }>;
       description: string;
-      openGraph: { type: string; article?: { publishedTime?: string; modifiedTime?: string } };
+      languageAlternates: Array<{ hrefLang: string; href: string }>;
+      openGraph: { type: string; locale: string; article?: { publishedTime?: string; modifiedTime?: string } };
     };
 
-    expect(seoProps.description).toContain("MEF growth update.");
+    expect(seoProps.description).toContain("MEF growth update に関する記事。");
+    expect(seoProps.canonical).toBe("https://peruinjapan.org/investing-in-peru/2026/mef-peru-grew-3-4-percent-2025");
+    expect(seoProps.languageAlternates).toEqual([
+      { hrefLang: "ja", href: "https://peruinjapan.org/investing-in-peru/2026/mef-peru-grew-3-4-percent-2025" },
+      { hrefLang: "x-default", href: "https://peruinjapan.org/investing-in-peru/2026/mef-peru-grew-3-4-percent-2025" },
+    ]);
     expect(seoProps.openGraph.type).toBe("article");
+    expect(seoProps.openGraph.locale).toBe("ja_JP");
     expect(seoProps.openGraph.article).toEqual({
       publishedTime: "2026-02-15T12:15:00+09:00",
       modifiedTime: "2026-02-15T12:15:00+09:00",
@@ -119,6 +128,12 @@ describe("Layout SEO", () => {
     expect(document.body.innerHTML).toContain('"headline":"MEF growth update"');
     expect(document.body.innerHTML).toContain('"datePublished":"2026-02-15T12:15:00+09:00"');
     expect(document.body.innerHTML).toContain('"@type":"BreadcrumbList"');
+    expect(document.body.innerHTML).toContain('"name":"ホーム"');
+    expect(document.body.innerHTML).toContain('"name":"ペルーへの投資"');
+    expect(seoProps.additionalMetaTags).toContainEqual({
+      name: "robots",
+      content: "noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    });
   });
 
   it("keeps investing project pages as website without editorial signals", () => {
@@ -139,15 +154,30 @@ describe("Layout SEO", () => {
     );
 
     const seoProps = mockNextSeo.mock.calls.at(-1)?.[0] as {
-      openGraph: { type: string; article?: unknown };
+      canonical: string;
+      languageAlternates: Array<{ hrefLang: string; href: string }>;
+      additionalMetaTags: Array<{ name: string; content: string }>;
+      openGraph: { type: string; locale: string; article?: unknown };
     };
 
+    expect(seoProps.canonical).toBe("https://peruinjapan.org/en/investing-in-peru/huancayo-huancavelica-railway");
+    expect(seoProps.languageAlternates).toEqual([
+      { hrefLang: "ja", href: "https://peruinjapan.org/investing-in-peru/huancayo-huancavelica-railway" },
+      { hrefLang: "en", href: "https://peruinjapan.org/en/investing-in-peru/huancayo-huancavelica-railway" },
+      { hrefLang: "x-default", href: "https://peruinjapan.org/investing-in-peru/huancayo-huancavelica-railway" },
+    ]);
     expect(seoProps.openGraph.type).toBe("website");
+    expect(seoProps.openGraph.locale).toBe("en_US");
     expect(seoProps.openGraph.article).toBeUndefined();
+    expect(seoProps.additionalMetaTags).toContainEqual({
+      name: "robots",
+      content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    });
     expect(document.body.innerHTML).not.toContain('"@type":"Article"');
+    expect(document.body.innerHTML).not.toContain('"@type":"BreadcrumbList"');
   });
 
-  it("keeps article SEO for investing stories marked explicitly as articles", () => {
+  it("keeps breadcrumb schema but skips article schema when an article lacks articlePublishedTime", () => {
     mockUseRouter.mockReturnValue({
       locale: "en",
       asPath: "/en/investing-in-peru/2026/anglo-american-quellaveco-mining-innovation-hub-productivity-sustainability",
@@ -170,7 +200,7 @@ describe("Layout SEO", () => {
     };
 
     expect(seoProps.openGraph.type).toBe("article");
-    expect(document.body.innerHTML).toContain('"@type":"Article"');
+    expect(document.body.innerHTML).not.toContain('"@type":"Article"');
     expect(document.body.innerHTML).not.toContain('"datePublished"');
     expect(document.body.innerHTML).toContain('"@type":"BreadcrumbList"');
   });

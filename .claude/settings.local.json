@@ -39,8 +39,6 @@
     "deny": [],
     "ask": []
   },
-  "enableAllProjectMcpServers": true,
-  "enabledMcpjsonServers": [
-    "next-devtools"
-  ]
+  "enableAllProjectMcpServers": false,
+  "enabledMcpjsonServers": []
 }
