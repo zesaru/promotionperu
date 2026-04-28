@@ -27,12 +27,12 @@ const SenaceCerroVerdeApprovalPage = () => {
         </div>
 
         <div className="mb-8">
-          <h1 className="text-lg md:text-xl font-normal text-gray-800 mb-3 md:mb-4 japanese-heading-3">
+          <p className="text-lg md:text-xl font-normal text-gray-800 mb-3 md:mb-4 japanese-heading-3">
             持続可能環境投資許可庁（SENACE）
-          </h1>
-          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 japanese-heading-1">
+          </p>
+          <h1 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 japanese-heading-1">
             Senace、厳格な技術評価を経てセロ・ベルデの環境社会影響評価 第2回変更を承認
-          </h2>
+          </h1>
           <p className="text-xs md:text-sm text-gray-600 mb-2">プレスリリース</p>
           <p className="text-xs md:text-sm text-gray-600 mb-6">2026年2月8日</p>
         </div>

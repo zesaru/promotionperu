@@ -5,11 +5,13 @@ import Layout from "@/components/Layout";
 
 const AngloAmericanQuellavecoInnovationHubPage = () => {
   const { locale } = useRouter();
+  const articlePublishedTime = "2026-03-01T00:00:00+09:00";
 
   return (
     <Layout
       language={locale}
       type="article"
+      articlePublishedTime={articlePublishedTime}
       title="ANGLO AMERICAN QUELLAVECO、ペルー鉱業イノベーションハブに参画 生産性と持続可能性の向上へ"
       description="Anglo American Quellavecoはペルー鉱業イノベーションハブに参画し、生産性、持続可能性、技術適応力の向上に向けて、スタートアップ、技術プロバイダー、学術機関との協働を加速させます。"
     >
@@ -27,14 +29,14 @@ const AngloAmericanQuellavecoInnovationHubPage = () => {
         </div>
 
         <div className="mb-8">
-          <h1 className="text-lg md:text-xl font-normal text-gray-800 mb-3 md:mb-4 japanese-heading-3">
+          <p className="text-lg md:text-xl font-normal text-gray-800 mb-3 md:mb-4 japanese-heading-3">
             ペルー鉱業イノベーションハブ
-          </h1>
-          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 japanese-heading-1">
+          </p>
+          <h1 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 japanese-heading-1">
             ANGLO AMERICAN QUELLAVECO、ペルー鉱業イノベーションハブに参画 生産性と持続可能性の向上へ
-          </h2>
+          </h1>
           <p className="text-xs md:text-sm text-gray-600 mb-2">プレスリリース</p>
-          <p className="text-xs md:text-sm text-gray-600 mb-6">2026年3月</p>
+          <p className="text-xs md:text-sm text-gray-600 mb-6">2026年3月1日</p>
         </div>
 
         <div className="max-w-4xl mx-auto">

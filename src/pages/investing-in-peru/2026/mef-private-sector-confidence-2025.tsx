@@ -27,12 +27,12 @@ const MefPrivateSectorPage = () => {
         </div>
 
         <div className="mb-8">
-          <h1 className="text-lg md:text-xl font-normal text-gray-800 mb-3 md:mb-4 japanese-heading-3">
+          <p className="text-lg md:text-xl font-normal text-gray-800 mb-3 md:mb-4 japanese-heading-3">
             経済財務省（MEF）
-          </h1>
-          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 japanese-heading-1">
+          </p>
+          <h1 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 japanese-heading-1">
             MEF：民間セクターの信頼が2025年の経済成長を支えた
-          </h2>
+          </h1>
           <p className="text-xs md:text-sm text-gray-600 mb-2">
             NP 20260108-5
           </p>

@@ -27,9 +27,9 @@ const RoqueBenavidesCopperPortfolioPage = () => {
         </div>
 
         <div className="m-4">
-          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 japanese-heading-1">
+          <h1 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 japanese-heading-1">
             ロケ・ベナビデス：ペルーは米州で最大の未開発銅プロジェクトのポートフォリオを保有
-          </h2>
+          </h1>
           <p className="text-xs md:text-sm text-gray-600 mb-2">
             デ・ミナス・ブエナベントゥラ（Compañía de Minas Buenaventura S.A.A.）取締役会長
           </p>

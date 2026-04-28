@@ -27,12 +27,12 @@ const ProinversionApp5GovernanceRiskReductionPage = () => {
         </div>
 
         <div className="mb-8">
-          <h1 className="text-lg md:text-xl font-normal text-gray-800 mb-3 md:mb-4 japanese-heading-3">
+          <p className="text-lg md:text-xl font-normal text-gray-800 mb-3 md:mb-4 japanese-heading-3">
             民間投資促進庁（PROINVERSIÓN）
-          </h1>
-          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 japanese-heading-1">
+          </p>
+          <h1 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6 japanese-heading-1">
             APP 5.0：ペルーはガバナンスを強化し、長期プロジェクトへの投資家リスクを軽減
-          </h2>
+          </h1>
           <p className="text-xs md:text-sm text-gray-600 mb-2">プレスリリース</p>
           <p className="text-xs md:text-sm text-gray-600 mb-6">2026年2月19日</p>
         </div>
