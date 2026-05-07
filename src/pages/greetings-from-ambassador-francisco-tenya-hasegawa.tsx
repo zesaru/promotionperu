@@ -21,15 +21,20 @@ export default function GreetingsFromAmbassadorPage() {
       <div className="flex justify-center px-4 pt-6">
         <Image
           alt={title}
-          src="https://res.cloudinary.com/de5ud82os/image/upload/v1778133014/WEB/2026/fotofranciscomofa_xwnm67.jpg"
-          width={1500}
-          height={660}
-          className="w-full md:w-1/2 rounded-3xl shadow-2xl"
+          src="https://res.cloudinary.com/de5ud82os/image/upload/f_auto,q_auto:best,e_sharpen/v1778133550/WEB/2026/fotofranciscomofav2_x62ogw.jpg"
+          width={1200}
+          height={1600}
+          className="w-full md:w-2/5 h-auto rounded-3xl shadow-2xl"
           priority
+          quality={100}
+          sizes="(max-width: 768px) 100vw, 40vw"
         />
       </div>
 
       <div className="container py-6 px-4 mx-auto max-w-4xl">
+        <p className="text-xs md:text-sm text-gray-600 text-right mb-4">
+          非公式翻訳
+        </p>
         <h1 className="uppercase tracking-wide font-bold text-gray-800 text-xl md:text-2xl mb-8">
           {title}
         </h1>
@@ -98,6 +103,9 @@ export default function GreetingsFromAmbassadorPage() {
             </>
           )}
         </div>
+        <p className="text-xs md:text-sm text-gray-600 text-right mt-8">
+          非公式翻訳
+        </p>
       </div>
     </Layout>
   );
