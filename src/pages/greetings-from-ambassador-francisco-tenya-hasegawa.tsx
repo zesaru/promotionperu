@@ -9,12 +9,12 @@ export default function GreetingsFromAmbassadorPage() {
   const title =
     locale === "en"
       ? "Greetings from Ambassador Francisco Tenya Hasegawa"
-      : "フランシスコ・テニャ・ハセガワ大使からのご挨拶";
+      : "フランシスコ・天谷・長谷川大使からのご挨拶";
 
   const description =
     locale === "en"
       ? "Official greetings from Ambassador Francisco Tenya Hasegawa on Peru in Japan."
-      : "Peru in Japanにおけるフランシスコ・テニャ・ハセガワ大使からの公式ご挨拶。";
+      : "Peru in Japanにおけるフランシスコ・天谷・長谷川大使からの公式ご挨拶。";
 
   return (
     <Layout language={locale} title={title} description={description}>
