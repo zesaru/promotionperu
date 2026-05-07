@@ -32,9 +32,11 @@ export default function GreetingsFromAmbassadorPage() {
       </div>
 
       <div className="container py-6 px-4 mx-auto max-w-4xl">
-        <p className="text-xs md:text-sm text-gray-600 text-right mb-4">
-          非公式翻訳
-        </p>
+        {locale !== "en" && (
+          <p className="text-xs md:text-sm text-gray-600 text-right mb-4">
+            非公式翻訳
+          </p>
+        )}
         <h1 className="uppercase tracking-wide font-bold text-gray-800 text-xl md:text-2xl mb-8">
           {title}
         </h1>
@@ -103,9 +105,11 @@ export default function GreetingsFromAmbassadorPage() {
             </>
           )}
         </div>
-        <p className="text-xs md:text-sm text-gray-600 text-right mt-8">
-          非公式翻訳
-        </p>
+        {locale !== "en" && (
+          <p className="text-xs md:text-sm text-gray-600 text-right mt-8">
+            非公式翻訳
+          </p>
+        )}
       </div>
     </Layout>
   );
