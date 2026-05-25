@@ -17,6 +17,9 @@ type Post = {
   __i18n_lang?: string;
 };
 
+const piscoBannerSrc =
+  "https://res.cloudinary.com/de5ud82os/image/upload/f_auto,q_auto,c_limit,w_1500/v1779691426/WEB/2026/Pisco/pisco_es_peru_xp7dcr.png";
+
 const Recipes = ({ posts }: { posts: Post[] }) => {
   const { locale, route } = useRouter();
 
@@ -45,7 +48,7 @@ const Recipes = ({ posts }: { posts: Post[] }) => {
     <Layout language={locale} title={title} description={description} structuredData={structuredData}>
       <Banner
         alt="Pisco Recipes"
-        src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564008/WEB/gastronomia/pisco_kqmd66.jpg"
+        src={piscoBannerSrc}
       />
       <div className="container p-2 md:p-4 mx-auto">
         <div className="flex uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-2">

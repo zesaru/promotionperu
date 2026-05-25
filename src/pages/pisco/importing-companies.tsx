@@ -111,6 +111,11 @@ const importers: Importer[] = [
   },
 ];
 
+const piscoBannerSrc =
+  "https://res.cloudinary.com/de5ud82os/image/upload/f_auto,q_auto,c_limit,w_1500/v1779691426/WEB/2026/Pisco/pisco_es_peru_xp7dcr.png";
+const piscoOgImageSrc =
+  "https://res.cloudinary.com/de5ud82os/image/upload/f_auto,q_auto,c_limit,w_1200/v1779691426/WEB/2026/Pisco/pisco_es_peru_xp7dcr.png";
+
 const translations = {
   en: {
     title: "Pisco Importing Companies",
@@ -199,7 +204,7 @@ const ImportingPage = () => {
           description: copy.seoDescription,
           images: [
             {
-              url: "https://res.cloudinary.com/de5ud82os/image/upload/v1694564008/WEB/gastronomia/pisco_kqmd66.jpg",
+              url: piscoOgImageSrc,
               width: 1200,
               height: 630,
               alt: "Pisco Peruano",
@@ -217,7 +222,7 @@ const ImportingPage = () => {
       />
       <Banner
         alt="Pisco"
-        src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564008/WEB/gastronomia/pisco_kqmd66.jpg"
+        src={piscoBannerSrc}
       />
 
       <section className="bg-[#fcfbf8]">
