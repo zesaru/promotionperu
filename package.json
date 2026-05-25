@@ -16,7 +16,7 @@
     }
   },
   "engines": {
-    "node": ">=18.19.0"
+    "node": "20.x"
   },
   "scripts": {
     "dev": "next dev",
