@@ -41,16 +41,6 @@ const ProductsPage = ({ posts }: { posts: Post[] }) => {
           <span className="pr-1 w-1 h-8 bg-red-500 border border-red-600"></span>
           <h1 className="pl-2">{title}</h1>
         </div>
-        <section className="bg-white py-1">
-          <div className="md:pt-4 pb-12">
-            <iframe
-              className="h-96 md:h-[48rem]"
-              style={{ width: "100%" }}
-              src="https://online.fliphtml5.com/kzjef/sluq/"
-              allowFullScreen={true}
-            />
-          </div>
-        </section>
         <PortableText
           content={localizedPost?.content || []}
           serializers={{
