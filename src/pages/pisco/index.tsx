@@ -19,6 +19,8 @@ type Post = {
 
 const piscoBannerSrc =
   "https://res.cloudinary.com/de5ud82os/image/upload/f_auto,q_auto,c_limit,w_1500/v1779691426/WEB/2026/Pisco/pisco_es_peru_xp7dcr.png";
+const piscoGuideCoverSrc =
+  "https://res.cloudinary.com/de5ud82os/image/upload/f_auto,q_auto,c_fill,w_900,h_600,pg_1/v1779780668/WEB/2026/Pisco/pisco-spirit-of-peru-2025.jpg";
 
 const ProductsPage = ({ posts }: { posts: Post[] }) => {
   const { locale, route } = useRouter();
@@ -32,6 +34,46 @@ const ProductsPage = ({ posts }: { posts: Post[] }) => {
   );
   const localizedPost = getLocalizedEntry(data, locale);
   const title = localizedPost?.title || (locale === "en" ? "Pisco" : "ピスコ");
+  const resources = [
+    {
+      href: "/pisco/recipes",
+      imageSrc:
+        "https://res.cloudinary.com/de5ud82os/image/upload/v1694564009/WEB/gastronomia/piscorecipes450x300_ftfgna.jpg",
+      imageAlt: locale === "en" ? "Pisco cocktail recipes" : "ピスコカクテルのレシピ",
+      title: locale === "en" ? "Recipes" : "レシピ",
+      subtitle:
+        locale === "en"
+          ? "Cocktails and serving ideas"
+          : "カクテルと楽しみ方",
+    },
+    {
+      href: "/pisco/importing-companies",
+      imageSrc:
+        "https://res.cloudinary.com/de5ud82os/image/upload/v1694564008/WEB/gastronomia/pisco-importing-company450x300_bi93s6.jpg",
+      imageAlt:
+        locale === "en"
+          ? "Pisco importing companies in Japan"
+          : "日本のピスコ輸入会社",
+      title: locale === "en" ? "Importing Companies" : "ピスコの輸入会社",
+      subtitle:
+        locale === "en"
+          ? "Directory in Japan"
+          : "日本国内ディレクトリ",
+    },
+    {
+      href: "/pisco/spirit-of-peru-2025",
+      imageSrc: piscoGuideCoverSrc,
+      imageAlt:
+        locale === "en"
+          ? "Pisco Spirit of Peru 2025 guide"
+          : "Pisco Spirit of Peru 2025 ガイド",
+      title: locale === "en" ? "Spirit of Peru 2025" : "Spirit of Peru 2025",
+      subtitle:
+        locale === "en"
+          ? "Guide PDF"
+          : "ガイドPDF",
+    },
+  ];
 
   return (
     <Layout language={locale} description={piscoDescription}>
@@ -55,46 +97,31 @@ const ProductsPage = ({ posts }: { posts: Post[] }) => {
       </div>
       <section className="bg-white py-1 ">
         <div className="container mx-auto flex flex-wrap md:pt-4 pb-12">
-          <div className="w-full md:w-1/2 p-3 md:p-4 lg:p-6 flex flex-col">
-            <div>
-              <div className="flex justify-center">
-                <Link href="/pisco/recipes" className="">
-                  <Image
-                    className="hover:grow hover:shadow-lg rounded-xl"
-                    src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564009/WEB/gastronomia/piscorecipes450x300_ftfgna.jpg"
-                    width={450}
-                    height={300}
-                    alt="Pisco cocktail recipes"
-                  />
+          {resources.map((resource) => (
+            <div key={resource.href} className="w-full md:w-1/2 xl:w-1/3 p-3 md:p-4 lg:p-6 flex flex-col">
+              <div>
+                <div className="flex justify-center">
+                  <Link href={resource.href} className="">
+                    <Image
+                      className="hover:grow hover:shadow-lg rounded-xl bg-stone-50"
+                      src={resource.imageSrc}
+                      width={450}
+                      height={300}
+                      alt={resource.imageAlt}
+                    />
+                  </Link>
+                </div>
+                <Link href={resource.href} className="">
+                  <div className="flex flex-col items-center py-4 text-center">
+                    <p className="text-xl">{resource.title}</p>
+                    <p className="mt-1 text-sm uppercase tracking-[0.2em] text-stone-500">
+                      {resource.subtitle}
+                    </p>
+                  </div>
                 </Link>
               </div>
-              <Link href="/pisco/recipes" className="">
-                <div className="flex justify-center">
-                  <p className="py-4 text-xl">レシピ</p>
-                </div>
-              </Link>
             </div>
-          </div>
-          <div className="w-full md:w-1/2 p-3 md:p-4 lg:p-6 flex flex-col">
-            <div>
-              <div className="flex justify-center">
-                <Link href="/pisco/importing-companies" className="">
-                  <Image
-                    className="hover:grow hover:shadow-lg rounded-xl"
-                    src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564008/WEB/gastronomia/pisco-importing-company450x300_bi93s6.jpg"
-                    width={450}
-                    height={300}
-                    alt="Pisco importing companies in Japan"
-                  />
-                </Link>
-              </div>
-              <Link href="/pisco/importing-companies" className="">
-                <div className="flex justify-center">
-                  <p className="py-4 text-xl">ピスコの輸入会社</p>
-                </div>
-              </Link>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
     </Layout>
