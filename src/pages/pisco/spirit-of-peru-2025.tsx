@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { ImArrowLeft2, ImDownload2 } from "react-icons/im";
 import Banner from "src/components/Banner";
@@ -49,26 +49,26 @@ const SpiritOfPeru2025Page = () => {
           <ImArrowLeft2 className="mr-2" />
           {backLabel}
         </Link>
-        <div className="mt-6 grid gap-6 xl:grid-cols-[1.1fr_0.9fr] xl:items-stretch">
-          <div className="rounded-[28px] border border-stone-200 bg-white p-6 shadow-sm md:p-8">
+        <div className="mt-5 grid gap-5 sm:mt-6 sm:gap-6 xl:grid-cols-[1.1fr_0.9fr] xl:items-stretch">
+          <div className="rounded-[28px] border border-stone-200 bg-white p-5 shadow-sm sm:p-6 md:p-8">
             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-red-600">
               Pisco Resource
             </p>
-            <h1 className="mt-4 text-3xl font-bold uppercase tracking-[0.18em] text-stone-900 md:text-4xl">
+            <h1 className="mt-3 text-[2.1rem] font-bold uppercase tracking-[0.14em] text-stone-900 sm:mt-4 sm:text-3xl sm:tracking-[0.18em] md:text-4xl">
               {title}
             </h1>
-            <p className="mt-4 max-w-2xl text-base leading-8 text-stone-700">
+            <p className="mt-4 max-w-2xl text-base leading-7 text-stone-700 sm:leading-8">
               {intro}
             </p>
-            <p className="mt-4 text-sm font-medium uppercase tracking-[0.25em] text-stone-500">
+            <p className="mt-4 text-sm font-medium uppercase tracking-[0.22em] text-stone-500 sm:tracking-[0.25em]">
               {detailsLabel}
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-7 flex flex-col gap-2.5 sm:mt-8 sm:gap-3 sm:flex-row">
               <a
                 href={pdfHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-full bg-red-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-red-700"
+                className="inline-flex items-center justify-center rounded-full bg-red-600 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-red-700 sm:py-3"
               >
                 <ImDownload2 className="mr-2" />
                 {openLabel}
@@ -76,7 +76,7 @@ const SpiritOfPeru2025Page = () => {
               <a
                 href={pdfHref}
                 download
-                className="inline-flex items-center justify-center rounded-full border border-stone-300 px-6 py-3 text-sm font-semibold text-stone-800 transition hover:border-stone-400 hover:bg-stone-50"
+                className="inline-flex items-center justify-center rounded-full border border-stone-300 px-6 py-2.5 text-sm font-semibold text-stone-800 transition hover:border-stone-400 hover:bg-stone-50 sm:py-3"
               >
                 <ImDownload2 className="mr-2" />
                 {downloadLabel}
@@ -89,7 +89,7 @@ const SpiritOfPeru2025Page = () => {
               alt={isEnglish ? "Pisco editorial image" : "ピスコのイメージ"}
               width={750}
               height={500}
-              className="h-full w-full object-cover xl:min-h-full"
+              className="h-[220px] w-full object-cover sm:h-full xl:min-h-full"
             />
           </div>
         </div>

@@ -59,31 +59,33 @@ export default function Header() {
   };
 
   return (
-    <nav id="header" className="w-full z-50 top-0 bg-white shadow-md sticky">
-      <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-4 py-3 lg:px-6">
+    <nav id="header" className="sticky top-0 z-50 w-full bg-white shadow-md">
+      <div className="container mx-auto mt-0 flex w-full flex-wrap items-center justify-between px-4 py-2.5 sm:py-3 lg:px-6">
         
         {/* Logo */}
-        <div className="flex order-1 lg:order-1">
+        <div className="flex min-w-0 order-1 lg:order-1">
           <Link
-            className="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl gap-2 transition-all duration-200 hover:scale-105"
+            className="flex min-w-0 items-center gap-2 font-bold tracking-wide text-gray-800 no-underline transition-all duration-200 hover:scale-105 hover:no-underline"
             href="/"
           >
             <Image
               src="/apple-touch-icon.png"
-              height="40"
-              width="40"
+              height="36"
+              width="36"
               alt="escudo del peru"
-              className="rounded-full"
+              className="rounded-full sm:h-10 sm:w-10"
             />
-            <span className="w-1 h-8 bg-red-500 border border-red-600 rounded-sm"></span>
-            <span className="hidden sm:block">PERUINJAPAN</span>
+            <span className="h-7 w-[3px] rounded-sm border border-red-600 bg-red-500 sm:h-8 sm:w-1"></span>
+            <span className="block whitespace-nowrap text-base font-extrabold leading-none tracking-[0.08em] sm:text-lg sm:tracking-[0.12em]">
+              PERUINJAPAN
+            </span>
           </Link>
         </div>
 
         {/* Mobile menu button */}
         <button 
           onClick={toggleMobileMenu}
-          className="lg:hidden order-2 p-2 text-gray-600 hover:text-red-600 transition-colors duration-200"
+          className="order-2 p-1.5 text-gray-600 transition-colors duration-200 hover:text-red-600 lg:hidden sm:p-2"
           aria-label="Toggle menu"
         >
           <svg
