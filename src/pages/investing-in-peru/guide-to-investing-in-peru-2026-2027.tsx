@@ -2,13 +2,13 @@ import { useRouter } from "next/router";
 
 import Layout from "@/components/Layout";
 
-const InvestmentGuide2026Page = () => {
+const InvestmentGuide20262027Page = () => {
   const { locale } = useRouter();
 
   return (
     <Layout
       language={locale}
-      title="Guide to Investing in Peru 2026"
+      title="Guide to Investing in Peru 2026-2027"
       description='Coming soon page for Investment Guide "VALE UN PERU 2026-2027".'
     >
       <section className="min-h-[70vh] flex items-center justify-center px-4 py-16 bg-white">
@@ -34,4 +34,4 @@ const InvestmentGuide2026Page = () => {
   );
 };
 
-export default InvestmentGuide2026Page;
+export default InvestmentGuide20262027Page;
