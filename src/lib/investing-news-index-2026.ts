@@ -36,6 +36,13 @@ export const news2026: NewsItem[] = [
     excerpt: "MINEMは、Puno州が5つの鉱山探査プロジェクト、総額1億4,620万米ドルで国内首位に立ったと報告。金、銅、銀、錫、ウランの高いポテンシャルを背景に、2026年探査ポートフォリオの19.3%を占めます。"
   },
   {
+    slug: "proinversion-natural-gas-project-portfolio-2-9-billion-2026-2027",
+    title: "PROINVERSIÓN、2026-2027年に向けて29億米ドル規模の天然ガスプロジェクトポートフォリオを推進",
+    date: "2026-04-13",
+    category: "エネルギー",
+    excerpt: "PROINVERSIÓNは、2026年から2027年にかけて最大29億米ドルの投資を伴う3つの天然ガスプロジェクトを推進し、11地域におけるサービス普及拡大とエネルギー安全保障強化を目指しています。"
+  },
+  {
     slug: "proinversion-five-electric-projects-165-million",
     title: "PROINVERSIÓN、1億6,500万米ドル規模の5つの電力プロジェクトの入札を公示",
     date: "2026-03-12",
