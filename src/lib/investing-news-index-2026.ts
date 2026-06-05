@@ -8,18 +8,18 @@ export interface NewsItem {
 
 export const news2026: NewsItem[] = [
   {
+    slug: "eu-latin-america-copper-lithium-value-chains-sustainable-innovative-mining",
+    title: "欧州連合（EU）と中南米、銅・リチウムのバリューチェーン強化に向け、持続可能かつ革新的な鉱業を推進",
+    date: "2026-05-27",
+    category: "鉱業",
+    excerpt: "専門家や当局は、責任あるクリティカルミネラル供給と、革新的かつ持続可能なバリューチェーン構築における中南米およびペルーの戦略的価値を強調しました。"
+  },
+  {
     slug: "mef-private-investment-grew-13-2-percent-first-quarter-2026",
     title: "経済財務省（MEF）：第1四半期の民間投資は13.2%増加し、9四半期連続の拡大を記録",
     date: "2026-05-23",
     category: "経済",
     excerpt: "MEFは、2026年第1四半期の民間投資が13.2%増加し、9四半期連続の拡大を達成したと発表。内需は6.6%成長し、約5年ぶりの高い伸びを記録しました。"
-  },
-  {
-    slug: "celaris-energy-jinzhao-mining-peru-clean-energy-connection-mega-mining-project",
-    title: "Celaris EnergyとJinzhao Mining Perú、メガマイニングプロジェクトにおけるクリーンエネルギー接続に向けた協定を強化",
-    date: "2026-05-20",
-    category: "エネルギー",
-    excerpt: "Celaris EnergyとJinzhao Mining Perúは、Pampa de Pongo鉱山プロジェクトをCaravelí 220kV変電所へ将来的に接続する協定を強化し、ペルー南部の戦略的エネルギーインフラ整備を前進させます。"
   },
   {
     slug: "minem-wind-projects-arequipa-ica-piura-lambayeque",
