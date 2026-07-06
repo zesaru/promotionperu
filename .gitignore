@@ -37,3 +37,6 @@ CLAUDE.md
 
 # sanity studio local cache
 .sanity
+
+# typescript build cache
+tsconfig.tsbuildinfo
