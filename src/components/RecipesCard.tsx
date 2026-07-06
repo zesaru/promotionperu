@@ -18,15 +18,18 @@ export default function CardRecipes({
       <div className="flex flex-col justify-center items-center">
       
         <Link href={`/recipes/${slug}`} >
-          <Image
-            loading="lazy"
-            className="hover:grow hover:shadow-lg rounded-xl"
-            alt={title}
-            src={image}
-            height={450}
-            width={300}
-            priority={false}
-          />
+          {image ? (
+            <Image
+              loading="lazy"
+              className="hover:grow hover:shadow-lg rounded-xl"
+              alt={title}
+              src={image}
+              height={450}
+              width={300}
+              style={{ height: "auto" }}
+              priority={false}
+            />
+          ) : null}
         </Link>
         <div className="p-2 text-center">
           <p className="text-xl">{title}</p>

@@ -190,6 +190,7 @@ const InvesmentPage = () => {
                 src="https://res.cloudinary.com/de5ud82os/image/upload/v1768974608/vale_un_peru_2025_fuphdw.png"
                 width={330}
                 height={468}
+                style={{ height: "auto" }}
                 alt="Peru Investment Opportunities"
                 priority
               />

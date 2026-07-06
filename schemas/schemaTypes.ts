@@ -1,5 +1,6 @@
 import cityType from "./documents/city";
 import menuType from "./documents/menu";
+import newsArticleType from "./documents/newsArticle";
 import postType from "./documents/post";
 import recipesType from "./documents/recipes";
 import restaurantType from "./documents/restaurant";
@@ -8,6 +9,7 @@ import restaurantType from "./documents/restaurant";
 export default [
     cityType,
     menuType,
+    newsArticleType,
     postType,
     restaurantType,
     recipesType

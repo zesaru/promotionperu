@@ -1,4 +1,4 @@
-import { apiVersion, dataset, projectId } from "lib/sanity.api";
+import { apiVersion, dataset, projectId } from "./lib/sanity.api";
 import { defineConfig } from "sanity";
 import { deskTool } from "sanity/desk";
 

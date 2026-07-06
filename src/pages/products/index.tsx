@@ -46,6 +46,7 @@ const ProductsPage = () => {
                 src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564010/WEB/gastronomia/product_piscov2_lobeaw.jpg"
                 width={750}
                 height={250}
+                style={{ height: "auto" }}
                 alt="Peruvian Pisco products"
               />
             </Link>
@@ -92,6 +93,7 @@ const ProductsPage = () => {
                 src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564010/WEB/gastronomia/product_cacaov2_tblzj4.jpg"
                 width={750}
                 height={250}
+                style={{ height: "auto" }}
                 alt="Peruvian Products Cacao"
               />
             </Link>
@@ -105,6 +107,7 @@ const ProductsPage = () => {
                 src="https://res.cloudinary.com/de5ud82os/image/upload/v1694564010/WEB/gastronomia/product_coffeev2_vcvqgi.jpg"
                 width={750}
                 height={250}
+                style={{ height: "auto" }}
                 alt="Peruvian Products Pisco"
               />
             </Link>

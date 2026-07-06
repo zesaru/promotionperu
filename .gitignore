@@ -34,3 +34,6 @@ yarn-error.log*
 # vercel
 .vercel
 CLAUDE.md
+
+# sanity studio local cache
+.sanity

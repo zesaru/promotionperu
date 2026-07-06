@@ -1,35 +1,50 @@
 import Image from 'next/image';
 import React, { useEffect,useState } from 'react';
 
+export interface SliderImage {
+  src: string;
+  alt?: string;
+  caption?: string;
+}
+
 interface ImageSliderProps {
-  images: string[];
+  images: Array<string | SliderImage>;
   interval?: number;
 }
 
 const ImageSlider: React.FC<ImageSliderProps> = ({ images, interval = 3000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const normalizedImages = images.map((image, index) =>
+    typeof image === 'string'
+      ? {
+          src: image,
+          alt: `Slider image ${index + 1}`,
+        }
+      : image
+  );
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % normalizedImages.length);
     }, interval);
 
     return () => clearInterval(timer);
-  }, [images.length, interval]);
+  }, [normalizedImages.length, interval]);
 
   const goToPrevious = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+      prevIndex === 0 ? normalizedImages.length - 1 : prevIndex - 1
     );
   };
 
   const goToNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % normalizedImages.length);
   };
 
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
   };
+  const currentImage = normalizedImages[currentIndex];
 
   return (
     <div className="relative w-full max-w-4xl mx-auto">
@@ -39,11 +54,11 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, interval = 3000 }) =>
           className="flex transition-transform duration-500 ease-in-out h-full"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
-          {images.map((image, index) => (
+          {normalizedImages.map((image, index) => (
             <div key={index} className="w-full h-full flex-shrink-0 relative">
               <Image
-                src={image}
-                alt={`Seminario de Inversiones 2025 - Imagen ${index + 1}`}
+                src={image.src}
+                alt={image.alt || `Slider image ${index + 1}`}
                 fill
                 className="object-contain"
                 priority={index === 0}
@@ -75,9 +90,13 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, interval = 3000 }) =>
         </button>
       </div>
 
+      {currentImage?.caption ? (
+        <p className="mt-4 text-center text-sm text-gray-600">{currentImage.caption}</p>
+      ) : null}
+
       {/* Dots Indicator */}
       <div className="flex justify-center mt-4 space-x-2">
-        {images.map((_, index) => (
+        {normalizedImages.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
