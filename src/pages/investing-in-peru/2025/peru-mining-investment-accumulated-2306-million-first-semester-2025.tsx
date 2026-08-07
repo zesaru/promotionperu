@@ -106,21 +106,21 @@ const MiningInvestmentPage = () => {
           {/* Footer */}
           <div className="mt-8 md:mt-12 pt-4 md:pt-6 border-t border-gray-200">
             <p className="text-xs md:text-sm text-gray-600 mb-2">
-              Sociedad Nacional de MinerÃ­a, PetrÃ³leo y EnergÃ­a
+              Sociedad Nacional de Minería, Petróleo y Energía
             </p>
             <p className="text-xs text-gray-500">
-              [Sociedad Nacional de MinerÃ­a, PetrÃ³leo y EnergÃ­a, 2025]
+              [Sociedad Nacional de Minería, Petróleo y Energía, 2025]
             </p>
           </div>
 
           {/* Reference */}
           <div className="mt-8 md:mt-12 pt-4 md:pt-6 border-t border-gray-200">
-            <h3 className="text-lg font-semibold text-blue-800 mb-4">å‚è€ƒæ–‡çŒ®</h3>
+            <h3 className="text-lg font-semibold text-blue-800 mb-4">参考文献</h3>
             <p className="text-sm text-gray-700 mb-2 japanese-text">
-              Sociedad Nacional de MinerÃ­a, PetrÃ³leo y EnergÃ­a. (2025å¹´08æœˆ18æ—¥). InversiÃ³n minera acumulada alcanzÃ³ los US$ 2,306 millones en el primer semestre de 2025.
+              Sociedad Nacional de Minería, Petróleo y Energía. (2025年08月18日). Inversión minera acumulada alcanzó los US$ 2,306 millones en el primer semestre de 2025.
             </p>
             <p className="text-xs md:text-sm text-gray-600">
-              å‚ç…§å…ˆ: desde adentro, Revista de la Sociedad Nacional de MinerÃ­a, PetrÃ³leo y EnergÃ­a:<br/>
+              参照先: desde adentro, Revista de la Sociedad Nacional de Minería, Petróleo y Energía:<br/>
               <Link href="https://www.desdeadentro.pe/2025/08/inversion-minera-acumulada-alcanzo-los-us-2306-millones-en-el-primer-semestre-de-2025/" className="text-blue-600 hover:underline text-xs break-all">
                 https://www.desdeadentro.pe/2025/08/inversion-minera-acumulada-alcanzo-los-us-2306-millones-en-el-primer-semestre-de-2025/
               </Link>
@@ -128,8 +128,8 @@ const MiningInvestmentPage = () => {
           </div>
 
           <div className="text-right mt-8">
-            <p className="text-xs md:text-sm text-gray-600">åœ¨æ—¥ãƒšãƒ«ãƒ¼å¤§ä½¿é¤¨</p>
-            <p className="text-xs md:text-sm text-gray-600">éžå…¬å¼ç¿»è¨³</p>
+            <p className="text-xs md:text-sm text-gray-600">在日ペルー大使館</p>
+            <p className="text-xs md:text-sm text-gray-600">非公式翻訳</p>
           </div>
         </div>
       </div>

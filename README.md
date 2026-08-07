@@ -1,44 +1,42 @@
-<a href='peruinjapan.org'>
-  <img src='https://res.cloudinary.com/de5ud82os/image/upload/v1695087980/Screenshot_2023-09-19_103959_q7maoq.png' alt='peruinjapan'>
-</a>
+# PeruinJapan
 
-## PeruinJapan
+PeruinJapan is a bilingual (Japanese and English) website that promotes Peruvian culture, products, tourism, and investment opportunities in Japan. It is built with Next.js Pages Router and uses Sanity for CMS-managed content.
 
-Our primary goal is to promote the rich culture and products of Peru in Japan, connecting those who wish to explore Peruvian cuisine and business opportunities in the Japanese market."
+## Requirements
 
-## Instalation
+- Node.js 24.x
+- Corepack, included with supported Node.js installations
 
-#### Download and clone repository
+The repository uses pnpm 9.15.9 and a pnpm v9 lockfile. Enable the pinned package manager before installing dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+corepack enable
+corepack pnpm --version
+corepack pnpm install --frozen-lockfile
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Do not move the `pnpm.overrides` entries from `package.json`; they are required for the deployment installer to reproduce the lockfile.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Scripts
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```bash
+corepack pnpm dev       # Development server at http://localhost:3000
+corepack pnpm lint      # ESLint for JavaScript and TypeScript files
+corepack pnpm test      # Jest test suite
+corepack pnpm build     # Production build and sitemap generation
+corepack pnpm start     # Serve a completed production build
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Project structure
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- `src/pages/`: Pages Router routes, including English and Japanese content.
+- `src/components/`: Shared layout and interface components.
+- `src/lib/` and `lib/`: Content indexes, localization helpers, and Sanity utilities.
+- `schemas/`: Sanity document schema definitions.
+- `public/`: Static files, images, robots, and sitemap assets.
+- `__tests__/`: Jest and Testing Library tests.
+- `docs/tasks/`: Repeatable editorial workflows.
 
-## Learn More
+## Configuration
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Local secrets and service configuration belong in `.env.local` and must not be committed. Sanity configuration is in `sanity.config.ts`; its shared client settings are in `lib/sanity.*`.

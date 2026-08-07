@@ -2,6 +2,7 @@
   "name": "promotionperu",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@9.15.9",
   "pnpm": {
     "overrides": {
       "@tootallnate/once@2.0.0": "2.0.1",

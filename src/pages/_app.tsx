@@ -18,8 +18,8 @@ const notoSansJP = Noto_Sans_JP({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${bree.variable} ${notoSansJP.variable} font-sans`}>
+    <div className={`${bree.variable} ${notoSansJP.variable} font-sans`}>
       <Component {...pageProps} />
-    </main>
+    </div>
   );
 }

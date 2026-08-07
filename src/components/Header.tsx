@@ -1,27 +1,8 @@
-import { apiVersion, dataset, projectId } from "lib/sanity.api";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { createClient, groq } from "next-sanity";
 import { useState } from "react";
 import { BsTranslate } from "react-icons/bs";
-
-const clientConfig = {
-  projectId,
-  dataset,
-  apiVersion,
-  useCdn: true,
-};
-
-function getMenu() {
-  return createClient(clientConfig).fetch(groq`
-    *[_type == "menu"]{
-      __i18n_lang,
-      _id,
-      menu,
-    }
-  `);
-}
 
 const navBar = {
   menus: [
@@ -49,6 +30,8 @@ const navBar = {
 export default function Header() {
   const { locale, locales, asPath } = useRouter();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const menuLabel = locale === "jp" ? "メニューを開く" : "Open menu";
+  const navigationLabel = locale === "jp" ? "主要なナビゲーション" : "Primary navigation";
 
   const isActiveRoute = (slug: string) => {
     return asPath.includes(slug) || (asPath === "/" && slug === "home");
@@ -59,7 +42,7 @@ export default function Header() {
   };
 
   return (
-    <nav id="header" className="sticky top-0 z-50 w-full bg-white shadow-md">
+    <nav id="header" aria-label={navigationLabel} className="sticky top-0 z-50 w-full bg-white shadow-md">
       <div className="container mx-auto mt-0 flex w-full flex-wrap items-center justify-between px-4 py-2.5 sm:py-3 lg:px-6">
         
         {/* Logo */}
@@ -86,12 +69,15 @@ export default function Header() {
         <button 
           onClick={toggleMobileMenu}
           className="order-2 p-1.5 text-gray-600 transition-colors duration-200 hover:text-red-600 lg:hidden sm:p-2"
-          aria-label="Toggle menu"
+          aria-controls="primary-navigation-links"
+          aria-expanded={isMobileMenuOpen}
+          aria-label={menuLabel}
         >
           <svg
             className={`w-6 h-6 transform transition-transform duration-200 ${isMobileMenuOpen ? 'rotate-90' : ''}`}
             fill="currentColor"
             viewBox="0 0 20 20"
+            aria-hidden="true"
           >
             {isMobileMenuOpen ? (
               <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -102,35 +88,33 @@ export default function Header() {
         </button>
 
         {/* Navigation Menu */}
-        <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} lg:flex lg:items-center lg:w-auto w-full order-3 lg:order-2 mt-4 lg:mt-0`}>
-          <nav className="lg:flex lg:items-center">
-            <ul className="lg:flex items-center space-y-2 lg:space-y-0 lg:space-x-1 text-base">
-              {navBar.menus
-                .filter((item) => item.locale === locale)
-                .map((item) => (
-                  <li 
-                    key={item.title}
-                    className={item.slug === "paz-de-hiroshima" ? "lg:hidden" : ""}
+        <div id="primary-navigation-links" className={`${isMobileMenuOpen ? 'block' : 'hidden'} lg:flex lg:items-center lg:w-auto w-full order-3 lg:order-2 mt-4 lg:mt-0`}>
+          <ul className="lg:flex items-center space-y-2 lg:space-y-0 lg:space-x-1 text-base">
+            {navBar.menus
+              .filter((item) => item.locale === locale)
+              .map((item) => (
+                <li
+                  key={item.title}
+                  className={item.slug === "paz-de-hiroshima" ? "lg:hidden" : ""}
+                >
+                  <Link
+                    className={`block px-4 py-2 rounded-lg transition-all duration-200 hover:bg-red-50 hover:text-red-600 ${
+                      isActiveRoute(item.slug)
+                        ? 'bg-red-600 text-white font-semibold'
+                        : 'text-gray-700 hover:bg-red-50'
+                    }`}
+                    href={`/${item.slug}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    <Link
-                      className={`block px-4 py-2 rounded-lg transition-all duration-200 hover:bg-red-50 hover:text-red-600 ${
-                        isActiveRoute(item.slug) 
-                          ? 'bg-red-600 text-white font-semibold' 
-                          : 'text-gray-700 hover:bg-red-50'
-                      }`}
-                      href={`/${item.slug}`}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      {item.title}
-                    </Link>
-                  </li>
-                ))}
-            </ul>
-          </nav>
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+          </ul>
 
           {/* Language Switcher */}
           <div className="flex items-center mt-4 lg:mt-0 lg:ml-6 pt-4 lg:pt-0 border-t lg:border-t-0 border-gray-200">
-            <BsTranslate className="text-lg text-gray-600 mr-2"/>
+            <BsTranslate className="text-lg text-gray-600 mr-2" aria-hidden="true" />
             <div className="flex space-x-1">
               {locales?.map((l) => {
                 return (

@@ -62,8 +62,8 @@ const InvesmentPage = () => {
 
   const content = {
     en: {
-      heroTitle: "Invest in Peru 2025",
-      heroDescription: "Peru's economic landscape offers macroeconomic stability and sustained growth. Explore our 2025 Investment Guide and learn why Japanese companies choose Peru as their strategic partner in the region.",
+      heroTitle: "Invest in Peru",
+      heroDescription: "Peru's economic landscape offers macroeconomic stability and sustained growth. Explore investment resources and learn why Japanese companies choose Peru as their strategic partner in the region.",
       download: "Download",
       investmentGuide: "Investment Guide 2025",
       guideTitle: "Investment Guide 2025 \"VALE UN PERÚ\"",
@@ -73,22 +73,34 @@ const InvesmentPage = () => {
       eyGuidesDescription: "Explore sector-specific EY publications for investors evaluating Peru across mining, agribusiness, fintech, energy, infrastructure, and broader business opportunities.",
       openGuide: "Open PDF →",
       latestNews: "Latest News",
-      readMore: "Read More →"
+      readMore: "Read More →",
+      statistics: [
+        "Mining Investment Pipeline",
+        "GDP Growth 2025",
+        "Japanese Companies",
+        "World Copper Producer",
+      ],
     },
     jp: {
-      heroTitle: "ペルーへの投資 2025",
+      heroTitle: "ペルーへの投資",
       heroDescription: "ペルーと日本は友好と協力の歴史を共有し、確かなビジネスチャンスを生み出しています。ラテンアメリカへの玄関口として、資源豊富で安定したペルー市場の可能性をぜひご確認ください。",
       download: "ダウンロード",
       investmentGuide: "投資ガイド 2025",
       guideTitle: "投資ガイド 2025 「VALE UN PERÚ」",
       guideDescription: "2025年向けの最も包括的で最新の投資ガイド。新たな投資機会と経済指標を探索してください。",
       viewPrevious: "過去のバージョンを見る →",
-      eyGuidesTitle: "Specialized Investment Guides",
-      eyGuidesDescription: "Explore sector-specific EY publications for investors evaluating Peru across mining, agribusiness, fintech, energy, infrastructure, and broader business opportunities.",
-      openGuide: "Open PDF ?",
+      eyGuidesTitle: "分野別投資ガイド",
+      eyGuidesDescription: "鉱業、農業・アグリビジネス、フィンテック、エネルギー、インフラなど、ペルーへの投資を検討する方向けのEY分野別ガイドをご覧いただけます。",
+      openGuide: "PDFを開く →",
       latestNews: "最新ニュース",
-      readMore: "続きを読む →"
-    }
+      readMore: "続きを読む →",
+      statistics: [
+        "鉱業投資パイプライン",
+        "2025年のGDP成長率",
+        "進出日系企業",
+        "世界第2位の銅生産国",
+      ],
+    },
   };
 
   const texts = content[locale as keyof typeof content] || content.en;
@@ -205,19 +217,19 @@ const InvesmentPage = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center">
             <div className="p-4 md:p-6 bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-md hover:shadow-lg transition-shadow">
               <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-red-600 mb-2">$54B</div>
-              <div className="text-xs md:text-sm lg:text-base text-gray-700">Mining Investment Pipeline</div>
+              <div className="text-xs md:text-sm lg:text-base text-gray-700">{texts.statistics[0]}</div>
             </div>
             <div className="p-4 md:p-6 bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-md hover:shadow-lg transition-shadow">
               <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-red-600 mb-2">3.2%</div>
-              <div className="text-xs md:text-sm lg:text-base text-gray-700">GDP Growth 2025</div>
+              <div className="text-xs md:text-sm lg:text-base text-gray-700">{texts.statistics[1]}</div>
             </div>
             <div className="p-4 md:p-6 bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-md hover:shadow-lg transition-shadow">
               <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-red-600 mb-2">150+</div>
-              <div className="text-xs md:text-sm lg:text-base text-gray-700">Japanese Companies</div>
+              <div className="text-xs md:text-sm lg:text-base text-gray-700">{texts.statistics[2]}</div>
             </div>
             <div className="p-4 md:p-6 bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-md hover:shadow-lg transition-shadow">
               <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-red-600 mb-2">#2</div>
-              <div className="text-xs md:text-sm lg:text-base text-gray-700">World Copper Producer</div>
+              <div className="text-xs md:text-sm lg:text-base text-gray-700">{texts.statistics[3]}</div>
             </div>
           </div>
         </div>
@@ -325,4 +337,3 @@ const InvesmentPage = () => {
 };
 
 export default InvesmentPage;
-

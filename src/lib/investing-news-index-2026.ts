@@ -8,6 +8,20 @@ export interface NewsItem {
 
 export const news2026: NewsItem[] = [
   {
+    slug: "fujimori-government-el-nino-emergency-security-investment",
+    title: "フジモリ大統領：政府はエルニーニョ緊急対策と治安対策に注力",
+    date: "2026-07-28",
+    category: "投資",
+    excerpt: "フジモリ大統領は、エルニーニョ現象への緊急対応と治安対策に加え、雇用、投資、企業活動の再活性化を進める方針を示しました。",
+  },
+  {
+    slug: "peru-independence-205-anniversary-reception-japan-investment-cooperation",
+    title: "ペルー独立205周年記念レセプション、日ペルーの経済・投資協力の強化を確認",
+    date: "2026-07-27",
+    category: "投資",
+    excerpt: "東京で開催されたペルー独立205周年記念レセプションでは、インフラ、運輸、連結性、経済・貿易・投資分野における日ペルー協力の重要性が確認されました。",
+  },
+  {
     slug: "eu-latin-america-copper-lithium-value-chains-sustainable-innovative-mining",
     title: "欧州連合（EU）と中南米、銅・リチウムのバリューチェーン強化に向け、持続可能かつ革新的な鉱業を推進",
     date: "2026-05-27",

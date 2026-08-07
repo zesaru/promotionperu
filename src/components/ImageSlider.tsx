@@ -10,9 +10,14 @@ export interface SliderImage {
 interface ImageSliderProps {
   images: Array<string | SliderImage>;
   interval?: number;
+  containerClassName?: string;
 }
 
-const ImageSlider: React.FC<ImageSliderProps> = ({ images, interval = 3000 }) => {
+const ImageSlider: React.FC<ImageSliderProps> = ({
+  images,
+  interval = 3000,
+  containerClassName = "max-w-4xl",
+}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const normalizedImages = images.map((image, index) =>
     typeof image === 'string'
@@ -47,7 +52,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, interval = 3000 }) =>
   const currentImage = normalizedImages[currentIndex];
 
   return (
-    <div className="relative w-full max-w-4xl mx-auto">
+    <div className={`relative mx-auto w-full ${containerClassName}`}>
       {/* Slider Container */}
       <div className="relative h-96 md:h-[500px] overflow-hidden rounded-lg bg-gray-100">
         <div

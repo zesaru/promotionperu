@@ -157,37 +157,37 @@ const ProinversionApp5Page = () => {
 
           {/* Context Section */}
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 sm:p-6 my-6 md:my-8">
-            <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-4 japanese-text">èƒŒæ™¯</h3>
+            <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-4 japanese-text">背景</h3>
             <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-4 japanese-text">
-              ãƒªãƒžå•†å·¥ä¼šè­°æ‰€ãŒä¸»å‚¬ã—ãŸã€Œãƒ“ã‚¸ãƒã‚¹ãƒ»ãƒªãƒ¼ãƒ€ãƒ¼ã‚·ãƒƒãƒ—ãƒ»ã‚µãƒ¼ã‚­ãƒƒãƒˆã€ã«ãŠã„ã¦ã€è¼¸é€ã€è¡›ç”Ÿã€ã‚¨ãƒãƒ«ã‚®ãƒ¼ã€ä¿å¥ã€æ•™è‚²ã€è¦³å…‰ã®å„åˆ†é‡Žã«ãŠã‘ã‚‹ 2026ï½ž2028 å¹´æœŸã®ãƒ¡ã‚¬ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆãŒç™ºè¡¨ã•ã‚Œã¾ã—ãŸã€‚
+              リマ商工会議所が主催した「ビジネス・リーダーシップ・サーキット」において、輸送、衛生、エネルギー、保健、教育、観光の各分野における 2026～2028 年期のメガプロジェクトが発表されました。
             </p>
             <p className="text-sm md:text-base text-gray-700 leading-relaxed japanese-text">
-              ã“ã®ã‚¤ãƒ‹ã‚·ã‚¢ãƒãƒ–ã¯ã€ãƒšãƒ«ãƒ¼ã®ç«¶äº‰åŠ›å¼·åŒ–ã¨æŒç¶šå¯èƒ½ãªçµŒæ¸ˆç™ºå±•ã‚’ç›®çš„ã¨ã—ã¦ãŠã‚Šã€æ°‘é–“æŠ•è³‡ã®æ´»æ€§åŒ–ã¨å®˜æ°‘é€£æºï¼ˆPPPï¼‰ã®å¼·åŒ–ã‚’å›³ã‚‹ã‚‚ã®ã§ã™ã€‚
+              このイニシアチブは、ペルーの競争力強化と持続可能な経済発展を目的としており、民間投資の活性化と官民連携（PPP）の強化を図るものです。
             </p>
           </div>
 
           {/* References */}
           <div className="mt-8 md:mt-12 pt-4 md:pt-6 border-t border-gray-300">
-            <h3 className="text-base font-semibold text-gray-900 mb-2 japanese-heading-3">å‚è€ƒæ–‡çŒ®</h3>
+            <h3 className="text-base font-semibold text-gray-900 mb-2 japanese-heading-3">参考文献</h3>
             <p className="text-xs md:text-sm text-gray-700 japanese-text">
-              PROINVERSION. (2025å¹´12æœˆ03æ—¥). PROINVERSIÃ“N activarÃ¡ ciclo de inversiones por mÃ¡s de USD 21 mil millones bajo el nuevo modelo APP 5.0.<br />
-              å‚ç…§å…ˆ: <a href="https://www.investinperu.pe/proinversion-activara-ciclo-de-inversiones-por-mas-de-usd-21-mil-millones-bajo-el-nuevo-modelo-app-5-0/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">PROINVERSION: https://www.investinperu.pe/proinversion-activara-ciclo-de-inversiones-por-mas-de-usd-21-mil-millones-bajo-el-nuevo-modelo-app-5-0/</a>
+              PROINVERSION. (2025年12月03日). PROINVERSIÓN activará ciclo de inversiones por más de USD 21 mil millones bajo el nuevo modelo APP 5.0.<br />
+              参照先: <a href="https://www.investinperu.pe/proinversion-activara-ciclo-de-inversiones-por-mas-de-usd-21-mil-millones-bajo-el-nuevo-modelo-app-5-0/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">PROINVERSION: https://www.investinperu.pe/proinversion-activara-ciclo-de-inversiones-por-mas-de-usd-21-mil-millones-bajo-el-nuevo-modelo-app-5-0/</a>
             </p>
           </div>
 
           {/* Footer */}
           <div className="mt-8 md:mt-12 pt-4 md:pt-6 border-t border-gray-300">
             <p className="text-xs md:text-sm text-gray-600 mb-2">
-              åœ¨æ—¥ãƒšãƒ«ãƒ¼å¤§ä½¿é¤¨
+              在日ペルー大使館
             </p>
             <p className="text-xs md:text-sm text-gray-600">
-              çµŒæ¸ˆå•†å‹™æ‹…å½“
+              経済商務担当
             </p>
           </div>
 
           <div className="text-right mt-8">
-            <p className="text-xs md:text-sm text-gray-600">åœ¨æ—¥ãƒšãƒ«ãƒ¼å¤§ä½¿é¤¨</p>
-            <p className="text-xs md:text-sm text-gray-600">éžå…¬å¼ç¿»è¨³</p>
+            <p className="text-xs md:text-sm text-gray-600">在日ペルー大使館</p>
+            <p className="text-xs md:text-sm text-gray-600">非公式翻訳</p>
           </div>
         </div>
       </div>

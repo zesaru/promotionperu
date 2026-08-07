@@ -284,6 +284,12 @@ export default function Layout({
 
   return (
     <div className="bg-white text-gray-600 work-sans leading-loose text-base tracking-normal">
+      <a
+        href="#main-content"
+        className="sr-only z-[60] bg-red-700 px-4 py-2 font-semibold text-white focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-red-800"
+      >
+        {currentLocaleCode === "jp" ? "メインコンテンツへ移動" : "Skip to main content"}
+      </a>
       {!disableDefaultSeo && (
         <>
           <NextSeo
@@ -357,7 +363,7 @@ export default function Layout({
       )}
       
       <Header />
-        {children}
+        <main id="main-content">{children}</main>
         <Analytics />
       <Footer />
     </div>

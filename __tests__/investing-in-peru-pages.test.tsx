@@ -85,6 +85,9 @@ describe("Investing in Peru hub pages SEO", () => {
     expect(seoProps.description).toContain("Peru investment opportunities");
     expect(document.body.innerHTML).toContain('"@type":"CollectionPage"');
     expect(document.body.innerHTML).toContain('"url":"https://peruinjapan.org/en/investing-in-peru"');
+    expect(document.body).toHaveTextContent("Invest in Peru");
+    expect(document.body).toHaveTextContent("Mining Investment Pipeline");
+    expect(document.body).toHaveTextContent("The images related to Peru are copyright protected by ©PromPeru.");
     expect(document.body.innerHTML).toContain('"name":"Investment Guide 2025 \\"VALE UN PERÚ\\""');
     expect(document.body.innerHTML).toContain('"name":"Previous Investment Guides"');
     expect(document.body.innerHTML).toContain('"url":"https://peruinjapan.org/en/investing-in-peru/previous-versions"');
@@ -131,6 +134,8 @@ describe("Investing in Peru hub pages SEO", () => {
 
     expect(document.body.innerHTML).toContain('"name":"過去の投資ガイド"');
     expect(document.body.innerHTML).toContain('"name":"ホーム"');
+    expect(document.body).toHaveTextContent("鉱業投資パイプライン");
+    expect(document.body).toHaveTextContent("ペルーに関連する画像の著作権はPromPeruに帰属します。");
 
     mockUseRouter.mockReturnValue({
       locale: "jp",

@@ -87,10 +87,10 @@ const InvestmentPage = () => {
           {/* Footer */}
           <div className="mt-8 md:mt-12 pt-4 md:pt-6 border-t border-gray-200">
             <p className="text-xs md:text-sm text-gray-600 mb-2 japanese-text">
-              è¾²æ¥­çŒæ¼‘çœï¼ˆMIDAGRIï¼‰
+              農業灌漑省（MIDAGRI）
             </p>
             <p className="text-sm text-gray-600 mb-4">
-              åºƒå ±ãƒ»åºƒå ±ç”»åƒå®¤
+              広報・広報画像室
             </p>
             <p className="text-xs text-gray-500">
               [MINISTERIO DE DESARROLLO AGRARIO Y RIEGO - OFICINA DE COMUNICACIONES E IMAGEN INSTITUCIONAL, 2025]
@@ -99,12 +99,12 @@ const InvestmentPage = () => {
 
           {/* Reference */}
           <div className="mt-8 md:mt-12 pt-4 md:pt-6 border-t border-gray-200">
-            <h3 className="text-lg font-semibold text-blue-800 mb-4">å‚è€ƒæ–‡çŒ®</h3>
+            <h3 className="text-lg font-semibold text-blue-800 mb-4">参考文献</h3>
             <p className="text-sm text-gray-700 mb-2 japanese-text">
-              MINISTERIO DE DESARROLLO AGRARIO Y RIEGO - OFICINA DE COMUNICACIONES E IMAGEN INSTITUCIONAL. (2025å¹´6æœˆ19æ—¥). Gobierno cumple con Arequipa y anuncia que JapÃ³n se harÃ¡ cargo de la puesta a punto de Majes Siguas I.
+              MINISTERIO DE DESARROLLO AGRARIO Y RIEGO - OFICINA DE COMUNICACIONES E IMAGEN INSTITUCIONAL. (2025年6月19日). Gobierno cumple con Arequipa y anuncia que Japón se hará cargo de la puesta a punto de Majes Siguas I.
             </p>
             <p className="text-xs md:text-sm text-gray-600">
-              å‚ç…§å…ˆ: Gog.pe - Plataforma Digital Ãšnica del Estado Peruano:<br/>
+              参照先: Gog.pe - Plataforma Digital Única del Estado Peruano:<br/>
               <Link href="https://www.gob.pe/institucion/midagri/noticias/1190713-gobierno-cumple-con-arequipa-y-anuncia-que-japon-se-hara-cargo-de-la-puesta-a-punto-de-majes-siguas-i" className="text-blue-600 hover:underline text-xs break-all">
                 https://www.gob.pe/institucion/midagri/noticias/1190713-gobierno-cumple-con-arequipa-y-anuncia-que-japon-se-hara-cargo-de-la-puesta-a-punto-de-majes-siguas-i
               </Link>
@@ -112,8 +112,8 @@ const InvestmentPage = () => {
           </div>
 
           <div className="text-right mt-8">
-            <p className="text-xs md:text-sm text-gray-600">åœ¨æ—¥ãƒšãƒ«ãƒ¼å¤§ä½¿é¤¨</p>
-            <p className="text-xs md:text-sm text-gray-600">éžå…¬å¼ç¿»è¨³</p>
+            <p className="text-xs md:text-sm text-gray-600">在日ペルー大使館</p>
+            <p className="text-xs md:text-sm text-gray-600">非公式翻訳</p>
           </div>
         </div>
       </div>
