@@ -8,6 +8,27 @@ export interface NewsItem {
 
 export const news2026: NewsItem[] = [
   {
+    slug: "energy-mines-minister-japan-investment-technical-cooperation",
+    title: "エネルギー鉱山相、日本で投資・技術協力の促進に向け協議",
+    date: "2026-09-08",
+    category: "エネルギー",
+    excerpt: "ギジェルモ・シンノ・エネルギー鉱山相は、日本政府関係者、JOGMEC、日本企業と会談し、鉱業技術、グリーン水素、分散型電源、重要鉱物分野における投資と技術協力の促進を協議しました。",
+  },
+  {
+    slug: "proinversion-oxi-public-works-investment-7-737-billion-2026",
+    title: "PROINVERSIÓN：2026年の税控除型公共事業投資が77億3,700万ソルに拡大",
+    date: "2026-09-07",
+    category: "インフラ",
+    excerpt: "PROINVERSIÓNは、2026年1月から8月までに税控除型公共事業制度（OxI）を通じて594件、総額77億3,700万ソルの事業が採択され、新たな公共機関と民間企業の参加が拡大していると発表しました。",
+  },
+  {
+    slug: "peru-trade-policy-new-developments",
+    title: "ペルーの通商政策に新たな進展",
+    date: "2026-09-04",
+    category: "貿易・輸出",
+    excerpt: "ペルー・香港自由貿易協定の発効、ZOFRATACNAへの投資促進、米国との通商関係強化に向けた立法措置など、輸出機会と戦略的市場へのアクセス改善に向けた新たな進展を解説します。",
+  },
+  {
     slug: "fujimori-government-el-nino-emergency-security-investment",
     title: "フジモリ大統領：政府はエルニーニョ緊急対策と治安対策に注力",
     date: "2026-07-28",
