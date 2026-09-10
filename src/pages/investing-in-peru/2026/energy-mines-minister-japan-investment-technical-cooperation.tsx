@@ -7,17 +7,17 @@ const galleryImages: SliderImage[] = [
   {
     src: "/images/investing-news/2026/energy-mines-minister-japan-investment-technical-cooperation/meti-meeting.jpeg",
     alt: "ギジェルモ・シンノ・エネルギー鉱山相と日本政府関係者による投資・技術協力に関する会談",
-    caption: "日本政府関係者との投資・技術協力に関する会談。",
+    caption: "METIとの技術協力に関する会談。",
   },
   {
     src: "/images/investing-news/2026/energy-mines-minister-japan-investment-technical-cooperation/jogmec-meeting.jpeg",
     alt: "ペルーと日本の関係機関による鉱業技術協力に関する会談",
-    caption: "鉱業技術協力の進捗を確認する日本の関係機関との会談。",
+    caption: "鉱業技術協力の進捗を確認するJOGMECとの会談。",
   },
   {
     src: "/images/investing-news/2026/energy-mines-minister-japan-investment-technical-cooperation/PXL_20260908_104855187.jpg",
     alt: "ギジェルモ・シンノ・エネルギー鉱山相と日本の関係者による会談",
-    caption: "日本の関係者とペルーにおける投資・協力の機会について意見交換。",
+    caption: "SMMとペルーにおける投資の機会について意見交換。",
   },
 ];
 
