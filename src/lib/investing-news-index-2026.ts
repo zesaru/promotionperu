@@ -8,6 +8,13 @@ export interface NewsItem {
 
 export const news2026: NewsItem[] = [
   {
+    slug: "fujimori-environment-sustainable-investment-expomina-2026",
+    title: "フジモリ大統領、「環境を守り、持続可能な投資を促進」",
+    date: "2026-09-09",
+    category: "鉱業",
+    excerpt: "フジモリ大統領はExpoMina Perú 2026で、環境保護と持続可能な投資は両立できると述べ、約640億米ドル規模の鉱業プロジェクトを投資、雇用、福祉へつなげる方針を示しました。",
+  },
+  {
     slug: "energy-mines-minister-japan-investment-technical-cooperation",
     title: "エネルギー鉱山相、日本で投資・技術協力の促進に向け協議",
     date: "2026-09-08",
@@ -20,13 +27,6 @@ export const news2026: NewsItem[] = [
     date: "2026-09-07",
     category: "インフラ",
     excerpt: "PROINVERSIÓNは、2026年1月から8月までに税控除型公共事業制度（OxI）を通じて594件、総額77億3,700万ソルの事業が採択され、新たな公共機関と民間企業の参加が拡大していると発表しました。",
-  },
-  {
-    slug: "peru-trade-policy-new-developments",
-    title: "ペルーの通商政策に新たな進展",
-    date: "2026-09-04",
-    category: "貿易・輸出",
-    excerpt: "ペルー・香港自由貿易協定の発効、ZOFRATACNAへの投資促進、米国との通商関係強化に向けた立法措置など、輸出機会と戦略的市場へのアクセス改善に向けた新たな進展を解説します。",
   },
   {
     slug: "fujimori-government-el-nino-emergency-security-investment",
