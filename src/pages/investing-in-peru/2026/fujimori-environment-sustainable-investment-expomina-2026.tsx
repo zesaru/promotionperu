@@ -100,12 +100,12 @@ const FujimoriSustainableInvestmentExpominaPage = () => {
           <h2 className="mb-2 text-base font-semibold text-gray-900 japanese-heading-3">出典</h2>
           <p>ペルー共和国大統領府（2026年9月9日）「Presidenta Keiko Fujimori: “Defenderemos el medio ambiente y promoveremos la inversión sostenible”」。</p>
           <a
-            href="https://andina.pe/agencia/noticia-presidenta-fujimori-defenderemos-medio-ambiente-y-promoveremos-inversion-sostenible-1091119.aspx"
+            href="https://www.gob.pe/institucion/presidencia/noticias/1441804-presidenta-keiko-fujimori-defenderemos-el-medio-ambiente-y-promoveremos-la-inversion-sostenible"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-2 inline-block break-all text-red-700 hover:underline"
           >
-            関連報道：Agencia Andina
+            公式ソース：ペルー共和国大統領府
           </a>
         </footer>
       </article>
