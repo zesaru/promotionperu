@@ -16,10 +16,10 @@ export const news2026: NewsItem[] = [
   },
   {
     slug: "energy-mines-minister-japan-investment-technical-cooperation",
-    title: "エネルギー鉱山相、日本で投資・技術協力の促進に向け協議",
+    title: "シンノ・エネルギー鉱山大臣が訪日、ペルーの鉱業・エネルギー分野における投資機会ポートフォリオを紹介",
     date: "2026-09-08",
     category: "エネルギー",
-    excerpt: "ギジェルモ・シンノ・エネルギー鉱山相は、日本政府関係者、JOGMEC、日本企業と会談し、鉱業技術、グリーン水素、分散型電源、重要鉱物分野における投資と技術協力の促進を協議しました。",
+    excerpt: "ギジェルモ・シンノ・ワマニ・エネルギー鉱山大臣は、日本の政府機関および企業との会談で、ペルーの鉱業・エネルギー分野における投資機会を紹介しました。",
   },
   {
     slug: "proinversion-oxi-public-works-investment-7-737-billion-2026",
