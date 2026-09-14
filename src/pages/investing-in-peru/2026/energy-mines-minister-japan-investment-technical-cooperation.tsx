@@ -68,20 +68,6 @@ const EnergyMinesMinisterJapanPage = () => {
           </p>
         </div>
 
-        <footer className="mt-10 border-t border-gray-300 pt-6 text-xs text-gray-600 md:text-sm">
-          <h2 className="mb-2 text-base font-semibold text-gray-900 japanese-heading-3">出典</h2>
-          <p>
-            ペルー・エネルギー鉱山省（2026年9月8日）「Ministro de Energía y Minas inició reuniones con autoridades y empresas en Japón para promover inversiones y cooperación técnica」。
-          </p>
-          <a
-            href="https://www.gob.pe/institucion/minem/noticias/1441162-ministro-de-energia-y-minas-inicio-reuniones-con-autoridades-y-empresas-en-japon-para-promover-inversiones-y-cooperacion-tecnica"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-2 inline-block break-all text-red-700 hover:underline"
-          >
-            公式ソース：ペルー・エネルギー鉱山省
-          </a>
-        </footer>
       </article>
     </Layout>
   );
