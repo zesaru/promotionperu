@@ -6,6 +6,8 @@ import { FaArrowLeft, FaEnvelope, FaGlobe, FaMapMarkerAlt, FaPhoneAlt } from "re
 import Banner from "src/components/Banner";
 import Layout from "src/components/Layout";
 
+import { serializeJsonLd } from "@/lib/serialize-json-ld";
+
 type Importer = {
   id: string;
   name: string;
@@ -218,7 +220,7 @@ const ImportingPage = () => {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(structuredData) }}
       />
       <Banner
         alt="Pisco"

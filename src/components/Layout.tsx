@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 import { NextSeo } from 'next-seo';
 import React, { ReactNode } from "react";
 
+import { serializeJsonLd } from "@/lib/serialize-json-ld";
+
 import Footer from "./Footer";
 import Header from "./Header";
 
@@ -350,13 +352,13 @@ export default function Layout({
           {/* JSON-LD Structured Data */}
           <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
           />
           {[...autoStructuredData, ...additionalStructuredData].map((entry, index) => (
             <script
               key={`structured-data-${index}`}
               type="application/ld+json"
-              dangerouslySetInnerHTML={{ __html: JSON.stringify(entry) }}
+              dangerouslySetInnerHTML={{ __html: serializeJsonLd(entry) }}
             />
           ))}
         </>

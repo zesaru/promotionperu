@@ -2,6 +2,8 @@ import { useRouter } from "next/router";
 import { NextSeo } from 'next-seo';
 import React from "react";
 
+import { serializeJsonLd } from "@/lib/serialize-json-ld";
+
 import Layout from "../components/Layout";
 
 const PazNagasakiPage = () => {
@@ -137,7 +139,7 @@ const PazNagasakiPage = () => {
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
       />
 
       <Layout

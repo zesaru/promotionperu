@@ -31,6 +31,34 @@ describe("Layout SEO", () => {
     mockNextSeo.mockClear();
   });
 
+  it("escapes CMS descriptions and additional schema before embedding JSON-LD", () => {
+    mockUseRouter.mockReturnValue({
+      locale: "en",
+      asPath: "/en/recipes/example",
+      locales: ["jp", "en"],
+    });
+    const maliciousText = '</script><img src=x onerror="alert(1)">';
+    const { container } = render(
+      <Layout
+        language="en"
+        description={maliciousText}
+        structuredData={{ "@type": "Recipe", name: maliciousText }}
+      >
+        <div>content</div>
+      </Layout>
+    );
+    // JSON-LD scripts have no accessible role; inspect their serialized payloads directly.
+    // eslint-disable-next-line testing-library/no-container, testing-library/no-node-access
+    const scripts = container.querySelectorAll('script[type="application/ld+json"]');
+
+    expect(scripts).toHaveLength(2);
+    scripts.forEach((script) => {
+      expect(script).not.toHaveTextContent(/</);
+    });
+    expect(JSON.parse(scripts[0].textContent!).description).toBe(maliciousText);
+    expect(JSON.parse(scripts[1].textContent!).name).toBe(maliciousText);
+  });
+
   it("builds canonical and hreflang correctly on English localized routes", () => {
     mockUseRouter.mockReturnValue({
       locale: "en",
