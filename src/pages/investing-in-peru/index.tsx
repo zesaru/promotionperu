@@ -330,7 +330,7 @@ const InvesmentPage = ({ latestNews = [] }: InvestingPageProps) => {
               ))}
             </div>
             <div className="mt-8 text-center">
-              <Link href="/news" className="font-semibold text-red-700 hover:underline">すべてのニュースを見る →</Link>
+              <Link href="/investing-in-peru/news" className="font-semibold text-red-700 hover:underline">すべてのニュースを見る →</Link>
             </div>
           </div>
         </section>

@@ -36,7 +36,7 @@ console.log(`Verified ${checked} public original URLs: full Japanese text, 52 im
 
 const found = new Set();
 for (const year of [2025, 2026]) {
-  const response = await fetch(`${base}/news/${year}`);
+  const response = await fetch(`${base}/investing-in-peru/news/${year}`);
   assert.equal(response.status, 200);
   const dom = new JSDOM(await response.text());
   const data = JSON.parse(dom.window.document.getElementById("__NEXT_DATA__").textContent);

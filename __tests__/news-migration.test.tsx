@@ -4,8 +4,11 @@ import type { NewsArticle } from "lib/sanity.queries";
 import NewsArticlePage from "@/components/NewsArticlePage";
 import NewsBody from "@/components/NewsBody";
 import { formatNewsDate, newsHref } from "@/lib/news";
+import InvestmentNewsIndex from "@/pages/investing-in-peru/news";
+import InvestmentNewsYear from "@/pages/investing-in-peru/news/[year]";
 
 jest.mock("next/router", () => ({ useRouter: () => ({ locale: "en" }) }));
+jest.mock("../lib/sanity.client", () => ({ getAllNewsArticles: jest.fn(), getNewsArticlesByYear: jest.fn() }));
 jest.mock("../src/components/Layout", () => ({ __esModule: true, default: ({ children }: { children: React.ReactNode }) => <main>{children}</main> }));
 jest.mock("next/image", () => ({ __esModule: true, default: ({ alt }: { alt: string }) => <span role="img" aria-label={alt} /> }));
 jest.mock("next/link", () => ({ __esModule: true, default: ({ href, children }: { href: string; children: React.ReactNode }) => <a href={href}>{children}</a> }));
@@ -19,6 +22,17 @@ const article: NewsArticle = {
 };
 
 describe("Sanity news migration", () => {
+  it("navigates between investing, its news archive and the unchanged article URLs", () => {
+    const { unmount } = render(<InvestmentNewsIndex years={[2026]} latestNews={[article]} />);
+    expect(screen.getByRole("link", { name: /← Investing in Peru/ })).toHaveAttribute("href", "/investing-in-peru");
+    expect(screen.getByRole("link", { name: "2026" })).toHaveAttribute("href", "/investing-in-peru/news/2026");
+    expect(screen.getByRole("link", { name: /日本語のニュース/ })).toHaveAttribute("href", "/news/2026/test");
+    unmount();
+
+    render(<InvestmentNewsYear year={2026} articles={[article]} />);
+    expect(screen.getByRole("link", { name: /← All news/ })).toHaveAttribute("href", "/investing-in-peru/news");
+  });
+
   it("shows Japanese content on the English interface unless Spanish was explicitly enabled", () => {
     render(<NewsArticlePage article={article} />);
     expect(screen.getByRole("heading", { level: 1, name: article.titleJp })).toBeVisible();
@@ -26,6 +40,7 @@ describe("Sanity news migration", () => {
     expect(screen.queryByRole("button", { name: /Spanish/ })).not.toBeInTheDocument();
     expect(screen.queryByText("Spanish article")).not.toBeInTheDocument();
     expect(screen.getByRole("article")).toHaveAttribute("lang", "ja");
+    expect(screen.getByRole("link", { name: /Back to archive/ })).toHaveAttribute("href", "/investing-in-peru/news/2026");
   });
 
   it("keeps the Peruvian publication date even when the browser is in Japan", () => {

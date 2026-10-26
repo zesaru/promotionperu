@@ -14,22 +14,22 @@ type NewsIndexPageProps = {
 
 const content = {
   en: {
-    title: "News",
+    title: "Investment News",
     description: "News from Peru in Japanese, covering investment, trade and bilateral relations.",
     intro: "Browse the latest news from Peru in Japanese and explore the archive by year.",
     latest: "Latest Articles",
     browseYear: "Browse by year",
     readMore: "Read article",
-    bilingualLabel: "Spanish and Japanese",
+    back: "Investing in Peru",
   },
   jp: {
-    title: "ニュース",
+    title: "投資ニュース",
     description: "ペルーの投資、貿易、日秘関係に関する最新ニュースを日本語でお届けします。",
     intro: "ペルーの最新ニュースを日本語でお届けします。年別アーカイブから過去の記事もご覧いただけます。",
     latest: "最新記事",
     browseYear: "年別アーカイブ",
     readMore: "記事を読む",
-    bilingualLabel: "スペイン語 / 日本語",
+    back: "ペルーへの投資",
   },
 };
 
@@ -43,6 +43,9 @@ export default function NewsIndexPage({ years, latestNews }: NewsIndexPageProps)
       <section className="bg-gradient-to-br from-stone-50 via-white to-red-50">
         <div className="container mx-auto px-4 py-10 md:py-14">
           <div className="mx-auto max-w-5xl">
+            <Link href="/investing-in-peru" className="mb-6 inline-block text-sm font-semibold text-red-700 hover:underline">
+              ← {texts.back}
+            </Link>
             <div className="mb-10 max-w-3xl">
               <span className="inline-flex rounded-full bg-red-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-red-700">
                 Peru in Japan
@@ -63,7 +66,7 @@ export default function NewsIndexPage({ years, latestNews }: NewsIndexPageProps)
                 {years.map((year) => (
                   <Link
                     key={year}
-                    href={`/news/${year}`}
+                    href={`/investing-in-peru/news/${year}`}
                     className="rounded-full border border-gray-300 bg-white px-5 py-2 text-sm font-semibold text-gray-700 transition-colors hover:border-red-300 hover:text-red-700"
                   >
                     {year}

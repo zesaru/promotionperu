@@ -17,17 +17,11 @@ type NewsLanguage = "es" | "jp";
 const interfaceText = {
   en: {
     back: "Back to archive",
-    gallery: "Photo gallery",
-    sourceLabel: "Article language",
-    sourceValue: "Spanish and Japanese",
     spanish: "Spanish",
     japanese: "Japanese",
   },
   jp: {
     back: "アーカイブに戻る",
-    gallery: "フォトギャラリー",
-    sourceLabel: "記事の言語",
-    sourceValue: "スペイン語 / 日本語",
     spanish: "スペイン語",
     japanese: "日本語",
   },
@@ -80,13 +74,13 @@ export default function NewsArticlePage({ article }: NewsArticlePageProps) {
           "@type": "ListItem",
           position: 1,
           name: currentLocale === "jp" ? "ニュース" : "News",
-          item: "https://peruinjapan.org/news",
+          item: "https://peruinjapan.org/investing-in-peru/news",
         },
         {
           "@type": "ListItem",
           position: 2,
           name: String(article.year),
-          item: `https://peruinjapan.org/news/${article.year}`,
+          item: `https://peruinjapan.org/investing-in-peru/news/${article.year}`,
         },
         {
           "@type": "ListItem",
@@ -112,13 +106,16 @@ export default function NewsArticlePage({ article }: NewsArticlePageProps) {
       <section className="container mx-auto px-4 py-8 md:py-12">
         <div className="mx-auto max-w-4xl">
           <Link
-            href={`/news/${article.year}`}
+            href={`/investing-in-peru/news/${article.year}`}
             className="text-sm font-semibold text-red-700 hover:underline"
           >
             ← {texts.back}
           </Link>
 
           <div className="mt-6 rounded-3xl bg-gradient-to-br from-white via-stone-50 to-red-50 p-6 shadow-sm md:p-10">
+            {isJapaneseContent && !article.legacyPath && (
+              <p className="mb-4 text-right text-xs text-gray-500 md:text-sm">非公式翻訳</p>
+            )}
             <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-red-700">
@@ -130,10 +127,6 @@ export default function NewsArticlePage({ article }: NewsArticlePageProps) {
                 <p className="mt-4 max-w-2xl text-base leading-8 text-gray-700">
                   {description}
                 </p>
-              </div>
-              <div className="rounded-2xl border border-red-100 bg-white px-4 py-3 text-sm text-gray-600 shadow-sm">
-                <p className="font-semibold text-gray-900">{texts.sourceLabel}</p>
-                <p>{hasSpanish ? texts.sourceValue : texts.japanese}</p>
               </div>
             </div>
 
@@ -168,7 +161,6 @@ export default function NewsArticlePage({ article }: NewsArticlePageProps) {
 
           {galleryImages.length ? (
             <div className="mt-10">
-              <h2 className="mb-5 text-xl font-semibold text-gray-900">{texts.gallery}</h2>
               <ImageSlider images={galleryImages} interval={4500} />
             </div>
           ) : null}

@@ -19,6 +19,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
   containerClassName = "max-w-4xl",
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [imageRatios, setImageRatios] = useState<Record<string, number>>({});
   const normalizedImages = images.map((image, index) =>
     typeof image === 'string'
       ? {
@@ -27,8 +28,11 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
         }
       : image
   );
+  const hasMultipleImages = normalizedImages.length > 1;
 
   useEffect(() => {
+    if (normalizedImages.length < 2) return;
+
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % normalizedImages.length);
     }, interval);
@@ -54,7 +58,10 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
   return (
     <div className={`relative mx-auto w-full ${containerClassName}`}>
       {/* Slider Container */}
-      <div className="relative h-96 md:h-[500px] overflow-hidden rounded-lg bg-gray-100">
+      <div
+        className="relative overflow-hidden rounded-lg bg-gray-100"
+        style={{ aspectRatio: imageRatios[currentImage?.src] || "3 / 2" }}
+      >
         <div
           className="flex transition-transform duration-500 ease-in-out h-full"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -66,6 +73,15 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
                 alt={image.alt || `Slider image ${index + 1}`}
                 fill
                 className="object-contain"
+                onLoad={(event) => {
+                  const { naturalWidth, naturalHeight } = event.currentTarget;
+                  if (naturalWidth && naturalHeight) {
+                    const ratio = naturalWidth / naturalHeight;
+                    setImageRatios((previous) => previous[image.src] === ratio
+                      ? previous
+                      : { ...previous, [image.src]: ratio });
+                  }
+                }}
                 priority={index === 0}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
               />
@@ -74,7 +90,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
         </div>
 
         {/* Navigation Buttons */}
-        <button
+        {hasMultipleImages && <><button
           onClick={goToPrevious}
           className="absolute left-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-all z-10"
           aria-label="Previous image"
@@ -92,7 +108,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
-        </button>
+        </button></>}
       </div>
 
       {currentImage?.caption ? (
@@ -100,7 +116,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
       ) : null}
 
       {/* Dots Indicator */}
-      <div className="flex justify-center mt-4 space-x-2">
+      {hasMultipleImages && <div className="flex justify-center mt-4 space-x-2">
         {normalizedImages.map((_, index) => (
           <button
             key={index}
@@ -113,7 +129,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
-      </div>
+      </div>}
     </div>
   );
 };

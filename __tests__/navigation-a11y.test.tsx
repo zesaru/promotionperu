@@ -70,6 +70,14 @@ describe("site navigation accessibility", () => {
     expect(screen.getByRole("link", { name: "YouTube" })).toBeInTheDocument();
   });
 
+  it("keeps news articles inside the investing section without a separate news menu", () => {
+    mockUseRouter.mockReturnValue({ locale: "jp", locales: ["jp", "en"], asPath: "/news/2026/article" });
+    render(<Header />);
+
+    expect(screen.queryByRole("link", { name: "ニュース", exact: true })).not.toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "ペルーへの投資", exact: true })).toHaveAttribute("aria-current", "location");
+  });
+
   it("provides a skip link that targets the main content landmark", () => {
     render(
       <Layout language="en" title="Accessibility test">

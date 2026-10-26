@@ -1,6 +1,12 @@
 const path = require("path");
 
 module.exports = {
+  redirects() {
+    return [
+      { source: '/news', destination: '/investing-in-peru/news', permanent: true },
+      { source: '/news/:year([0-9]{4})', destination: '/investing-in-peru/news/:year', permanent: true },
+    ];
+  },
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
   },

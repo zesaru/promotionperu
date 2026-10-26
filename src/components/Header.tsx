@@ -9,7 +9,6 @@ const navBar = {
     { locale: "en", title: "Gastronomy", slug: "gastronomy" },
     { locale: "en", title: "Products", slug: "products" },
     { locale: "en", title: "Investing in Peru", slug: "investing-in-peru" },
-    { locale: "en", title: "News", slug: "news" },
     {
       locale: "en",
       title: "150 years of diplomatic relations",
@@ -19,7 +18,6 @@ const navBar = {
     { locale: "jp", title: "ガストロノミー", slug: "gastronomy" },
     { locale: "jp", title: "ペルー食品", slug: "products" },
     { locale: "jp", title: "ペルーへの投資", slug: "investing-in-peru" },
-    { locale: "jp", title: "ニュース", slug: "news" },
     {
       locale: "jp",
       title: "外交関係樹立150周年",
@@ -36,7 +34,9 @@ export default function Header() {
   const navigationLabel = locale === "jp" ? "主要なナビゲーション" : "Primary navigation";
 
   const isActiveRoute = (slug: string) => {
-    return asPath.includes(slug) || (asPath === "/" && slug === "home");
+    return asPath.includes(slug)
+      || (slug === "investing-in-peru" && /^\/(?:en\/|jp\/)?news(?:\/|$)/.test(asPath))
+      || (asPath === "/" && slug === "home");
   };
 
   const toggleMobileMenu = () => {
@@ -105,6 +105,7 @@ export default function Header() {
                         ? 'bg-red-600 text-white font-semibold'
                         : 'text-gray-700 hover:bg-red-50'
                     }`}
+                    aria-current={isActiveRoute(item.slug) ? "location" : undefined}
                     href={`/${item.slug}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >

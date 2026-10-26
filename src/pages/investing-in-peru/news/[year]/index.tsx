@@ -14,12 +14,12 @@ type NewsYearPageProps = {
 
 const content = {
   en: {
-    title: "News Archive",
+    title: "Investment News Archive",
     back: "All news",
     readMore: "Read article",
   },
   jp: {
-    title: "ニュースアーカイブ",
+    title: "投資ニュースアーカイブ",
     back: "ニュース一覧",
     readMore: "記事を読む",
   },
@@ -34,11 +34,11 @@ export default function NewsYearPage({ articles, year }: NewsYearPageProps) {
     <Layout
       language={locale}
       title={`${texts.title} ${year}`}
-      description={`Peru in Japan news archive for ${year}.`}
+      description={`Peru investment news archive for ${year}.`}
     >
       <section className="container mx-auto px-4 py-10 md:py-14">
         <div className="mx-auto max-w-5xl">
-          <Link href="/news" className="text-sm font-semibold text-red-700 hover:underline">
+          <Link href="/investing-in-peru/news" className="text-sm font-semibold text-red-700 hover:underline">
             ← {texts.back}
           </Link>
           <h1 className="mt-4 text-3xl font-bold text-gray-900 md:text-5xl">{year}</h1>

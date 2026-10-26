@@ -40,7 +40,7 @@ españoles ya existentes se conservan en el CMS.
 - `legacyPath` conserva la URL anterior, que ahora consulta Sanity cada 60 segundos.
 - La copia local se conserva para respaldo y auditoría. Tras completar la carga, las páginas anteriores consultan únicamente Sanity; retirar una noticia del CMS también retira su página pública tras la revalidación.
 - Las URLs alternativas `/news/<año>/<slug>` redirigen a la URL anterior para evitar duplicados.
-- El archivo `/news` y sus páginas por año reúnen todas las noticias.
+- El archivo `/investing-in-peru/news` y sus páginas por año reúnen todas las noticias. Los listados anteriores `/news` y `/news/<año>` redirigen permanentemente al archivo dentro de inversión. Las URLs de los artículos permanecen sin cambios.
 - El año del archivo corresponde a la publicación, aunque la URL anterior use otra carpeta anual.
 - `publicationDate` conserva el día editorial. Cuando falta, la fecha se interpreta en `America/Lima`.
 - La portada de inversión obtiene sus seis noticias más recientes de Sanity.
