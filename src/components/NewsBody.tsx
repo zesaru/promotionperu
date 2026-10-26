@@ -25,5 +25,9 @@ const serializers = {
 };
 
 export default function NewsBody({ body }: { body: object[] }) {
-  return <PortableText content={body} serializers={serializers} />;
+  return <PortableText
+    content={body}
+    serializers={serializers}
+    className="space-y-6 font-japanese text-base leading-8 text-gray-700 [&_a]:break-words [&_a]:text-red-700 [&_a]:underline [&_blockquote]:border-l-4 [&_blockquote]:border-red-300 [&_blockquote]:pl-5 [&_h2]:pt-4 [&_h2]:text-xl [&_h2]:font-bold [&_h2]:text-gray-900 [&_h3]:pt-2 [&_h3]:text-lg [&_h3]:font-semibold [&_h4]:font-semibold [&_ol]:list-decimal [&_ol]:pl-6 [&_ul]:list-disc [&_ul]:pl-6 [&_li]:my-2"
+  />;
 }

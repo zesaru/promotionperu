@@ -10,7 +10,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const articles = (await getAllNewsArticles()) as NewsArticle[];
   const locales = ["jp", "en"];
   const paths = locales.flatMap((locale) =>
-    articles.map((article: NewsArticle) => ({
+    articles.filter((article) => !article.legacyPath).map((article: NewsArticle) => ({
       params: {
         year: String(article.year),
         slug: article.slug,

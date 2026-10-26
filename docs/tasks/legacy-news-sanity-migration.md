@@ -22,6 +22,7 @@ node scripts/migrate-legacy-news.mjs           # Revisar sin escribir
 node scripts/migrate-legacy-news.mjs --pilot   # Importar y comprobar dos artículos: tabla y galería
 node scripts/migrate-legacy-news.mjs --publish # Importar y comprobar los 39
 node scripts/migrate-legacy-news.mjs --verify  # Comparar el contenido guardado con la copia local
+node scripts/verify-news-migration.mjs        # Revisar las 39 páginas públicas y sus listados
 ```
 
 La escritura usa la configuración existente de `.env` y la sesión del CLI de
@@ -37,7 +38,7 @@ españoles ya existentes se conservan en el CMS.
 ## Rutas y fechas
 
 - `legacyPath` conserva la URL anterior, que ahora consulta Sanity cada 60 segundos.
-- Las páginas anteriores mantienen una copia local de respaldo durante la transición.
+- La copia local se conserva para respaldo y auditoría. Tras completar la carga, las páginas anteriores consultan únicamente Sanity; retirar una noticia del CMS también retira su página pública tras la revalidación.
 - Las URLs alternativas `/news/<año>/<slug>` redirigen a la URL anterior para evitar duplicados.
 - El archivo `/news` y sus páginas por año reúnen todas las noticias.
 - El año del archivo corresponde a la publicación, aunque la URL anterior use otra carpeta anual.
