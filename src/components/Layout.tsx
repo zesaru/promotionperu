@@ -20,6 +20,7 @@ type LayoutProps = {
   structuredData?: Record<string, unknown> | Array<Record<string, unknown>>;
   articlePublishedTime?: string;
   articleModifiedTime?: string;
+  japaneseOnly?: boolean;
 };
 
 function toTitleCase(value: string) {
@@ -141,7 +142,8 @@ export default function Layout({
   disableDefaultSeo = false,
   structuredData,
   articlePublishedTime,
-  articleModifiedTime
+  articleModifiedTime,
+  japaneseOnly = false
 }: LayoutProps) {
   const { locale, asPath } = useRouter();
   const pathWithoutQuery = asPath.split("#")[0]?.split("?")[0] || "/";
@@ -152,8 +154,9 @@ export default function Layout({
     pathSegments[0] === "investing-in-peru" &&
     /^(20\d{2})$/.test(pathSegments[1] ?? "") &&
     pathSegments.length === 3;
+  const isJapaneseEditorial = isAnnualInvestingEditorial || japaneseOnly;
   const canonicalPath =
-    isAnnualInvestingEditorial
+    isJapaneseEditorial
       ? normalizedPath
       : currentLocaleCode === "en"
         ? normalizedPath === "/"
@@ -161,7 +164,7 @@ export default function Layout({
           : `/en${normalizedPath}`
         : normalizedPath;
   const contentLocaleCode: "jp" | "en" =
-    isAnnualInvestingEditorial ? "jp" : currentLocaleCode;
+    isJapaneseEditorial ? "jp" : currentLocaleCode;
 
   const canonicalUrl = `https://peruinjapan.org${canonicalPath === '/' ? '' : canonicalPath}`;
   const pathTitle =
@@ -194,7 +197,7 @@ export default function Layout({
       href: `https://peruinjapan.org${normalizedPath === "/" ? "" : normalizedPath}`,
     }
   ];
-  if (!isAnnualInvestingEditorial) {
+  if (!isJapaneseEditorial) {
     hreflangs.splice(1, 0, {
       hrefLang: 'en',
       href: `https://peruinjapan.org${normalizedPath === "/" ? "/en" : `/en${normalizedPath}`}`,
@@ -342,7 +345,7 @@ export default function Layout({
               },
               {
                 name: 'robots',
-                content: isAnnualInvestingEditorial && currentLocaleCode === "en"
+                content: isJapaneseEditorial && currentLocaleCode === "en"
                   ? 'noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
                   : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
               }

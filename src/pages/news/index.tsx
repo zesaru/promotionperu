@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 import Layout from "@/components/Layout";
+import { newsHref } from "@/lib/news";
 
 type NewsIndexPageProps = {
   years: number[];
@@ -14,8 +15,8 @@ type NewsIndexPageProps = {
 const content = {
   en: {
     title: "News",
-    description: "Latest Peru in Japan updates, bilingual in Spanish and Japanese, with photo galleries hosted on Cloudinary.",
-    intro: "Browse recent news and access each article with Spanish and Japanese content plus a Cloudinary photo carousel.",
+    description: "News from Peru in Japanese, covering investment, trade and bilateral relations.",
+    intro: "Browse the latest news from Peru in Japanese and explore the archive by year.",
     latest: "Latest Articles",
     browseYear: "Browse by year",
     readMore: "Read article",
@@ -23,8 +24,8 @@ const content = {
   },
   jp: {
     title: "ニュース",
-    description: "Peru in Japan の最新ニュースを、スペイン語と日本語のバイリンガル記事と Cloudinary フォトギャラリー付きで掲載します。",
-    intro: "最新ニュースを確認し、各記事でスペイン語・日本語の本文と Cloudinary の写真カルーセルをご覧いただけます。",
+    description: "ペルーの投資、貿易、日秘関係に関する最新ニュースを日本語でお届けします。",
+    intro: "ペルーの最新ニュースを日本語でお届けします。年別アーカイブから過去の記事もご覧いただけます。",
     latest: "最新記事",
     browseYear: "年別アーカイブ",
     readMore: "記事を読む",
@@ -79,16 +80,16 @@ export default function NewsIndexPage({ years, latestNews }: NewsIndexPageProps)
                 {latestNews.map((article) => (
                   <Link
                     key={article._id}
-                    href={`/news/${article.year}/${article.slug}`}
+                    href={newsHref(article)}
                     className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
                   >
                     <p className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-red-700">
-                      {texts.bilingualLabel}
+                      日本語
                     </p>
                     <h3 className="text-lg font-bold text-gray-900">{article.titleJp}</h3>
-                    <p className="mt-2 text-sm text-gray-600">{article.titleEs}</p>
+                    {article.spanishEnabled && article.titleEs && <p className="mt-2 text-sm text-gray-600">{article.titleEs}</p>}
                     <p className="mt-4 line-clamp-3 text-sm leading-7 text-gray-700">
-                      {currentLocale === "jp" ? article.excerptJp : article.excerptEs}
+                      {article.excerptJp}
                     </p>
                     <p className="mt-5 text-sm font-semibold text-red-700">{texts.readMore} →</p>
                   </Link>

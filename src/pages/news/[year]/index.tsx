@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 import Layout from "@/components/Layout";
+import { formatNewsDate, newsHref } from "@/lib/news";
 
 type NewsYearPageProps = {
   articles: NewsArticle[];
@@ -45,20 +46,20 @@ export default function NewsYearPage({ articles, year }: NewsYearPageProps) {
             {articles.map((article) => (
               <Link
                 key={article._id}
-                href={`/news/${article.year}/${article.slug}`}
+                href={newsHref(article)}
                 className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
               >
                 <div className="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
                   <div>
                     <h2 className="text-xl font-bold text-gray-900">{article.titleJp}</h2>
-                    <p className="mt-1 text-sm text-gray-600">{article.titleEs}</p>
+                    {article.spanishEnabled && article.titleEs && <p className="mt-1 text-sm text-gray-600">{article.titleEs}</p>}
                   </div>
                   <p className="text-sm text-gray-500">
-                    {new Date(article.publishedAt).toLocaleDateString(currentLocale === "jp" ? "ja-JP" : "es-PE")}
+                    {formatNewsDate(article)}
                   </p>
                 </div>
                 <p className="mt-4 leading-7 text-gray-700">
-                  {currentLocale === "jp" ? article.excerptJp : article.excerptEs}
+                  {article.excerptJp}
                 </p>
                 <p className="mt-5 text-sm font-semibold text-red-700">{texts.readMore} →</p>
               </Link>

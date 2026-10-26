@@ -22,10 +22,14 @@ export const allNewsArticles = groq`
     _id,
     titleEs,
     titleJp,
+    spanishEnabled,
+    publicationDate,
+    legacyPath,
+    category,
     "slug": slug.current,
     year,
     publishedAt,
-    "coverImage": coverImage.asset->url,
+    "coverImage": coalesce(coverImage.asset->url, coverImageUrl),
     coverImageAltEs,
     coverImageAltJp,
     excerptEs,
@@ -47,10 +51,14 @@ export const newsArticleByYearAndSlug = groq`
     _id,
     titleEs,
     titleJp,
+    spanishEnabled,
+    publicationDate,
+    legacyPath,
+    category,
     "slug": slug.current,
     year,
     publishedAt,
-    "coverImage": coverImage.asset->url,
+    "coverImage": coalesce(coverImage.asset->url, coverImageUrl),
     coverImageAltEs,
     coverImageAltJp,
     excerptEs,
@@ -72,10 +80,14 @@ export const newsArticlesByYear = groq`
     _id,
     titleEs,
     titleJp,
+    spanishEnabled,
+    publicationDate,
+    legacyPath,
+    category,
     "slug": slug.current,
     year,
     publishedAt,
-    "coverImage": coverImage.asset->url,
+    "coverImage": coalesce(coverImage.asset->url, coverImageUrl),
     coverImageAltEs,
     coverImageAltJp,
     excerptEs,
@@ -99,16 +111,20 @@ export interface NewsGalleryItem {
 }
 
 export interface NewsArticle {
+  spanishEnabled?: boolean;
+  publicationDate?: string;
+  legacyPath?: string;
+  category?: string;
   _id: string;
-  titleEs: string;
+  titleEs?: string;
   titleJp: string;
   slug: string;
   year: number;
   publishedAt: string;
-  coverImage?: string;
+  coverImage?: string | null;
   coverImageAltEs?: string;
   coverImageAltJp?: string;
-  excerptEs: string;
+  excerptEs?: string;
   excerptJp: string;
   bodyEs?: any;
   bodyJp?: any;

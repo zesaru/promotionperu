@@ -9,6 +9,7 @@ const navBar = {
     { locale: "en", title: "Gastronomy", slug: "gastronomy" },
     { locale: "en", title: "Products", slug: "products" },
     { locale: "en", title: "Investing in Peru", slug: "investing-in-peru" },
+    { locale: "en", title: "News", slug: "news" },
     {
       locale: "en",
       title: "150 years of diplomatic relations",
@@ -18,6 +19,7 @@ const navBar = {
     { locale: "jp", title: "ガストロノミー", slug: "gastronomy" },
     { locale: "jp", title: "ペルー食品", slug: "products" },
     { locale: "jp", title: "ペルーへの投資", slug: "investing-in-peru" },
+    { locale: "jp", title: "ニュース", slug: "news" },
     {
       locale: "jp",
       title: "外交関係樹立150周年",
@@ -44,7 +46,7 @@ export default function Header() {
   return (
     <nav id="header" aria-label={navigationLabel} className="sticky top-0 z-50 w-full bg-white shadow-md">
       <div className="container mx-auto mt-0 flex w-full flex-wrap items-center justify-between px-4 py-2.5 sm:py-3 lg:px-6">
-        
+
         {/* Logo */}
         <div className="flex min-w-0 order-1 lg:order-1">
           <Link
@@ -66,7 +68,7 @@ export default function Header() {
         </div>
 
         {/* Mobile menu button */}
-        <button 
+        <button
           onClick={toggleMobileMenu}
           className="order-2 p-1.5 text-gray-600 transition-colors duration-200 hover:text-red-600 lg:hidden sm:p-2"
           aria-controls="primary-navigation-links"
@@ -123,8 +125,8 @@ export default function Header() {
                     href={asPath}
                     locale={l}
                     className={`px-3 py-1 rounded-md text-sm font-medium transition-all duration-200 ${
-                      l === locale 
-                        ? 'bg-red-600 text-white' 
+                      l === locale
+                        ? 'bg-red-600 text-white'
                         : 'bg-gray-100 text-gray-700 hover:bg-red-100 hover:text-red-600'
                     }`}
                     onClick={() => setIsMobileMenuOpen(false)}

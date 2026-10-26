@@ -1,10 +1,13 @@
 import Layout from "@src/components/Layout";
+import { getAllNewsArticles } from "lib/sanity.client";
+import type { NewsArticle } from "lib/sanity.queries";
+import type { GetStaticProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { ImDownload2 } from "react-icons/im";
 
-import { getLatestNews } from "@/lib/investing-news-index";
+import { formatNewsDate, newsHref } from "@/lib/news";
 
 const eyGuides = [
   {
@@ -57,7 +60,9 @@ const eyGuides = [
   },
 ];
 
-const InvesmentPage = () => {
+type InvestingPageProps = { latestNews?: NewsArticle[] };
+
+const InvesmentPage = ({ latestNews = [] }: InvestingPageProps) => {
   const { locale } = useRouter();
 
   const content = {
@@ -296,30 +301,26 @@ const InvesmentPage = () => {
               {texts.latestNews}
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-              {getLatestNews(6).map((news) => (
+              {latestNews.map((news) => (
                 <Link
-                  key={news.slug}
-                  href={`/investing-in-peru/${news.year}/${news.slug}`}
+                  key={news._id}
+                  href={newsHref(news)}
                   className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group"
                 >
                   <div className="p-4 md:p-6">
                     <div className="flex items-center justify-between mb-2 md:mb-3">
                       <span className="inline-block bg-red-100 text-red-700 text-xs font-semibold px-2 md:px-3 py-1 rounded-full">
-                        {news.category}
+                        {news.category || "投資"}
                       </span>
                       <span className="text-xs md:text-sm text-gray-500">
-                        {new Date(news.date).toLocaleDateString("ja-JP", {
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric"
-                        })}
+                        {formatNewsDate(news)}
                       </span>
                     </div>
                     <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2 md:mb-3 group-hover:text-red-600 transition-colors line-clamp-2 japanese-heading-3">
-                      {news.title}
+                      {news.titleJp}
                     </h3>
                     <p className="text-gray-600 text-xs md:text-sm mb-3 md:mb-4 line-clamp-3 japanese-text">
-                      {news.excerpt}
+                      {news.excerptJp}
                     </p>
                     <span className="text-red-600 font-semibold text-xs md:text-sm group-hover:text-red-700 transition-colors">
                       {texts.readMore}
@@ -327,6 +328,9 @@ const InvesmentPage = () => {
                   </div>
                 </Link>
               ))}
+            </div>
+            <div className="mt-8 text-center">
+              <Link href="/news" className="font-semibold text-red-700 hover:underline">すべてのニュースを見る →</Link>
             </div>
           </div>
         </section>
@@ -337,3 +341,11 @@ const InvesmentPage = () => {
 };
 
 export default InvesmentPage;
+
+export const getStaticProps: GetStaticProps<InvestingPageProps> = async () => {
+  const articles = await getAllNewsArticles() as NewsArticle[];
+  return {
+    props: { latestNews: articles.filter((article) => article.legacyPath || article.category).slice(0, 6) },
+    revalidate: 60,
+  };
+};
